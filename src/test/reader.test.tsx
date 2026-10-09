@@ -15,14 +15,15 @@ function renderAt(path: string) {
 describe("páginas", () => {
   it("mostra a promessa na entrada", () => {
     renderAt("/");
-    expect(screen.getByRole("heading", { name: /clássicos anotados à margem/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /primeiros capítulos, anotados à margem/i })).toBeInTheDocument();
   });
 
   it("leva do livro ao capítulo anotado", async () => {
     const user = userEvent.setup();
     renderAt("/livro/o-idiota");
-    expect(screen.getByRole("heading", { name: "O Idiota" })).toBeInTheDocument();
-    expect(screen.getAllByText(/em breve/i).length).toBeGreaterThan(3);
+    expect(screen.getByRole("heading", { level: 1, name: "O Idiota" })).toBeInTheDocument();
+    expect(screen.getByText(/Há um só capítulo nesta margem/i)).toBeInTheDocument();
+    expect(screen.queryByText(/em breve/i)).not.toBeInTheDocument();
     await user.click(screen.getByRole("link", { name: /ler anotado/i }));
     expect(await screen.findByText(/No fim de novembro, no degelo/i)).toBeInTheDocument();
   });
@@ -39,8 +40,8 @@ describe("páginas", () => {
     expect(screen.getByText(/В конце ноября, в оттепель/)).toBeInTheDocument();
   });
 
-  it("deixa o capítulo II em breve", () => {
+  it("não publica um capítulo posterior", () => {
     renderAt("/livro/o-idiota/ler/parte-1-capitulo-2");
-    expect(screen.getByText(/Este capítulo ainda não está na margem/i)).toBeInTheDocument();
+    expect(screen.getByText(/não está nesta margem/i)).toBeInTheDocument();
   });
 });

@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
-import { AnnotatedReader, type PopoverAnchor, type TextSelection } from "@/components/reader/AnnotatedReader";
+import { useParams } from "react-router-dom";
+import { AnnotatedReader, type PopoverAnchor, type ReaderFrame, type TextSelection } from "@/components/reader/AnnotatedReader";
 import { Button } from "@/components/ui/button";
-import { bundledAnnotations, chapterFromAnnotations, partOne } from "@/data/book";
+import { bookBySlug, books } from "@/data/catalog";
+import { bookChapter, bundledFile } from "@/data/book";
 import {
   MARK_LABEL,
   MARK_NAMES,
@@ -15,8 +17,8 @@ import { clearDraft, loadDraft, saveDraft } from "@/lib/draftStorage";
 import { publishAnnotationFile, TOKEN_STORAGE_KEY } from "@/lib/githubPublish";
 
 type FormState =
-  | { kind: "create"; selection: TextSelection; mark: MarkName; note: string; expanded: string; russian: string; error?: string }
-  | { kind: "edit"; id: string; anchor: PopoverAnchor; mark: MarkName; note: string; expanded: string; russian: string; error?: string };
+  | { kind: "create"; selection: TextSelection; mark: MarkName; note: string; expanded: string; russian: string; lat: string; lng: string; placeLabel: string; error?: string }
+  | { kind: "edit"; id: string; anchor: PopoverAnchor; mark: MarkName; note: string; expanded: string; russian: string; lat: string; lng: string; placeLabel: string; error?: string };
 
 /** Sits just to the left of the anchor when it fits; otherwise below it, then above, and always inside the viewport. */
 export function placeEditPopover(rect: PopoverAnchor): CSSProperties {
@@ -37,6 +39,14 @@ export function placeEditPopover(rect: PopoverAnchor): CSSProperties {
   return { position: "fixed", top, left, width, maxHeight: height };
 }
 
+function placeFromForm(form: FormState) {
+  if (form.mark !== "lugar") return undefined;
+  const lat = Number(form.lat);
+  const lng = Number(form.lng);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng) || !form.placeLabel.trim()) return undefined;
+  return { lat, lng, label: form.placeLabel.trim() };
+}
+
 function popoverStyle(form: FormState): CSSProperties {
   if (form.kind === "edit") return placeEditPopover(form.anchor);
   const width = Math.min(384, window.innerWidth - 24);
@@ -51,13 +61,15 @@ function download(file: AnnotationFile) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "parte-1-capitulo-1.annotations.json";
+  link.download = `${file.chapterId}.annotations.json`;
   link.click();
   URL.revokeObjectURL(url);
 }
 
 export default function EditorPage() {
-  const [file, setFile] = useState<AnnotationFile>(() => loadDraft() ?? bundledAnnotations);
+  const { slug = "o-idiota" } = useParams();
+  const book = bookBySlug(slug) ?? books[0]!;
+  const [file, setFile] = useState<AnnotationFile>(() => loadDraft(book.chapterId) ?? bundledFile(book.slug));
   const [dirty, setDirty] = useState(false);
   const [form, setForm] = useState<FormState | null>(null);
   const [undo, setUndo] = useState<Annotation | null>(null);
@@ -66,6 +78,7 @@ export default function EditorPage() {
   const [askToken, setAskToken] = useState(false);
   const [tokenDraft, setTokenDraft] = useState("");
   const [conflict, setConflict] = useState(false);
+  const [widgetId, setWidgetId] = useState<string | null>(null);
   const fileInput = useRef<HTMLInputElement>(null);
   const dirtyRef = useRef(false);
 
@@ -75,29 +88,32 @@ export default function EditorPage() {
   };
 
   useEffect(() => {
-    if (loadDraft()) {
-      setStatus("Rascunho recuperado.");
-      return;
-    }
+    const draft = loadDraft(book.chapterId);
+    dirtyRef.current = false;
+    setDirty(false);
+    setForm(null);
+    setFile(draft ?? bundledFile(book.slug));
+    setStatus(draft ? "Rascunho recuperado." : "Rascunho neste navegador.");
+    if (draft) return;
     let cancel = false;
-    fetch(`${import.meta.env.BASE_URL}data/o-idiota/parte-1-capitulo-1.annotations.json`, { cache: "no-cache" })
+    fetch(`${import.meta.env.BASE_URL}data/${book.slug}/${book.chapterId}.annotations.json`, { cache: "no-cache" })
       .then((response) => (response.ok ? response.json() : null))
       .then((data) => {
         if (cancel || dirtyRef.current) return;
         const parsed = parseAnnotationFile(data);
-        if (!("error" in parsed)) setFile(parsed);
+        if (!("error" in parsed) && parsed.chapterId === book.chapterId) setFile(parsed);
       })
       .catch(() => undefined);
     return () => {
       cancel = true;
     };
-  }, []);
+  }, [book.slug, book.chapterId]);
 
   useEffect(() => {
     if (dirty) saveDraft(file);
   }, [file, dirty]);
 
-  const chapter = useMemo(() => chapterFromAnnotations(file), [file]);
+  const chapter = useMemo(() => bookChapter(book.slug, file)!, [book.slug, file]);
 
   const updateAnnotation = (id: string, patch: Partial<Annotation>) => {
     markDirty();
@@ -110,14 +126,25 @@ export default function EditorPage() {
   const openEdit = (id: string, anchor: PopoverAnchor) => {
     const found = file.annotations.find((item) => item.id === id);
     if (!found) return;
-    setForm({ kind: "edit", id, anchor, mark: found.mark, note: found.note, expanded: found.expanded, russian: found.russian ?? "" });
+    setForm({
+      kind: "edit",
+      id,
+      anchor,
+      mark: found.mark,
+      note: found.note,
+      expanded: found.expanded,
+      russian: found.gloss ?? found.russian ?? "",
+      lat: found.place ? String(found.place.lat) : "",
+      lng: found.place ? String(found.place.lng) : "",
+      placeLabel: found.place?.label ?? "",
+    });
   };
 
   const onTextSelect = (selection: TextSelection) => {
     const error = crossesExisting(selection.start, selection.end, file.annotations, selection.paragraphId)
       ? "Esse trecho cruza outra marca. Escolha um pedaço dentro dela, ou por fora."
       : undefined;
-    setForm({ kind: "create", selection, mark: "sublinhado", note: "", expanded: "", russian: "", error });
+    setForm({ kind: "create", selection, mark: "sublinhado", note: "", expanded: "", russian: "", lat: "", lng: "", placeLabel: "", error });
   };
 
   const saveCreate = () => {
@@ -132,13 +159,21 @@ export default function EditorPage() {
       return;
     }
     const order = file.annotations.reduce((max, item) => Math.max(max, item.order), 0) + 1;
+    const place = placeFromForm(form);
+    if (form.mark === "lugar" && !place) {
+      setForm({ ...form, error: "O lugar precisa de latitude, longitude e nome." });
+      return;
+    }
+    const gloss = form.russian.trim() || undefined;
     const annotation: Annotation = {
       id: `c1-${selection.paragraphId}-${order}`,
       anchor: { paragraphId: selection.paragraphId, start: selection.start, end: selection.end, quote: selection.quote },
       mark: form.mark,
       note: form.note.trim(),
       expanded: form.expanded.trim(),
-      russian: form.russian.trim() || undefined,
+      gloss,
+      russian: gloss,
+      place,
       order,
     };
     markDirty();
@@ -154,7 +189,13 @@ export default function EditorPage() {
       setForm({ ...form, error: "A nota curta precisa de pelo menos duas letras." });
       return;
     }
-    updateAnnotation(form.id, { mark: form.mark, note: form.note.trim(), expanded: form.expanded.trim(), russian: form.russian.trim() || undefined });
+    const place = placeFromForm(form);
+    if (form.mark === "lugar" && !place) {
+      setForm({ ...form, error: "O lugar precisa de latitude, longitude e nome." });
+      return;
+    }
+    const gloss = form.russian.trim() || undefined;
+    updateAnnotation(form.id, { mark: form.mark, note: form.note.trim(), expanded: form.expanded.trim(), gloss, russian: gloss, place });
     setForm(null);
     setStatus("Anotação atualizada.");
   };
@@ -262,18 +303,36 @@ export default function EditorPage() {
           }}
         />
       </label>
-      <label className="mt-3 block font-sans text-xs uppercase tracking-wider text-muted-foreground">
-        Palavra russa
-        <input
-          className="mt-1 w-full rounded-md border border-border bg-card px-2 py-2 font-serif text-sm"
-          value={form.russian}
-          onChange={(event) => {
-            const russian = event.target.value;
-            setForm({ ...form, russian });
-            if (form.kind === "edit") updateAnnotation(form.id, { russian: russian.trim() || undefined });
-          }}
-        />
-      </label>
+      {book.originalLabel && (
+        <label className="mt-3 block font-sans text-xs uppercase tracking-wider text-muted-foreground">
+          {book.originalLabel === "russo" ? "Palavra russa" : "Palavra inglesa"}
+          <input
+            className="mt-1 w-full rounded-md border border-border bg-card px-2 py-2 font-serif text-sm"
+            value={form.russian}
+            onChange={(event) => {
+              const russian = event.target.value;
+              setForm({ ...form, russian });
+              if (form.kind === "edit") updateAnnotation(form.id, { gloss: russian.trim() || undefined, russian: russian.trim() || undefined });
+            }}
+          />
+        </label>
+      )}
+      {form.mark === "lugar" && (
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <label className="font-sans text-xs uppercase tracking-wider text-muted-foreground">
+            Latitude
+            <input className="mt-1 w-full rounded-md border border-border bg-card px-2 py-2 text-sm" value={form.lat} onChange={(event) => setForm({ ...form, lat: event.target.value })} />
+          </label>
+          <label className="font-sans text-xs uppercase tracking-wider text-muted-foreground">
+            Longitude
+            <input className="mt-1 w-full rounded-md border border-border bg-card px-2 py-2 text-sm" value={form.lng} onChange={(event) => setForm({ ...form, lng: event.target.value })} />
+          </label>
+          <label className="col-span-2 font-sans text-xs uppercase tracking-wider text-muted-foreground">
+            Nome do lugar
+            <input className="mt-1 w-full rounded-md border border-border bg-card px-2 py-2 text-sm" value={form.placeLabel} onChange={(event) => setForm({ ...form, placeLabel: event.target.value })} />
+          </label>
+        </div>
+      )}
       {form.error && <p className="mt-2 font-sans text-sm text-destructive">{form.error}</p>}
       <div className="mt-3 flex flex-wrap gap-2">
         <Button type="button" size="sm" onClick={form.kind === "create" ? saveCreate : saveEdit}>
@@ -303,7 +362,25 @@ export default function EditorPage() {
     <div>
       <div className="sticky top-16 z-40 border-b border-wine/20 bg-[hsl(36_42%_96%)] md:top-[4.5rem]">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-4 py-2 sm:px-6">
-          <p className="mr-auto font-sans text-xs text-muted-foreground">Edição da margem · Parte I, capítulo I. O leitor público não vê o rascunho.</p>
+          <label className="mr-auto font-sans text-xs text-muted-foreground">
+            Livro
+            <select
+              className="ml-2 rounded-md border border-border bg-card px-2 py-1 text-sm text-foreground"
+              value={book.slug}
+              onChange={(event) => {
+                const next = event.target.value;
+                if (dirty && !window.confirm("Trocar de livro descarta o que ainda não está no rascunho deste?")) return;
+                window.location.hash = `#/editor/${next}`;
+              }}
+            >
+              {books.map((item) => (
+                <option key={item.slug} value={item.slug}>
+                  {item.title}
+                </option>
+              ))}
+            </select>
+            <span className="ml-2">O leitor público não vê o rascunho.</span>
+          </label>
           <Button type="button" size="sm" variant="outline" onClick={() => download(file)}>
             Exportar JSON
           </Button>
@@ -338,7 +415,7 @@ export default function EditorPage() {
             size="sm"
             variant="ghost"
             onClick={() => {
-              clearDraft();
+              clearDraft(book.chapterId);
               window.location.reload();
             }}
           >
@@ -450,7 +527,80 @@ export default function EditorPage() {
         </div>
       )}
 
-      <AnnotatedReader chapter={chapter} siblings={partOne} mode="edit" onEditNote={openEdit} onTextSelect={onTextSelect} />
+      {(() => {
+        const widget = file.widgets.find((item) => item.id === widgetId);
+        if (!widget) return null;
+        const patch = (next: typeof widget) => {
+          markDirty();
+          setFile((current) => ({ ...current, widgets: current.widgets.map((item) => (item.id === next.id ? next : item)) }));
+        };
+        return (
+          <div className="mx-auto max-w-3xl px-4 py-3">
+            <div className="rounded-md border border-wine/30 bg-card p-4">
+              <p className="font-hand text-2xl text-wine">Editar esquema</p>
+              <label className="mt-3 block font-sans text-xs uppercase tracking-wider text-muted-foreground">
+                Título
+                <input className="mt-1 w-full rounded-md border border-border px-2 py-2 text-sm" value={widget.title} onChange={(event) => patch({ ...widget, title: event.target.value })} />
+              </label>
+              <label className="mt-3 block font-sans text-xs uppercase tracking-wider text-muted-foreground">
+                Depois do parágrafo
+                <select className="mt-1 w-full rounded-md border border-border px-2 py-2 text-sm" value={widget.paragraphId} onChange={(event) => patch({ ...widget, paragraphId: event.target.value })}>
+                  {chapter.paragraphs.map((paragraph) => (
+                    <option key={paragraph.id} value={paragraph.id}>
+                      {paragraph.id}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="mt-3 block font-sans text-xs uppercase tracking-wider text-muted-foreground">
+                Texto
+                <textarea className="mt-1 h-24 w-full rounded-md border border-border px-2 py-2 text-sm" value={widget.text} onChange={(event) => patch({ ...widget, text: event.target.value })} />
+              </label>
+              <label className="mt-3 block font-sans text-xs uppercase tracking-wider text-muted-foreground">
+                Diagrama em JSON
+                <textarea
+                  className="mt-1 h-32 w-full rounded-md border border-border px-2 py-2 font-mono text-xs"
+                  value={JSON.stringify(widget.diagram, null, 2)}
+                  onChange={(event) => {
+                    try {
+                      const diagram = JSON.parse(event.target.value) as typeof widget.diagram;
+                      if (!Array.isArray(diagram.boxes) || !Array.isArray(diagram.arrows)) return;
+                      patch({ ...widget, diagram });
+                    } catch {
+                      setStatus("O JSON do diagrama ainda não fecha.");
+                    }
+                  }}
+                />
+              </label>
+              <Button type="button" size="sm" variant="ghost" className="mt-2" onClick={() => setWidgetId(null)}>
+                Fechar esquema
+              </Button>
+            </div>
+          </div>
+        );
+      })()}
+
+      <AnnotatedReader
+        chapter={chapter}
+        frame={
+          {
+            slug: book.slug,
+            kicker: book.kicker,
+            originalLabel: book.originalLabel,
+            translationNote: book.translationNote,
+            citation: book.citation,
+            electronic: book.electronic,
+            sourceUrl: book.sourceUrl,
+            continueUrl: book.continueUrl,
+            continueLabel: book.continueLabel,
+          } satisfies ReaderFrame
+        }
+        widgets={file.widgets}
+        mode="edit"
+        onEditNote={openEdit}
+        onTextSelect={onTextSelect}
+        onEditWidget={setWidgetId}
+      />
       {formCard}
     </div>
   );

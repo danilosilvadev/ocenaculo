@@ -1,25 +1,27 @@
 # O Cenáculo
 
-Os clássicos anotados à margem. O livro corre na página, em tipografia de volume impresso; a leitura fica na margem, presa ao texto por sublinhados, círculos, colchetes e setas, como lápis de vinho num exemplar de papel.
+Primeiros capítulos, anotados à margem. O texto corre na coluna da esquerda; a leitura fica na direita, presa por sublinhado, círculo, colchete, realce, traço e seta, como lápis de vinho num exemplar de papel. Um alfinete de mapa abre o lugar da frase. Um esquema fechado, «Esquema: …», abre um diagrama quando a frase pede.
 
-O primeiro volume é *O Idiota*, de Dostoiévski. A tradução para o português do Brasil é do Cenáculo, feita a partir do original russo em domínio público. Não se usa nenhuma tradução publicada.
+Cada livro entra só com a abertura. O resto fica na edição pública citada no fim do capítulo.
 
-## O que está na página
+## Os quatro
 
-- Parte I, capítulo I (o vagão), traduzido e anotado frase a frase.
-- Os outros capítulos aparecem na navegação como «em breve».
-- Cada parágrafo pode mostrar o russo da edição citada.
-- No telefone o texto ocupa a largura; o toque numa marca abre a nota num painel inferior.
+- **O Idiota**, Dostoiévski, 1868–69. Parte I, capítulo I, o vagão da estrada Petersburgo–Varsóvia. Tradução do Cenáculo a partir do russo. A margem mostra o original.
+- **Frankenstein**, Mary Shelley, 1818. A Carta I, não o capítulo de Victor: as cartas de Walton são o começo verdadeiro do livro de 1818. Tradução do Cenáculo a partir do inglês. A margem mostra o original.
+- **Memórias Póstumas de Brás Cubas**, Machado de Assis, 1881. Dedicatória, «Ao leitor» e capítulo I, «Óbito do autor». O texto é o português da edição, sem tradução.
+- **Vidas Secas**, Graciliano Ramos, 1938. Capítulo «Mudança». Português da 2ª edição (1947), a transcrição pública que dá para conferir. Sem tradução.
 
-## Edição russa
+## Edições
 
-F. M. Dostoiévski, *Идиот*, in *Собрание сочинений в 15 томах*, т. 6. Leningrado: Nauka, filial de Leningrado, 1989, pp. 5–616.
+**O Idiota.** F. M. Dostoiévski, *Идиот*, in *Собрание сочинений в 15 томах*, т. 6. Leningrado: Nauka, filial de Leningrado, 1989, pp. 5–616. Eletrônico: [Русская виртуальная библиотека](https://rvb.ru/dostoevski/01text/vol6/28.htm), versão 3.0, 27 de janeiro de 2017. Capítulo I: [28-01.htm](https://rvb.ru/dostoevski/01text/vol6/28-01.htm).
 
-Publicação eletrônica: [Русская виртуальная библиотека](https://rvb.ru/dostoevski/01text/vol6/28.htm), versão 3.0, de 27 de janeiro de 2017.
+**Frankenstein.** Mary Wollstonecraft Shelley, *Frankenstein; or, The Modern Prometheus*. Londres: Lackington, Hughes, Harding, Mavor & Jones, 1818. Usamos o texto de 1818 (Project Gutenberg, eBook [41445](https://www.gutenberg.org/ebooks/41445)), não o de 1831: a revisão de 1831 reescreve passagens das cartas e acrescenta a introdução. A tradução portuguesa é do Cenáculo. Não se usa tradução publicada.
 
-- Capítulo I, o vagão: [28-01.htm](https://rvb.ru/dostoevski/01text/vol6/28-01.htm)
+**Brás Cubas.** Machado de Assis, *Memorias Posthumas de Braz Cubas*. Rio de Janeiro: Typographia Nacional, 1881. Texto da [Wikisource](https://pt.wikisource.org/wiki/Memórias_Póstumas_de_Brás_Cubas), com a grafia dessa edição (Catumby, melancholia, escripto). Dedicatória e «Ao leitor» (pp. v–vi), capítulo I (pp. 9–12).
 
-O russo no site é o dessa edição, com os parágrafos partidos por número de página reunidos de novo.
+**Vidas Secas.** Graciliano Ramos, *Vidas Sêcas*, 2ª ed. São Paulo: Livraria José Olympio, 1947, pp. 7–17 (capítulo «Mudança»). A primeira edição é do Rio, José Olympio, 1938. A transcrição está na [Wikisource](https://pt.wikisource.org/wiki/Vidas_Sêcas/Mudança), grafia da impressão de 1947 (juàzeiros, sêca, bôca). Palavra partida por número de página foi reunida («roupa», «pouco»). Graciliano morre em 1953; no Brasil a obra entra em domínio público em 1º de janeiro de 2024 (Lei 9.610/98). Noutros países o prazo pode ser outro.
+
+Nada do texto da esquerda foi inventado ou parafraseado.
 
 ## Como rodar
 
@@ -28,7 +30,7 @@ npm install
 npm run dev
 ```
 
-O servidor de desenvolvimento sobe em [http://127.0.0.1:43123/ocenaculo/](http://127.0.0.1:43123/ocenaculo/). As rotas usam hash (`/#/livro/o-idiota`), para o site estático funcionar no GitHub Pages sob o caminho `/ocenaculo/`.
+O servidor sobe em [http://127.0.0.1:43123/ocenaculo/](http://127.0.0.1:43123/ocenaculo/). As rotas usam hash (`/#/livro/o-idiota`), para o site estático no GitHub Pages sob `/ocenaculo/`.
 
 ```bash
 npm test
@@ -36,27 +38,23 @@ npm run build
 npm run preview
 ```
 
-`VITE_BASE` define o caminho base (o padrão é `/ocenaculo/`). O build copia `dist/index.html` para `dist/404.html`, que é o fallback do GitHub Pages.
+`VITE_BASE` define o caminho base (o padrão é `/ocenaculo/`). O build copia `dist/index.html` para `dist/404.html`.
 
-## Anotações e o editor
+## Anotações
 
-O texto do capítulo I está em `src/content/o-idiota/parte-1-capitulo-1.text.json`. As marcas ficam em `public/data/o-idiota/parte-1-capitulo-1.annotations.json` e o leitor busca esse arquivo em tempo de execução (`/ocenaculo/data/o-idiota/parte-1-capitulo-1.annotations.json`). Se o pedido falhar, a página usa a cópia que entrou no build.
+O texto de cada abertura está em `src/content/<livro>/<capítulo>.text.json`. As marcas, os lugares e os esquemas estão em `public/data/<livro>/<capítulo>.annotations.json`. O leitor busca esse JSON em tempo de execução. Se o pedido falhar, usa a cópia do build.
 
-Cada anotação tem `id`, `anchor` (`paragraphId`, `start`, `end`, `quote`), `mark` (`sublinhado`, `circulo`, `colchete`, `realce`, `traco`, `seta`), `note`, `expanded`, `russian` opcional e `order`. O `quote` serve para reencontrar o trecho se os deslocamentos mudarem.
+Cada anotação tem `id`, `anchor` (`paragraphId`, `start`, `end`, `quote`), `mark` (`sublinhado`, `circulo`, `colchete`, `realce`, `traco`, `seta`, `lugar`), `note`, `expanded`, `order`. `lugar` exige `place` (`lat`, `lng`, `label`). `gloss` (ou o campo antigo `russian`) é uma nota da língua original, quando há. Os esquemas ficam em `widgets`: `title`, `paragraphId`, `text` e `diagram` (`boxes`, `arrows`).
 
-O editor fica em `#/editor`. Não entra no menu; o rodapé tem o atalho «Editar a margem». O leitor público continua só de leitura. O rascunho grava sozinho em `localStorage` (`ocenaculo.draft.parte-1-capitulo-1`) e não aparece no leitor público. Na barra: Exportar JSON, Importar JSON, Descartar rascunho, Publicar no GitHub.
+O mapa usa `public/maps/countries-110m.json` (Natural Earth, via world-atlas), no próprio site, sem pedido externo.
 
-## Publicar no GitHub
+## Editor
 
-O site no ar é o branch `gh-pages`, com o `dist` já construído. Por isso publicar não dispara um build: grava o mesmo JSON em dois lugares, pela API de conteúdos do GitHub (GET do `sha`, depois PUT).
+`#/editor` e `#/editor/<livro>`. O atalho «Editar a margem» está no rodapé. Dá para trocar de livro na barra. O rascunho grava em `localStorage` (`ocenaculo.draft.<capítulo>`) e não aparece no leitor público. Selecionar texto cria marca; clicar numa marca edita. Lugar pede latitude, longitude e nome. O esquema abre um painel com título, parágrafo, texto e o JSON do diagrama.
 
-- Branch `main`, caminho `public/data/o-idiota/parte-1-capitulo-1.annotations.json` — a fonte do próximo build.
-- Branch `gh-pages`, caminho `data/o-idiota/parte-1-capitulo-1.annotations.json` — o arquivo que a página já publicada busca.
+Publicar grava o mesmo JSON em dois ramos, pela API de conteúdos (GET do `sha`, depois PUT):
 
-O token é fino, só com Contents de leitura e escrita em `danilosilvadev/ocenaculo`. O editor pede uma vez e guarda apenas em `localStorage` (`ocenaculo.github.token`). «Esquecer token» apaga essa chave. Um 401 mostra que o token foi recusado e não grava nada. Um 409 (o `sha` mudou) pede confirmação: «Publicar por cima» lê o `sha` de novo e grava o rascunho por cima.
+- `main`: `public/data/<livro>/<capítulo>.annotations.json`
+- `gh-pages`: `data/<livro>/<capítulo>.annotations.json`
 
-Para servir na raiz de um domínio local:
-
-```bash
-VITE_BASE=/ npm run dev
-```
+O token é fino, só Contents de leitura e escrita em `danilosilvadev/ocenaculo`, guardado em `ocenaculo.github.token`. 401 não grava. 409 pede «Publicar por cima».

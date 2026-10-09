@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import annotationFile from "../../public/data/o-idiota/parte-1-capitulo-1.annotations.json";
-import { partOne } from "../data/book";
+import { idiotChapter } from "../data/book";
 import { collectNotes, paragraphText } from "../data/types";
 import { chapterText } from "../data/book";
 import { crossesExisting, parseAnnotationFile, renderParagraph } from "../lib/annotations";
@@ -10,7 +10,7 @@ describe("anotações em JSON", () => {
     const parsed = parseAnnotationFile(annotationFile);
     expect("error" in parsed).toBe(false);
     if ("error" in parsed) return;
-    const chapter = partOne[0]!;
+    const chapter = idiotChapter;
     expect(chapter.paragraphs).toHaveLength(86);
     expect(collectNotes(chapter.paragraphs)).toHaveLength(parsed.annotations.length);
     for (const paragraph of chapter.paragraphs) {

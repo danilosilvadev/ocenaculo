@@ -1,0 +1,2165 @@
+{
+  "version": 1,
+  "bookId": "vidas-secas",
+  "chapterId": "mudanca",
+  "annotations": [
+    {
+      "id": "mudanca-p1-1",
+      "anchor": {
+        "paragraphId": "p1",
+        "start": 0,
+        "end": 67,
+        "quote": "Na planície avermelhada os juàzeiros alargavam duas manchas verdes."
+      },
+      "mark": "realce",
+      "note": "A planície antes da gente.",
+      "expanded": "«juàzeiros» são duas manchas, não uma árvore de postal. «alargavam» faz a sombra crescer no verbo. O capítulo abre no chão, sem nome de herói.",
+      "order": 0
+    },
+    {
+      "id": "mudanca-p1-2",
+      "anchor": {
+        "paragraphId": "p1",
+        "start": 67,
+        "end": 141,
+        "quote": " Os infelizes tinham caminhado o dia inteiro, estavam cansados e famintos."
+      },
+      "mark": "sublinhado",
+      "note": "Cansados, e ainda sem nome.",
+      "expanded": "«infelizes» é o julgamento do narrador, cedo. «dia inteiro» mede a marcha no tempo, e «famintos» fecha a frase no corpo.",
+      "order": 1
+    },
+    {
+      "id": "mudanca-p1-3",
+      "anchor": {
+        "paragraphId": "p1",
+        "start": 141,
+        "end": 265,
+        "quote": " Ordinàriamente andavam pouco, mas como haviam repousado bastante na areia do rio sêco, a viagem progredira bem três léguas."
+      },
+      "mark": "colchete",
+      "note": "Três léguas por causa do rio.",
+      "expanded": "«Ordinàriamente» instala um hábito. A concessão «mas» explica o avanço: descansaram na «areia do rio sêco». A seca, aqui, ainda é cronometragem, não discurso.",
+      "order": 2
+    },
+    {
+      "id": "mudanca-p1-4",
+      "anchor": {
+        "paragraphId": "p1",
+        "start": 265,
+        "end": 304,
+        "quote": " Fazia horas que procuravam uma sombra."
+      },
+      "mark": "traco",
+      "note": "A sombra como único projeto.",
+      "expanded": "«Fazia horas» alonga a espera sem relógio. «sombra» é o objeto da frase, menor que comida. O verbo «procuravam» no plural já é o grupo.",
+      "order": 3
+    },
+    {
+      "id": "mudanca-p1-5",
+      "anchor": {
+        "paragraphId": "p1",
+        "start": 304,
+        "end": 389,
+        "quote": " A folhagem dos juàzeiros apareceu longe, através dos galhos pelados da catinga rala."
+      },
+      "mark": "seta",
+      "note": "O verde aparece e a catinga pelada.",
+      "expanded": "«longe» adia o alívio. «galhos pelados» e «catinga rala» furam a esperança no meio do caminho visual. Os juàzeiros são vistos através do que não tem folha.",
+      "order": 4
+    },
+    {
+      "id": "mudanca-p2-6",
+      "anchor": {
+        "paragraphId": "p2",
+        "start": 0,
+        "end": 247,
+        "quote": "Arrastaram-se para lá, devagar, sinha Victoria com o filho mais novo escanchado no quarto e o baú de fôlha na cabeça, Fabiano sombrio, cambaio, o aió a tiracolo, a cuia pendurada numa correia prêsa ao cinturão, a espingarda de pederneira no ombro."
+      },
+      "mark": "colchete",
+      "note": "O grupo inteiro numa frase só.",
+      "expanded": "«escanchado», «baú de fôlha», «cambaio», «aió», «pederneira»: a sintaxe carrega o que eles carregam. «sinha Victoria» guarda o nome da edição, com esse c. Ninguém é apresentado; é inventariado.",
+      "order": 5
+    },
+    {
+      "id": "mudanca-p2-7",
+      "anchor": {
+        "paragraphId": "p2",
+        "start": 247,
+        "end": 298,
+        "quote": " O menino mais velho e a cachorra Baleia iam atrás."
+      },
+      "mark": "sublinhado",
+      "note": "Menino e cachorra no mesmo passo.",
+      "expanded": "«iam atrás» nivela «menino» e «Baleia». A ordem da fila é a ordem moral do livro: gente e bicho no mesmo plano, sem discurso a respeito.",
+      "order": 6
+    },
+    {
+      "id": "mudanca-p2-8",
+      "anchor": {
+        "paragraphId": "p2",
+        "start": 298,
+        "end": 349,
+        "quote": " Os juàzeiros aproximaram-se, recuaram, sumiram-se."
+      },
+      "mark": "realce",
+      "note": "A miragem em três verbos.",
+      "expanded": "«aproximaram-se, recuaram, sumiram-se»: o ritmo é a decepção. Não há explicação óptica. Os juàzeiros se comportam como bicho arisco.",
+      "order": 7
+    },
+    {
+      "id": "mudanca-p2-9",
+      "anchor": {
+        "paragraphId": "p2",
+        "start": 349,
+        "end": 405,
+        "quote": " O menino mais velho pôs-se a chorar, sentou-se no chão."
+      },
+      "mark": "traco",
+      "note": "O choro senta no chão.",
+      "expanded": "«pôs-se a chorar» e logo «sentou-se»: dois atos, sem grito descrito. O corpo para antes da fala do pai.",
+      "order": 8
+    },
+    {
+      "id": "mudanca-p3-10",
+      "anchor": {
+        "paragraphId": "p3",
+        "start": 0,
+        "end": 45,
+        "quote": "— Anda, condenado do diabo, gritou-lhe o pai."
+      },
+      "mark": "circulo",
+      "note": "O xingamento é ordem de marcha.",
+      "expanded": "«condenado do diabo» não explica nada ao menino. O travessão do diálogo entra sem aspas de romance urbano. «gritou-lhe» cola a voz no gesto.",
+      "order": 9
+    },
+    {
+      "id": "mudanca-p4-11",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 0,
+        "end": 64,
+        "quote": "Não obtendo resultado, fustigou-o com a bainha da faca de ponta."
+      },
+      "mark": "sublinhado",
+      "note": "A faca pelo lado que não corta.",
+      "expanded": "«bainha» em vez de lâmina: a violência já é hábito de tocar o instrumento. «Não obtendo resultado» abre com gerúndio negativo, seco.",
+      "order": 10
+    },
+    {
+      "id": "mudanca-p4-12",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 64,
+        "end": 141,
+        "quote": " Mas o pequeno esperneou acuado, depois sossegou, deitou-se, fechou os olhos."
+      },
+      "mark": "colchete",
+      "note": "Espernear, sossegar, deitar.",
+      "expanded": "Três verbos em escala decrescente. «acuado» vem do bicho. «fechou os olhos» recusa o mundo sem uma palavra da criança.",
+      "order": 11
+    },
+    {
+      "id": "mudanca-p4-13",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 141,
+        "end": 213,
+        "quote": " Fabiano ainda lhe deu algumas pancadas e esperou que êle se levantasse."
+      },
+      "mark": "traco",
+      "note": "As pancadas continuam depois do fim.",
+      "expanded": "«ainda» é o advérbio cruel. «esperou que êle se levantasse» finge paciência em cima do golpe. Fabiano mede o filho como se mede rês.",
+      "order": 12
+    },
+    {
+      "id": "mudanca-p4-14",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 213,
+        "end": 293,
+        "quote": " Como isto não acontecesse, espiou os quatro cantos, zangado, praguejando baixo."
+      },
+      "mark": "seta",
+      "note": "Os quatro cantos não têm saída.",
+      "expanded": "«Como isto não acontecesse» é subjuntivo de frustração. «quatro cantos» num descampado é expressão de casa, e por isso falha. «praguejando baixo» guarda a raiva sem plateia.",
+      "order": 13
+    },
+    {
+      "id": "mudanca-p5-15",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 0,
+        "end": 93,
+        "quote": "A catinga estendia-se, de um vermelho indeciso salpicado de manchas brancas que eram ossadas."
+      },
+      "mark": "realce",
+      "note": "O vermelho indeciso das ossadas.",
+      "expanded": "«indeciso» tira certeza da cor. As «manchas brancas» só depois se explicam: «eram ossadas». A frase ensina o olho a chegar tarde.",
+      "order": 14
+    },
+    {
+      "id": "mudanca-p5-16",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 93,
+        "end": 168,
+        "quote": " O vôo negro dos urubus fazia círculos altos em redor de bichos moribundos."
+      },
+      "mark": "circulo",
+      "note": "Urubus no lugar do horizonte.",
+      "expanded": "«círculos altos» desenham geometria em cima da fome. «bichos moribundos» ainda não são a família, mas a frase não precisa dizer a ameaça.",
+      "order": 15
+    },
+    {
+      "id": "mudanca-p6-17",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 0,
+        "end": 20,
+        "quote": "— Anda, excomungado."
+      },
+      "mark": "traco",
+      "note": "A segunda ordem, mais curta.",
+      "expanded": "«excomungado» troca o diabo pela igreja e não muda o gesto. A frase não tem «gritou»: o narrador já não gasta verbo de elocução. O corte é o estilo.",
+      "order": 16
+    },
+    {
+      "id": "mudanca-p7-18",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 0,
+        "end": 51,
+        "quote": "O pirralho não se mexeu, e Fabiano desejou matá-lo."
+      },
+      "mark": "sublinhado",
+      "note": "Desejo de matar, em voz de relato.",
+      "expanded": "«desejou matá-lo» cabe na mesma linha do pirralho imóvel. Não há grito interior em aspas. O desejo passa como fato, ao lado do «não se mexeu».",
+      "order": 17
+    },
+    {
+      "id": "mudanca-p7-19",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 51,
+        "end": 124,
+        "quote": " Tinha o coração grosso, queria responsabilizar alguém pela sua desgraça."
+      },
+      "mark": "colchete",
+      "note": "Coração grosso, culpa emprestada.",
+      "expanded": "«grosso» é adjetivo de comida e de sentimento. «responsabilizar alguém» busca um réu. A «desgraça» ainda não tem nome de seca nesta frase.",
+      "order": 18
+    },
+    {
+      "id": "mudanca-p7-20",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 124,
+        "end": 209,
+        "quote": " A sêca aparecia-lhe como um facto necessário — e a obstinação da criança irritava-o."
+      },
+      "mark": "seta",
+      "note": "A seca como facto necessário.",
+      "expanded": "«facto necessário» tira acaso do clima. O travessão isola a «obstinação» da criança, irritante justamente porque a seca não tem rosto e o menino tem.",
+      "order": 19
+    },
+    {
+      "id": "mudanca-p7-21",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 209,
+        "end": 331,
+        "quote": " Certamente êsse obstáculo miúdo não era culpado, mas dificultava a marcha, e o vaqueiro precisava chegar, não sabia onde."
+      },
+      "mark": "realce",
+      "note": "Chegar, sem saber onde.",
+      "expanded": "«obstáculo miúdo» diminui o filho e quase o inocenta («não era culpado»). «não sabia onde» esvazia o destino no fim da frase. A marcha é obrigação sem vila.",
+      "order": 20
+    },
+    {
+      "id": "mudanca-p8-22",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 0,
+        "end": 140,
+        "quote": "Tinham deixado os caminhos, cheios de espinho e seixos, fazia horas que pisavam a margem do rio, a lama sêca e rachada que escaldava os pés."
+      },
+      "mark": "colchete",
+      "note": "Espinho, seixo, lama que escalda.",
+      "expanded": "«deixado os caminhos» é erro ou atalho, dito sem julgamento. «escaldava» faz a «lama sêca» queimar. O chão trabalha contra o pé.",
+      "order": 21
+    },
+    {
+      "id": "mudanca-p9-23",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 0,
+        "end": 93,
+        "quote": "Pelo espírito atribulado do sertanejo passou a idéia de abandonar o filho naquele descampado."
+      },
+      "mark": "sublinhado",
+      "note": "A ideia passa; ele não a segura.",
+      "expanded": "«passou a idéia» trata o abandono como visita, não como decisão. «sertanejo» generaliza Fabiano no meio do crime pensado. «descampado» é o lugar sem esconderijo.",
+      "order": 22
+    },
+    {
+      "id": "mudanca-p9-24",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 93,
+        "end": 188,
+        "quote": " Pensou nos urubus, nas ossadas, coçou a barba ruiva e suja, irresoluto, examinou os arredores."
+      },
+      "mark": "colchete",
+      "note": "Urubus, ossadas, barba.",
+      "expanded": "A vírgula cola pensamento e gesto: «Pensou», «coçou», «examinou». «irresoluto» é o único adjetivo de caráter. A barba «ruiva e suja» devolve o homem ao corpo.",
+      "order": 23
+    },
+    {
+      "id": "mudanca-p9-25",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 188,
+        "end": 305,
+        "quote": " Sinha Vitória estirou o beiço indicando vagamente uma direcção e afirmou com alguns sons guturais que estavam perto."
+      },
+      "mark": "traco",
+      "note": "A direção sai em som, não em frase.",
+      "expanded": "«estirou o beiço» é mapa. «sons guturais» recusam discurso indireto elegante: sinha Vitória não ganha oração completa. «perto» é a única informação.",
+      "order": 24
+    },
+    {
+      "id": "mudanca-p9-26",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 305,
+        "end": 473,
+        "quote": " Fabiano meteu a faca na bainha, guardou-a no cinturão, acocorou-se, pegou no pulso do menino, que se encolhia, os joelhos encostados ao estômago, frio como um defunto."
+      },
+      "mark": "realce",
+      "note": "Frio como defunto, ainda vivo.",
+      "expanded": "«faca na bainha» desarma a frase anterior. «frio como um defunto» aproxima o menino do verme de outro livro, mas aqui é tato, não trocadilho. Os joelhos no estômago fecham o corpo.",
+      "order": 25
+    },
+    {
+      "id": "mudanca-p9-27",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 473,
+        "end": 518,
+        "quote": " Aí a cólera desapareceu e Fabiano teve pena."
+      },
+      "mark": "sublinhado",
+      "note": "A cólera sai; a pena entra.",
+      "expanded": "«Aí» marca a hora sem relógio. Dois verbos psíquicos, «desapareceu» e «teve pena», no mesmo fôlego. Não há discurso de perdão.",
+      "order": 26
+    },
+    {
+      "id": "mudanca-p9-28",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 518,
+        "end": 569,
+        "quote": " Impossível abandonar o anjinho aos bichos do mato."
+      },
+      "mark": "circulo",
+      "note": "Anjinho, e mesmo assim impossível.",
+      "expanded": "«Impossível» sem sujeito pessoal: a moral chega como fato. «anjinho» é o diminutivo que a pena usa. «bichos do mato» devolvem os urubus sem os nomear de novo.",
+      "order": 27
+    },
+    {
+      "id": "mudanca-p9-29",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 569,
+        "end": 723,
+        "quote": " Entregou a espingarda a sinha Vitória, pôs o filho no cangote, levantou-se, agarrou os bracinhos que lhe caíam sôbre o peito, moles, finos como cambitos."
+      },
+      "mark": "colchete",
+      "note": "Cambitos: o filho vira galho.",
+      "expanded": "«cangote» carrega como se carrega rês. «moles, finos como cambitos» compara braço a graveto. A espingarda passa para sinha Vitória: o pai ocupa as duas mãos com a criança.",
+      "order": 28
+    },
+    {
+      "id": "mudanca-p9-30",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 723,
+        "end": 831,
+        "quote": " Sinha Vitória aprovou êsse arranjo, lançou de novo a interjeição gutural, designou os juàzeiros invisíveis."
+      },
+      "mark": "seta",
+      "note": "Os juàzeiros que não se veem.",
+      "expanded": "«interjeição gutural» repete a língua curta. «invisíveis» desmente a direção. Ela aponta o que a miragem já sumiu, e o grupo obedece mesmo assim.",
+      "order": 29
+    },
+    {
+      "id": "mudanca-p10-31",
+      "anchor": {
+        "paragraphId": "p10",
+        "start": 0,
+        "end": 71,
+        "quote": "E a viagem prosseguiu, mais lenta, mais arrastada, num silêncio grande."
+      },
+      "mark": "realce",
+      "note": "O silêncio tem tamanho.",
+      "expanded": "«mais lenta, mais arrastada»: o comparativo sem o primeiro termo (mais do que a marcha de antes). «silêncio grande» mede o quieto como se mede terra.",
+      "order": 30
+    },
+    {
+      "id": "mudanca-p11-32",
+      "anchor": {
+        "paragraphId": "p11",
+        "start": 0,
+        "end": 66,
+        "quote": "Ausente do companheiro, a cachorra Baleia tomou a frente do grupo."
+      },
+      "mark": "sublinhado",
+      "note": "Baleia na frente, gente atrás.",
+      "expanded": "«Ausente do companheiro» dá à cachorra uma perda própria. «tomou a frente» é verbo de quem decide. O grupo fica definido pelo lugar do animal.",
+      "order": 31
+    },
+    {
+      "id": "mudanca-p11-33",
+      "anchor": {
+        "paragraphId": "p11",
+        "start": 66,
+        "end": 138,
+        "quote": " Arqueada, as costelas à mostra, corria ofegando, a língua fora da bôca."
+      },
+      "mark": "realce",
+      "note": "Costelas, língua, ofego.",
+      "expanded": "«Arqueada» abre no corpo, sem «estava». «bôca» na grafia da edição. A frase não lamenta: descreve o fôlego como se descreve ferramenta gasta.",
+      "order": 32
+    },
+    {
+      "id": "mudanca-p11-34",
+      "anchor": {
+        "paragraphId": "p11",
+        "start": 138,
+        "end": 213,
+        "quote": " E de quando em quando se detinha, esperando as pessoas, que se retardavam."
+      },
+      "mark": "traco",
+      "note": "Ela espera; eles atrasam.",
+      "expanded": "«de quando em quando» instala o ritmo da marcha. «pessoas» é palavra quase fria para a família. «se retardavam» põe a culpa do atraso nos de pé, não na cachorra.",
+      "order": 33
+    },
+    {
+      "id": "mudanca-p12-35",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 0,
+        "end": 61,
+        "quote": "Ainda na véspera eram seis viventes, contando com o papagaio."
+      },
+      "mark": "circulo",
+      "note": "Seis viventes, com a ave.",
+      "expanded": "«viventes» iguala gente, cachorra e papagaio numa conta. «Ainda na véspera» é o pretérito que o capítulo vai desmontar. O número seis dura uma frase.",
+      "order": 34
+    },
+    {
+      "id": "mudanca-p12-36",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 61,
+        "end": 217,
+        "quote": " Coitado, morrera na areia do rio, onde haviam descansado, à beira de uma poça: a fome apertara de mais os retirantes e por ali não existia sinal de comida."
+      },
+      "mark": "colchete",
+      "note": "A fome como causa, sem discurso.",
+      "expanded": "«Coitado» é o único afago, e vem tarde. «poça» é o que restou de água. «não existia sinal de comida» fecha a paisagem em negativo.",
+      "order": 35
+    },
+    {
+      "id": "mudanca-p12-37",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 217,
+        "end": 301,
+        "quote": " Baleia jantara os pés, a cabeça, os ossos do amigo, e não guardava lembrança disto."
+      },
+      "mark": "sublinhado",
+      "note": "Ela come o amigo e esquece.",
+      "expanded": "«jantara» é verbo de refeição, não de horror anunciado. «pés, a cabeça, os ossos» enumeram sem nojo. «não guardava lembrança» tira da cachorra a moral que o leitor põe.",
+      "order": 36
+    },
+    {
+      "id": "mudanca-p12-38",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 301,
+        "end": 468,
+        "quote": " Agora, enquanto parava, dirigia as pupilas brilhantes aos objectos familiares, estranhava não ver sôbre o baú de fôlha a gaiola pequena onde a ave se equilibrava mal."
+      },
+      "mark": "seta",
+      "note": "A gaiola em falta no baú.",
+      "expanded": "«pupilas brilhantes» veem objeto, não símbolo. «estranhava» é a consciência possível de Baleia. A «ave» se «equilibrava mal»: até o pouso já era precário, antes da morte.",
+      "order": 37
+    },
+    {
+      "id": "mudanca-p12-39",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 468,
+        "end": 542,
+        "quote": " Fabiano também às vezes sentia falta dela, mas logo a recordação chegava."
+      },
+      "mark": "traco",
+      "note": "A falta dura pouco nele.",
+      "expanded": "«também» aproxima Fabiano da cachorra. «logo» corta o sentimento. «recordação chegava» — o verbo chegar, que no capítulo é sempre adiado, aqui chega depressa demais e apaga o papagaio.",
+      "order": 38
+    },
+    {
+      "id": "mudanca-p12-40",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 542,
+        "end": 658,
+        "quote": " Tinha andado a procurar raízes, à toa: o resto de farinha acabara, não se ouvia um berro de rês perdida na catinga."
+      },
+      "mark": "colchete",
+      "note": "Raiz, farinha, nenhum berro.",
+      "expanded": "Os dois-pontos explicam o «à toa». «rês perdida» seria comida e não há o som. A catinga fica muda no ouvido de quem procura.",
+      "order": 39
+    },
+    {
+      "id": "mudanca-p12-41",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 658,
+        "end": 870,
+        "quote": " Sinha Vitória, queimando o assento no chão, as mãos cruzadas segurando os joelhos ossudos, pensava em acontecimentos antigos que não se relacionavam: festas de casamento, vaquejadas, novenas, tudo numa confusão."
+      },
+      "mark": "realce",
+      "note": "A memória dela não se relaciona.",
+      "expanded": "«queimando o assento» é o corpo presente; «festas», «vaquejadas», «novenas» são o passado em lista. «não se relacionavam» diz a técnica: a cabeça não organiza, justapõe.",
+      "order": 40
+    },
+    {
+      "id": "mudanca-p12-42",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 870,
+        "end": 1007,
+        "quote": " Despertara-a um grito áspero, vira de perto a realidade e o papagaio, que andava furioso, com os pés apalhetados, numa atitude ridícula."
+      },
+      "mark": "sublinhado",
+      "note": "O grito devolve o papagaio.",
+      "expanded": "«Despertara-a» muda o sujeito para a mulher sem aviso, discurso que cola. «pés apalhetados» e «ridícula» veem o bicho com crueldade doméstica, não com elegia.",
+      "order": 41
+    },
+    {
+      "id": "mudanca-p12-43",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 1007,
+        "end": 1121,
+        "quote": " Resolvera de supetão aproveitá-lo como alimento e justificara-se declarando a si mesma que êle era mudo e inútil."
+      },
+      "mark": "seta",
+      "note": "Mudo e inútil: a justificativa.",
+      "expanded": "«de supetão» marca a decisão sem debate. «declarando a si mesma» é a consciência curta, em discurso indireto. «alimento» substitui o nome da ave no fim da conta.",
+      "order": 42
+    },
+    {
+      "id": "mudanca-p12-44",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 1121,
+        "end": 1151,
+        "quote": " Não podia deixar de ser mudo."
+      },
+      "mark": "circulo",
+      "note": "O mudo era fatum da casa.",
+      "expanded": "«Não podia deixar de ser» tira o acaso. «mudo» repete a palavra da frase anterior e a transforma em lei. O papagaio falaria se a casa falasse.",
+      "order": 43
+    },
+    {
+      "id": "mudanca-p12-45",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 1151,
+        "end": 1190,
+        "quote": " Ordinàriamente a família falava pouco."
+      },
+      "mark": "traco",
+      "note": "Pouca fala, antes do desastre.",
+      "expanded": "«Ordinàriamente» ecoa o advérbio da marcha. «pouco» é quantidade de língua, não de léguas. A família já vivia no limite da frase curta; a seca só empurra.",
+      "order": 44
+    },
+    {
+      "id": "mudanca-p12-46",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 1190,
+        "end": 1274,
+        "quote": " E depois daquele desastre viviam todos calados, raramente soltavam palavras curtas."
+      },
+      "mark": "sublinhado",
+      "note": "Calados, e às vezes uma palavra.",
+      "expanded": "«daquele desastre» não explica qual, porque para eles basta. «raramente» e «curtas» reduzem a fala a resto. O narrador não cita uma dessas palavras.",
+      "order": 45
+    },
+    {
+      "id": "mudanca-p12-47",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 1274,
+        "end": 1353,
+        "quote": " O louro aboiava, tangendo um gado inexistente, e latia arremedando a cachorra."
+      },
+      "mark": "realce",
+      "note": "O aboio de um gado que não há.",
+      "expanded": "«aboiava» e «latia»: o papagaio era o arquivo sonoro da casa. «inexistente» mata o gado na mesma frase em que o som aparece. «arremedando a cachorra» fecha o círculo dos viventes.",
+      "order": 46
+    },
+    {
+      "id": "mudanca-p13-48",
+      "anchor": {
+        "paragraphId": "p13",
+        "start": 0,
+        "end": 117,
+        "quote": "As manchas dos juàzeiros tornaram a aparecer, Fabiano aligeirou o passo, esqueceu a fome, a canseira e os ferimentos."
+      },
+      "mark": "sublinhado",
+      "note": "A mancha volta, o corpo some.",
+      "expanded": "«tornaram a aparecer» desmente o sumiço. «esqueceu» a fome, a canseira e os ferimentos num verbo só. A esperança apaga o corpo, e a frase seguinte vai devolvê-lo.",
+      "order": 47
+    },
+    {
+      "id": "mudanca-p13-49",
+      "anchor": {
+        "paragraphId": "p13",
+        "start": 117,
+        "end": 234,
+        "quote": " As alpercatas dêle estavam gastas nos saltos, e a embira tinha-lhe aberto entre os dedos rachaduras muito dolorosas."
+      },
+      "mark": "colchete",
+      "note": "Embirra, salto, rachadura.",
+      "expanded": "«alpercatas» e «embira» descem ao material. «entre os dedos» é o lugar exato da dor. O esquecimento da frase anterior não chega aqui.",
+      "order": 48
+    },
+    {
+      "id": "mudanca-p13-50",
+      "anchor": {
+        "paragraphId": "p13",
+        "start": 234,
+        "end": 294,
+        "quote": " Os calcanhares, duros como cascos, gretavam-se e sangravam."
+      },
+      "mark": "realce",
+      "note": "Casco, greta, sangue.",
+      "expanded": "«duros como cascos» aproxima o homem do gado que não berra. «gretavam-se e sangravam» são verbos de terra seca aplicados ao pé. A comparação faz o serviço sem sermão.",
+      "order": 49
+    },
+    {
+      "id": "mudanca-p14-51",
+      "anchor": {
+        "paragraphId": "p14",
+        "start": 0,
+        "end": 113,
+        "quote": "Num cotovêlo do caminho avistou um canto de cêrca, encheu-o a esperança de achar comida, sentiu desejo de cantar."
+      },
+      "mark": "colchete",
+      "note": "Cerca, comida, desejo de cantar.",
+      "expanded": "«cotovêlo do caminho» é a curva que revela. Três verbos psíquicos em fila: esperança, desejo, e logo a voz. «cêrca» promete dono.",
+      "order": 50
+    },
+    {
+      "id": "mudanca-p14-52",
+      "anchor": {
+        "paragraphId": "p14",
+        "start": 113,
+        "end": 144,
+        "quote": " A voz saíu-lhe rouca, medonha."
+      },
+      "mark": "traco",
+      "note": "A voz sai e se desmente.",
+      "expanded": "«rouca, medonha» são os adjetivos que ele ouve de si. Não há letra de canção. O narrador recusa o lirismo no momento em que o personagem o tenta.",
+      "order": 51
+    },
+    {
+      "id": "mudanca-p14-53",
+      "anchor": {
+        "paragraphId": "p14",
+        "start": 144,
+        "end": 178,
+        "quote": " Calou-se para não estragar fôrça."
+      },
+      "mark": "sublinhado",
+      "note": "Calar para guardar força.",
+      "expanded": "«estragar fôrça» trata o canto como despesa. O silêncio volta a ser economia, não mistério. A frase é tão curta quanto a decisão.",
+      "order": 52
+    },
+    {
+      "id": "mudanca-p15-54",
+      "anchor": {
+        "paragraphId": "p15",
+        "start": 0,
+        "end": 92,
+        "quote": "Deixaram a margem do rio, acompanharam a cêrca, subiram uma ladeira, chegaram aos juàzeiros."
+      },
+      "mark": "colchete",
+      "note": "Quatro verbos até a sombra.",
+      "expanded": "«Deixaram», «acompanharam», «subiram», «chegaram»: a marcha em polissíndeto zero, só vírgulas. «juàzeiros» enfim são lugar, não miragem.",
+      "order": 53
+    },
+    {
+      "id": "mudanca-p15-55",
+      "anchor": {
+        "paragraphId": "p15",
+        "start": 92,
+        "end": 125,
+        "quote": " Fazia tempo que não viam sombra."
+      },
+      "mark": "realce",
+      "note": "A sombra tinha prazo antigo.",
+      "expanded": "«Fazia tempo» mede a falta, não a hora. «sombra» repete o objeto da abertura e agora existe. A frase curta funciona como pouso.",
+      "order": 54
+    },
+    {
+      "id": "mudanca-p16-56",
+      "anchor": {
+        "paragraphId": "p16",
+        "start": 0,
+        "end": 84,
+        "quote": "Sinha Vitória acomodou os filhos, que arriaram como trouxas, cobriu-os com molambos."
+      },
+      "mark": "sublinhado",
+      "note": "Filhos como trouxa.",
+      "expanded": "«arriaram como trouxas» compara criança a fardo. «molambos» cobrem. Sinha Vitória organiza o acampamento sem uma fala.",
+      "order": 55
+    },
+    {
+      "id": "mudanca-p16-57",
+      "anchor": {
+        "paragraphId": "p16",
+        "start": 84,
+        "end": 223,
+        "quote": " O menino mais velho, passada a vertigem que o derrubara, encolhido sôbre fôlhas sêcas, a cabeça encostada a uma raiz, adormecia, acordava."
+      },
+      "mark": "colchete",
+      "note": "Dormir e acordar no mesmo verbo.",
+      "expanded": "«vertigem» nomeia o tombo lá atrás. «adormecia, acordava» no imperfeito não escolhe. A «raiz» substitui o travesseiro.",
+      "order": 56
+    },
+    {
+      "id": "mudanca-p16-58",
+      "anchor": {
+        "paragraphId": "p16",
+        "start": 223,
+        "end": 321,
+        "quote": " E quando abria os olhos, distinguia vagamente um monte próximo, algumas pedras, um carro de bois."
+      },
+      "mark": "seta",
+      "note": "O que o olho ainda distingue.",
+      "expanded": "«vagamente» enfraquece a visão. «monte», «pedras», «carro de bois»: três nomes, o último já é resto de trabalho humano. O capítulo começa a trocar a catinga por fazenda.",
+      "order": 57
+    },
+    {
+      "id": "mudanca-p16-59",
+      "anchor": {
+        "paragraphId": "p16",
+        "start": 321,
+        "end": 367,
+        "quote": " A cachorra Baleia foi enroscar-se junto dêle."
+      },
+      "mark": "traco",
+      "note": "Baleia escolhe o menino.",
+      "expanded": "«enroscar-se» é verbo de conforto mínimo. «junto dêle» fecha o grupo no chão. A cachorra, que ia na frente, agora é calor.",
+      "order": 58
+    },
+    {
+      "id": "mudanca-p17-60",
+      "anchor": {
+        "paragraphId": "p17",
+        "start": 0,
+        "end": 41,
+        "quote": "Estavam no pátio de uma fazenda sem vida."
+      },
+      "mark": "circulo",
+      "note": "Fazenda sem vida, de uma vez.",
+      "expanded": "«pátio» promete casa e «sem vida» cancela. A frase é curta como uma placa. Ainda não vimos a porta; o narrador já deu o diagnóstico.",
+      "order": 59
+    },
+    {
+      "id": "mudanca-p17-61",
+      "anchor": {
+        "paragraphId": "p17",
+        "start": 41,
+        "end": 163,
+        "quote": " O curral deserto, o chiqueiro das cabras arruïnado e também deserto, a casa do vaqueiro fechada, tudo anunciava abandono."
+      },
+      "mark": "colchete",
+      "note": "Curral, chiqueiro, casa fechada.",
+      "expanded": "A enumeração «deserto» / «arruïnado e também deserto» insiste no vazio com variação mínima. «tudo anunciava» dá à paisagem o verbo de quem fala, porque ninguém fala.",
+      "order": 60
+    },
+    {
+      "id": "mudanca-p17-62",
+      "anchor": {
+        "paragraphId": "p17",
+        "start": 163,
+        "end": 221,
+        "quote": " Certamente o gado se finara e os moradores tinham fugido."
+      },
+      "mark": "sublinhado",
+      "note": "O gado morreu; a gente fugiu.",
+      "expanded": "«Certamente» é inferência, não testemunho. «finara» é eufemismo seco. «fugido» explica a porta fechada antes de Fabiano bater.",
+      "order": 61
+    },
+    {
+      "id": "mudanca-p18-63",
+      "anchor": {
+        "paragraphId": "p18",
+        "start": 0,
+        "end": 54,
+        "quote": "Fabiano procurou em vão perceber um toque de chocalho."
+      },
+      "mark": "traco",
+      "note": "O chocalho que não vem.",
+      "expanded": "«em vão» antecipa o fracasso do ouvido. «toque de chocalho» seria vida de curral. A frase inteira é uma espera de som.",
+      "order": 62
+    },
+    {
+      "id": "mudanca-p18-64",
+      "anchor": {
+        "paragraphId": "p18",
+        "start": 54,
+        "end": 106,
+        "quote": " Avizinhou-se da casa, bateu, tentou forçar a porta."
+      },
+      "mark": "sublinhado",
+      "note": "Bater, forçar, e só.",
+      "expanded": "Três verbos de entrada, nenhum de resposta. «porta» resiste sem dono. A sintaxe não abre oração de fala porque não há quem atenda.",
+      "order": 63
+    },
+    {
+      "id": "mudanca-p18-65",
+      "anchor": {
+        "paragraphId": "p18",
+        "start": 106,
+        "end": 338,
+        "quote": " Encontrando resistência, penetrou num cercadinho cheio de plantas mortas, rodeou a tapera, alcançou o terreiro do fundo, viu um barreiro vazio, um bosque de catingueiras murchas, um pé de turco e o prolongamento da cêrca do curral."
+      },
+      "mark": "colchete",
+      "note": "A tapera inventariada.",
+      "expanded": "«plantas mortas», «barreiro vazio», «catingueiras murchas», «pé de turco»: o rodeio é um inventário de fins. «tapera» nomeia a casa pelo abandono. A cerca do curral «prolonga» um limite inútil.",
+      "order": 64
+    },
+    {
+      "id": "mudanca-p18-66",
+      "anchor": {
+        "paragraphId": "p18",
+        "start": 338,
+        "end": 438,
+        "quote": " Trepou-se no mourão do canto, examinou a catinga, onde avultavam as ossadas e o negrume dos urubus."
+      },
+      "mark": "realce",
+      "note": "Do mourão, as ossadas de novo.",
+      "expanded": "«Trepou-se» muda a escala do olhar. «avultavam» faz as ossadas crescerem com a distância. «negrume dos urubus» repete o círculo do começo, agora visto de cima.",
+      "order": 65
+    },
+    {
+      "id": "mudanca-p18-67",
+      "anchor": {
+        "paragraphId": "p18",
+        "start": 438,
+        "end": 475,
+        "quote": " Desceu, empurrou a porta da cozinha."
+      },
+      "mark": "traco",
+      "note": "Cozinha, e a frase não entra.",
+      "expanded": "«Desceu, empurrou»: dois atos, nenhum objeto achado. A porta da cozinha não rende nem um interior. O narrador recusa a descrição de despensa.",
+      "order": 66
+    },
+    {
+      "id": "mudanca-p18-68",
+      "anchor": {
+        "paragraphId": "p18",
+        "start": 475,
+        "end": 565,
+        "quote": " Voltou desanimado, ficou um instante no copiar, fazendo tenção de hospedar ali a família."
+      },
+      "mark": "sublinhado",
+      "note": "O copiar como projeto.",
+      "expanded": "«desanimado» é o resumo. «fazendo tenção» guarda o plano na cabeça, não na fala. «hospedar» é verbo de visita, quase cômico na tapera.",
+      "order": 67
+    },
+    {
+      "id": "mudanca-p18-69",
+      "anchor": {
+        "paragraphId": "p18",
+        "start": 565,
+        "end": 649,
+        "quote": " Mas chegando aos juàzeiros, encontrou os meninos adormecidos e não quis acordá-los."
+      },
+      "mark": "seta",
+      "note": "Não acordar os que dormem.",
+      "expanded": "«Mas» corta a tenção. «adormecidos» pesa mais que o abrigo. A decisão é negativa e silenciosa, no mesmo tom da casa fechada.",
+      "order": 68
+    },
+    {
+      "id": "mudanca-p18-70",
+      "anchor": {
+        "paragraphId": "p18",
+        "start": 649,
+        "end": 811,
+        "quote": " Foi apanhar gravetos, trouxe do chiqueiro das cabras uma braçada de madeira meio roída pelo cupim, arrancou touceiras de macambira, arrumou tudo para a fogueira."
+      },
+      "mark": "colchete",
+      "note": "Graveto, cupim, macambira.",
+      "expanded": "A fogueira se constrói com resto: madeira «roída», «touceiras». «arrumou tudo» dá ordem mínima ao caos. Ainda não há fogo; há a intenção do fogo.",
+      "order": 69
+    },
+    {
+      "id": "mudanca-p19-71",
+      "anchor": {
+        "paragraphId": "p19",
+        "start": 0,
+        "end": 151,
+        "quote": "Nesse ponto Baleia arrebitou as orelhas, arregaçou as ventas, sentiu cheiro de preás, farejou um minuto, localizou-os no morro proximo e saíu correndo."
+      },
+      "mark": "realce",
+      "note": "Orelha, venta, preá.",
+      "expanded": "«arrebitou», «arregaçou», «sentiu», «farejou», «localizou», «saíu»: seis verbos, um focinho. «proximo» sem acento é a grafia da página. Baleia lê o morro melhor que Fabiano lê o céu.",
+      "order": 70
+    },
+    {
+      "id": "mudanca-p20-72",
+      "anchor": {
+        "paragraphId": "p20",
+        "start": 0,
+        "end": 81,
+        "quote": "Fabiano seguiu-a com a vista e espantou-se: uma sombra passava por cima do monte."
+      },
+      "mark": "circulo",
+      "note": "A sombra no monte, não a cachorra.",
+      "expanded": "«espantou-se» quebra o hábito. Os dois-pontos entregam a causa: «uma sombra» no alto. O olho sobe da caça para o tempo.",
+      "order": 71
+    },
+    {
+      "id": "mudanca-p20-73",
+      "anchor": {
+        "paragraphId": "p20",
+        "start": 81,
+        "end": 180,
+        "quote": " Tocou o braço da mulher, apontou o céu, ficaram os dois algum tempo agüentando a claridade do sol."
+      },
+      "mark": "colchete",
+      "note": "Dois aguentando o sol.",
+      "expanded": "«Tocou o braço» é a fala que eles não têm. «agüentando a claridade» faz da luz um peso. O céu, aqui, não é alívio; é o que se suporta.",
+      "order": 72
+    },
+    {
+      "id": "mudanca-p20-74",
+      "anchor": {
+        "paragraphId": "p20",
+        "start": 180,
+        "end": 396,
+        "quote": " Enxugaram as lágrimas, foram agachar-se perto dos filhos, suspirando, conservaram-se encolhidos, temendo que a nuvem se tivesse desfeito, vencida pelo azul terrível, aquêle azul que deslumbrava e endoidecia a gente."
+      },
+      "mark": "realce",
+      "note": "O azul que endoidece.",
+      "expanded": "«lágrimas» podem ser sol ou susto; a frase não separa. «azul terrível» repete «aquêle azul» para insistir. «deslumbrava e endoidecia» dá ao céu dois verbos de dano.",
+      "order": 73
+    },
+    {
+      "id": "mudanca-p21-75",
+      "anchor": {
+        "paragraphId": "p21",
+        "start": 0,
+        "end": 23,
+        "quote": "Entrava dia e saía dia."
+      },
+      "mark": "sublinhado",
+      "note": "O dia entra e sai.",
+      "expanded": "«Entrava dia e saía dia» é quase provérbio, sem artigo de calendário. O imperfeito instala uma duração que o capítulo não viveu em cena: um resumo de travessia.",
+      "order": 74
+    },
+    {
+      "id": "mudanca-p21-76",
+      "anchor": {
+        "paragraphId": "p21",
+        "start": 23,
+        "end": 60,
+        "quote": " As noites cobriam a terra de chofre."
+      },
+      "mark": "traco",
+      "note": "A noite cai de uma vez.",
+      "expanded": "«de chofre» recusa crepúsculo lento. «cobriam» no plural das noites. A frase é curta como o corte de luz.",
+      "order": 75
+    },
+    {
+      "id": "mudanca-p21-77",
+      "anchor": {
+        "paragraphId": "p21",
+        "start": 60,
+        "end": 142,
+        "quote": " A tampa anilada baixava, escurecia, quebrada apenas pelas vermelhidões do poente."
+      },
+      "mark": "realce",
+      "note": "A tampa anilada do céu.",
+      "expanded": "«tampa» fecha a terra como panela. «anilada» é a cor exata, não «escura». «vermelhidões do poente» são a única rachadura. A metáfora é doméstica e enorme.",
+      "order": 76
+    },
+    {
+      "id": "mudanca-p22-78",
+      "anchor": {
+        "paragraphId": "p22",
+        "start": 0,
+        "end": 112,
+        "quote": "Miüdinhos, perdidos no deserto queimado, os fugitivos agarraram-se, somaram as suas desgraças e os seus pavores."
+      },
+      "mark": "colchete",
+      "note": "Miúdos no deserto queimado.",
+      "expanded": "«Miüdinhos» diminui o grupo inteiro, com o trema da edição. «somaram» desgraças e pavores como quem soma gado. «perdidos» é participio de lugar, não de sermão.",
+      "order": 77
+    },
+    {
+      "id": "mudanca-p22-79",
+      "anchor": {
+        "paragraphId": "p22",
+        "start": 112,
+        "end": 230,
+        "quote": " O coração de Fabiano bateu junto do coração de sinha Vitória, um abraço cansado aproximou os farrapos que os cobriam."
+      },
+      "mark": "sublinhado",
+      "note": "Dois corações, um abraço cansado.",
+      "expanded": "A frase encosta os corpos sem romance de fala. «farrapos» são o que se abraça, quase no lugar da pele. «cansado» qualifica o gesto, não só a gente.",
+      "order": 78
+    },
+    {
+      "id": "mudanca-p22-80",
+      "anchor": {
+        "paragraphId": "p22",
+        "start": 230,
+        "end": 371,
+        "quote": " Resistiram à fraqueza, afastaram-se envergonhados, sem ânimo de afrontar de novo a luz dura, receosos de perder a esperança que os alentava."
+      },
+      "mark": "seta",
+      "note": "A vergonha de olhar de novo.",
+      "expanded": "«Resistiram à fraqueza» e se afastam. «luz dura» e «esperança» brigam: olhar pode apagar o que os alenta. O medo é perder a nuvem, não a seca em abstrato.",
+      "order": 79
+    },
+    {
+      "id": "mudanca-p23-81",
+      "anchor": {
+        "paragraphId": "p23",
+        "start": 0,
+        "end": 81,
+        "quote": "Iam-se amodorrando e foram despertados por Baleia, que trazia nos dentes um preá."
+      },
+      "mark": "realce",
+      "note": "O preá na boca da cachorra.",
+      "expanded": "«amodorrando» ia para o sono; Baleia corta. «nos dentes» é o presente da comida. O grupo existe outra vez porque o animal volta.",
+      "order": 80
+    },
+    {
+      "id": "mudanca-p23-82",
+      "anchor": {
+        "paragraphId": "p23",
+        "start": 81,
+        "end": 111,
+        "quote": " Levantaram-se todos gritando."
+      },
+      "mark": "traco",
+      "note": "O grito coletivo, sem palavra.",
+      "expanded": "«todos gritando» não cita o que dizem. O verbo basta. A fome tinha um som e a frase não o soletra.",
+      "order": 81
+    },
+    {
+      "id": "mudanca-p23-83",
+      "anchor": {
+        "paragraphId": "p23",
+        "start": 111,
+        "end": 182,
+        "quote": " O menino mais velho esfregou as pálpebras, afastando pedaços de sonho."
+      },
+      "mark": "sublinhado",
+      "note": "Pedaços de sonho na pálpebra.",
+      "expanded": "«esfregou» é gesto; «pedaços de sonho» é a imagem que o narrador empresta ao menino. O sonho se quebra como cisco. Não há conteúdo de sonho.",
+      "order": 82
+    },
+    {
+      "id": "mudanca-p23-84",
+      "anchor": {
+        "paragraphId": "p23",
+        "start": 182,
+        "end": 308,
+        "quote": " Sinha Vitória beijava o focinho de Baleia, e como o focinho estava ensangüentado, lambia o sangue e tirava proveito do beijo."
+      },
+      "mark": "colchete",
+      "note": "O beijo que lambe sangue.",
+      "expanded": "«beijava» e «lambia» no mesmo período, o segundo corrigindo o primeiro. «proveito» é a palavra econômica, seca, exata. O afeto rende comida.",
+      "order": 83
+    },
+    {
+      "id": "mudanca-p24-85",
+      "anchor": {
+        "paragraphId": "p24",
+        "start": 0,
+        "end": 60,
+        "quote": "Aquilo era caça bem mesquinha, mas adiaria a morte do grupo."
+      },
+      "mark": "sublinhado",
+      "note": "Mesquinha, e ainda assim prazo.",
+      "expanded": "«mesquinha» não enfeita a caça. «adiaria» é condicional de pouco tempo, não salvação. «morte do grupo» nomeia o que a frase anterior chamou de felicidade possível.",
+      "order": 84
+    },
+    {
+      "id": "mudanca-p24-86",
+      "anchor": {
+        "paragraphId": "p24",
+        "start": 60,
+        "end": 84,
+        "quote": " E Fabiano queria viver."
+      },
+      "mark": "circulo",
+      "note": "Querer viver, em quatro palavras.",
+      "expanded": "«E» liga o preá à decisão. «queria viver» não tem ornamento. Depois de tanta fome, a vontade cabe numa oração principal curta.",
+      "order": 85
+    },
+    {
+      "id": "mudanca-p24-87",
+      "anchor": {
+        "paragraphId": "p24",
+        "start": 84,
+        "end": 111,
+        "quote": " Olhou o céu com resolução."
+      },
+      "mark": "traco",
+      "note": "O céu olhado como quem resolve.",
+      "expanded": "«com resolução» transfere a firmeza do ânimo para o olhar. Não há discurso. O gesto substitui a frase que Fabiano não diria.",
+      "order": 86
+    },
+    {
+      "id": "mudanca-p24-88",
+      "anchor": {
+        "paragraphId": "p24",
+        "start": 111,
+        "end": 165,
+        "quote": " A nuvem tinha crescido, agora cobria o morro inteiro."
+      },
+      "mark": "seta",
+      "note": "A nuvem cobre o morro.",
+      "expanded": "«tinha crescido» mede a esperança em área. «morro inteiro» dá tamanho. A frase é constatação, e por isso mais forte que um desejo.",
+      "order": 87
+    },
+    {
+      "id": "mudanca-p24-89",
+      "anchor": {
+        "paragraphId": "p24",
+        "start": 165,
+        "end": 265,
+        "quote": " Fabiano pisou com segurança, esquecendo as rachaduras que lhe estragavam os dedos e os calcanhares."
+      },
+      "mark": "sublinhado",
+      "note": "O pé esquece a rachadura.",
+      "expanded": "«pisou com segurança» desmente os calcanhares de antes. «esquecendo» repete o mecanismo da mancha verde: a expectativa apaga a ferida.",
+      "order": 88
+    },
+    {
+      "id": "mudanca-p25-90",
+      "anchor": {
+        "paragraphId": "p25",
+        "start": 0,
+        "end": 97,
+        "quote": "Sinha Vitória remexeu no baú, os meninos foram quebrar uma haste de alecrim para fazer um espêto."
+      },
+      "mark": "colchete",
+      "note": "Baú, alecrim, espeto.",
+      "expanded": "Dois sujeitos, dois trabalhos, uma vírgula. «alecrim» vira ferramenta, não cheiro de casa. A preparação da comida é tão concreta quanto a sede.",
+      "order": 89
+    },
+    {
+      "id": "mudanca-p25-91",
+      "anchor": {
+        "paragraphId": "p25",
+        "start": 97,
+        "end": 274,
+        "quote": " Baleia, o ouvido atento, o traseiro em repouso e as pernas da frente erguidas, vigiava, aguardando a parte que lhe iria tocar, provàvelmente os ossos do bicho e talvez o couro."
+      },
+      "mark": "realce",
+      "note": "Baleia já conta a sua parte.",
+      "expanded": "«traseiro em repouso» e «pernas da frente erguidas»: a pose é desenho. «provàvelmente» e «talvez» são o cálculo dela, em discurso que cola no focinho. Ossos e couro: ela conhece a divisão.",
+      "order": 90
+    },
+    {
+      "id": "mudanca-p26-92",
+      "anchor": {
+        "paragraphId": "p26",
+        "start": 0,
+        "end": 115,
+        "quote": "Fabiano tomou a cuia, desceu a ladeira, encaminhou-se ao rio sêco, achou no bebedouro dos animais um pouco de lama."
+      },
+      "mark": "colchete",
+      "note": "Cuia, ladeira, lama.",
+      "expanded": "Quatro verbos de descida até «um pouco de lama». «bebedouro dos animais» empresta o lugar do gado ao homem. O rio «sêco» continua seco; o que há é resto.",
+      "order": 91
+    },
+    {
+      "id": "mudanca-p26-93",
+      "anchor": {
+        "paragraphId": "p26",
+        "start": 115,
+        "end": 211,
+        "quote": " Cavou a areia com as unhas, esperou que a água marejasse e, debruçando-se no chão, bebeu muito."
+      },
+      "mark": "sublinhado",
+      "note": "Unha, areia, água que mareja.",
+      "expanded": "«Cavou» com a unha, não com ferramenta. «marejasse» é o subjuntivo da pouca água. «bebeu muito» inverte a escassez numa sede que não mede.",
+      "order": 92
+    },
+    {
+      "id": "mudanca-p26-94",
+      "anchor": {
+        "paragraphId": "p26",
+        "start": 211,
+        "end": 286,
+        "quote": " Saciado, caíu de papo para cima, olhando as estrêlas, que vinham nascendo."
+      },
+      "mark": "realce",
+      "note": "De papo para cima, como bicho.",
+      "expanded": "«papo» é palavra de ave e de corpo jogado. «estrêlas, que vinham nascendo» abrem o céu no imperfeito. Saciado, ele pode enfim olhar para cima sem o sol.",
+      "order": 93
+    },
+    {
+      "id": "mudanca-p26-95",
+      "anchor": {
+        "paragraphId": "p26",
+        "start": 286,
+        "end": 371,
+        "quote": " Uma, duas, três, quatro, havia muitas estrêlas, havia mais de cinco estrêlas no céu."
+      },
+      "mark": "circulo",
+      "note": "Contar estrela como quem conta gado.",
+      "expanded": "«Uma, duas, três, quatro» é o limite da conta. «mais de cinco» confessa que a aritmética acabou. A repetição vai voltar; aqui ainda é maravilha.",
+      "order": 94
+    },
+    {
+      "id": "mudanca-p26-96",
+      "anchor": {
+        "paragraphId": "p26",
+        "start": 371,
+        "end": 451,
+        "quote": " O poente cobria-se de cirros — e uma alegria doida enchia o coração de Fabiano."
+      },
+      "mark": "seta",
+      "note": "Cirros, e a alegria doida.",
+      "expanded": "O travessão cola o tempo ao peito. «alegria doida» rima com o azul que endoidecia: o céu tanto castiga quanto embriaga. «coração de Fabiano» nomeia o dono da hipérbole.",
+      "order": 95
+    },
+    {
+      "id": "mudanca-p27-97",
+      "anchor": {
+        "paragraphId": "p27",
+        "start": 0,
+        "end": 31,
+        "quote": "Pensou na família, sentiu fome."
+      },
+      "mark": "traco",
+      "note": "Família e fome, dois verbos.",
+      "expanded": "«Pensou», «sentiu»: a consciência volta ao chão. A frase mínima desfaz um pouco o céu. A fome não tinha ido embora; tinha sido adiada pelo gole.",
+      "order": 96
+    },
+    {
+      "id": "mudanca-p27-98",
+      "anchor": {
+        "paragraphId": "p27",
+        "start": 31,
+        "end": 136,
+        "quote": " Caminhando, movia-se como uma coisa, para bem dizer não se diferençava muito da bolandeira de seu Tomás."
+      },
+      "mark": "colchete",
+      "note": "A bolandeira entra sem aviso.",
+      "expanded": "«como uma coisa» rebaixa o caminhar. «para bem dizer» é o tique do narrador quando a comparação o envergonha e ele a mantém. «seu Tomás» chega com a máquina, não com biografia.",
+      "order": 97
+    },
+    {
+      "id": "mudanca-p27-99",
+      "anchor": {
+        "paragraphId": "p27",
+        "start": 136,
+        "end": 190,
+        "quote": " Agora, deitado, apertava a barriga e batia os dentes."
+      },
+      "mark": "sublinhado",
+      "note": "Deitado, a fome fala no dente.",
+      "expanded": "«apertava a barriga» e «batia os dentes»: dois ritmos. «Agora» opõe este corpo ao corpo-coisa que caminhava. A frase não explica a bolandeira; deixa o enigma.",
+      "order": 98
+    },
+    {
+      "id": "mudanca-p27-100",
+      "anchor": {
+        "paragraphId": "p27",
+        "start": 190,
+        "end": 238,
+        "quote": " Que fim teria levado a bolandeira de seu Tomás?"
+      },
+      "mark": "circulo",
+      "note": "A pergunta não é de Fabiano letrado.",
+      "expanded": "«Que fim teria levado» imita um dizer popular, não um inquérito. A «bolandeira» repete o nome como quem não acha outra palavra. A interrogação é o máximo de filosofia do capítulo.",
+      "order": 99
+    },
+    {
+      "id": "mudanca-p28-101",
+      "anchor": {
+        "paragraphId": "p28",
+        "start": 0,
+        "end": 20,
+        "quote": "Olhou o céu de novo."
+      },
+      "mark": "traco",
+      "note": "O céu, de novo, sem discurso.",
+      "expanded": "«de novo» assume a repetição. Não há adjetivo. A frase curta é o gesto de quem confere se a esperança ainda está lá.",
+      "order": 100
+    },
+    {
+      "id": "mudanca-p28-102",
+      "anchor": {
+        "paragraphId": "p28",
+        "start": 20,
+        "end": 76,
+        "quote": " Os cirros acumulavam-se, a lua surgiu, grande e branca."
+      },
+      "mark": "realce",
+      "note": "Lua grande, cirro acumulado.",
+      "expanded": "«grande e branca» são adjetivos simples, de quem não tem outros. «acumulavam-se» faz os cirros trabalharem. A frase prepara a certeza sem dizê-la ainda.",
+      "order": 101
+    },
+    {
+      "id": "mudanca-p28-103",
+      "anchor": {
+        "paragraphId": "p28",
+        "start": 76,
+        "end": 98,
+        "quote": " Certamente ia chover."
+      },
+      "mark": "circulo",
+      "note": "A certeza cabe em três palavras.",
+      "expanded": "«Certamente» já tinha servido para o gado morto. Agora serve para a chuva. O advérbio é inferência de vaqueiro, não de meteorologia. «ia chover» é futuro imediato.",
+      "order": 102
+    },
+    {
+      "id": "mudanca-p29-104",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 0,
+        "end": 64,
+        "quote": "Seu Tomás fugira também, com a sêca, a bolandeira estava parada."
+      },
+      "mark": "sublinhado",
+      "note": "Tomás fugiu; a máquina parou.",
+      "expanded": "«também» põe seu Tomás na mesma retirada. «bolandeira estava parada» é o fato. A vírgula cola a seca à fuga como causa única, sem mais história.",
+      "order": 103
+    },
+    {
+      "id": "mudanca-p29-105",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 64,
+        "end": 103,
+        "quote": " E êle, Fabiano, era como a bolandeira."
+      },
+      "mark": "realce",
+      "note": "Ele era a máquina.",
+      "expanded": "«E êle, Fabiano, era como» insiste no nome próprio no meio da comparação, para o leitor não perder o homem dentro da coisa. A bolandeira deixa de ser enfeite e vira definição.",
+      "order": 104
+    },
+    {
+      "id": "mudanca-p29-106",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 103,
+        "end": 130,
+        "quote": " Não sabia porquê, mas era."
+      },
+      "mark": "circulo",
+      "note": "Não sabia, e era mesmo assim.",
+      "expanded": "«porquê» sem resposta é o ponto. «mas era» segura a comparação contra a ignorância. A frase curta imita o limite da consciência que ela descreve: discurso indireto livre no osso.",
+      "order": 105
+    },
+    {
+      "id": "mudanca-p29-107",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 130,
+        "end": 184,
+        "quote": " Uma, duas, três, havia mais de cinco estrêlas no céu."
+      },
+      "mark": "seta",
+      "note": "A conta das estrelas volta.",
+      "expanded": "«Uma, duas, três» reaparece, agora sem o «quatro». A repetição é estrutural, não descuido. O céu continua grande demais para a conta de Fabiano.",
+      "order": 106
+    },
+    {
+      "id": "mudanca-p29-108",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 184,
+        "end": 230,
+        "quote": " A lua estava cercada de um halo côr de leite."
+      },
+      "mark": "sublinhado",
+      "note": "Halo de leite em volta da lua.",
+      "expanded": "«côr de leite» traduz o sinal com o alimento que falta. «cercada» faz da lua um curral. O presságio é doméstico.",
+      "order": 107
+    },
+    {
+      "id": "mudanca-p29-109",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 230,
+        "end": 246,
+        "quote": " Ia chover. Bem."
+      },
+      "mark": "realce",
+      "note": "Ia chover. Bem.",
+      "expanded": "«Bem» sozinho, depois do ponto, é a concordância muda. Não há grito. «chover» já foi dito; o narrador dá a Fabiano uma sílaba de alívio e corta.",
+      "order": 108
+    },
+    {
+      "id": "mudanca-p29-110",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 246,
+        "end": 363,
+        "quote": " A catinga ressuscitaria, a semente do gado voltaria ao curral, êle, Fabiano, seria o vaqueiro daquela fazenda morta."
+      },
+      "mark": "colchete",
+      "note": "O condicional abre a fazenda.",
+      "expanded": "«ressuscitaria», «voltaria», «seria»: o futuro do pretérito é o modo do capítulo. «fazenda morta» ainda está morta. A «semente do gado» é metáfora de quem pensa em rês, não em lavoura.",
+      "order": 109
+    },
+    {
+      "id": "mudanca-p29-111",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 363,
+        "end": 414,
+        "quote": " Chocalhos de badalos de ossos animariam a solidão."
+      },
+      "mark": "realce",
+      "note": "Badalo de osso na solidão.",
+      "expanded": "«badalos de ossos» junta o chocalho sonhado às ossadas vistas. «animariam» é condicional: o som não está no curral. A frase faz música com o que foi carcaça.",
+      "order": 110
+    },
+    {
+      "id": "mudanca-p29-112",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 414,
+        "end": 532,
+        "quote": " Os meninos, gordos, vermelhos, brincariam no chiqueiro das cabras, sinha Vitória vestiria saias de ramagens vistosas."
+      },
+      "mark": "colchete",
+      "note": "Meninos gordos, saia de ramagem.",
+      "expanded": "«gordos, vermelhos» desmentem os corpos do presente. «brincariam» e «vestiria» continuam no condicional. O chiqueiro vira pátio de jogo. O desejo tem guarda-roupa.",
+      "order": 111
+    },
+    {
+      "id": "mudanca-p29-113",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 532,
+        "end": 561,
+        "quote": " As vacas povoariam o curral."
+      },
+      "mark": "sublinhado",
+      "note": "As vacas, enfim, no curral.",
+      "expanded": "A frase é uma oração só, e por isso parece mais certa que as outras. «povoariam» ainda é condicional. O verbo de povoar aplica-se a gado, não a gente: a escala de Fabiano.",
+      "order": 112
+    },
+    {
+      "id": "mudanca-p29-114",
+      "anchor": {
+        "paragraphId": "p29",
+        "start": 561,
+        "end": 593,
+        "quote": " E a catinga ficaria tôda verde."
+      },
+      "mark": "realce",
+      "note": "Verde total, no futuro.",
+      "expanded": "«tôda» não deixa resto de seco. «ficaria» é o mesmo tempo das saias e das vacas. A cor da abertura (manchas verdes) aqui quer tomar a catinga inteira.",
+      "order": 113
+    },
+    {
+      "id": "mudanca-p30-115",
+      "anchor": {
+        "paragraphId": "p30",
+        "start": 0,
+        "end": 105,
+        "quote": "Lembrou-se dos filhos, da mulher e da cachorra, que estavam lá em cima, debaixo de um juàzeiro, com sêde."
+      },
+      "mark": "seta",
+      "note": "A sede lá em cima, debaixo do juàzeiro.",
+      "expanded": "«Lembrou-se» desce do sonho ao grupo real. «com sêde» é o fato que a alegria tinha esquecido. O juàzeiro, enfim alcançado, ainda é só sombra de quem espera.",
+      "order": 114
+    },
+    {
+      "id": "mudanca-p30-116",
+      "anchor": {
+        "paragraphId": "p30",
+        "start": 105,
+        "end": 131,
+        "quote": " Lembrou-se do preá morto."
+      },
+      "mark": "traco",
+      "note": "O preá, segundo lembrete.",
+      "expanded": "A frase repete «Lembrou-se» de propósito. «preá morto» é a tarefa, não o símbolo. A memória de Fabiano funciona por itens, como a conta das estrelas.",
+      "order": 115
+    },
+    {
+      "id": "mudanca-p30-117",
+      "anchor": {
+        "paragraphId": "p30",
+        "start": 131,
+        "end": 210,
+        "quote": " Encheu a cuia, ergueu-se, afastou-se, lento, para não derramar a água salobra."
+      },
+      "mark": "colchete",
+      "note": "Lento, para não derramar.",
+      "expanded": "Quatro verbos e um cuidado. «salobra» qualifica a água sem estragar o gesto. «lento» é o oposto da alegria doida: o corpo volta a calcular.",
+      "order": 116
+    },
+    {
+      "id": "mudanca-p30-118",
+      "anchor": {
+        "paragraphId": "p30",
+        "start": 210,
+        "end": 227,
+        "quote": " Subiu a ladeira."
+      },
+      "mark": "sublinhado",
+      "note": "A ladeira, de volta.",
+      "expanded": "«Subiu» desfaz o «desceu» de antes. A frase mínima marca o caminho. Não há adjetivo: o esforço cabe no verbo.",
+      "order": 117
+    },
+    {
+      "id": "mudanca-p30-119",
+      "anchor": {
+        "paragraphId": "p30",
+        "start": 227,
+        "end": 282,
+        "quote": " A aragem morna sacudia os xiquexiques e os mandacarus."
+      },
+      "mark": "realce",
+      "note": "Xiquexique e mandacaru no vento.",
+      "expanded": "«aragem morna» ainda não é chuva. Os nomes das plantas são o conhecimento concreto, sem glossário. «sacudia» é o primeiro movimento da catinga que não seja gente.",
+      "order": 118
+    },
+    {
+      "id": "mudanca-p30-120",
+      "anchor": {
+        "paragraphId": "p30",
+        "start": 282,
+        "end": 303,
+        "quote": " Uma palpitação nova."
+      },
+      "mark": "circulo",
+      "note": "Uma palpitação, sem dono.",
+      "expanded": "A frase nominal não diz quem palpita. Pode ser a terra ou o peito. «nova» opõe este ritmo ao cansaço. A ausência de verbo é o estilo no auge.",
+      "order": 119
+    },
+    {
+      "id": "mudanca-p30-121",
+      "anchor": {
+        "paragraphId": "p30",
+        "start": 303,
+        "end": 380,
+        "quote": " Sentiu um arrepio na catinga, uma ressurreição de garranchos e fôlhas sêcas."
+      },
+      "mark": "seta",
+      "note": "Arrepio e ressurreição seca.",
+      "expanded": "«arrepio na catinga» dá nervo ao mato. «ressurreição de garranchos e fôlhas sêcas» antecipa o verde com o que ainda está morto. O condicional desce ao presente do sentimento.",
+      "order": 120
+    },
+    {
+      "id": "mudanca-p31-122",
+      "anchor": {
+        "paragraphId": "p31",
+        "start": 0,
+        "end": 74,
+        "quote": "Chegou. Pôs a cuia no chão, escorou-a com pedras, matou a sêde da família."
+      },
+      "mark": "colchete",
+      "note": "Chegou, e a água alcança a família.",
+      "expanded": "«Chegou.» cabe dentro do período como um selo. «escorou-a com pedras» é o cuidado do pouco. «matou a sêde» usa «matar» no único sentido benigno do capítulo.",
+      "order": 121
+    },
+    {
+      "id": "mudanca-p31-123",
+      "anchor": {
+        "paragraphId": "p31",
+        "start": 74,
+        "end": 202,
+        "quote": " Em seguida acocorou-se, remexeu o aió, tirou o fuzil, acendeu as raízes de macambira, soprou-as, inchando as bochechas cavadas."
+      },
+      "mark": "colchete",
+      "note": "Fuzil, macambira, bochecha.",
+      "expanded": "«fuzil» aqui é isqueiro, não a espingarda de pederneira: o objeto certo da fogueira. «bochechas cavadas» sopram. A frase é uma sequência de mãos.",
+      "order": 122
+    },
+    {
+      "id": "mudanca-p31-124",
+      "anchor": {
+        "paragraphId": "p31",
+        "start": 202,
+        "end": 294,
+        "quote": " Uma labareda tremeu, elevou-se, tingiu-lhe o rosto queimado, a barba ruiva, os olhos azuis."
+      },
+      "mark": "realce",
+      "note": "A chama pinta o rosto.",
+      "expanded": "«tremeu, elevou-se»: o fogo hesita e sobe. «barba ruiva» e «olhos azuis» são o retrato que a labareda permite, o primeiro do capítulo com cor de gente.",
+      "order": 123
+    },
+    {
+      "id": "mudanca-p31-125",
+      "anchor": {
+        "paragraphId": "p31",
+        "start": 294,
+        "end": 357,
+        "quote": " Minutos depois o preá torcia-se e chiava no espêto de alecrim."
+      },
+      "mark": "sublinhado",
+      "note": "O preá chia no alecrim.",
+      "expanded": "«torcia-se e chiava» devolvem o bicho ao som, não ao símbolo. «espêto» fecha o trabalho dos meninos. A frase não diz fome: diz cozimento.",
+      "order": 124
+    },
+    {
+      "id": "mudanca-p32-126",
+      "anchor": {
+        "paragraphId": "p32",
+        "start": 0,
+        "end": 19,
+        "quote": "Eram todos felizes."
+      },
+      "mark": "circulo",
+      "note": "Felizes, no pretérito que mente.",
+      "expanded": "«Eram» parece fato. O parágrafo seguinte desmente com o condicional. A frase curta é o auge irônico: a felicidade cabe no verbo, e já está no tempo errado.",
+      "order": 125
+    },
+    {
+      "id": "mudanca-p32-127",
+      "anchor": {
+        "paragraphId": "p32",
+        "start": 19,
+        "end": 70,
+        "quote": " Sinha Vitória vestiria uma saia larga de ramagens."
+      },
+      "mark": "seta",
+      "note": "A saia ainda é «vestiria».",
+      "expanded": "«vestiria» expõe o modo. «ramagens» repete o desejo de antes, agora mais curto. A felicidade da frase anterior era este futuro do pretérito.",
+      "order": 126
+    },
+    {
+      "id": "mudanca-p32-128",
+      "anchor": {
+        "paragraphId": "p32",
+        "start": 70,
+        "end": 237,
+        "quote": " A cara murcha de sinha Vitória remoçaria, as nádegas bambas de sinha Vitória engrossariam, a roupa encarnada de sinha Vitória provocaria a inveja das outras caboclas."
+      },
+      "mark": "colchete",
+      "note": "O nome dela três vezes.",
+      "expanded": "«sinha Vitória» repete como ladainha: cara, nádegas, roupa. «remoçaria», «engrossariam», «provocaria» são três condicionais de corpo. «encarnada» é a cor da inveja alheia, não a cor da catinga.",
+      "order": 127
+    },
+    {
+      "id": "mudanca-p33-129",
+      "anchor": {
+        "paragraphId": "p33",
+        "start": 0,
+        "end": 107,
+        "quote": "A lua crescia, a sombra leitosa crescia, as estrêlas foram esmorecendo naquela brancura que enchia a noite."
+      },
+      "mark": "realce",
+      "note": "A lua come as estrelas.",
+      "expanded": "«crescia» duas vezes, lua e sombra. «esmorecendo» é o verbo das estrêlas, o oposto do nascimento de antes. «brancura» enche a noite e apaga a conta.",
+      "order": 128
+    },
+    {
+      "id": "mudanca-p33-130",
+      "anchor": {
+        "paragraphId": "p33",
+        "start": 107,
+        "end": 160,
+        "quote": " Uma, duas, três, agora havia poucas estrêlas no céu."
+      },
+      "mark": "circulo",
+      "note": "A conta diminui.",
+      "expanded": "«Uma, duas, três» pela terceira vez, e agora «poucas». A estrutura cíclica está no número, não num discurso sobre ciclo. O céu muda; a sintaxe fica.",
+      "order": 129
+    },
+    {
+      "id": "mudanca-p33-131",
+      "anchor": {
+        "paragraphId": "p33",
+        "start": 160,
+        "end": 197,
+        "quote": " Ali perto a nuvem escurecia o morro."
+      },
+      "mark": "seta",
+      "note": "A nuvem ainda está no morro.",
+      "expanded": "«Ali perto» devolve o tamanho verdadeiro. «escurecia» ameaça e promete. A frase curta impede que o condicional disfarce o presente: a chuva não caiu.",
+      "order": 130
+    },
+    {
+      "id": "mudanca-p34-132",
+      "anchor": {
+        "paragraphId": "p34",
+        "start": 0,
+        "end": 97,
+        "quote": "A fazenda renasceria — e êle, Fabiano, seria o vaqueiro, para bem dizer seria dono daquele mundo."
+      },
+      "mark": "realce",
+      "note": "Dono daquele mundo, para bem dizer.",
+      "expanded": "O travessão corrige «vaqueiro» em «dono». «para bem dizer» outra vez: o narrador marca o exagero e não o tira. «renasceria» continua no condicional. O mundo é «aquele», visto do juàzeiro.",
+      "order": 131
+    },
+    {
+      "id": "mudanca-p35-133",
+      "anchor": {
+        "paragraphId": "p35",
+        "start": 0,
+        "end": 117,
+        "quote": "Os troços minguados ajuntavam-se no chão: a espingarda de pederneira, o aió, a cuia de água e o baú de fôlha pintada."
+      },
+      "mark": "colchete",
+      "note": "Os troços, no presente.",
+      "expanded": "«minguados» desmente a fazenda renascida. Espingarda, aió, cuia, baú: o inventário real, no chão. O presente do indicativo é o corretivo do sonho.",
+      "order": 132
+    },
+    {
+      "id": "mudanca-p35-134",
+      "anchor": {
+        "paragraphId": "p35",
+        "start": 117,
+        "end": 138,
+        "quote": " A fogueira estalava."
+      },
+      "mark": "sublinhado",
+      "note": "A fogueira, só o som.",
+      "expanded": "«estalava» cabe sozinho. Não há chama descrita aqui; há ruído. A frase mínima segura o capítulo no chão.",
+      "order": 133
+    },
+    {
+      "id": "mudanca-p35-135",
+      "anchor": {
+        "paragraphId": "p35",
+        "start": 138,
+        "end": 172,
+        "quote": " O preá chiava em cima das brasas."
+      },
+      "mark": "traco",
+      "note": "O preá em cima das brasas.",
+      "expanded": "«chiava» repete o som de antes, agora nas brasas, não no espeto. A comida existe. A frase não diz que alguém coma: ainda é espera.",
+      "order": 134
+    },
+    {
+      "id": "mudanca-p36-136",
+      "anchor": {
+        "paragraphId": "p36",
+        "start": 0,
+        "end": 17,
+        "quote": "Uma ressurreição."
+      },
+      "mark": "circulo",
+      "note": "Ressurreição, em uma palavra.",
+      "expanded": "Sem verbo. O substantivo é o eco de «ressuscitaria» e de «ressurreição de garranchos». Solto, parece título. O parágrafo vai traduzi-lo de novo em condicional.",
+      "order": 135
+    },
+    {
+      "id": "mudanca-p36-137",
+      "anchor": {
+        "paragraphId": "p36",
+        "start": 17,
+        "end": 77,
+        "quote": " As côres da saúde voltariam à cara triste de sinha Vitória."
+      },
+      "mark": "seta",
+      "note": "A cara triste no futuro.",
+      "expanded": "«voltariam» insiste no modo. «côres da saúde» opõem-se a «triste». É a mesma sinha Vitória, dita outra vez, porque o desejo não tem frase nova: tem refrão.",
+      "order": 136
+    },
+    {
+      "id": "mudanca-p36-138",
+      "anchor": {
+        "paragraphId": "p36",
+        "start": 77,
+        "end": 141,
+        "quote": " Os meninos se espojariam na terra fôfa do chiqueiro das cabras."
+      },
+      "mark": "sublinhado",
+      "note": "Espojar-se no chiqueiro.",
+      "expanded": "«terra fôfa» é o luxo imaginado, o oposto da lama que escalda. «espojariam» é verbo de bicho folgado, dado aos meninos. O condicional não sai do curral.",
+      "order": 137
+    },
+    {
+      "id": "mudanca-p36-139",
+      "anchor": {
+        "paragraphId": "p36",
+        "start": 141,
+        "end": 180,
+        "quote": " Chocalhos tilintariam pelos arredores."
+      },
+      "mark": "traco",
+      "note": "O chocalho, enfim, no ouvido.",
+      "expanded": "«tilintariam» realiza em som o que o mourão não ouviu. «arredores» espalham o gado sem mostrá-lo. Continua futuro do pretérito: o ouvido de agora não escuta isso.",
+      "order": 138
+    },
+    {
+      "id": "mudanca-p36-140",
+      "anchor": {
+        "paragraphId": "p36",
+        "start": 180,
+        "end": 205,
+        "quote": " A catinga ficaria verde."
+      },
+      "mark": "realce",
+      "note": "Verde, sem o «toda».",
+      "expanded": "«ficaria verde» repete a frase de antes e corta o «tôda». O refrão encurta, como a conta das estrelas. A catinga do presente continua seca; o verbo não deixa esquecer.",
+      "order": 139
+    },
+    {
+      "id": "mudanca-p37-141",
+      "anchor": {
+        "paragraphId": "p37",
+        "start": 0,
+        "end": 41,
+        "quote": "Baleia agitava o rabo, olhando as brasas."
+      },
+      "mark": "sublinhado",
+      "note": "O rabo, as brasas, o presente.",
+      "expanded": "«agitava» é o único presente alegre que não é condicional. «olhando as brasas» prende Baleia ao fogo real. Ela não entra na fazenda imaginária.",
+      "order": 140
+    },
+    {
+      "id": "mudanca-p37-142",
+      "anchor": {
+        "paragraphId": "p37",
+        "start": 41,
+        "end": 137,
+        "quote": " E como não podia ocupar-se daquelas coisas, esperava com paciência a hora de mastigar os ossos."
+      },
+      "mark": "colchete",
+      "note": "Ela espera osso, não saia.",
+      "expanded": "«não podia ocupar-se daquelas coisas» separa a cachorra do condicional humano. «com paciência» é a virtude dela, concreta. «mastigar os ossos» devolve a divisão anunciada lá atrás.",
+      "order": 141
+    },
+    {
+      "id": "mudanca-p37-143",
+      "anchor": {
+        "paragraphId": "p37",
+        "start": 137,
+        "end": 157,
+        "quote": " Depois iria dormir."
+      },
+      "mark": "traco",
+      "note": "Depois, dormir.",
+      "expanded": "«Depois» é a única sequência que Baleia precisa. «iria» ainda é condicional, mas miúdo, de corpo, não de fazenda. O capítulo acaba no sono que a comida vai permitir, não na chuva.",
+      "order": 142
+    },
+    {
+      "id": "mudanca-lugar-144",
+      "anchor": {
+        "paragraphId": "p1",
+        "start": 376,
+        "end": 388,
+        "quote": "catinga rala"
+      },
+      "mark": "lugar",
+      "note": "Região, não vila.",
+      "expanded": "O capítulo não nomeia município nem rio. O pin marca o sertão nordestino como região, no ponto em que a frase diz «catinga rala».",
+      "order": 143,
+      "place": {
+        "lat": -9.4,
+        "lng": -37.2,
+        "label": "Sertão nordestino (região aproximada)"
+      }
+    },
+    {
+      "id": "mudanca-lugar-145",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 2,
+        "end": 9,
+        "quote": "catinga"
+      },
+      "mark": "lugar",
+      "note": "O vermelho sem vila.",
+      "expanded": "«A catinga estendia-se»: de novo a região, não uma cidade. Ossadas e urubus cabem neste chão aproximado.",
+      "order": 144,
+      "place": {
+        "lat": -9.4,
+        "lng": -37.2,
+        "label": "Sertão nordestino (região aproximada)"
+      }
+    }
+  ],
+  "widgets": [
+    {
+      "id": "abertura",
+      "title": "Antes do nome",
+      "paragraphId": "p1",
+      "text": "A primeira frase é a planície e os juàzeiros. «Infelizes» chega antes de Fabiano. O capítulo abre no chão, não num herói.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "chao",
+            "x": 12,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "a planície"
+          },
+          {
+            "id": "arvore",
+            "x": 175,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "juàzeiros"
+          },
+          {
+            "id": "gente",
+            "x": 338,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "sem nome ainda"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "chao",
+            "to": "arvore"
+          },
+          {
+            "from": "arvore",
+            "to": "gente"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ciclo",
+      "title": "Seca e o condicional",
+      "paragraphId": "p29",
+      "text": "O presente é a catinga seca e a fazenda morta. O desejo inteiro cabe no futuro do pretérito: ressuscitaria, seria, ficaria. A chuva não cai neste capítulo.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "seca",
+            "x": 16,
+            "y": 78,
+            "w": 140,
+            "h": 64,
+            "text": "sêca, agora"
+          },
+          {
+            "id": "cond",
+            "x": 190,
+            "y": 78,
+            "w": 150,
+            "h": 64,
+            "text": "ressuscitaria"
+          },
+          {
+            "id": "verde",
+            "x": 370,
+            "y": 78,
+            "w": 130,
+            "h": 64,
+            "text": "catinga verde"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "seca",
+            "to": "cond"
+          },
+          {
+            "from": "cond",
+            "to": "verde",
+            "label": "não chove ainda"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bolandeira",
+      "title": "A bolandeira",
+      "paragraphId": "p27",
+      "text": "«Para bem dizer» avisa que a comparação é tosca e mesmo assim fica. Fabiano não explica por que é a máquina parada de seu Tomás. O não saber faz parte da frase.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "fabiano",
+            "x": 12,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "Fabiano"
+          },
+          {
+            "id": "como",
+            "x": 175,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "como uma coisa"
+          },
+          {
+            "id": "bola",
+            "x": 338,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "bolandeira"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "fabiano",
+            "to": "como"
+          },
+          {
+            "from": "como",
+            "to": "bola"
+          }
+        ]
+      }
+    },
+    {
+      "id": "seis",
+      "title": "Seis, depois cinco",
+      "paragraphId": "p12",
+      "text": "Na véspera eram seis viventes, com o papagaio. A fome corta um. Baleia come e não lembra. A família, que já falava pouco, fica ainda mais calada.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "seis",
+            "x": 12,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "seis viventes"
+          },
+          {
+            "id": "fome",
+            "x": 175,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "a fome"
+          },
+          {
+            "id": "cinco",
+            "x": 338,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "os que seguem"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "seis",
+            "to": "fome"
+          },
+          {
+            "from": "fome",
+            "to": "cinco"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fazenda",
+      "title": "A fazenda fechada",
+      "paragraphId": "p17",
+      "text": "Curral deserto, chiqueiro arruinado, casa fechada. O narrador conclui antes de Fabiano entrar: o gado se finou, os moradores fugiram. O condicional do fim vai reabrir esta planta.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "curral",
+            "x": 12,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "curral deserto"
+          },
+          {
+            "id": "casa",
+            "x": 175,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "casa fechada"
+          },
+          {
+            "id": "fuga",
+            "x": 338,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "gente fugida"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "curral",
+            "to": "casa"
+          },
+          {
+            "from": "casa",
+            "to": "fuga"
+          }
+        ]
+      }
+    },
+    {
+      "id": "baleia",
+      "title": "Baleia fora do sonho",
+      "paragraphId": "p37",
+      "text": "A família imagina saia, curral e chocalho. A cachorra não entra nessa frase. Espera os ossos do preá e, depois, o sono. O capítulo acaba no presente dela.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "sonho",
+            "x": 16,
+            "y": 36,
+            "w": 220,
+            "h": 58,
+            "text": "a fazenda que seria"
+          },
+          {
+            "id": "baleia",
+            "x": 16,
+            "y": 130,
+            "w": 200,
+            "h": 58,
+            "text": "Baleia, os ossos"
+          },
+          {
+            "id": "dormir",
+            "x": 280,
+            "y": 130,
+            "w": 160,
+            "h": 58,
+            "text": "depois, dormir"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "baleia",
+            "to": "dormir"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import type { Chapter, MarkKind, Note } from "@/data/types";
 import { collectNotes, noteContext, paragraphText, type Paragraph, type Segment } from "@/data/types";
-import { RUSSIAN_SOURCE, TRANSLATION_NOTE } from "@/data/source";
 import { arrowPath, hashString, placeMarginNotes, wavyLine, wavyVertical } from "@/lib/layout";
+import type { ConceptWidget } from "@/lib/annotations";
+import { MiniMap } from "@/components/maps/LiteraryMap";
+import { ConceptCard } from "@/components/reader/SketchDiagram";
 import { cn } from "@/lib/utils";
 
 export interface TextSelection {
@@ -22,12 +24,26 @@ export interface PopoverAnchor {
   bottom: number;
 }
 
+export interface ReaderFrame {
+  slug: string;
+  kicker: string;
+  originalLabel: string | null;
+  translationNote: string | null;
+  citation: string;
+  electronic: string;
+  sourceUrl: string;
+  continueUrl: string;
+  continueLabel: string;
+}
+
 interface AnnotatedReaderProps {
   chapter: Chapter;
-  siblings: Chapter[];
+  frame: ReaderFrame;
+  widgets?: ConceptWidget[];
   mode?: "read" | "edit";
   onEditNote?: (id: string, anchor: PopoverAnchor) => void;
   onTextSelect?: (selection: TextSelection) => void;
+  onEditWidget?: (id: string) => void;
 }
 
 interface Rect {
@@ -56,6 +72,7 @@ const MARK_LABEL: Record<MarkKind, string> = {
   bracket: "colchete",
   sideline: "traço à margem",
   arrow: "seta",
+  place: "lugar",
 };
 
 function useIsMobile() {
@@ -131,12 +148,14 @@ function SegView({
 function ParagraphView({
   paragraph,
   russian,
+  originalLabel,
   onToggleRussian,
   activeId,
   onOpen,
 }: {
   paragraph: Paragraph;
   russian: boolean;
+  originalLabel: string | null;
   onToggleRussian: (id: string) => void;
   activeId: string | null;
   onOpen: (id: string) => void;
@@ -146,20 +165,22 @@ function ParagraphView({
 
   return (
     <div className="para group relative" data-paragraph={paragraph.id}>
-      <p className={cn("mb-[0.85em]", dialogue ? "indent-0" : "indent-[1.4em]")}>
+      <p className={cn("mb-[0.85em]", dialogue ? "indent-0" : "indent-[1.4em]", paragraphText(paragraph).includes("\n") && "whitespace-pre-line indent-0")}>
         <span data-prose="">
           {paragraph.segs.map((seg, index) => (
             <SegView key={seg.note?.id ?? `${paragraph.id}-${index}`} seg={seg} activeId={activeId} onOpen={onOpen} />
           ))}
         </span>
-        <button
-          type="button"
-          className="ml-2 inline align-baseline font-sans text-[0.68rem] font-medium uppercase tracking-[0.14em] text-wine/70 hover:text-wine"
-          aria-expanded={russian}
-          onClick={() => onToggleRussian(paragraph.id)}
-        >
-          {russian ? "ocultar russo" : "russo"}
-        </button>
+        {originalLabel && paragraph.ru.trim() && (
+          <button
+            type="button"
+            className="ml-2 inline align-baseline font-sans text-[0.68rem] font-medium uppercase tracking-[0.14em] text-wine/70 hover:text-wine"
+            aria-expanded={russian}
+            onClick={() => onToggleRussian(paragraph.id)}
+          >
+            {russian ? `ocultar ${originalLabel}` : originalLabel}
+          </button>
+        )}
       </p>
       {russian && (
         <blockquote lang="ru" className="mb-[1.1em] border-l border-gold/80 pl-3 font-serif text-[0.98rem] font-normal italic leading-relaxed text-foreground/70">
@@ -187,7 +208,7 @@ function offsetWithin(root: HTMLElement, node: Node, offset: number) {
   return count;
 }
 
-export const AnnotatedReader = ({ chapter, siblings, mode = "read", onEditNote, onTextSelect }: AnnotatedReaderProps) => {
+export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", onEditNote, onTextSelect, onEditWidget }: AnnotatedReaderProps) => {
   const mobile = useIsMobile();
   const pageRef = useRef<HTMLDivElement>(null);
   const bookRef = useRef<HTMLDivElement>(null);
@@ -223,7 +244,8 @@ export const AnnotatedReader = ({ chapter, siblings, mode = "read", onEditNote, 
     });
   };
 
-  const showAllRussian = openRu.size === chapter.paragraphs.length && chapter.paragraphs.length > 0;
+  const hasOriginal = Boolean(frame.originalLabel) && chapter.paragraphs.some((paragraph) => paragraph.ru.trim().length > 0);
+  const showAllRussian = hasOriginal && openRu.size === chapter.paragraphs.length;
 
   useLayoutEffect(() => {
     const page = pageRef.current;
@@ -359,47 +381,32 @@ export const AnnotatedReader = ({ chapter, siblings, mode = "read", onEditNote, 
     <div>
       <div className="sticky top-16 z-30 border-b border-border bg-background/90 backdrop-blur md:top-[4.5rem]">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2 sm:px-6">
-          <p className="hidden shrink-0 font-serif text-sm text-wine sm:block">Parte I</p>
+          <p className="hidden shrink-0 font-serif text-sm text-wine sm:block">{frame.kicker}</p>
           <div className="flex min-w-0 flex-1 gap-1.5 overflow-x-auto pb-1">
-            {siblings.map((item) =>
-              item.available ? (
-                <Link
-                  key={item.id}
-                  to={`/livro/o-idiota/ler/${item.id}`}
-                  className={cn(
-                    "shrink-0 rounded-full border px-3 py-1 text-xs font-medium",
-                    item.id === chapter.id
-                      ? "border-wine bg-wine text-primary-foreground"
-                      : "border-border bg-card text-foreground hover:border-wine/40",
-                  )}
-                  aria-current={item.id === chapter.id ? "page" : undefined}
-                >
-                  {item.numeral}
-                  {item.label ? ` · ${item.label}` : ""}
-                </Link>
-              ) : (
-                <span
-                  key={item.id}
-                  className="shrink-0 rounded-full border border-dashed border-border px-3 py-1 text-xs text-muted-foreground"
-                >
-                  {item.numeral} · em breve
-                </span>
-              ),
-            )}
+            <Link
+              to={`/livro/${frame.slug}/ler/${chapter.id}`}
+              className="shrink-0 rounded-full border border-wine bg-wine px-3 py-1 text-xs font-medium text-primary-foreground"
+              aria-current="page"
+            >
+              {chapter.numeral}
+              {chapter.label ? ` · ${chapter.label}` : ""}
+            </Link>
           </div>
-          <button
-            type="button"
-            className={cn(
-              "shrink-0 rounded-full border px-3 py-1 text-xs font-medium",
-              showAllRussian ? "border-wine bg-wine text-primary-foreground" : "border-border bg-card",
-            )}
-            aria-pressed={showAllRussian}
-            onClick={() =>
-              setOpenRu(showAllRussian ? new Set() : new Set(chapter.paragraphs.map((paragraph) => paragraph.id)))
-            }
-          >
-            Originais
-          </button>
+          {hasOriginal && (
+            <button
+              type="button"
+              className={cn(
+                "shrink-0 rounded-full border px-3 py-1 text-xs font-medium",
+                showAllRussian ? "border-wine bg-wine text-primary-foreground" : "border-border bg-card",
+              )}
+              aria-pressed={showAllRussian}
+              onClick={() =>
+                setOpenRu(showAllRussian ? new Set() : new Set(chapter.paragraphs.map((paragraph) => paragraph.id)))
+              }
+            >
+              Originais
+            </button>
+          )}
         </div>
       </div>
 
@@ -443,31 +450,57 @@ export const AnnotatedReader = ({ chapter, siblings, mode = "read", onEditNote, 
             }}
           >
             <header className="mb-8 text-center">
-              <p className="font-sans text-[0.68rem] uppercase tracking-[0.28em] text-wine/80">Parte primeira</p>
+              <p className="font-sans text-[0.68rem] uppercase tracking-[0.28em] text-wine/80">{frame.kicker}</p>
               <h1 className="mt-2 font-serif text-4xl font-medium tracking-wide">{chapter.numeral}</h1>
               {chapter.label && <p className="mt-1 font-serif text-lg italic text-muted-foreground">{chapter.label}</p>}
               <p className="mx-auto mt-4 max-w-md font-sans text-xs leading-relaxed text-muted-foreground">
-                As marcas são lápis. Toque uma frase para abrir a leitura. {TRANSLATION_NOTE}.
+                As marcas são lápis. Toque uma frase para abrir a leitura.
+                {frame.translationNote ? ` ${frame.translationNote}.` : " O texto é o da edição citada."}
               </p>
             </header>
 
             {chapter.paragraphs.map((paragraph) => (
-              <ParagraphView
-                key={paragraph.id}
-                paragraph={paragraph}
-                russian={openRu.has(paragraph.id)}
-                onToggleRussian={toggleRussian}
-                activeId={activeId}
-                onOpen={openNote}
-              />
+              <div key={paragraph.id}>
+                {paragraph.section && (
+                  <h2 className="mb-4 mt-10 text-center font-serif text-xl font-medium tracking-wide text-wine">{paragraph.section}</h2>
+                )}
+                <ParagraphView
+                  paragraph={paragraph}
+                  russian={openRu.has(paragraph.id)}
+                  originalLabel={frame.originalLabel}
+                  onToggleRussian={toggleRussian}
+                  activeId={activeId}
+                  onOpen={openNote}
+                />
+                {widgets
+                  .filter((widget) => widget.paragraphId === paragraph.id)
+                  .map((widget) => (
+                    <ConceptCard
+                      key={widget.id}
+                      title={widget.title}
+                      text={widget.text}
+                      diagram={widget.diagram}
+                      editable={mode === "edit"}
+                      onEdit={() => onEditWidget?.(widget.id)}
+                    />
+                  ))}
+              </div>
             ))}
 
-            <footer className="mt-10 border-t border-wine/15 pt-5 font-sans text-xs leading-relaxed text-muted-foreground">
-              <p className="font-medium text-foreground/80">{TRANSLATION_NOTE}.</p>
-              <p className="mt-2">{RUSSIAN_SOURCE.citation}</p>
-              <p className="mt-2">{RUSSIAN_SOURCE.electronic}</p>
+            <aside className="mt-12 rounded-md border border-wine/20 bg-[hsl(40_40%_97%)] px-4 py-4">
+              <p className="font-hand text-3xl text-wine">Continuar lendo</p>
+              <p className="mt-1 font-sans text-sm leading-relaxed text-muted-foreground">O resto do livro está na edição pública citada nesta página.</p>
+              <a className="mt-3 inline-block font-sans text-sm text-wine underline decoration-gold/70 underline-offset-2" href={frame.continueUrl}>
+                {frame.continueLabel}
+              </a>
+            </aside>
+
+            <footer className="mt-8 border-t border-wine/15 pt-5 font-sans text-xs leading-relaxed text-muted-foreground">
+              {frame.translationNote && <p className="font-medium text-foreground/80">{frame.translationNote}.</p>}
+              <p className="mt-2">{frame.citation}</p>
+              <p className="mt-2">{frame.electronic}</p>
               <p className="mt-2">
-                <a className="underline decoration-gold/70 underline-offset-2" href={RUSSIAN_SOURCE.chapters[chapter.id as keyof typeof RUSSIAN_SOURCE.chapters] ?? RUSSIAN_SOURCE.url}>
+                <a className="underline decoration-gold/70 underline-offset-2" href={frame.sourceUrl}>
                   Ver o capítulo na edição eletrônica
                 </a>
               </p>
@@ -512,6 +545,7 @@ export const AnnotatedReader = ({ chapter, siblings, mode = "read", onEditNote, 
                   {excerpts.get(active.id)}
                 </SheetDescription>
               </SheetHeader>
+              {active.place && <div className="mt-3"><MiniMap lat={active.place.lat} lng={active.place.lng} label={active.place.label} /></div>}
               {active.ruWord && <p className="mt-3 font-serif italic text-wine">{active.ruWord}</p>}
               {active.x && <p className="mt-4 font-sans text-[0.95rem] leading-relaxed text-foreground">{active.x}</p>}
             </>
@@ -539,28 +573,36 @@ function MarginNote({
 }) {
   const tilt = ((hashString(note.id) % 5) - 2) * 0.15;
   return (
-    <button
-      type="button"
+    <div
       data-margin-note={note.id}
-      onClick={(event) => {
-        onOpen(note.id);
-        onEdit?.(note.id, anchorFromElement(event.currentTarget));
-      }}
-      className={cn(
-        "absolute left-0 right-0 text-left",
-        active ? "z-10" : "z-[1]",
-        !ready && "invisible",
-      )}
+      className={cn("absolute left-0 right-0 text-left", active ? "z-10" : "z-[1]", !ready && "invisible")}
       style={{ top, transform: `rotate(${tilt}deg)` }}
     >
-      <span className="font-hand block text-[1.35rem] leading-[1.05] text-wine">{note.m}</span>
+      <button
+        type="button"
+        className="w-full text-left"
+        onClick={(event) => {
+          onOpen(note.id);
+          onEdit?.(note.id, anchorFromElement(event.currentTarget));
+        }}
+      >
+        <span className="font-hand block text-[1.35rem] leading-[1.05] text-wine">
+          {note.mark === "place" ? "⌖ " : ""}
+          {note.m}
+        </span>
+      </button>
+      {active && note.place && (
+        <div className="mt-1">
+          <MiniMap lat={note.place.lat} lng={note.place.lng} label={note.place.label} />
+        </div>
+      )}
       {active && note.x && (
-        <span className="mt-1 block rounded-sm bg-[hsl(42_70%_55%/0.14)] px-1.5 py-1 font-sans text-[0.78rem] font-normal leading-snug text-foreground">
+        <div className="mt-1 rounded-sm bg-[hsl(42_70%_55%/0.14)] px-1.5 py-1 font-sans text-[0.78rem] font-normal leading-snug text-foreground">
           {note.ruWord && <span className="mb-1 block font-serif italic text-wine">{note.ruWord}</span>}
           {note.x}
-        </span>
+        </div>
       )}
-    </button>
+    </div>
   );
 }
 

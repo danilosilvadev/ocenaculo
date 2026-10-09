@@ -1,0 +1,836 @@
+{
+  "version": 1,
+  "bookId": "bras-cubas",
+  "chapterId": "ao-leitor-e-capitulo-1",
+  "annotations": [
+    {
+      "id": "ao-leitor-e-capitulo-1-d1-1",
+      "anchor": {
+        "paragraphId": "d1",
+        "start": 0,
+        "end": 112,
+        "quote": "AO VERME\nQUE\nPRIMEIRO ROEU AS FRIAS CARNES\nDO MEU CADAVER\nDEDICO\nCOMO SAUDOSA LEMBRANÇA\nESTAS\nMEMORIAS POSTHUMAS"
+      },
+      "mark": "colchete",
+      "note": "O livro pertence a quem o rói.",
+      "expanded": "As maiúsculas e a escada de versos fazem epitáfio. «VERME» é o primeiro leitor, e «FRIAS CARNES» já entregam o corpo. «SAUDOSA LEMBRANÇA» trata a dedicatória como afeto, não como nojo.",
+      "order": 0
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a1-2",
+      "anchor": {
+        "paragraphId": "a1",
+        "start": 0,
+        "end": 130,
+        "quote": "Que, no alto do principal de seus livros, confessasse Stendhal havel-o escripto para cem leitores, cousa é que admira e consterna."
+      },
+      "mark": "circulo",
+      "note": "Cem leitores, e o espanto.",
+      "expanded": "«Stendhal» entra como autoridade e como alvo. «admira e consterna» incham um fato editorial. A oração começa em «Que», concessiva, para o golpe vir depois.",
+      "order": 1
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a1-3",
+      "anchor": {
+        "paragraphId": "a1",
+        "start": 130,
+        "end": 291,
+        "quote": " O que não admira, nem provavelmente consternará é se este outro livro não tiver os cem leitores de Stendhal, nem cincoenta, nem vinte, e quando muito, dez. Dez?"
+      },
+      "mark": "colchete",
+      "note": "A conta desce em voz alta.",
+      "expanded": "«cincoenta», «vinte», «dez» são degraus. «Dez?» interrompe a própria aritmética. O narrador regateia o público antes de existir página de romance.",
+      "order": 2
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a1-4",
+      "anchor": {
+        "paragraphId": "a1",
+        "start": 291,
+        "end": 305,
+        "quote": " Talvez cinco."
+      },
+      "mark": "realce",
+      "note": "Cinco, e talvez nem isso.",
+      "expanded": "«Talvez» esvazia o número que acabou de oferecer. A frase curta imita quem corta a conversa. «cinco» fica ridículo ao lado dos cem de Stendhal.",
+      "order": 3
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a1-5",
+      "anchor": {
+        "paragraphId": "a1",
+        "start": 305,
+        "end": 507,
+        "quote": " Trata-se, na verdade, de uma obra diffusa, na qual eu, Braz Cubas, se adoptei a fórma livre de um Sterne, de um Lamb, ou de um de Maistre, não sei se lhe metti algumas rabugens de pessimismo. Póde ser."
+      },
+      "mark": "sublinhado",
+      "note": "A forma livre, com rabugem.",
+      "expanded": "«Sterne», «Lamb», «de Maistre» são a biblioteca confessada. «não sei se» finge dúvida sobre o «pessimismo», e «Póde ser» encolhe os ombros no meio do programa.",
+      "order": 4
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a1-6",
+      "anchor": {
+        "paragraphId": "a1",
+        "start": 507,
+        "end": 523,
+        "quote": " Obra de finado."
+      },
+      "mark": "traco",
+      "note": "Três palavras, um gênero.",
+      "expanded": "«finado» define a obra pelo estado civil do autor. Sem verbo, a frase é lápide. O ponto final é seco de propósito, depois de tanto rodeio.",
+      "order": 5
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a1-7",
+      "anchor": {
+        "paragraphId": "a1",
+        "start": 523,
+        "end": 641,
+        "quote": " Escrevi-a com a penna da galhofa e a tinta da melancholia; e não é difficil antever o que poderá sair desse connubio."
+      },
+      "mark": "realce",
+      "note": "Galhofa na pena, tinta triste.",
+      "expanded": "«penna» e «tinta» separam instrumento e humor. «connubio» casa o riso com a «melancholia» e já avisa a cor da página. A grafia de 1881 guarda o século na palavra.",
+      "order": 6
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a1-8",
+      "anchor": {
+        "paragraphId": "a1",
+        "start": 641,
+        "end": 900,
+        "quote": " Accresce que a gente grave achará no livro umas apparencias de puro romance, ao passo que a gente frivola não achará nelle o seu romance usual; e eil-o ahi fica privado da estima dos graves e do amor dos frivolos, que são as duas columnas maximas da opinião."
+      },
+      "mark": "colchete",
+      "note": "Graves e frívolos, as duas colunas.",
+      "expanded": "«puro romance» para uns, «romance usual» para outros: o livro falha nos dois testes. «eil-o ahi» aponta o volume como quem mostra um objeto sem dono. «columnas» segura a opinião em arquitetura.",
+      "order": 7
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a2-9",
+      "anchor": {
+        "paragraphId": "a2",
+        "start": 0,
+        "end": 121,
+        "quote": "Mas eu ainda espero angariar as sympathias da opinião, e o meio efficaz para isso é fugir a um prologo explicito e longo."
+      },
+      "mark": "seta",
+      "note": "Fugir do prólogo é o prólogo.",
+      "expanded": "«sympathias da opinião» ainda são o alvo. O «meio efficaz» é não explicar. A frase anuncia omissão e, ao anunciá-la, explica.",
+      "order": 8
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a2-10",
+      "anchor": {
+        "paragraphId": "a2",
+        "start": 121,
+        "end": 215,
+        "quote": " O melhor prologo é o que contém menos cousas, ou o que as diz de um geito obscuro e truncado."
+      },
+      "mark": "sublinhado",
+      "note": "Obscuro e truncado de propósito.",
+      "expanded": "«menos cousas» ou «geito obscuro»: o melhor prólogo mente por economia. «truncado» descreve o corte que o capítulo I vai fazer na vida, começando pelo fim.",
+      "order": 9
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a2-11",
+      "anchor": {
+        "paragraphId": "a2",
+        "start": 215,
+        "end": 349,
+        "quote": " Conseguintemente, evito contar o processo extraordinario que empreguei na composição destas Memorias, trabalhadas cá no outro seculo."
+      },
+      "mark": "circulo",
+      "note": "O processo fica no outro século.",
+      "expanded": "«cá no outro seculo» é o defunto a falar de oficina. «extraordinario» acende a curiosidade que a frase diz evitar. «Conseguintemente» imita tratado.",
+      "order": 10
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a2-12",
+      "anchor": {
+        "paragraphId": "a2",
+        "start": 349,
+        "end": 435,
+        "quote": " Seria curioso, mas nimiamente extenso, e aliás desnecessario ao entendimento da obra."
+      },
+      "mark": "traco",
+      "note": "Curioso, logo dispensável.",
+      "expanded": "«nimiamente extenso» e «desnecessario» empurram o método para fora. «aliás» é o advérbio de quem já decidiu. A obra não precisa da cozinha.",
+      "order": 11
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a2-13",
+      "anchor": {
+        "paragraphId": "a2",
+        "start": 435,
+        "end": 562,
+        "quote": " A obra em si mesma é tudo: se te agradar, fino leitor, pago-me da tarefa; se te não agradar, pago-te com um piparote, e adeus."
+      },
+      "mark": "realce",
+      "note": "O piparote como pagamento.",
+      "expanded": "«fino leitor» lisonjeia e ameaça. «pago-me» / «pago-te» invertem a dívida. «piparote» e «adeus» fecham o contrato sem ternura.",
+      "order": 12
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-a3-14",
+      "anchor": {
+        "paragraphId": "a3",
+        "start": 0,
+        "end": 11,
+        "quote": "BRAZ CUBAS."
+      },
+      "mark": "circulo",
+      "note": "A assinatura em caixa alta.",
+      "expanded": "«BRAZ» com z, como na edição. O nome sozinho, depois do prólogo, funciona como firma de tabelião. Não há «seu criado» nem despedida: o defunto não pede licença.",
+      "order": 13
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c1-15",
+      "anchor": {
+        "paragraphId": "c1",
+        "start": 0,
+        "end": 147,
+        "quote": "Algum tempo hesitei se devia abrir estas memorias pelo principio ou pelo fim, isto é, se poria em primeiro logar o meu nascimento ou a minha morte."
+      },
+      "mark": "sublinhado",
+      "note": "Nascer ou morrer, a hesitação.",
+      "expanded": "«hesitei» põe a composição em cena. «principio ou fim», «nascimento ou morte»: os pares organizam o método antes da teoria. «logar» é lugar e também posto na página.",
+      "order": 14
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c1-16",
+      "anchor": {
+        "paragraphId": "c1",
+        "start": 147,
+        "end": 442,
+        "quote": " Supposto o uso vulgar seja começar pelo nascimento, duas considerações me levaram a adoptar differente methodo: a primeira é que eu não sou propriamente um autor defunto, mas um defunto autor, para quem a campa foi outro berço; a segunda é que o escripto ficaria assim mais galante e mais novo."
+      },
+      "mark": "colchete",
+      "note": "Defunto autor, não autor defunto.",
+      "expanded": "A inversão é o achado e o método. «campa foi outro berço» refaz o nascimento. «galante e mais novo» é a segunda razão, estética, quase fútil ao lado da primeira, e por isso machadiana.",
+      "order": 15
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c1-17",
+      "anchor": {
+        "paragraphId": "c1",
+        "start": 442,
+        "end": 569,
+        "quote": " Moysés, que tambem contou a sua morte, não a poz no introito, mas no cabo: differença radical entre este livro e o Pentateuco."
+      },
+      "mark": "seta",
+      "note": "Moisés no cabo, ele no introito.",
+      "expanded": "«Pentateuco» mede o atrevimento. «differença radical» não é modéstia: é propaganda. Moisés contou a morte no fim; este livro a põe na porta.",
+      "order": 16
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c2-18",
+      "anchor": {
+        "paragraphId": "c2",
+        "start": 0,
+        "end": 121,
+        "quote": "Dito isto, expirei ás duas horas da tarde de uma sexta feira do mez de agosto de 1869, na minha bella chacara de Catumby."
+      },
+      "mark": "realce",
+      "note": "A hora, o dia, o bairro.",
+      "expanded": "«duas horas», «sexta feira», «agosto de 1869», «Catumby»: o óbito ganha certidão. «expirei» é o verbo do morto, no pretérito, sem drama de leito ainda. «bella chacara» elogia o cenário.",
+      "order": 17
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c2-19",
+      "anchor": {
+        "paragraphId": "c2",
+        "start": 121,
+        "end": 271,
+        "quote": " Tinha uns sessenta e quatro annos, rijos e prosperos, era solteiro, possuia cerca de tresentos contos e fui acompanhado ao cemiterio por onze amigos."
+      },
+      "mark": "traco",
+      "note": "O inventário cabe numa linha.",
+      "expanded": "«sessenta e quatro», «solteiro», «tresentos contos», «onze amigos»: a vida reduzida a ficha. «rijos e prosperos» elogia o corpo que já não está. A frase não escolhe um fato; empilha.",
+      "order": 18
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c2-20",
+      "anchor": {
+        "paragraphId": "c2",
+        "start": 271,
+        "end": 284,
+        "quote": " Onze amigos!"
+      },
+      "mark": "circulo",
+      "note": "Onze, e o espanto é ironia.",
+      "expanded": "A repetição de «Onze amigos» finge orgulho. O ponto de exclamação é o riso. Logo se explica por que eram tão poucos.",
+      "order": 19
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c2-21",
+      "anchor": {
+        "paragraphId": "c2",
+        "start": 284,
+        "end": 330,
+        "quote": " Verdade é que não houve cartas nem annuncios."
+      },
+      "mark": "sublinhado",
+      "note": "Sem carta, sem anúncio.",
+      "expanded": "«Verdade é que» concede a desculpa e a transforma em acusação. «cartas» e «annuncios» medem o luto pelo correio. O enterro foi pequeno porque ninguém foi chamado.",
+      "order": 20
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c2-22",
+      "anchor": {
+        "paragraphId": "c2",
+        "start": 330,
+        "end": 744,
+        "quote": " Accresce que chovia — peneirava — uma chuvinha miuda, triste e constante, tão constante e tão triste, que levou um daquelles fieis da ultima hora a intercalar esta engenhosa idéa no discurso que proferiu á beira de minha cova: — «Vós, que o conhecestes, meus senhores, vós podeis dizer commigo que a natureza parece estar chorando a perda irreparavel de um dos mais bellos caracteres que tem honrado a humanidade."
+      },
+      "mark": "colchete",
+      "note": "A chuva ensaiada no discurso.",
+      "expanded": "«peneirava» afina «chovia». A repetição «constante e triste» prepara o orador. «engeniosa idéa» já desmonta o elogio antes das aspas: a natureza a chorar é achado de discurso, não de céu.",
+      "order": 21
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c2-23",
+      "anchor": {
+        "paragraphId": "c2",
+        "start": 744,
+        "end": 981,
+        "quote": " Este ar sombrio, estas gotas do céu, aquellas nuvens escuras que cobrem o azul como um crepe funereo, tudo isso é a dor crua e má que lhe róe á natureza as mais intimas entranhas; tudo isso é um sublime louvor ao nosso illustre finado.»"
+      },
+      "mark": "realce",
+      "note": "O crepe e o louvor sublime.",
+      "expanded": "«crepe funereo» veste a nuvem de luto social. «tudo isso é» repete a equação: tempo ruim igual a virtude do morto. O narrador cita para deixar o exagero na boca do outro.",
+      "order": 22
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-24",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 0,
+        "end": 17,
+        "quote": "Bom e fiel amigo!"
+      },
+      "mark": "traco",
+      "note": "O amigo, com o preço ao lado.",
+      "expanded": "«Bom e fiel» ecoa epitáfio. O ponto de exclamação, depois do discurso, soa como palmas. A frase seguinte vai cobrar as apólices.",
+      "order": 23
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-25",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 17,
+        "end": 74,
+        "quote": " Não, não me arrependo das vinte apolices que lhe deixei."
+      },
+      "mark": "sublinhado",
+      "note": "Vinte apólices, sem arrependimento.",
+      "expanded": "A dupla negação «Não, não» insiste demais. «apolices» traduzem a fidelidade em dinheiro. O elogio da chuva teve tarifa, e o morto acha o preço justo.",
+      "order": 24
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-26",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 74,
+        "end": 303,
+        "quote": " E foi assim que cheguei á clausula dos meus dias; foi assim que me encaminhei para o undiscovered country de Hamlet, sem as ancias nem as duvidas do moço principe, mas pausado e tropego, como quem se retira tarde do expectaculo."
+      },
+      "mark": "colchete",
+      "note": "Hamlet sem a dúvida.",
+      "expanded": "«undiscovered country» entra em inglês, citação de quem foi ao teatro. «pausado e tropego» desmente o príncipe: Brás sai como quem deixa a plateia, não como quem teme o além.",
+      "order": 25
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-27",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 303,
+        "end": 323,
+        "quote": " Tarde e aborrecido."
+      },
+      "mark": "realce",
+      "note": "Tarde, e ainda por cima tédio.",
+      "expanded": "«aborrecido» é o adjetivo que o espetáculo não merecia. A frase curta corta o período anterior. Morrer, aqui, é sair depois da hora e sem graça.",
+      "order": 26
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-28",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 323,
+        "end": 467,
+        "quote": " Viram-me ir umas nove ou dez pessoas, entre ellas tres senhoras, — minha irmã Sabina, casada com o Cotrim, — a filha, um lyrio do valle, — e..."
+      },
+      "mark": "traco",
+      "note": "A lista para no «e...».",
+      "expanded": "Sabina, Cotrim, o «lyrio do valle»: a família entra em travessões. As reticências depois de «e» seguram a terceira senhora. A contagem «nove ou dez» já não fecha.",
+      "order": 27
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-29",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 467,
+        "end": 485,
+        "quote": " Tenham paciencia!"
+      },
+      "mark": "circulo",
+      "note": "A paciência pedida ao leitor.",
+      "expanded": "«Tenham» no plural trata a gente como plateia. A exclamação é gesto de palco. O narrador suspende o nome porque o suspense lhe rende.",
+      "order": 28
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-30",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 485,
+        "end": 539,
+        "quote": " daqui a pouco lhes direi quem era a terceira senhora."
+      },
+      "mark": "seta",
+      "note": "O nome fica para depois.",
+      "expanded": "«daqui a pouco» é promessa de folhetim dentro do capítulo. «terceira senhora» permanece função, não pessoa. A minúscula inicial cola a frase na reticência anterior.",
+      "order": 29
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-31",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 539,
+        "end": 635,
+        "quote": " Contentem-se de saber que essa anonyma, ainda que não parenta, padeceu mais do que as parentas."
+      },
+      "mark": "sublinhado",
+      "note": "A anônima dói mais que as parentas.",
+      "expanded": "«ainda que não parenta» destaca o escândalo sem contá-lo. «padeceu mais» compara dores e escolhe a de fora da família. O verbo é sentimento, não gesto.",
+      "order": 30
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-32",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 635,
+        "end": 660,
+        "quote": " É verdade, padeceu mais."
+      },
+      "mark": "realce",
+      "note": "A insistência já é suspeita.",
+      "expanded": "Repetir «padeceu mais» não acrescenta fato: acrescenta prazer do narrador. «É verdade» finge confirmação. O leitor é empurrado a perguntar quem.",
+      "order": 31
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-33",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 660,
+        "end": 740,
+        "quote": " Não digo que se carpisse, não digo que se deixasse rolar pelo chão, epileptica."
+      },
+      "mark": "traco",
+      "note": "O que ele diz que não diz.",
+      "expanded": "«Não digo» duas vezes descreve o choro e o chão. «epileptica» é o excesso que a frase nega e mesmo assim desenha. A anônima fica contida por subtração.",
+      "order": 32
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-34",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 740,
+        "end": 789,
+        "quote": " Nem o meu obito era cousa altamente dramatica..."
+      },
+      "mark": "sublinhado",
+      "note": "O óbito sem altura dramática.",
+      "expanded": "As reticências de «dramatica...» deixam o tom cair. «altamente» é a régua que o solteirão não alcança. Ele se diminui para controlar a cena.",
+      "order": 33
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-35",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 789,
+        "end": 905,
+        "quote": " Um solteirão que expira aos sessenta e quatro annos, não parece que reuna em si todos os elementos de uma tragedia."
+      },
+      "mark": "circulo",
+      "note": "Solteirão não dá tragédia.",
+      "expanded": "«não parece» já é o julgamento. «elementos» soa a receita. Sessenta e quatro anos e a ausência de esposa tiram o morto do gênero alto, e ele concorda.",
+      "order": 34
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-36",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 905,
+        "end": 975,
+        "quote": " E dado que sim, o que menos convinha a essa anonyma era apparental-o."
+      },
+      "mark": "seta",
+      "note": "Convir não parecer tragédia.",
+      "expanded": "«apparental-o» é o verbo do decoro. «anonyma» não deve encenar o que o óbito não merece. O narrador dita o comportamento dela a partir da cama.",
+      "order": 35
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c3-37",
+      "anchor": {
+        "paragraphId": "c3",
+        "start": 975,
+        "end": 1099,
+        "quote": " De pé, á cabeceira da cama, com os olhos estupidos, a boca entreaberta, a triste senhora mal podia crer na minha extincção."
+      },
+      "mark": "realce",
+      "note": "O corpo da que fica.",
+      "expanded": "«estupidos», «entreaberta»: o retrato é físico e pouco nobre. «extincção» é palavra de lampião, não de heroína. «á cabeceira» a coloca no posto clássico e a frase recusa o clássico.",
+      "order": 36
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c4-38",
+      "anchor": {
+        "paragraphId": "c4",
+        "start": 0,
+        "end": 30,
+        "quote": "— Morto! morto! dizia consigo."
+      },
+      "mark": "circulo",
+      "note": "Morto, e só para si.",
+      "expanded": "A repetição «Morto! morto!» é o único discurso direto dela. «dizia consigo» fecha o grito do lado de dentro. Não há plateia nessa frase.",
+      "order": 37
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c5-39",
+      "anchor": {
+        "paragraphId": "c5",
+        "start": 0,
+        "end": 266,
+        "quote": "E a imaginação dela, como as cegonhas que um ilustre viajante viu desferirem o vôo desde o Ilysso ás ribas africanas, sem embargo das ruínas e dos tempos, — a imaginação dessa senhora também voou por sobre os destroços presentes até ás ribas de uma Africa juvenil..."
+      },
+      "mark": "colchete",
+      "note": "Cegonhas, Ilissos, África.",
+      "expanded": "O símile é longo de propósito: «Ilysso», ruínas, «Africa juvenil». A imaginação «voou» por cima do quarto. O viajante ilustre não é nomeado; o voo importa mais que a fonte.",
+      "order": 38
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c5-40",
+      "anchor": {
+        "paragraphId": "c5",
+        "start": 266,
+        "end": 355,
+        "quote": " Deixal-a ir; lá iremos mais tarde; lá iremos quando eu me restituir aos primeiros annos."
+      },
+      "mark": "seta",
+      "note": "Deixar ir, para voltar menino.",
+      "expanded": "«Deixal-a» empurra a senhora para fora do capítulo. «primeiros annos» anunciam a narrativa de trás para diante. O futuro do livro é o passado do morto.",
+      "order": 39
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c5-41",
+      "anchor": {
+        "paragraphId": "c5",
+        "start": 355,
+        "end": 620,
+        "quote": " Agora, quero morrer tranquillamente, methodicamente, ouvindo os soluços das damas, as fallas baixas dos homens, a chuva que tamborila nas folhas de tinhorão da chacara, e o som estridulo de uma navalha que um amolador está afiando lá fóra, à porta de um correeiro."
+      },
+      "mark": "colchete",
+      "note": "A orquestra miúda da chácara.",
+      "expanded": "Soluços, «fallas baixas», chuva no «tinhorão», navalha no «correeiro»: quatro sons, um só período. «methodicamente» quer morrer com método, e a lista é o método.",
+      "order": 40
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c5-42",
+      "anchor": {
+        "paragraphId": "c5",
+        "start": 620,
+        "end": 703,
+        "quote": " Juro-lhes que essa orchestra da morte foi muito menos triste do que podia parecer."
+      },
+      "mark": "sublinhado",
+      "note": "Orquestra, e menos triste.",
+      "expanded": "«juro-lhes» pede crédito para um paradoxo. «orchestra da morte» junta o amolador e as damas. «menos triste» prepara o adjetivo que vem.",
+      "order": 41
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c5-43",
+      "anchor": {
+        "paragraphId": "c5",
+        "start": 703,
+        "end": 752,
+        "quote": " De certo ponto em deante chegou a ser deliciosa."
+      },
+      "mark": "realce",
+      "note": "Deliciosa, a partir de um ponto.",
+      "expanded": "«deante» marca um limiar sem dizer qual. «deliciosa» é o escândalo do adjetivo. Morrer muda de sabor, e a frase curta não explica o gosto.",
+      "order": 42
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c5-44",
+      "anchor": {
+        "paragraphId": "c5",
+        "start": 752,
+        "end": 952,
+        "quote": " A vida estrebuchava-me no peito, com uns impetos de vaga marinha, esvaia-se-me a consciencia, eu descia á immobilidade physica e moral, e o corpo fazia-se-me planta, e pedra, e lodo, e cousa nenhuma."
+      },
+      "mark": "colchete",
+      "note": "Planta, pedra, lodo, nada.",
+      "expanded": "«estrebuchava» ainda é vida; «cousa nenhuma» é o fim da escala. «vaga marinha» no peito e depois o corpo mineral. A enumeração desce e apaga o eu.",
+      "order": 43
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c6-45",
+      "anchor": {
+        "paragraphId": "c6",
+        "start": 0,
+        "end": 185,
+        "quote": "Morri de uma pneumonia; mas se lhe disser que foi menos a pneumonia, do que uma idéa grandiosa e util, a causa da minha morte, é possível que o leitor me não creia, e todavia é verdade."
+      },
+      "mark": "sublinhado",
+      "note": "Pneumonia, ou a ideia.",
+      "expanded": "O «mas» desvia a causa clínica. «idéa grandiosa e util» ainda não tem conteúdo: é isca. «é possível que o leitor me não creia» já conta com a descrença e a usa como prova.",
+      "order": 44
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c6-46",
+      "anchor": {
+        "paragraphId": "c6",
+        "start": 185,
+        "end": 221,
+        "quote": " Vou expor-lhe summariamente o caso."
+      },
+      "mark": "traco",
+      "note": "O caso, em resumo prometido.",
+      "expanded": "«summariamente» cabe a quem acabou de dizer que o prólogo deve ser curto. «expor» anuncia o capítulo seguinte sem sair deste. O morto vira relator.",
+      "order": 45
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-c6-47",
+      "anchor": {
+        "paragraphId": "c6",
+        "start": 221,
+        "end": 244,
+        "quote": " Julgue-o por si mesmo."
+      },
+      "mark": "circulo",
+      "note": "O julgamento fica com o leitor.",
+      "expanded": "«Julgue-o» devolve a autoridade e não a solta de verdade: o caso ainda não foi contado. «por si mesmo» lisonjeia. O capítulo acaba na soleira.",
+      "order": 46
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-lugar-48",
+      "anchor": {
+        "paragraphId": "c2",
+        "start": 113,
+        "end": 120,
+        "quote": "Catumby"
+      },
+      "mark": "lugar",
+      "note": "A chácara do óbito.",
+      "expanded": "«Minha bella chacara de Catumby», sexta-feira de agosto de 1869, duas da tarde. O pin é o bairro que o texto nomeia, na grafia da edição.",
+      "order": 47,
+      "place": {
+        "lat": -22.917,
+        "lng": -43.196,
+        "label": "Catumbi"
+      }
+    },
+    {
+      "id": "ao-leitor-e-capitulo-1-lugar-49",
+      "anchor": {
+        "paragraphId": "c5",
+        "start": 91,
+        "end": 97,
+        "quote": "Ilysso"
+      },
+      "mark": "lugar",
+      "note": "Símile, não cenário.",
+      "expanded": "O rio entra na comparação das cegonhas, não como lugar da ação. A morte continua na chácara; a imaginação é que voa.",
+      "order": 48,
+      "place": {
+        "lat": 37.968,
+        "lng": 23.733,
+        "label": "Ilissos"
+      }
+    }
+  ],
+  "widgets": [
+    {
+      "id": "colunas",
+      "title": "Graves e frívolos",
+      "paragraphId": "a1",
+      "text": "O livro se apresenta já sem as duas colunas da opinião: os graves não acham romance puro, os frívolos não acham o romance de sempre.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "livro",
+            "x": 190,
+            "y": 78,
+            "w": 140,
+            "h": 60,
+            "text": "este livro"
+          },
+          {
+            "id": "graves",
+            "x": 16,
+            "y": 24,
+            "w": 150,
+            "h": 52,
+            "text": "gente grave"
+          },
+          {
+            "id": "frivolos",
+            "x": 340,
+            "y": 24,
+            "w": 160,
+            "h": 52,
+            "text": "gente frívola"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "graves",
+            "to": "livro",
+            "label": "sem estima"
+          },
+          {
+            "from": "frivolos",
+            "to": "livro",
+            "label": "sem amor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tinta",
+      "title": "Pena e tinta",
+      "paragraphId": "a1",
+      "text": "A galhofa está no instrumento; a melancolia, na tinta. O «connubio» avisa a cor de tudo o que segue, inclusive do óbito contado com graça.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "pena",
+            "x": 12,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "pena da galhofa"
+          },
+          {
+            "id": "connubio",
+            "x": 175,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "connubio"
+          },
+          {
+            "id": "tinta",
+            "x": 338,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "tinta da melancholia"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "pena",
+            "to": "connubio"
+          },
+          {
+            "from": "connubio",
+            "to": "tinta"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tras",
+      "title": "Morrer, depois narrar",
+      "paragraphId": "c1",
+      "text": "O uso vulgar começa no nascimento. Brás escolhe a morte como berço. O resto das memórias anda para trás, em direção aos primeiros anos.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "morte",
+            "x": 16,
+            "y": 70,
+            "w": 120,
+            "h": 64,
+            "text": "óbito"
+          },
+          {
+            "id": "agora",
+            "x": 180,
+            "y": 70,
+            "w": 140,
+            "h": 64,
+            "text": "defunto autor"
+          },
+          {
+            "id": "anos",
+            "x": 360,
+            "y": 70,
+            "w": 140,
+            "h": 64,
+            "text": "primeiros anos"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "morte",
+            "to": "agora",
+            "label": "campa / berço"
+          },
+          {
+            "from": "agora",
+            "to": "anos",
+            "label": "para trás"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ideia",
+      "title": "Pneumonia e a ideia",
+      "paragraphId": "c6",
+      "text": "A causa clínica está dita. A frase a empurra para o lado e oferece outra, «grandiosa e util», que este capítulo não explica. O leitor fica na soleira.",
+      "diagram": {
+        "boxes": [
+          {
+            "id": "pneumonia",
+            "x": 12,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "pneumonia"
+          },
+          {
+            "id": "mas",
+            "x": 175,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "mas"
+          },
+          {
+            "id": "ideia",
+            "x": 338,
+            "y": 70,
+            "w": 149,
+            "h": 72,
+            "text": "ideia grandiosa"
+          }
+        ],
+        "arrows": [
+          {
+            "from": "pneumonia",
+            "to": "mas"
+          },
+          {
+            "from": "mas",
+            "to": "ideia"
+          }
+        ]
+      }
+    }
+  ]
+}

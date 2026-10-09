@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Heading } from "@/components/typography/Heading";
 import { Section } from "@/components/layout/Section";
-import { Button } from "@/components/ui/button";
+import { BookCover } from "@/components/books/BookCover";
+import { Flag } from "@/components/books/Flag";
+import { books } from "@/data/catalog";
 
 export default function HomePage() {
   return (
@@ -12,49 +14,37 @@ export default function HomePage() {
           <div className="absolute bottom-6 right-6 h-72 w-72 rounded-full bg-gold blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-3xl text-center">
-          <p className="mb-4 font-sans text-xs uppercase tracking-[0.32em] text-gold">Academia de leitura</p>
+          <p className="mb-4 font-sans text-xs uppercase tracking-[0.32em] text-gold">O Cenáculo</p>
           <Heading as="h1" size="xl" className="mb-6">
-            Os clássicos anotados à margem
+            Primeiros capítulos, anotados à margem
           </Heading>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
-            O livro fica na página, como numa edição impressa. Na margem, o lápis de uma leitura de perto: a ordem da frase,
-            o ritmo, a palavra russa, o que o narrador finge não saber.
+            Cada livro entra por uma só porta: o primeiro capítulo, lido de perto. O texto corre na página. O lápis, à direita, marca a frase, o lugar e o esquema.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/livro/o-idiota">Entrar em O Idiota</Link>
-            </Button>
-            <Button variant="wine-outline" size="lg" asChild>
-              <Link to="/livro/o-idiota/ler/parte-1-capitulo-1">Abrir no vagão</Link>
-            </Button>
-          </div>
         </div>
       </Section>
 
-      <Section background="parchment">
-        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
-          {[
-            {
-              n: "01",
-              title: "A página",
-              text: "A tradução corre contínua, em tipo de livro. Não é ficha, nem aula cortada em exercícios. É o capítulo.",
-            },
-            {
-              n: "02",
-              title: "A marca",
-              text: "Sublinhado, círculo, colchete, realce, traço. O lápis aponta a frase, não um resumo ao lado dela.",
-            },
-            {
-              n: "03",
-              title: "A margem",
-              text: "A nota é curta, escrita à mão. O clique abre a leitura: sintaxe, ironia, a escolha em russo, o efeito.",
-            },
-          ].map((item) => (
-            <article key={item.n} className="rounded-lg border border-border bg-card p-6 shadow-soft">
-              <p className="font-hand text-3xl text-wine">{item.n}</p>
-              <h2 className="mt-2 font-serif text-2xl">{item.title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-            </article>
+      <Section background="parchment" id="livros">
+        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
+          {books.map((book) => (
+            <Link
+              key={book.slug}
+              to={`/livro/${book.slug}`}
+              className="flex gap-4 rounded-lg border border-border bg-card p-4 shadow-soft transition-colors hover:border-wine/40"
+            >
+              <BookCover book={book} className="h-40 w-28" />
+              <div className="min-w-0 py-1">
+                <p className="flex items-center gap-2 font-sans text-xs uppercase tracking-[0.16em] text-muted-foreground">
+                  <Flag code={book.flag} />
+                  {book.country}
+                  <span aria-hidden="true">·</span>
+                  {book.year}
+                </p>
+                <h2 className="mt-2 font-serif text-2xl leading-tight">{book.title}</h2>
+                <p className="mt-1 font-sans text-sm text-muted-foreground">{book.author}</p>
+                <p className="mt-3 line-clamp-4 font-sans text-sm leading-relaxed text-foreground/80">{book.pitch}</p>
+              </div>
+            </Link>
           ))}
         </div>
       </Section>

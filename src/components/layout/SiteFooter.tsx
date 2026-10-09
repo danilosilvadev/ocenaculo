@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { BrandMark } from "@/components/BrandMark";
 import { Container } from "@/components/layout/Container";
-import { RUSSIAN_SOURCE, TRANSLATION_NOTE } from "@/data/source";
+import { books } from "@/data/catalog";
 
 export const SiteFooter = () => {
   return (
@@ -18,9 +18,9 @@ export const SiteFooter = () => {
             </p>
           </div>
           <div className="text-sm leading-relaxed text-primary-foreground/75">
-            <p className="font-serif text-base text-primary-foreground">{TRANSLATION_NOTE}.</p>
-            <p className="mt-2">{RUSSIAN_SOURCE.citation}</p>
-            <p className="mt-2">{RUSSIAN_SOURCE.electronic}</p>
+            <p className="font-serif text-base text-primary-foreground">Primeiros capítulos, anotados à margem.</p>
+            <p className="mt-2">{books.map((book) => book.title).join(" · ")}</p>
+            <p className="mt-2">A edição de cada texto está na página do livro.</p>
           </div>
         </div>
         <p className="mt-10 border-t border-primary-foreground/20 pt-6 text-xs text-primary-foreground/60">

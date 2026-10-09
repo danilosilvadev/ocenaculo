@@ -1,7 +1,7 @@
 import type { MarkKind, Note, Paragraph, Segment } from "@/data/types";
 
 /** Marks stored in the JSON the editor publishes. `traco` keeps the existing sideline. */
-export const MARK_NAMES = ["sublinhado", "circulo", "colchete", "realce", "traco", "seta"] as const;
+export const MARK_NAMES = ["sublinhado", "circulo", "colchete", "realce", "traco", "seta", "lugar"] as const;
 export type MarkName = (typeof MARK_NAMES)[number];
 
 export const MARK_LABEL: Record<MarkName, string> = {
@@ -11,6 +11,7 @@ export const MARK_LABEL: Record<MarkName, string> = {
   realce: "Realce",
   traco: "Traço",
   seta: "Seta",
+  lugar: "Lugar",
 };
 
 const MARK_KIND: Record<MarkName, MarkKind> = {
@@ -20,6 +21,7 @@ const MARK_KIND: Record<MarkName, MarkKind> = {
   realce: "highlight",
   traco: "sideline",
   seta: "arrow",
+  lugar: "place",
 };
 
 const KIND_NAME: Record<MarkKind, MarkName> = {
@@ -29,6 +31,7 @@ const KIND_NAME: Record<MarkKind, MarkName> = {
   bracket: "colchete",
   sideline: "traco",
   arrow: "seta",
+  place: "lugar",
 };
 
 export interface AnnotationAnchor {
@@ -38,27 +41,70 @@ export interface AnnotationAnchor {
   quote: string;
 }
 
+export interface AnnotationPlace {
+  lat: number;
+  lng: number;
+  label: string;
+}
+
 export interface Annotation {
   id: string;
   anchor: AnnotationAnchor;
   mark: MarkName;
   note: string;
   expanded: string;
+  /** Gloss of a word in the original. Older files used `russian`. */
+  gloss?: string;
   russian?: string;
   order: number;
+  place?: AnnotationPlace;
+}
+
+export interface DiagramBox {
+  id: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  text: string;
+}
+
+export interface DiagramArrow {
+  from: string;
+  to: string;
+  label?: string;
+}
+
+export interface ConceptWidget {
+  id: string;
+  title: string;
+  paragraphId: string;
+  text: string;
+  diagram: { boxes: DiagramBox[]; arrows: DiagramArrow[] };
 }
 
 export interface AnnotationFile {
   version: 1;
+  bookId: string;
   chapterId: string;
   annotations: Annotation[];
+  widgets: ConceptWidget[];
 }
 
 export interface PlainParagraph {
   id: string;
   pt: string;
-  ru: string;
+  ru?: string;
+  original?: string;
+  section?: string;
 }
+
+const BOOK_OF_CHAPTER: Record<string, string> = {
+  "parte-1-capitulo-1": "o-idiota",
+  "carta-1": "frankenstein",
+  "ao-leitor-e-capitulo-1": "bras-cubas",
+  mudanca: "vidas-secas",
+};
 
 export interface ChapterTextFile {
   chapterId: string;
@@ -73,12 +119,54 @@ export function markName(kind: MarkKind): MarkName {
   return KIND_NAME[kind];
 }
 
+function parsePlace(value: unknown, id: string): AnnotationPlace | { error: string } | undefined {
+  if (value == null) return undefined;
+  if (!value || typeof value !== "object") return { error: `Lugar incompleto em ${id}.` };
+  const place = value as Partial<AnnotationPlace>;
+  if (typeof place.lat !== "number" || typeof place.lng !== "number" || typeof place.label !== "string" || !place.label.trim()) {
+    return { error: `Lugar incompleto em ${id}.` };
+  }
+  return { lat: place.lat, lng: place.lng, label: place.label.trim() };
+}
+
+function parseWidgets(value: unknown): ConceptWidget[] | { error: string } {
+  if (value == null) return [];
+  if (!Array.isArray(value)) return { error: "Os esquemas não estão numa lista." };
+  const widgets: ConceptWidget[] = [];
+  for (const item of value) {
+    if (!item || typeof item !== "object") return { error: "Esquema inválido." };
+    const widget = item as Partial<ConceptWidget>;
+    if (!widget.id || !widget.paragraphId || typeof widget.title !== "string" || typeof widget.text !== "string") {
+      return { error: "Esquema sem título ou lugar." };
+    }
+    const diagram = widget.diagram;
+    if (!diagram || !Array.isArray(diagram.boxes) || !Array.isArray(diagram.arrows)) return { error: `Diagrama incompleto em ${widget.id}.` };
+    const boxes: DiagramBox[] = [];
+    for (const box of diagram.boxes) {
+      if (!box || typeof box.id !== "string" || typeof box.text !== "string") return { error: `Caixa inválida em ${widget.id}.` };
+      if ([box.x, box.y, box.w, box.h].some((n) => typeof n !== "number")) return { error: `Caixa inválida em ${widget.id}.` };
+      boxes.push({ id: box.id, x: box.x, y: box.y, w: box.w, h: box.h, text: box.text });
+    }
+    const arrows: DiagramArrow[] = [];
+    for (const arrow of diagram.arrows) {
+      if (!arrow || typeof arrow.from !== "string" || typeof arrow.to !== "string") return { error: `Seta inválida em ${widget.id}.` };
+      arrows.push({ from: arrow.from, to: arrow.to, label: typeof arrow.label === "string" ? arrow.label : undefined });
+    }
+    widgets.push({ id: widget.id, title: widget.title, paragraphId: widget.paragraphId, text: widget.text, diagram: { boxes, arrows } });
+  }
+  return widgets;
+}
+
 export function parseAnnotationFile(data: unknown): AnnotationFile | { error: string } {
   if (!data || typeof data !== "object") return { error: "O JSON não é um objeto." };
   const record = data as Partial<AnnotationFile>;
   if (record.version !== 1) return { error: "Versão do arquivo desconhecida." };
-  if (record.chapterId !== "parte-1-capitulo-1") return { error: "Este editor só publica o capítulo I." };
+  if (typeof record.chapterId !== "string" || !record.chapterId) return { error: "Falta o capítulo." };
+  const bookId = typeof record.bookId === "string" && record.bookId ? record.bookId : BOOK_OF_CHAPTER[record.chapterId];
+  if (!bookId) return { error: "Falta o livro." };
   if (!Array.isArray(record.annotations)) return { error: "Falta a lista de anotações." };
+  const widgets = parseWidgets(record.widgets);
+  if ("error" in widgets) return widgets;
   const annotations: Annotation[] = [];
   for (const item of record.annotations) {
     if (!item || typeof item !== "object") return { error: "Anotação inválida." };
@@ -92,17 +180,23 @@ export function parseAnnotationFile(data: unknown): AnnotationFile | { error: st
     if (typeof note.note !== "string" || typeof note.expanded !== "string" || typeof note.order !== "number") {
       return { error: `Campos em falta em ${note.id}.` };
     }
+    const place = parsePlace(note.place, note.id);
+    if (place && "error" in place) return place;
+    if (note.mark === "lugar" && !place) return { error: `Lugar sem mapa em ${note.id}.` };
+    const gloss = (typeof note.gloss === "string" && note.gloss.trim()) || (typeof note.russian === "string" && note.russian.trim()) || "";
     annotations.push({
       id: note.id,
       anchor: { paragraphId: anchor.paragraphId, start: anchor.start, end: anchor.end, quote: anchor.quote },
       mark: note.mark,
       note: note.note,
       expanded: note.expanded,
-      russian: typeof note.russian === "string" && note.russian.trim() ? note.russian : undefined,
+      gloss: gloss || undefined,
+      russian: gloss || undefined,
       order: note.order,
+      place: place && !("error" in place) ? place : undefined,
     });
   }
-  return { version: 1, chapterId: "parte-1-capitulo-1", annotations };
+  return { version: 1, bookId, chapterId: record.chapterId, annotations, widgets };
 }
 
 interface Resolved {
@@ -149,8 +243,9 @@ export function buildSegments(text: string, resolved: Resolved[]): Segment[] {
         mark: MARK_KIND[item.annotation.mark],
         m: item.annotation.note,
         x: item.annotation.expanded || undefined,
-        ruWord: item.annotation.russian,
+        ruWord: item.annotation.gloss || item.annotation.russian,
         order: item.annotation.order,
+        place: item.annotation.place,
       };
       const children = rec(item.start, item.end, inside.filter((other) => other !== item));
       if (children.length === 1 && !children[0]?.note && !children[0]?.inner) {
@@ -168,9 +263,11 @@ export function buildSegments(text: string, resolved: Resolved[]): Segment[] {
 
 export function renderParagraph(paragraph: PlainParagraph, annotations: Annotation[]): Paragraph {
   const mine = annotations.filter((item) => item.anchor.paragraphId === paragraph.id);
+  const original = paragraph.original ?? paragraph.ru ?? "";
   return {
     id: paragraph.id,
-    ru: paragraph.ru,
+    ru: original,
+    section: paragraph.section,
     segs: buildSegments(paragraph.pt, resolveAnnotations(paragraph.pt, mine)),
   };
 }

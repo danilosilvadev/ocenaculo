@@ -14,7 +14,7 @@ describe("publicar no GitHub", () => {
       calls.push(`${init?.method ?? "GET"} ${url}`);
       if ((init?.method ?? "GET") === "GET") return jsonResponse(200, { sha: "abc" });
       const payload = JSON.parse(String(init?.body));
-      expect(payload.message).toMatch(/capítulo I/);
+      expect(payload.message).toMatch(/primeiro capítulo/);
       expect(payload.sha).toBe("abc");
       expect(typeof payload.content).toBe("string");
       return jsonResponse(200, { content: { sha: "def" } });

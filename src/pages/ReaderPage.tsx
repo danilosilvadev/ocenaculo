@@ -1,19 +1,22 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { AnnotatedReader } from "@/components/reader/AnnotatedReader";
-import { bundledAnnotations, chapterFromAnnotations, findChapter, partOne } from "@/data/book";
+import { AnnotatedReader, type ReaderFrame } from "@/components/reader/AnnotatedReader";
+import { bookBySlug } from "@/data/catalog";
+import { bookChapter, bundledFile } from "@/data/book";
 import { parseAnnotationFile, type AnnotationFile } from "@/lib/annotations";
-import { PUBLISHED_ANNOTATIONS_URL } from "@/lib/githubPublish";
+import { publishedAnnotationsUrl } from "@/lib/githubPublish";
 
 export default function ReaderPage() {
-  const { chapterId } = useParams();
-  const chapter = findChapter(chapterId);
-  const [live, setLive] = useState<AnnotationFile>(bundledAnnotations);
+  const { slug, chapterId } = useParams();
+  const book = bookBySlug(slug);
+  const bundled = book ? bundledFile(book.slug) : undefined;
+  const [live, setLive] = useState<AnnotationFile | null>(bundled ?? null);
 
   useEffect(() => {
-    if (chapterId !== "parte-1-capitulo-1") return;
+    if (!book || chapterId !== book.chapterId) return;
+    setLive(bundledFile(book.slug));
     let cancel = false;
-    fetch(PUBLISHED_ANNOTATIONS_URL, { cache: "no-cache" })
+    fetch(publishedAnnotationsUrl(book.slug, book.chapterId), { cache: "no-cache" })
       .then((response) => (response.ok ? response.json() : null))
       .then((data) => {
         const parsed = parseAnnotationFile(data);
@@ -23,21 +26,32 @@ export default function ReaderPage() {
     return () => {
       cancel = true;
     };
-  }, [chapterId]);
+  }, [book, chapterId]);
 
-  const shown = useMemo(() => (chapterId === "parte-1-capitulo-1" ? chapterFromAnnotations(live) : chapter), [chapter, chapterId, live]);
+  const shown = useMemo(() => (book && live && chapterId === book.chapterId ? bookChapter(book.slug, live) : null), [book, chapterId, live]);
 
-  if (!shown || !shown.available) {
+  if (!book || !shown) {
     return (
       <div className="mx-auto max-w-lg px-4 py-20 text-center">
-        <p className="font-hand text-4xl text-wine">Em breve</p>
-        <p className="mt-3 font-serif text-2xl">Este capítulo ainda não está na margem.</p>
-        <Link to="/livro/o-idiota" className="mt-6 inline-block font-sans text-sm text-wine underline">
-          Voltar ao livro
+        <p className="font-serif text-2xl">Este capítulo não está nesta margem.</p>
+        <Link to={book ? `/livro/${book.slug}` : "/"} className="mt-6 inline-block font-sans text-sm text-wine underline">
+          Voltar
         </Link>
       </div>
     );
   }
 
-  return <AnnotatedReader chapter={shown} siblings={partOne} />;
+  const frame: ReaderFrame = {
+    slug: book.slug,
+    kicker: book.kicker,
+    originalLabel: book.originalLabel,
+    translationNote: book.translationNote,
+    citation: book.citation,
+    electronic: book.electronic,
+    sourceUrl: book.sourceUrl,
+    continueUrl: book.continueUrl,
+    continueLabel: book.continueLabel,
+  };
+
+  return <AnnotatedReader chapter={shown} frame={frame} widgets={live?.widgets ?? []} />;
 }

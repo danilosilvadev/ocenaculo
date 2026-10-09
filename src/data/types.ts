@@ -1,4 +1,10 @@
-export type MarkKind = "underline" | "circle" | "highlight" | "bracket" | "sideline" | "arrow";
+export type MarkKind = "underline" | "circle" | "highlight" | "bracket" | "sideline" | "arrow" | "place";
+
+export interface NotePlace {
+  lat: number;
+  lng: number;
+  label: string;
+}
 
 export interface Note {
   id: string;
@@ -7,9 +13,10 @@ export interface Note {
   m: string;
   /** Close reading, opened on click. */
   x?: string;
-  /** Optional gloss of a Russian word. */
+  /** Optional gloss of a word in the original. */
   ruWord?: string;
   order?: number;
+  place?: NotePlace;
 }
 
 export interface Segment {
@@ -22,6 +29,7 @@ export interface Paragraph {
   id: string;
   ru: string;
   segs: Segment[];
+  section?: string;
 }
 
 export interface Chapter {

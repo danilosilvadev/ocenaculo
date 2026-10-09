@@ -14,9 +14,10 @@ export function AppRoutes() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/livro/o-idiota" element={<BookPage />} />
-          <Route path="/livro/o-idiota/ler/:chapterId" element={<ReaderPage />} />
+          <Route path="/livro/:slug" element={<BookPage />} />
+          <Route path="/livro/:slug/ler/:chapterId" element={<ReaderPage />} />
           <Route path="/editor" element={<EditorPage />} />
+          <Route path="/editor/:slug" element={<EditorPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

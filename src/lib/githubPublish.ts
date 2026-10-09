@@ -5,10 +5,12 @@ export const MAIN_ANNOTATION_PATH = "public/data/o-idiota/parte-1-capitulo-1.ann
 export const PAGES_ANNOTATION_PATH = "data/o-idiota/parte-1-capitulo-1.annotations.json";
 export const TOKEN_STORAGE_KEY = "ocenaculo.github.token";
 
-const TARGETS = [
-  { branch: "main", path: MAIN_ANNOTATION_PATH },
-  { branch: "gh-pages", path: PAGES_ANNOTATION_PATH },
-] as const;
+export function annotationTargets(file: AnnotationFile) {
+  return [
+    { branch: "main" as const, path: `public/data/${file.bookId}/${file.chapterId}.annotations.json` },
+    { branch: "gh-pages" as const, path: `data/${file.bookId}/${file.chapterId}.annotations.json` },
+  ];
+}
 
 export type PublishFailure = {
   ok: false;
@@ -60,7 +62,7 @@ async function putFile(
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      message: "Atualiza as anotações de O Idiota, parte I, capítulo I.",
+      message: "Atualiza as anotações do primeiro capítulo.",
       content: toBase64(content),
       branch,
       sha,
@@ -71,7 +73,7 @@ async function putFile(
 
 export async function publishAnnotationFile(token: string, file: AnnotationFile, fetchImpl: typeof fetch = fetch): Promise<PublishResult> {
   const json = `${JSON.stringify(file, null, 2)}\n`;
-  for (const target of TARGETS) {
+  for (const target of annotationTargets(file)) {
     const current = await readSha(GITHUB_REPO, target.path, target.branch, token, fetchImpl);
     if ("error" in current && current.error === "unauthorized") {
       return { ok: false, code: "unauthorized", message: "O GitHub recusou o token (401). Confira se ele tem Contents em danilosilvadev/ocenaculo.", branch: target.branch };
@@ -98,4 +100,6 @@ export async function publishAnnotationFile(token: string, file: AnnotationFile,
   return { ok: true };
 }
 
-export const PUBLISHED_ANNOTATIONS_URL = `${import.meta.env.BASE_URL}data/o-idiota/parte-1-capitulo-1.annotations.json`;
+export function publishedAnnotationsUrl(bookId: string, chapterId: string) {
+  return `${import.meta.env.BASE_URL}data/${bookId}/${chapterId}.annotations.json`;
+}

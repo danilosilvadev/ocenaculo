@@ -1,10 +1,14 @@
 import { parseAnnotationFile, type AnnotationFile } from "@/lib/annotations";
 
-export const DRAFT_STORAGE_KEY = "ocenaculo.draft.parte-1-capitulo-1";
+export function draftKey(chapterId: string) {
+  return `ocenaculo.draft.${chapterId}`;
+}
 
-export function loadDraft(): AnnotationFile | null {
+export const DRAFT_STORAGE_KEY = draftKey("parte-1-capitulo-1");
+
+export function loadDraft(chapterId = "parte-1-capitulo-1"): AnnotationFile | null {
   try {
-    const raw = localStorage.getItem(DRAFT_STORAGE_KEY);
+    const raw = localStorage.getItem(draftKey(chapterId));
     if (!raw) return null;
     const parsed = parseAnnotationFile(JSON.parse(raw) as unknown);
     return "error" in parsed ? null : parsed;
@@ -14,9 +18,9 @@ export function loadDraft(): AnnotationFile | null {
 }
 
 export function saveDraft(file: AnnotationFile) {
-  localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(file));
+  localStorage.setItem(draftKey(file.chapterId), JSON.stringify(file));
 }
 
-export function clearDraft() {
-  localStorage.removeItem(DRAFT_STORAGE_KEY);
+export function clearDraft(chapterId = "parte-1-capitulo-1") {
+  localStorage.removeItem(draftKey(chapterId));
 }

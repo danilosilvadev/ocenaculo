@@ -3,11 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { BrandMark } from "@/components/BrandMark";
 import { Container } from "@/components/layout/Container";
+import { books } from "@/data/catalog";
 import { cn } from "@/lib/utils";
 
 const links = [
   { to: "/", label: "Início", end: true },
-  { to: "/livro/o-idiota", label: "O Idiota", end: false },
+  ...books.map((book) => ({ to: `/livro/${book.slug}`, label: book.title.replace("Memórias Póstumas de ", ""), end: false })),
 ];
 
 export const SiteHeader = () => {
@@ -41,10 +42,10 @@ export const SiteHeader = () => {
         </ul>
 
         <Link
-          to="/livro/o-idiota/ler/parte-1-capitulo-1"
+          to="/"
           className="hidden rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-soft transition-colors hover:bg-wine-light md:inline-flex"
         >
-          Abrir o livro
+          Os livros
         </Link>
 
         <button
@@ -75,11 +76,11 @@ export const SiteHeader = () => {
             ))}
             <li className="pt-2">
               <Link
-                to="/livro/o-idiota/ler/parte-1-capitulo-1"
+                to="/"
                 onClick={() => setOpen(false)}
                 className="inline-flex w-full justify-center rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground"
               >
-                Abrir o livro
+                Os livros
               </Link>
             </li>
           </ul>
