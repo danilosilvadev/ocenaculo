@@ -45,10 +45,13 @@ describe("placeMarginNotes", () => {
 });
 
 describe("arrowPath", () => {
-  it("keeps the horizontal run short when the note is pushed far down", () => {
-    const path = arrowPath(100, 10, 180, 240, 3);
-    expect(path.startsWith("M 100.0 10.0")).toBe(true);
-    expect(path).toContain("117.6");
+  it("leaves the line, runs down the gutter, and only then enters the note", () => {
+    const path = arrowPath(80, 20, 180, 240, 3, 140);
+    expect(path.startsWith("M 80.0 20.0")).toBe(true);
+    expect(path).toContain("L 140.0");
     expect(path.endsWith("180.0 240.0")).toBe(true);
+    expect(path).not.toMatch(/[CQ] /);
+    const xs = [...path.matchAll(/[\d.]+/g)].map((match) => Number(match[0])).filter((_, index) => index % 2 === 0);
+    expect(Math.min(...xs)).toBeGreaterThanOrEqual(80);
   });
 });

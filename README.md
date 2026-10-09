@@ -46,7 +46,7 @@ O texto de cada abertura está em `src/content/<livro>/<capítulo>.text.json`. A
 
 Cada anotação tem `id`, `anchor` (`paragraphId`, `start`, `end`, `quote`), `mark` (`sublinhado`, `circulo`, `colchete`, `realce`, `traco`, `seta`, `lugar`), `note`, `expanded`, `order`. `lugar` exige `place` (`lat`, `lng`, `label`). `gloss` (ou o campo antigo `russian`) é uma nota da língua original, quando há. Os esquemas ficam em `widgets`: `title`, `paragraphId`, `text` e `diagram` (`boxes`, `arrows`).
 
-O mapa usa `public/maps/countries-110m.json` (Natural Earth, via world-atlas), no próprio site, sem pedido externo.
+O mapa usa `public/maps/countries-50m.json` (Natural Earth, via world-atlas), `brazil-states.json` e `sao-francisco.json`, no próprio site, sem pedido externo. Os rótulos se afastam quando colidem. O minimapa de um lugar mostra costa, uma cidade de referência e, quando a região é aproximada, uma mancha em vez de um ponto.
 
 ## Editor
 

@@ -56,29 +56,15 @@ export function hashString(value: string): number {
 }
 
 /**
- * A short ink arrow in the gutter.
- * Horizontal runs stay short; a long vertical gap becomes an elbow, not a slash across the page.
+ * Margin arrow: leave the mark along its own line, drop in the gutter, then enter the note.
+ * The vertical run stays to the right of the text column.
  */
-export function arrowPath(x1: number, y1: number, x2: number, y2: number, seed: number): string {
-  const wob = (seed % 7) - 3;
-  const dy = y2 - y1;
-  if (Math.abs(dy) < 22) {
-    const cx = x1 + Math.min(28, Math.max(12, (x2 - x1) * 0.45));
-    const cy = y1 + wob;
-    return `M ${x1.toFixed(1)} ${y1.toFixed(1)} Q ${cx.toFixed(1)} ${cy.toFixed(1)}, ${x2.toFixed(1)} ${y2.toFixed(1)}`;
-  }
-  const out = Math.min(18, Math.max(10, (x2 - x1) * 0.22));
-  const gutter = x1 + out;
-  const into = x2 - Math.min(16, Math.max(8, x2 - gutter));
-  const midY = y1 + dy * 0.55 + wob;
-  return [
-    `M ${x1.toFixed(1)} ${y1.toFixed(1)}`,
-    `C ${(x1 + out * 0.6).toFixed(1)} ${(y1 + wob * 0.4).toFixed(1)},`,
-    `${gutter.toFixed(1)} ${(y1 + wob).toFixed(1)},`,
-    `${gutter.toFixed(1)} ${midY.toFixed(1)}`,
-    `S ${(into - 4).toFixed(1)} ${(y2 - wob).toFixed(1)},`,
-    `${x2.toFixed(1)} ${y2.toFixed(1)}`,
-  ].join(" ");
+export function arrowPath(x1: number, y1: number, x2: number, y2: number, seed: number, gutterX?: number): string {
+  const wob = ((seed % 5) - 2) * 0.45;
+  const fmt = (n: number) => n.toFixed(1);
+  const rail = gutterX ?? x1 + Math.min(14, Math.max(8, (x2 - x1) * 0.18));
+  const railX = Math.min(Math.max(rail, x1 + 2), x2 - 4);
+  return `M ${fmt(x1)} ${fmt(y1)} L ${fmt(railX)} ${fmt(y1 + wob)} L ${fmt(railX)} ${fmt(y2 - wob)} L ${fmt(x2)} ${fmt(y2)}`;
 }
 
 export function wavyVertical(x: number, y1: number, y2: number, seed: number): string {

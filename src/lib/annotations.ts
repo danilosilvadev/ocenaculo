@@ -60,6 +60,14 @@ export interface Annotation {
   place?: AnnotationPlace;
 }
 
+export const DIAGRAM_FILLS = ["none", "yellow", "wine"] as const;
+export const DIAGRAM_ROLES = ["node", "frame", "bar", "tick", "callout", "axis"] as const;
+export const DIAGRAM_BENDS = ["above", "elbow"] as const;
+
+export type DiagramFill = (typeof DIAGRAM_FILLS)[number];
+export type DiagramRole = (typeof DIAGRAM_ROLES)[number];
+export type DiagramBend = (typeof DIAGRAM_BENDS)[number];
+
 export interface DiagramBox {
   id: string;
   x: number;
@@ -67,12 +75,22 @@ export interface DiagramBox {
   w: number;
   h: number;
   text: string;
+  fill?: DiagramFill;
+  role?: DiagramRole;
 }
 
 export interface DiagramArrow {
   from: string;
   to: string;
   label?: string;
+  bend?: DiagramBend;
+}
+
+export interface Diagram {
+  boxes: DiagramBox[];
+  arrows: DiagramArrow[];
+  w?: number;
+  h?: number;
 }
 
 export interface ConceptWidget {
@@ -80,7 +98,7 @@ export interface ConceptWidget {
   title: string;
   paragraphId: string;
   text: string;
-  diagram: { boxes: DiagramBox[]; arrows: DiagramArrow[] };
+  diagram: Diagram;
 }
 
 export interface AnnotationFile {
@@ -145,14 +163,25 @@ function parseWidgets(value: unknown): ConceptWidget[] | { error: string } {
     for (const box of diagram.boxes) {
       if (!box || typeof box.id !== "string" || typeof box.text !== "string") return { error: `Caixa inválida em ${widget.id}.` };
       if ([box.x, box.y, box.w, box.h].some((n) => typeof n !== "number")) return { error: `Caixa inválida em ${widget.id}.` };
-      boxes.push({ id: box.id, x: box.x, y: box.y, w: box.w, h: box.h, text: box.text });
+      const fill = DIAGRAM_FILLS.find((item) => item === box.fill);
+      const role = DIAGRAM_ROLES.find((item) => item === box.role);
+      boxes.push({ id: box.id, x: box.x, y: box.y, w: box.w, h: box.h, text: box.text, fill, role });
     }
     const arrows: DiagramArrow[] = [];
     for (const arrow of diagram.arrows) {
       if (!arrow || typeof arrow.from !== "string" || typeof arrow.to !== "string") return { error: `Seta inválida em ${widget.id}.` };
-      arrows.push({ from: arrow.from, to: arrow.to, label: typeof arrow.label === "string" ? arrow.label : undefined });
+      const bend = DIAGRAM_BENDS.find((item) => item === arrow.bend);
+      arrows.push({ from: arrow.from, to: arrow.to, label: typeof arrow.label === "string" ? arrow.label : undefined, bend });
     }
-    widgets.push({ id: widget.id, title: widget.title, paragraphId: widget.paragraphId, text: widget.text, diagram: { boxes, arrows } });
+    const width = typeof diagram.w === "number" ? diagram.w : undefined;
+    const height = typeof diagram.h === "number" ? diagram.h : undefined;
+    widgets.push({
+      id: widget.id,
+      title: widget.title,
+      paragraphId: widget.paragraphId,
+      text: widget.text,
+      diagram: { boxes, arrows, w: width, h: height },
+    });
   }
   return widgets;
 }

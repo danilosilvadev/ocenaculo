@@ -3718,40 +3718,67 @@
       "paragraphId": "p1",
       "text": "Antes dos nomes, o trem, a névoa e a terceira classe. O capítulo apresenta dois homens como se apresenta uma sala: primeiro o ar, depois a gente.",
       "diagram": {
+        "w": 460,
+        "h": 208,
         "boxes": [
           {
-            "id": "trem",
-            "x": 12,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "o trem"
+            "id": "camara",
+            "x": 8,
+            "y": 8,
+            "w": 292,
+            "h": 190,
+            "text": "vagão de terceira",
+            "role": "frame"
           },
           {
             "id": "nevoa",
-            "x": 175,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "névoa"
+            "x": 22,
+            "y": 50,
+            "w": 112,
+            "h": 48,
+            "text": "névoa",
+            "fill": "yellow",
+            "role": "callout"
           },
           {
-            "id": "dois",
-            "x": 338,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "dois homens"
+            "id": "capuz",
+            "x": 152,
+            "y": 46,
+            "w": 130,
+            "h": 48,
+            "text": "capuz suíço",
+            "role": "node"
+          },
+          {
+            "id": "sobretudo",
+            "x": 152,
+            "y": 114,
+            "w": 130,
+            "h": 48,
+            "text": "sobretudo",
+            "role": "node"
+          },
+          {
+            "id": "nomes",
+            "x": 316,
+            "y": 72,
+            "w": 132,
+            "h": 62,
+            "text": "os nomes\nainda não",
+            "fill": "yellow",
+            "role": "callout"
           }
         ],
         "arrows": [
           {
-            "from": "trem",
-            "to": "nevoa"
+            "from": "nevoa",
+            "to": "capuz",
+            "label": "o ar primeiro"
           },
           {
-            "from": "nevoa",
-            "to": "dois"
+            "from": "capuz",
+            "to": "nomes",
+            "label": "sem nome"
           }
         ]
       }
@@ -3762,29 +3789,89 @@
       "paragraphId": "p2",
       "text": "Míchkin e Rogójin entram juntos e não se equivalem. Um volta da Suíça, doente e sem malícia; o outro volta de uma herança, com o corpo por diante. O vagão segura os dois no mesmo banco.",
       "diagram": {
+        "w": 460,
+        "h": 246,
         "boxes": [
           {
-            "id": "michkin",
-            "x": 16,
-            "y": 48,
-            "w": 180,
-            "h": 120,
-            "text": "Míchkin"
+            "id": "suica",
+            "x": 12,
+            "y": 12,
+            "w": 150,
+            "h": 44,
+            "text": "volta da Suíça",
+            "role": "node"
           },
           {
-            "id": "rogojin",
-            "x": 320,
-            "y": 48,
-            "w": 180,
-            "h": 120,
-            "text": "Rogójin"
+            "id": "doente",
+            "x": 12,
+            "y": 74,
+            "w": 118,
+            "h": 40,
+            "text": "doente",
+            "role": "node"
+          },
+          {
+            "id": "malicia",
+            "x": 12,
+            "y": 130,
+            "w": 142,
+            "h": 44,
+            "text": "sem malícia",
+            "fill": "yellow",
+            "role": "node"
+          },
+          {
+            "id": "heranca",
+            "x": 292,
+            "y": 12,
+            "w": 152,
+            "h": 44,
+            "text": "a herança",
+            "fill": "yellow",
+            "role": "node"
+          },
+          {
+            "id": "corpo",
+            "x": 292,
+            "y": 74,
+            "w": 152,
+            "h": 54,
+            "text": "o corpo\npor diante",
+            "role": "node"
+          },
+          {
+            "id": "banco",
+            "x": 146,
+            "y": 188,
+            "w": 168,
+            "h": 48,
+            "text": "o mesmo banco",
+            "fill": "wine",
+            "role": "node"
           }
         ],
         "arrows": [
           {
-            "from": "michkin",
-            "to": "rogojin",
-            "label": "o mesmo vagão"
+            "from": "suica",
+            "to": "doente"
+          },
+          {
+            "from": "doente",
+            "to": "malicia"
+          },
+          {
+            "from": "heranca",
+            "to": "corpo"
+          },
+          {
+            "from": "malicia",
+            "to": "banco",
+            "label": "um"
+          },
+          {
+            "from": "corpo",
+            "to": "banco",
+            "label": "outro"
           }
         ]
       }
@@ -3795,40 +3882,70 @@
       "paragraphId": "p2",
       "text": "A voz que descreve o capuz e o sobretudo já escolheu o que importa. Não é um passageiro descobrindo os dois ao mesmo tempo que o leitor: adianta o juízo e depois deixa a fala chegar.",
       "diagram": {
+        "w": 470,
+        "h": 208,
         "boxes": [
           {
-            "id": "olhar",
-            "x": 12,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "o que se vê"
+            "id": "voz",
+            "x": 8,
+            "y": 8,
+            "w": 300,
+            "h": 190,
+            "text": "o que a voz já sabe",
+            "role": "frame"
           },
           {
-            "id": "voz",
-            "x": 175,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "o que a voz já sabe"
+            "id": "olhar",
+            "x": 24,
+            "y": 54,
+            "w": 128,
+            "h": 44,
+            "text": "capuz, sobretudo",
+            "role": "node"
+          },
+          {
+            "id": "juizo",
+            "x": 164,
+            "y": 50,
+            "w": 124,
+            "h": 52,
+            "text": "juízo\nadiantado",
+            "fill": "yellow",
+            "role": "node"
           },
           {
             "id": "fala",
-            "x": 338,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "o diálogo"
+            "x": 24,
+            "y": 124,
+            "w": 258,
+            "h": 52,
+            "text": "o diálogo ainda\nvai chegar",
+            "role": "node"
+          },
+          {
+            "id": "leitor",
+            "x": 322,
+            "y": 64,
+            "w": 136,
+            "h": 60,
+            "text": "o leitor\nchega tarde",
+            "fill": "yellow",
+            "role": "callout"
           }
         ],
         "arrows": [
           {
             "from": "olhar",
-            "to": "voz"
+            "to": "juizo"
           },
           {
-            "from": "voz",
-            "to": "fala"
+            "from": "juizo",
+            "to": "fala",
+            "label": "depois"
+          },
+          {
+            "from": "juizo",
+            "to": "leitor"
           }
         ]
       }
@@ -3839,40 +3956,84 @@
       "paragraphId": "p59",
       "text": "Nastássia Filíppovna entra como pergunta de um terceiro, não como entrada em cena. O nome circula no vagão; a mulher fica para depois.",
       "diagram": {
+        "w": 460,
+        "h": 172,
         "boxes": [
+          {
+            "id": "eixo",
+            "x": 20,
+            "y": 74,
+            "w": 420,
+            "h": 2,
+            "text": "",
+            "role": "axis"
+          },
           {
             "id": "fala",
             "x": 12,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "a fala no vagão"
+            "y": 22,
+            "w": 128,
+            "h": 36,
+            "text": "a fala no vagão",
+            "role": "tick"
           },
           {
             "id": "nome",
-            "x": 175,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "o nome"
+            "x": 176,
+            "y": 22,
+            "w": 96,
+            "h": 36,
+            "text": "o nome",
+            "role": "tick"
           },
           {
-            "id": "ausente",
-            "x": 338,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "ela, ainda fora"
+            "id": "fora",
+            "x": 308,
+            "y": 22,
+            "w": 136,
+            "h": 36,
+            "text": "ela, ainda fora",
+            "role": "tick"
+          },
+          {
+            "id": "terceiro",
+            "x": 8,
+            "y": 104,
+            "w": 142,
+            "h": 56,
+            "text": "pergunta de\num terceiro",
+            "role": "callout"
+          },
+          {
+            "id": "nastassia",
+            "x": 164,
+            "y": 112,
+            "w": 112,
+            "h": 44,
+            "text": "Nastássia",
+            "fill": "yellow",
+            "role": "callout"
+          },
+          {
+            "id": "pessoa",
+            "x": 292,
+            "y": 104,
+            "w": 156,
+            "h": 56,
+            "text": "a pessoa fica\npara depois",
+            "role": "callout"
           }
         ],
         "arrows": [
           {
             "from": "fala",
-            "to": "nome"
+            "to": "nome",
+            "label": "circula"
           },
           {
             "from": "nome",
-            "to": "ausente"
+            "to": "fora",
+            "label": "não entra"
           }
         ]
       }

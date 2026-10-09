@@ -658,30 +658,36 @@
       "paragraphId": "a1",
       "text": "O livro se apresenta já sem as duas colunas da opinião: os graves não acham romance puro, os frívolos não acham o romance de sempre.",
       "diagram": {
+        "w": 460,
+        "h": 186,
         "boxes": [
           {
-            "id": "livro",
-            "x": 190,
-            "y": 78,
-            "w": 140,
-            "h": 60,
-            "text": "este livro"
-          },
-          {
             "id": "graves",
-            "x": 16,
-            "y": 24,
-            "w": 150,
-            "h": 52,
-            "text": "gente grave"
+            "x": 12,
+            "y": 10,
+            "w": 142,
+            "h": 48,
+            "text": "gente grave",
+            "role": "node"
           },
           {
             "id": "frivolos",
-            "x": 340,
-            "y": 24,
-            "w": 160,
-            "h": 52,
-            "text": "gente frívola"
+            "x": 302,
+            "y": 10,
+            "w": 146,
+            "h": 48,
+            "text": "gente frívola",
+            "role": "node"
+          },
+          {
+            "id": "livro",
+            "x": 154,
+            "y": 112,
+            "w": 150,
+            "h": 56,
+            "text": "este livro",
+            "fill": "wine",
+            "role": "node"
           }
         ],
         "arrows": [
@@ -704,30 +710,46 @@
       "paragraphId": "a1",
       "text": "A galhofa está no instrumento; a melancolia, na tinta. O «connubio» avisa a cor de tudo o que segue, inclusive do óbito contado com graça.",
       "diagram": {
+        "w": 470,
+        "h": 206,
         "boxes": [
           {
             "id": "pena",
-            "x": 12,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "pena da galhofa"
-          },
-          {
-            "id": "connubio",
-            "x": 175,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "connubio"
+            "x": 8,
+            "y": 12,
+            "w": 170,
+            "h": 48,
+            "text": "pena da galhofa",
+            "role": "node"
           },
           {
             "id": "tinta",
-            "x": 338,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "tinta da melancholia"
+            "x": 8,
+            "y": 86,
+            "w": 176,
+            "h": 56,
+            "text": "tinta da\nmelancholia",
+            "fill": "yellow",
+            "role": "node"
+          },
+          {
+            "id": "connubio",
+            "x": 248,
+            "y": 46,
+            "w": 132,
+            "h": 48,
+            "text": "connubio",
+            "fill": "yellow",
+            "role": "node"
+          },
+          {
+            "id": "pagina",
+            "x": 270,
+            "y": 146,
+            "w": 140,
+            "h": 44,
+            "text": "a página",
+            "role": "node"
           }
         ],
         "arrows": [
@@ -736,8 +758,13 @@
             "to": "connubio"
           },
           {
+            "from": "tinta",
+            "to": "connubio"
+          },
+          {
             "from": "connubio",
-            "to": "tinta"
+            "to": "pagina",
+            "label": "a cor do óbito"
           }
         ]
       }
@@ -748,42 +775,82 @@
       "paragraphId": "c1",
       "text": "O uso vulgar começa no nascimento. Brás escolhe a morte como berço. O resto das memórias anda para trás, em direção aos primeiros anos.",
       "diagram": {
+        "w": 480,
+        "h": 200,
         "boxes": [
           {
-            "id": "morte",
-            "x": 16,
-            "y": 70,
-            "w": 120,
-            "h": 64,
-            "text": "óbito"
+            "id": "eixo",
+            "x": 20,
+            "y": 86,
+            "w": 440,
+            "h": 2,
+            "text": "",
+            "role": "axis"
           },
           {
-            "id": "agora",
-            "x": 180,
-            "y": 70,
-            "w": 140,
-            "h": 64,
-            "text": "defunto autor"
+            "id": "nasc",
+            "x": 12,
+            "y": 36,
+            "w": 124,
+            "h": 36,
+            "text": "nascimento",
+            "role": "tick"
           },
           {
-            "id": "anos",
-            "x": 360,
-            "y": 70,
-            "w": 140,
-            "h": 64,
-            "text": "primeiros anos"
+            "id": "vida",
+            "x": 184,
+            "y": 36,
+            "w": 88,
+            "h": 36,
+            "text": "a vida",
+            "role": "tick"
+          },
+          {
+            "id": "obito",
+            "x": 318,
+            "y": 36,
+            "w": 142,
+            "h": 36,
+            "text": "óbito, 1869",
+            "fill": "yellow",
+            "role": "tick"
+          },
+          {
+            "id": "vulgar",
+            "x": 8,
+            "y": 122,
+            "w": 196,
+            "h": 62,
+            "text": "autor defunto\nseria o uso vulgar",
+            "role": "callout"
+          },
+          {
+            "id": "defunto",
+            "x": 248,
+            "y": 122,
+            "w": 216,
+            "h": 62,
+            "text": "defunto autor\na campa é o berço",
+            "fill": "yellow",
+            "role": "callout"
           }
         ],
         "arrows": [
           {
-            "from": "morte",
-            "to": "agora",
-            "label": "campa / berço"
+            "from": "obito",
+            "to": "nasc",
+            "bend": "above",
+            "label": "narração, para trás"
           },
           {
-            "from": "agora",
-            "to": "anos",
-            "label": "para trás"
+            "from": "nasc",
+            "to": "vulgar",
+            "label": "o uso vulgar"
+          },
+          {
+            "from": "obito",
+            "to": "defunto",
+            "label": "começa aqui"
           }
         ]
       }
@@ -794,40 +861,34 @@
       "paragraphId": "c6",
       "text": "A causa clínica está dita. A frase a empurra para o lado e oferece outra, «grandiosa e util», que este capítulo não explica. O leitor fica na soleira.",
       "diagram": {
+        "w": 450,
+        "h": 130,
         "boxes": [
           {
             "id": "pneumonia",
             "x": 12,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "pneumonia"
-          },
-          {
-            "id": "mas",
-            "x": 175,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "mas"
+            "y": 34,
+            "w": 140,
+            "h": 52,
+            "text": "pneumonia",
+            "role": "node"
           },
           {
             "id": "ideia",
-            "x": 338,
-            "y": 70,
-            "w": 149,
-            "h": 72,
-            "text": "ideia grandiosa"
+            "x": 248,
+            "y": 24,
+            "w": 186,
+            "h": 64,
+            "text": "ideia grandiosa\ne útil",
+            "fill": "yellow",
+            "role": "node"
           }
         ],
         "arrows": [
           {
             "from": "pneumonia",
-            "to": "mas"
-          },
-          {
-            "from": "mas",
-            "to": "ideia"
+            "to": "ideia",
+            "label": "ainda sem conteúdo"
           }
         ]
       }

@@ -1,9 +1,17 @@
+import { referenceCities, SERTAO_RING } from "@/data/geoNotes";
+
 export interface MapPoint {
   id: string;
   lat: number;
   lng: number;
   label: string;
   note: string;
+  /** Region labels sit on a wash. Points keep a dot. */
+  kind?: "point" | "region";
+  /** Degrees. A faint disc for a neighborhood or a direction, not a city. */
+  spotRadius?: number;
+  /** Drawn on the map, left out of the caption list. */
+  quiet?: boolean;
 }
 
 export interface MapRoute {
@@ -15,9 +23,16 @@ export interface MapRoute {
 export interface LiteraryMapData {
   caption: string;
   center: [number, number];
+  /** Projection scale tuned at `baseWidth` pixels. */
   scale: number;
+  baseWidth?: number;
+  frameHeight?: number;
   points: MapPoint[];
   routes?: MapRoute[];
+  showStates?: boolean;
+  showRiver?: boolean;
+  /** Closed ring, [lng, lat]. */
+  highlight?: [number, number][];
 }
 
 export interface BookProfile {
@@ -158,9 +173,10 @@ export const books: BookProfile[] = [
       ],
     },
     settingMap: {
-      caption: "A carta é escrita em Petersburgo. Arcangel é a próxima cidade. O Ártico ainda não foi alcançado.",
-      center: [32, 68],
-      scale: 520,
+      caption: "A carta é escrita em Petersburgo. Arcangel é a próxima cidade. O Ártico ainda não foi alcançado: o pin de cima é a direção.",
+      center: [36, 71],
+      scale: 270,
+      frameHeight: 400,
       points: [
         { id: "petersburgo", lat: 59.934, lng: 30.335, label: "São Petersburgo", note: "Data e lugar da Carta I. Ele caminha nas ruas e sente a brisa do norte." },
         { id: "arcangel", lat: 64.54, lng: 40.543, label: "Arcangel", note: "Pretende partir para lá em quinze dias ou três semanas e alugar um navio." },
@@ -214,11 +230,14 @@ export const books: BookProfile[] = [
       ],
     },
     settingMap: {
-      caption: "O óbito é no Catumbi. O Ilissos entra só como símile das cegonhas, não como cenário.",
-      center: [-43.2, -22.91],
-      scale: 24000,
+      caption: "O óbito é no Catumbi. O centro e Niterói mostram a baía. O Ilissos entra só como símile das cegonhas, não como cenário.",
+      center: [-43.17, -22.93],
+      scale: 22000,
+      frameHeight: 300,
       points: [
-        { id: "catumbi", lat: -22.917, lng: -43.196, label: "Catumbi", note: "«Minha bella chacara de Catumby.» Sexta-feira de agosto de 1869, duas da tarde." },
+        { id: "catumbi", lat: -22.917, lng: -43.196, label: "Catumbi", note: "«Minha bella chacara de Catumby.» Sexta-feira de agosto de 1869, duas da tarde.", spotRadius: 0.03 },
+        { id: "centro", ...referenceCities.centro, note: "O centro do Rio, para situar o bairro do outro lado do morro.", quiet: true },
+        { id: "niteroi", ...referenceCities.niteroi, note: "Na outra margem da baía de Guanabara.", quiet: true },
       ],
     },
   },
@@ -260,9 +279,11 @@ export const books: BookProfile[] = [
       "Vidas Secas é o romance em que Graciliano encosta a narração na pouca língua das personagens sem falar por elas em discurso de comício. «Mudança» abre com a paisagem, não com um herói, e fecha o desejo de chuva no condicional: a fazenda renasceria.",
     ],
     contextMap: {
-      caption: "Alagoas, onde nasce; o Rio, onde o livro é publicado em 1938.",
-      center: [-40, -14],
-      scale: 700,
+      caption: "Alagoas, onde nasce; o Rio, onde o livro é publicado em 1938. Quebrangulo e Palmeira dos Índios cabem no mesmo agreste.",
+      center: [-40, -15],
+      scale: 780,
+      frameHeight: 360,
+      showStates: true,
       points: [
         { id: "quebrangulo", lat: -9.329, lng: -36.471, label: "Quebrangulo", note: "Nascimento, 1892, no agreste de Alagoas." },
         { id: "palmeira", lat: -9.408, lng: -36.628, label: "Palmeira dos Índios", note: "Foi prefeito aqui. Não é o cenário de «Mudança»." },
@@ -270,17 +291,25 @@ export const books: BookProfile[] = [
       ],
     },
     settingMap: {
-      caption: "O capítulo não nomeia a vila. O pin é o sertão nordestino, região aproximada, não um município.",
-      center: [-37.2, -9.4],
-      scale: 1600,
+      caption: "O capítulo não nomeia a vila. A mancha é o sertão nordestino, região aproximada, entre Alagoas, Pernambuco e a Bahia. O traço azul é o São Francisco.",
+      center: [-38.4, -9.6],
+      scale: 2100,
+      frameHeight: 340,
+      showStates: true,
+      showRiver: true,
+      highlight: SERTAO_RING,
       points: [
         {
           id: "sertao",
           lat: -9.4,
           lng: -37.2,
-          label: "Sertão nordestino",
+          label: "Sertão",
+          kind: "region",
           note: "Região aproximada. A catinga, o rio seco e a fazenda sem nome cabem neste chão, não num ponto de GPS.",
         },
+        { id: "maceio", ...referenceCities.maceio, note: "Costa de Alagoas, fora da mancha.", quiet: true },
+        { id: "recife", ...referenceCities.recife, note: "Costa de Pernambuco.", quiet: true },
+        { id: "salvador", ...referenceCities.salvador, note: "Costa da Bahia.", quiet: true },
       ],
     },
   },

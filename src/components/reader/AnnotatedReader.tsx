@@ -256,7 +256,7 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
     const measure = () => {
       const pageBox = page.getBoundingClientRect();
       const bookBox = book.getBoundingClientRect();
-      const gutterX = bookBox.right - pageBox.left + 8;
+      const columnRight = bookBox.right - pageBox.left;
       const nextMarks: MarkGeom[] = [];
 
       page.querySelectorAll<HTMLElement>("[data-note]").forEach((el) => {
@@ -310,10 +310,11 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
           nextTops[place.id] = place.top;
           const item = byId.get(place.id);
           if (!item) continue;
-          const y2 = marginBox.top - pageBox.top + place.top + place.height / 2;
-          const x2 = marginBox.left - pageBox.left + 2;
+          const y2 = marginBox.top - pageBox.top + place.top + Math.min(22, place.height / 2);
+          const x2 = marginBox.left - pageBox.left + 4;
           const seed = hashString(place.id);
-          const d = arrowPath(Math.min(item.anchorX, gutterX - 4), item.anchorY, x2, y2, seed);
+          const gutter = Math.min(columnRight + 8, x2 - 6);
+          const d = arrowPath(item.anchorX, item.anchorY, x2, y2, seed, gutter);
           const head = `M ${(x2 - 7).toFixed(1)} ${(y2 - 3.5).toFixed(1)} L ${x2.toFixed(1)} ${y2.toFixed(1)} L ${(x2 - 7).toFixed(1)} ${(y2 + 3.5).toFixed(1)}`;
           nextArrows.push({ id: place.id, d, head });
         }

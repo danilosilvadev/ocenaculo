@@ -23,6 +23,34 @@ describe("anotações em JSON", () => {
     expect(parsed.annotations.some((item) => item.note.includes("Três circunstâncias"))).toBe(true);
   });
 
+  it("guarda o desenho do esquema, com papel e cor", () => {
+    const parsed = parseAnnotationFile({
+      version: 1,
+      bookId: "o-idiota",
+      chapterId: "parte-1-capitulo-1",
+      annotations: [],
+      widgets: [
+        {
+          id: "t",
+          title: "t",
+          paragraphId: "p1",
+          text: "t",
+          diagram: {
+            w: 120,
+            h: 80,
+            boxes: [{ id: "a", x: 1, y: 2, w: 30, h: 20, text: "Walton", fill: "yellow", role: "frame" }],
+            arrows: [{ from: "a", to: "a", label: "carta", bend: "above" }],
+          },
+        },
+      ],
+    });
+    if ("error" in parsed) throw new Error(parsed.error);
+    expect(parsed.widgets[0]?.diagram.w).toBe(120);
+    expect(parsed.widgets[0]?.diagram.boxes[0]?.role).toBe("frame");
+    expect(parsed.widgets[0]?.diagram.boxes[0]?.fill).toBe("yellow");
+    expect(parsed.widgets[0]?.diagram.arrows[0]?.bend).toBe("above");
+  });
+
   it("recusa um trecho que cruza outra marca", () => {
     const parsed = parseAnnotationFile(annotationFile);
     if ("error" in parsed) throw new Error(parsed.error);
