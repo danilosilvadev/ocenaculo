@@ -1,124 +1,11 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useMemo, useRef } from "react";
 import rough from "roughjs";
-import type { Diagram, DiagramBend, DiagramBox } from "@/lib/annotations";
+import type { Diagram } from "@/lib/annotations";
+import { arrowRoute, layoutDiagram, type PlacedLabel } from "@/lib/diagramLayout";
 
-const INK = "hsl(350 46% 32%)";
-const YELLOW = "hsla(48, 94%, 62%, 0.72)";
+const INK = "#6b1f2a";
+const YELLOW = "hsl(48 94% 62%)";
 const HAND = "Caveat Variable, Caveat, cursive";
-
-function linesOf(text: string) {
-  return text.split("\n");
-}
-
-function InkText({
-  x,
-  y,
-  w,
-  h,
-  text,
-  size = 16,
-  anchor = "middle",
-  top = false,
-}: {
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-  text: string;
-  size?: number;
-  anchor?: "middle" | "start";
-  top?: boolean;
-}) {
-  if (!text.trim()) return null;
-  const lines = linesOf(text);
-  const lineH = size * 1.12;
-  const tx = anchor === "middle" ? x + w / 2 : x + 8;
-  const startY = top ? y + size + 2 : y + (h - lines.length * lineH) / 2 + size * 0.82;
-  return (
-    <text textAnchor={anchor} fill={INK} style={{ fontFamily: HAND, fontSize: size }}>
-      {lines.map((line, index) => (
-        <tspan key={index} x={tx} y={startY + index * lineH}>
-          {line}
-        </tspan>
-      ))}
-    </text>
-  );
-}
-
-interface Route {
-  d: string;
-  labelX: number;
-  labelY: number;
-  x2: number;
-  y2: number;
-  dx: number;
-  dy: number;
-}
-
-function routeArrow(from: DiagramBox, to: DiagramBox, bend?: DiagramBend): Route {
-  if (from.role === "tick" && to.role === "tick") {
-    const y = from.y + from.h + 14;
-    const x1 = from.x + from.w / 2;
-    const x2 = to.x + to.w / 2;
-    return {
-      d: `M ${x1} ${y} L ${x2} ${y}`,
-      labelX: (x1 + x2) / 2,
-      labelY: y - 4,
-      x2,
-      y2: y,
-      dx: x2 >= x1 ? 1 : -1,
-      dy: 0,
-    };
-  }
-  if (bend === "above") {
-    const y = Math.min(from.y, to.y) - 18;
-    const x1 = from.x + from.w / 2;
-    const x2 = to.x + to.w / 2;
-    const yStart = from.y;
-    const yEnd = to.y;
-    return {
-      d: `M ${x1} ${yStart} L ${x1} ${y} L ${x2} ${y} L ${x2} ${yEnd}`,
-      labelX: (x1 + x2) / 2,
-      labelY: y - 2,
-      x2,
-      y2: yEnd,
-      dx: 0,
-      dy: 1,
-    };
-  }
-  const acx = from.x + from.w / 2;
-  const acy = from.y + from.h / 2;
-  const bcx = to.x + to.w / 2;
-  const bcy = to.y + to.h / 2;
-  const dx = bcx - acx;
-  const dy = bcy - acy;
-  if (Math.abs(dx) >= Math.abs(dy)) {
-    const x1 = dx >= 0 ? from.x + from.w : from.x;
-    const x2 = dx >= 0 ? to.x : to.x + to.w;
-    const mid = (x1 + x2) / 2;
-    return {
-      d: `M ${x1} ${acy} L ${mid} ${acy} L ${mid} ${bcy} L ${x2} ${bcy}`,
-      labelX: mid,
-      labelY: (acy + bcy) / 2 - 8,
-      x2,
-      y2: bcy,
-      dx: dx >= 0 ? 1 : -1,
-      dy: 0,
-    };
-  }
-  const y1 = dy >= 0 ? from.y + from.h : from.y;
-  const y2 = dy >= 0 ? to.y : to.y + to.h;
-  const mid = (y1 + y2) / 2;
-  return {
-    d: `M ${acx} ${y1} L ${acx} ${mid} L ${bcx} ${mid} L ${bcx} ${y2}`,
-    labelX: (acx + bcx) / 2,
-    labelY: mid - 8,
-    x2: bcx,
-    y2,
-    dx: 0,
-    dy: dy >= 0 ? 1 : -1,
-  };
-}
 
 function arrowHead(x: number, y: number, dx: number, dy: number) {
   const len = Math.hypot(dx, dy) || 1;
@@ -130,18 +17,28 @@ function arrowHead(x: number, y: number, dx: number, dy: number) {
   return `${x},${y} ${x - ux * s + px * 4.2},${y - uy * s + py * 4.2} ${x - ux * s - px * 4.2},${y - uy * s - py * 4.2}`;
 }
 
+function LabelText({ label }: { label: PlacedLabel }) {
+  const lines = label.text.split("\n");
+  const lineH = label.size * 1.16;
+  return (
+    <text
+      data-diagram-label={label.text}
+      textAnchor={label.anchor}
+      fill={INK}
+      style={{ fontFamily: HAND, fontSize: label.size, fontWeight: label.weight }}
+    >
+      {lines.map((line, index) => (
+        <tspan key={index} x={label.tx} y={label.ty + index * lineH}>
+          {line}
+        </tspan>
+      ))}
+    </text>
+  );
+}
+
 export function SketchDiagram({ diagram, label }: { diagram: Diagram; label?: string }) {
   const ref = useRef<SVGSVGElement>(null);
-  const pad = 10;
-  const bounds = diagram.boxes.reduce(
-    (acc, box) => ({
-      maxX: Math.max(acc.maxX, box.x + box.w),
-      maxY: Math.max(acc.maxY, box.y + box.h + (box.role === "bar" ? 22 : 0)),
-    }),
-    { maxX: 0, maxY: 0 },
-  );
-  const w = diagram.w ?? bounds.maxX + pad;
-  const h = diagram.h ?? bounds.maxY + pad;
+  const layout = useMemo(() => layoutDiagram(diagram), [diagram]);
   const byId = new Map(diagram.boxes.map((box) => [box.id, box]));
 
   useLayoutEffect(() => {
@@ -156,15 +53,7 @@ export function SketchDiagram({ diagram, label }: { diagram: Diagram; label?: st
       else svg.appendChild(node);
     };
     for (const box of diagram.boxes) {
-      if (box.role === "axis") {
-        append(pen.line(box.x, box.y + box.h / 2, box.x + box.w, box.y + box.h / 2, { stroke: INK, strokeWidth: 1.3, roughness: 1.2 }) as unknown as SVGElement);
-        continue;
-      }
-      if (box.role === "tick") {
-        const x = box.x + box.w / 2;
-        append(pen.line(x, box.y + box.h, x, box.y + box.h + 12, { stroke: INK, strokeWidth: 1.2, roughness: 1.1 }) as unknown as SVGElement);
-        continue;
-      }
+      if (box.role === "axis" || box.role === "caption" || box.role === "tick") continue;
       const yellow = box.fill === "yellow" || box.role === "callout" || box.role === "bar";
       const wine = box.fill === "wine";
       const frame = box.role === "frame" || box.fill === "none";
@@ -172,72 +61,85 @@ export function SketchDiagram({ diagram, label }: { diagram: Diagram; label?: st
         pen.rectangle(box.x, box.y, box.w, box.h, {
           stroke: INK,
           strokeWidth: frame ? 1.5 : 1.25,
-          roughness: 1.35,
-          fill: frame ? undefined : yellow ? YELLOW : wine ? "hsla(350, 45%, 36%, 0.16)" : "hsla(42, 40%, 70%, 0.2)",
+          roughness: 1.15,
+          fill: frame ? undefined : yellow ? YELLOW : wine ? "hsla(350, 45%, 36%, 0.16)" : "hsla(42, 40%, 70%, 0.28)",
           fillStyle: yellow || wine ? "solid" : "hachure",
           hachureGap: 5,
         }) as unknown as SVGElement,
       );
     }
-    const boxes = new Map(diagram.boxes.map((box) => [box.id, box]));
     for (const arrow of diagram.arrows) {
-      const from = boxes.get(arrow.from);
-      const to = boxes.get(arrow.to);
+      const from = byId.get(arrow.from);
+      const to = byId.get(arrow.to);
       if (!from || !to) continue;
-      const route = routeArrow(from, to, arrow.bend);
-      const points = route.d
-        .split(/[ML]\s*/)
-        .filter(Boolean)
-        .map((pair) => pair.trim().split(/\s+/).map(Number) as [number, number]);
-      if (points.length >= 2) {
-        append(pen.linearPath(points, { stroke: INK, strokeWidth: 1.25, roughness: 1.15 }) as unknown as SVGElement);
+      const route = arrowRoute(from, to, arrow.bend);
+      if (route.points.length >= 2) {
+        const points = route.points.map((point) => [point.x, point.y] as [number, number]);
+        append(pen.linearPath(points, { stroke: INK, strokeWidth: 1.25, roughness: 1.05 }) as unknown as SVGElement);
       }
     }
   }, [diagram]);
 
   return (
-    <div className="mt-2 overflow-x-auto overscroll-x-contain">
-      <svg ref={ref} width={w} height={h} viewBox={`0 0 ${w} ${h}`} role="img" aria-label={label ? `Esquema: ${label}` : "Esquema desenhado"} className="block max-w-none">
+    <div className="mt-2">
+      <svg
+        ref={ref}
+        viewBox={`0 0 ${layout.w} ${layout.h}`}
+        role="img"
+        aria-label={label ? `Esquema: ${label}` : "Esquema desenhado"}
+        className="block h-auto w-full"
+      >
         {diagram.boxes.map((box) => {
-          if (box.role === "axis") return null;
-          if (box.role === "bar") {
-            return <InkText key={box.id} x={box.x} y={box.y + box.h + 2} w={box.w} h={18} text={box.text} size={14} top />;
-          }
+          if (box.role !== "axis") return null;
+          const y = box.y + box.h / 2;
           return (
-            <InkText
-              key={box.id}
-              x={box.x}
-              y={box.y}
-              w={box.w}
-              h={box.role === "frame" ? 36 : box.h}
-              text={box.text}
-              size={box.role === "callout" || box.role === "tick" ? 15 : 16}
-              anchor={box.role === "frame" ? "start" : "middle"}
-              top={box.role === "frame"}
-            />
+            <g key={box.id} data-ink="1">
+              <line x1={box.x} y1={y} x2={box.x + box.w} y2={y} stroke={INK} strokeWidth={1.6} />
+              <line x1={box.x} y1={y - 5} x2={box.x} y2={y + 5} stroke={INK} strokeWidth={1.4} />
+              <line x1={box.x + box.w} y1={y - 5} x2={box.x + box.w} y2={y + 5} stroke={INK} strokeWidth={1.4} />
+            </g>
           );
         })}
+        {diagram.boxes
+          .filter((box) => box.role === "tick")
+          .map((box) => (
+            <line
+              key={`stem-${box.id}`}
+              data-ink="1"
+              x1={box.x + box.w / 2}
+              y1={box.y + box.h}
+              x2={box.x + box.w / 2}
+              y2={box.y + box.h + 10}
+              stroke={INK}
+              strokeWidth={1.3}
+            />
+          ))}
         <g data-ink="1">
+          {layout.labels.map((item) => (
+            <LabelText key={item.id} label={item} />
+          ))}
           {diagram.arrows.map((arrow) => {
             const from = byId.get(arrow.from);
             const to = byId.get(arrow.to);
             if (!from || !to) return null;
-            const route = routeArrow(from, to, arrow.bend);
-            const chip = arrow.label ? arrow.label.length * 7.4 + 10 : 0;
-            return (
-              <g key={`${arrow.from}-${arrow.to}-${arrow.label ?? ""}`}>
-                <polygon points={arrowHead(route.x2, route.y2, route.dx, route.dy)} fill={INK} />
-                {arrow.label && (
-                  <>
-                    <rect x={route.labelX - chip / 2} y={route.labelY - 13} width={chip} height={16} rx={2} fill={YELLOW} />
-                    <text x={route.labelX} y={route.labelY} textAnchor="middle" fill={INK} style={{ fontFamily: HAND, fontSize: 14 }}>
-                      {arrow.label}
-                    </text>
-                  </>
-                )}
-              </g>
-            );
+            const route = arrowRoute(from, to, arrow.bend);
+            return <polygon key={`${arrow.from}-${arrow.to}-${arrow.label ?? ""}`} points={arrowHead(route.x2, route.y2, route.dx, route.dy)} fill={INK} />;
           })}
+          {layout.chips.map((chip) => (
+            <g key={chip.id}>
+              <rect x={chip.x} y={chip.y} width={chip.w} height={chip.h} rx={2} fill={YELLOW} stroke={INK} strokeWidth={1} />
+              <text
+                data-diagram-label={chip.text}
+                x={chip.x + chip.w / 2}
+                y={chip.y + 13}
+                textAnchor="middle"
+                fill={INK}
+                style={{ fontFamily: HAND, fontSize: 13, fontWeight: 700 }}
+              >
+                {chip.text}
+              </text>
+            </g>
+          ))}
         </g>
       </svg>
     </div>

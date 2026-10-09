@@ -1906,67 +1906,85 @@
       "paragraphId": "p1",
       "text": "A primeira frase é a planície e os juàzeiros. «Infelizes» chega antes de Fabiano. O capítulo abre no chão, não num herói.",
       "diagram": {
-        "w": 440,
-        "h": 186,
+        "w": 300,
+        "h": 228,
         "boxes": [
           {
+            "id": "titulo",
+            "x": 8,
+            "y": 4,
+            "w": 250,
+            "h": 20,
+            "text": "palavras por frase",
+            "role": "caption"
+          },
+          {
             "id": "eixo",
-            "x": 24,
-            "y": 140,
-            "w": 390,
-            "h": 2,
+            "x": 16,
+            "y": 126,
+            "w": 268,
+            "h": 4,
             "text": "",
             "role": "axis"
           },
           {
             "id": "planicie",
-            "x": 36,
-            "y": 80,
-            "w": 52,
-            "h": 60,
-            "text": "planície",
+            "x": 27,
+            "y": 90,
+            "w": 26,
+            "h": 38,
+            "text": "9\nplanície",
             "role": "bar",
             "fill": "yellow"
           },
           {
             "id": "fome",
-            "x": 112,
-            "y": 75,
-            "w": 52,
-            "h": 65,
-            "text": "fome",
+            "x": 83,
+            "y": 82,
+            "w": 26,
+            "h": 46,
+            "text": "11\nfome",
             "role": "bar",
             "fill": "yellow"
           },
           {
             "id": "leguas",
-            "x": 188,
-            "y": 30,
-            "w": 52,
-            "h": 110,
-            "text": "léguas",
+            "x": 131,
+            "y": 48,
+            "w": 26,
+            "h": 80,
+            "text": "19\nléguas",
             "role": "bar",
             "fill": "yellow"
           },
           {
             "id": "sombra",
-            "x": 264,
-            "y": 106,
-            "w": 52,
-            "h": 34,
-            "text": "sombra",
+            "x": 187,
+            "y": 103,
+            "w": 26,
+            "h": 25,
+            "text": "6\nsombra",
             "role": "bar",
             "fill": "yellow"
           },
           {
             "id": "folhagem",
-            "x": 340,
-            "y": 65,
-            "w": 52,
-            "h": 75,
-            "text": "folhagem",
+            "x": 249,
+            "y": 73,
+            "w": 26,
+            "h": 55,
+            "text": "13\nfolhagem",
             "role": "bar",
             "fill": "yellow"
+          },
+          {
+            "id": "nota",
+            "x": 8,
+            "y": 188,
+            "w": 270,
+            "h": 22,
+            "text": "cinco frases da abertura",
+            "role": "caption"
           }
         ],
         "arrows": []
@@ -1978,33 +1996,33 @@
       "paragraphId": "p29",
       "text": "O presente é a catinga seca e a fazenda morta. O desejo inteiro cabe no futuro do pretérito: ressuscitaria, seria, ficaria. A chuva não cai neste capítulo.",
       "diagram": {
-        "w": 460,
-        "h": 150,
+        "w": 300,
+        "h": 230,
         "boxes": [
           {
             "id": "seca",
-            "x": 12,
-            "y": 70,
-            "w": 128,
+            "x": 8,
+            "y": 44,
+            "w": 148,
             "h": 48,
             "text": "sêca, agora",
             "role": "node"
           },
           {
             "id": "cond",
-            "x": 164,
-            "y": 70,
-            "w": 142,
+            "x": 8,
+            "y": 104,
+            "w": 176,
             "h": 48,
             "text": "ressuscitaria",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           },
           {
             "id": "verde",
-            "x": 330,
-            "y": 70,
-            "w": 118,
+            "x": 8,
+            "y": 164,
+            "w": 168,
             "h": 48,
             "text": "catinga verde",
             "role": "node"
@@ -2022,8 +2040,8 @@
           {
             "from": "verde",
             "to": "seca",
-            "bend": "above",
-            "label": "a chuva não cai"
+            "label": "a chuva não cai",
+            "bend": "above"
           }
         ]
       }
@@ -2034,13 +2052,13 @@
       "paragraphId": "p27",
       "text": "«Para bem dizer» avisa que a comparação é tosca e mesmo assim fica. Fabiano não explica por que é a máquina parada de seu Tomás. O não saber faz parte da frase.",
       "diagram": {
-        "w": 470,
-        "h": 186,
+        "w": 300,
+        "h": 260,
         "boxes": [
           {
             "id": "fabiano",
             "x": 8,
-            "y": 12,
+            "y": 8,
             "w": 104,
             "h": 44,
             "text": "Fabiano",
@@ -2048,41 +2066,41 @@
           },
           {
             "id": "dizer",
-            "x": 132,
-            "y": 12,
-            "w": 148,
+            "x": 120,
+            "y": 8,
+            "w": 172,
             "h": 44,
             "text": "para bem dizer",
             "role": "node"
           },
           {
             "id": "coisa",
-            "x": 300,
-            "y": 12,
-            "w": 154,
+            "x": 8,
+            "y": 68,
+            "w": 184,
             "h": 48,
             "text": "como uma coisa",
             "role": "node"
           },
           {
             "id": "bola",
-            "x": 308,
-            "y": 100,
-            "w": 140,
-            "h": 48,
+            "x": 8,
+            "y": 132,
+            "w": 148,
+            "h": 46,
             "text": "bolandeira",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           },
           {
             "id": "nao",
             "x": 8,
-            "y": 108,
-            "w": 210,
-            "h": 58,
+            "y": 192,
+            "w": 236,
+            "h": 52,
             "text": "não sabia porquê,\nmas era",
-            "fill": "yellow",
-            "role": "callout"
+            "role": "callout",
+            "fill": "yellow"
           }
         ],
         "arrows": [
@@ -2111,68 +2129,68 @@
       "paragraphId": "p12",
       "text": "Na véspera eram seis viventes, com o papagaio. A fome corta um. Baleia come e não lembra. A família, que já falava pouco, fica ainda mais calada.",
       "diagram": {
-        "w": 470,
-        "h": 176,
+        "w": 300,
+        "h": 268,
         "boxes": [
           {
             "id": "fabiano",
             "x": 8,
-            "y": 10,
-            "w": 70,
+            "y": 8,
+            "w": 92,
             "h": 42,
             "text": "Fabiano",
             "role": "node"
           },
           {
             "id": "vitoria",
-            "x": 86,
-            "y": 10,
-            "w": 72,
+            "x": 108,
+            "y": 8,
+            "w": 88,
             "h": 42,
             "text": "Vitória",
             "role": "node"
           },
           {
             "id": "menino1",
-            "x": 166,
-            "y": 10,
-            "w": 72,
+            "x": 204,
+            "y": 8,
+            "w": 88,
             "h": 42,
             "text": "menino",
             "role": "node"
           },
           {
             "id": "menino2",
-            "x": 246,
-            "y": 10,
-            "w": 72,
+            "x": 8,
+            "y": 58,
+            "w": 88,
             "h": 42,
             "text": "menino",
             "role": "node"
           },
           {
             "id": "baleia",
-            "x": 326,
-            "y": 10,
-            "w": 70,
+            "x": 104,
+            "y": 58,
+            "w": 84,
             "h": 42,
             "text": "Baleia",
             "role": "node"
           },
           {
             "id": "papagaio",
-            "x": 404,
-            "y": 8,
-            "w": 58,
-            "h": 48,
+            "x": 196,
+            "y": 58,
+            "w": 96,
+            "h": 44,
             "text": "papagaio",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           },
           {
             "id": "casa",
             "x": 8,
-            "y": 100,
+            "y": 128,
             "w": 168,
             "h": 56,
             "text": "a casa falava\npouco",
@@ -2180,13 +2198,13 @@
           },
           {
             "id": "come",
-            "x": 292,
-            "y": 96,
-            "w": 156,
+            "x": 8,
+            "y": 196,
+            "w": 176,
             "h": 56,
             "text": "Baleia come\ne não lembra",
-            "fill": "yellow",
-            "role": "callout"
+            "role": "callout",
+            "fill": "yellow"
           }
         ],
         "arrows": [
@@ -2212,45 +2230,45 @@
       "paragraphId": "p17",
       "text": "Curral deserto, chiqueiro arruinado, casa fechada. O narrador conclui antes de Fabiano entrar: o gado se finou, os moradores fugiram. O condicional do fim vai reabrir esta planta.",
       "diagram": {
-        "w": 460,
-        "h": 180,
+        "w": 300,
+        "h": 210,
         "boxes": [
           {
             "id": "curral",
             "x": 8,
-            "y": 12,
-            "w": 128,
-            "h": 46,
+            "y": 8,
+            "w": 168,
+            "h": 48,
             "text": "curral deserto",
             "role": "node"
           },
           {
             "id": "chiqueiro",
-            "x": 156,
-            "y": 12,
-            "w": 120,
+            "x": 8,
+            "y": 68,
+            "w": 124,
             "h": 46,
             "text": "chiqueiro",
             "role": "node"
           },
           {
             "id": "casa",
-            "x": 296,
-            "y": 12,
-            "w": 148,
+            "x": 148,
+            "y": 68,
+            "w": 144,
             "h": 46,
             "text": "casa fechada",
             "role": "node"
           },
           {
             "id": "cond",
-            "x": 150,
-            "y": 112,
-            "w": 156,
+            "x": 64,
+            "y": 142,
+            "w": 168,
             "h": 50,
             "text": "renasceria",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           }
         ],
         "arrows": [
@@ -2276,23 +2294,23 @@
       "paragraphId": "p37",
       "text": "A família imagina saia, curral e chocalho. A cachorra não entra nessa frase. Espera os ossos do preá e, depois, o sono. O capítulo acaba no presente dela.",
       "diagram": {
-        "w": 470,
-        "h": 196,
+        "w": 300,
+        "h": 312,
         "boxes": [
           {
             "id": "sonho",
-            "x": 8,
-            "y": 8,
-            "w": 280,
-            "h": 118,
+            "x": 6,
+            "y": 6,
+            "w": 288,
+            "h": 148,
             "text": "o que eles imaginam",
             "role": "frame"
           },
           {
             "id": "saia",
-            "x": 22,
-            "y": 56,
-            "w": 74,
+            "x": 18,
+            "y": 50,
+            "w": 78,
             "h": 40,
             "text": "saia",
             "role": "node"
@@ -2300,39 +2318,39 @@
           {
             "id": "curral",
             "x": 108,
-            "y": 56,
-            "w": 78,
+            "y": 50,
+            "w": 90,
             "h": 40,
             "text": "curral",
             "role": "node"
           },
           {
             "id": "chocalho",
-            "x": 196,
-            "y": 56,
-            "w": 78,
+            "x": 18,
+            "y": 100,
+            "w": 112,
             "h": 40,
             "text": "chocalho",
             "role": "node"
           },
           {
             "id": "ossos",
-            "x": 308,
-            "y": 28,
-            "w": 150,
-            "h": 52,
+            "x": 8,
+            "y": 182,
+            "w": 196,
+            "h": 50,
             "text": "Baleia, os ossos",
             "role": "node"
           },
           {
             "id": "dormir",
-            "x": 308,
-            "y": 124,
-            "w": 150,
+            "x": 8,
+            "y": 250,
+            "w": 176,
             "h": 48,
             "text": "depois, dormir",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           }
         ],
         "arrows": [

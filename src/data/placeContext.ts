@@ -41,9 +41,9 @@ export function miniMapFor(lat: number, lng: number, label: string): LiteraryMap
     return {
       ...base,
       caption: "Sertão nordestino, região aproximada. Alagoas, Pernambuco, Bahia e o São Francisco; a costa fica de fora.",
-      center: [-38.4, -9.5],
-      scale: 1750,
-      frameHeight: 270,
+      center: [-38.6, -9.6],
+      scale: 1480,
+      frameHeight: 310,
       showStates: true,
       showRiver: true,
       highlight: SERTAO_RING,
@@ -52,9 +52,9 @@ export function miniMapFor(lat: number, lng: number, label: string): LiteraryMap
         ref("maceio", city.maceio, "Maceió."),
         ref("recife", city.recife, "Recife."),
         ref("salvador", city.salvador, "Salvador."),
-        { id: "al", lat: -9.55, lng: -36.7, label: "Alagoas", note: "", quiet: true, kind: "region" },
-        { id: "pe", lat: -8.3, lng: -37.6, label: "Pernambuco", note: "", quiet: true, kind: "region" },
-        { id: "ba", lat: -11.4, lng: -41.2, label: "Bahia", note: "", quiet: true, kind: "region" },
+        { id: "al", lat: -9.95, lng: -37.55, label: "Alagoas", note: "", quiet: true, kind: "region" },
+        { id: "pe", lat: -7.55, lng: -39.15, label: "Pernambuco", note: "", quiet: true, kind: "region" },
+        { id: "ba", lat: -12.7, lng: -42.15, label: "Bahia", note: "", quiet: true, kind: "region" },
       ],
     };
   }

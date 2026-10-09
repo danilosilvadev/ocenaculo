@@ -107,10 +107,11 @@ function MapInk({ map, river, activeLabel }: { map: LiteraryMapData; river: GeoJ
           <text
             key={`label-${point.id}`}
             data-map-label={point.label}
-            x={label.x}
-            y={label.y + label.h * 0.78}
+            x={label.x + label.w / 2}
+            y={label.y + label.h * 0.76}
+            textAnchor="middle"
             fill={INK}
-            style={{ fontFamily: HAND, fontSize: width < 420 ? 13 : 15 }}
+            style={{ fontFamily: HAND, fontSize: width < 420 ? 13 : 15, fontWeight: 650 }}
           >
             {point.label}
           </text>

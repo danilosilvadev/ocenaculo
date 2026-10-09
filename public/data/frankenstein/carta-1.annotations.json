@@ -752,45 +752,45 @@
       "paragraphId": "p3",
       "text": "Nesta carta só existem Walton e a irmã. Victor e a criatura ainda não entraram. O romance inteiro vai ser contado dentro de cartas como esta.",
       "diagram": {
-        "w": 470,
-        "h": 226,
+        "w": 300,
+        "h": 276,
         "boxes": [
           {
             "id": "walton",
-            "x": 8,
-            "y": 8,
-            "w": 304,
-            "h": 208,
+            "x": 6,
+            "y": 6,
+            "w": 288,
+            "h": 158,
             "text": "Walton\nCarta I, a Margaret",
             "role": "frame"
           },
           {
             "id": "victor",
-            "x": 26,
-            "y": 72,
-            "w": 236,
-            "h": 128,
+            "x": 20,
+            "y": 52,
+            "w": 250,
+            "h": 96,
             "text": "Victor\nainda não nesta carta",
             "role": "frame"
           },
           {
             "id": "criatura",
-            "x": 44,
-            "y": 136,
-            "w": 168,
-            "h": 50,
+            "x": 34,
+            "y": 100,
+            "w": 220,
+            "h": 40,
             "text": "a criatura, depois",
             "role": "frame"
           },
           {
             "id": "so",
-            "x": 326,
-            "y": 80,
-            "w": 132,
-            "h": 70,
+            "x": 8,
+            "y": 198,
+            "w": 200,
+            "h": 56,
             "text": "só esta moldura\nexiste agora",
-            "fill": "yellow",
-            "role": "callout"
+            "role": "callout",
+            "fill": "yellow"
           }
         ],
         "arrows": [
@@ -808,37 +808,37 @@
       "paragraphId": "p4",
       "text": "Ele sabe que o polo é gelo e desolação. A frase seguinte troca o mapa pela imaginação: beleza e deleite. O «em vão» não vence.",
       "diagram": {
-        "w": 460,
-        "h": 186,
+        "w": 300,
+        "h": 248,
         "boxes": [
           {
             "id": "gelo",
-            "x": 12,
-            "y": 14,
-            "w": 180,
-            "h": 58,
+            "x": 8,
+            "y": 8,
+            "w": 188,
+            "h": 56,
             "text": "razão: gelo\ne desolação",
             "role": "node"
           },
           {
             "id": "beleza",
-            "x": 12,
-            "y": 112,
-            "w": 196,
-            "h": 58,
+            "x": 8,
+            "y": 92,
+            "w": 210,
+            "h": 56,
             "text": "imaginação:\nbeleza e deleite",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           },
           {
             "id": "margaret",
-            "x": 248,
-            "y": 56,
-            "w": 196,
-            "h": 64,
+            "x": 8,
+            "y": 176,
+            "w": 230,
+            "h": 56,
             "text": "Margaret já ouviu\no fracasso",
-            "fill": "yellow",
-            "role": "callout"
+            "role": "callout",
+            "fill": "yellow"
           }
         ],
         "arrows": [
@@ -860,63 +860,63 @@
       "paragraphId": "p6",
       "text": "Um ano de paraíso próprio, o fracasso que Margaret já conhece, a herança do primo, e o corpo de volta ao mar. A carta conta a vocação como uma curva, não como um dom.",
       "diagram": {
-        "w": 470,
-        "h": 148,
+        "w": 300,
+        "h": 176,
         "boxes": [
           {
             "id": "eixo",
-            "x": 16,
-            "y": 62,
-            "w": 438,
-            "h": 2,
+            "x": 8,
+            "y": 84,
+            "w": 284,
+            "h": 4,
             "text": "",
             "role": "axis"
           },
           {
             "id": "poeta",
             "x": 8,
-            "y": 14,
-            "w": 84,
+            "y": 40,
+            "w": 64,
             "h": 34,
             "text": "poeta",
             "role": "tick"
           },
           {
             "id": "fracasso",
-            "x": 124,
-            "y": 14,
-            "w": 100,
+            "x": 78,
+            "y": 40,
+            "w": 90,
             "h": 34,
             "text": "fracasso",
             "role": "tick"
           },
           {
             "id": "heranca",
-            "x": 256,
-            "y": 14,
-            "w": 96,
+            "x": 176,
+            "y": 40,
+            "w": 68,
             "h": 34,
             "text": "herança",
             "role": "tick"
           },
           {
             "id": "mar",
-            "x": 380,
-            "y": 14,
-            "w": 76,
+            "x": 250,
+            "y": 40,
+            "w": 48,
             "h": 34,
             "text": "o mar",
             "role": "tick"
           },
           {
             "id": "nota",
-            "x": 140,
-            "y": 96,
-            "w": 196,
-            "h": 42,
+            "x": 8,
+            "y": 112,
+            "w": 270,
+            "h": 48,
             "text": "ela já conhece a curva",
-            "fill": "yellow",
-            "role": "callout"
+            "role": "callout",
+            "fill": "yellow"
           }
         ],
         "arrows": [
@@ -941,55 +941,55 @@
       "paragraphId": "p10",
       "text": "Sucesso significa meses ou anos sem a irmã. Fracasso não tem meio-termo: vê-lo cedo, ou não vê-lo. As duas voltas cabem na mesma linha.",
       "diagram": {
-        "w": 460,
-        "h": 208,
+        "w": 300,
+        "h": 292,
         "boxes": [
           {
             "id": "quando",
-            "x": 136,
+            "x": 56,
             "y": 8,
-            "w": 176,
-            "h": 44,
+            "w": 188,
+            "h": 48,
             "text": "quando voltarei?",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           },
           {
             "id": "sucesso",
-            "x": 12,
+            "x": 8,
             "y": 76,
-            "w": 156,
-            "h": 44,
+            "w": 176,
+            "h": 48,
             "text": "se tiver sucesso",
             "role": "node"
           },
           {
-            "id": "anos",
-            "x": 12,
-            "y": 148,
-            "w": 184,
-            "h": 46,
-            "text": "meses, talvez anos",
-            "role": "node"
-          },
-          {
             "id": "falha",
-            "x": 292,
+            "x": 192,
             "y": 76,
-            "w": 150,
-            "h": 44,
+            "w": 100,
+            "h": 48,
             "text": "se falhar",
             "role": "node"
           },
           {
-            "id": "nunca",
-            "x": 256,
+            "id": "anos",
+            "x": 8,
             "y": 148,
-            "w": 190,
-            "h": 46,
-            "text": "em breve, ou nunca",
-            "fill": "yellow",
+            "w": 200,
+            "h": 48,
+            "text": "meses, talvez anos",
             "role": "node"
+          },
+          {
+            "id": "nunca",
+            "x": 8,
+            "y": 224,
+            "w": 248,
+            "h": 52,
+            "text": "em breve, ou nunca",
+            "role": "node",
+            "fill": "yellow"
           }
         ],
         "arrows": [

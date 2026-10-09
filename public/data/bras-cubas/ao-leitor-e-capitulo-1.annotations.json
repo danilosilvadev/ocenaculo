@@ -658,36 +658,36 @@
       "paragraphId": "a1",
       "text": "O livro se apresenta já sem as duas colunas da opinião: os graves não acham romance puro, os frívolos não acham o romance de sempre.",
       "diagram": {
-        "w": 460,
-        "h": 186,
+        "w": 300,
+        "h": 196,
         "boxes": [
           {
             "id": "graves",
-            "x": 12,
-            "y": 10,
-            "w": 142,
+            "x": 8,
+            "y": 8,
+            "w": 136,
             "h": 48,
             "text": "gente grave",
             "role": "node"
           },
           {
             "id": "frivolos",
-            "x": 302,
-            "y": 10,
-            "w": 146,
+            "x": 152,
+            "y": 8,
+            "w": 140,
             "h": 48,
             "text": "gente frívola",
             "role": "node"
           },
           {
             "id": "livro",
-            "x": 154,
-            "y": 112,
-            "w": 150,
-            "h": 56,
+            "x": 68,
+            "y": 124,
+            "w": 164,
+            "h": 52,
             "text": "este livro",
-            "fill": "wine",
-            "role": "node"
+            "role": "node",
+            "fill": "wine"
           }
         ],
         "arrows": [
@@ -710,14 +710,14 @@
       "paragraphId": "a1",
       "text": "A galhofa está no instrumento; a melancolia, na tinta. O «connubio» avisa a cor de tudo o que segue, inclusive do óbito contado com graça.",
       "diagram": {
-        "w": 470,
-        "h": 206,
+        "w": 300,
+        "h": 228,
         "boxes": [
           {
             "id": "pena",
             "x": 8,
-            "y": 12,
-            "w": 170,
+            "y": 8,
+            "w": 172,
             "h": 48,
             "text": "pena da galhofa",
             "role": "node"
@@ -725,29 +725,29 @@
           {
             "id": "tinta",
             "x": 8,
-            "y": 86,
-            "w": 176,
+            "y": 68,
+            "w": 172,
             "h": 56,
             "text": "tinta da\nmelancholia",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           },
           {
             "id": "connubio",
-            "x": 248,
-            "y": 46,
-            "w": 132,
+            "x": 192,
+            "y": 36,
+            "w": 100,
             "h": 48,
             "text": "connubio",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           },
           {
             "id": "pagina",
-            "x": 270,
-            "y": 146,
+            "x": 8,
+            "y": 164,
             "w": 140,
-            "h": 44,
+            "h": 48,
             "text": "a página",
             "role": "node"
           }
@@ -775,82 +775,80 @@
       "paragraphId": "c1",
       "text": "O uso vulgar começa no nascimento. Brás escolhe a morte como berço. O resto das memórias anda para trás, em direção aos primeiros anos.",
       "diagram": {
-        "w": 480,
-        "h": 200,
+        "w": 300,
+        "h": 260,
         "boxes": [
           {
             "id": "eixo",
-            "x": 20,
-            "y": 86,
-            "w": 440,
-            "h": 2,
+            "x": 10,
+            "y": 94,
+            "w": 280,
+            "h": 4,
             "text": "",
             "role": "axis"
           },
           {
             "id": "nasc",
-            "x": 12,
-            "y": 36,
-            "w": 124,
+            "x": 8,
+            "y": 46,
+            "w": 116,
             "h": 36,
             "text": "nascimento",
             "role": "tick"
           },
           {
             "id": "vida",
-            "x": 184,
-            "y": 36,
-            "w": 88,
+            "x": 132,
+            "y": 46,
+            "w": 72,
             "h": 36,
             "text": "a vida",
             "role": "tick"
           },
           {
             "id": "obito",
-            "x": 318,
-            "y": 36,
-            "w": 142,
+            "x": 214,
+            "y": 46,
+            "w": 76,
             "h": 36,
-            "text": "óbito, 1869",
-            "fill": "yellow",
-            "role": "tick"
+            "text": "óbito",
+            "role": "tick",
+            "fill": "yellow"
           },
           {
             "id": "vulgar",
             "x": 8,
-            "y": 122,
-            "w": 196,
-            "h": 62,
+            "y": 120,
+            "w": 284,
+            "h": 56,
             "text": "autor defunto\nseria o uso vulgar",
             "role": "callout"
           },
           {
             "id": "defunto",
-            "x": 248,
-            "y": 122,
-            "w": 216,
-            "h": 62,
+            "x": 8,
+            "y": 188,
+            "w": 284,
+            "h": 56,
             "text": "defunto autor\na campa é o berço",
-            "fill": "yellow",
-            "role": "callout"
+            "role": "callout",
+            "fill": "yellow"
           }
         ],
         "arrows": [
           {
             "from": "obito",
             "to": "nasc",
-            "bend": "above",
-            "label": "narração, para trás"
+            "label": "narração, para trás",
+            "bend": "above"
           },
           {
             "from": "nasc",
-            "to": "vulgar",
-            "label": "o uso vulgar"
+            "to": "vulgar"
           },
           {
             "from": "obito",
-            "to": "defunto",
-            "label": "começa aqui"
+            "to": "defunto"
           }
         ]
       }
@@ -861,27 +859,27 @@
       "paragraphId": "c6",
       "text": "A causa clínica está dita. A frase a empurra para o lado e oferece outra, «grandiosa e util», que este capítulo não explica. O leitor fica na soleira.",
       "diagram": {
-        "w": 450,
-        "h": 130,
+        "w": 300,
+        "h": 168,
         "boxes": [
           {
             "id": "pneumonia",
-            "x": 12,
-            "y": 34,
-            "w": 140,
+            "x": 8,
+            "y": 28,
+            "w": 116,
             "h": 52,
             "text": "pneumonia",
             "role": "node"
           },
           {
             "id": "ideia",
-            "x": 248,
-            "y": 24,
-            "w": 186,
-            "h": 64,
+            "x": 128,
+            "y": 12,
+            "w": 164,
+            "h": 72,
             "text": "ideia grandiosa\ne útil",
-            "fill": "yellow",
-            "role": "node"
+            "role": "node",
+            "fill": "yellow"
           }
         ],
         "arrows": [

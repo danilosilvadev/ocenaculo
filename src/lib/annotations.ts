@@ -61,7 +61,7 @@ export interface Annotation {
 }
 
 export const DIAGRAM_FILLS = ["none", "yellow", "wine"] as const;
-export const DIAGRAM_ROLES = ["node", "frame", "bar", "tick", "callout", "axis"] as const;
+export const DIAGRAM_ROLES = ["node", "frame", "bar", "tick", "callout", "axis", "caption"] as const;
 export const DIAGRAM_BENDS = ["above", "elbow"] as const;
 
 export type DiagramFill = (typeof DIAGRAM_FILLS)[number];

@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import type { Chapter, MarkKind, Note } from "@/data/types";
 import { collectNotes, noteContext, paragraphText, type Paragraph, type Segment } from "@/data/types";
 import { arrowPath, hashString, placeMarginNotes, wavyLine, wavyVertical } from "@/lib/layout";
+import { circleLoops } from "@/lib/marks";
 import type { ConceptWidget } from "@/lib/annotations";
 import { MiniMap } from "@/components/maps/LiteraryMap";
 import { ConceptCard } from "@/components/reader/SketchDiagram";
@@ -631,20 +632,34 @@ function MarkShape({ mark, active }: { mark: MarkGeom; active: boolean }) {
   }
 
   if (mark.mark === "circle") {
-    const cx = box.x + box.w / 2;
-    const cy = box.y + box.h / 2;
-    const rot = (seed % 7) - 3;
+    const loops = circleLoops(mark.rects, seed);
     return (
-      <ellipse
-        cx={cx}
-        cy={cy}
-        rx={box.w / 2 + 4}
-        ry={box.h / 2 + 3}
-        transform={`rotate(${rot} ${cx} ${cy})`}
-        fill="none"
-        stroke={stroke}
-        strokeWidth={width}
-      />
+      <g>
+        {loops.map((loop, index) =>
+          loop.kind === "underline" ? (
+            <path
+              key={index}
+              d={wavyLine(loop.x1, loop.x2, loop.y, seed + index)}
+              fill="none"
+              stroke={stroke}
+              strokeWidth={width}
+              strokeLinecap="round"
+            />
+          ) : (
+            <ellipse
+              key={index}
+              cx={loop.cx}
+              cy={loop.cy}
+              rx={loop.rx}
+              ry={loop.ry}
+              transform={loop.rot ? `rotate(${loop.rot} ${loop.cx} ${loop.cy})` : undefined}
+              fill="none"
+              stroke={stroke}
+              strokeWidth={width}
+            />
+          ),
+        )}
+      </g>
     );
   }
 
