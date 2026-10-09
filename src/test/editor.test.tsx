@@ -3,6 +3,7 @@ import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it } from "vitest";
 import { AppRoutes } from "../App";
 import { DRAFT_STORAGE_KEY } from "../lib/draftStorage";
+import { placeEditPopover } from "../pages/EditorPage";
 
 function renderAt(path: string) {
   return render(
@@ -13,6 +14,18 @@ function renderAt(path: string) {
 }
 
 describe("editor da margem", () => {
+  it("encosta o popover de edição no clique", () => {
+    const beside = placeEditPopover({ top: 420, left: 980, right: 980, bottom: 440 });
+    expect(beside.position).toBe("fixed");
+    expect(Number(beside.left) + Number(beside.width)).toBeLessThanOrEqual(980);
+    expect(Number(beside.left)).toBeGreaterThan(120);
+    expect(Number(beside.top)).toBeGreaterThan(80);
+
+    const below = placeEditPopover({ top: 180, left: 40, right: 40, bottom: 200 });
+    expect(Number(below.top)).toBeGreaterThanOrEqual(200);
+    expect(Number(below.left)).toBeLessThan(80);
+  });
+
   beforeEach(() => localStorage.clear());
 
   it("não aparece na navegação pública", () => {

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
-import { AnnotatedReader, type TextSelection } from "@/components/reader/AnnotatedReader";
+import { AnnotatedReader, type PopoverAnchor, type TextSelection } from "@/components/reader/AnnotatedReader";
 import { Button } from "@/components/ui/button";
 import { bundledAnnotations, chapterFromAnnotations, partOne } from "@/data/book";
 import {
@@ -16,13 +16,29 @@ import { publishAnnotationFile, TOKEN_STORAGE_KEY } from "@/lib/githubPublish";
 
 type FormState =
   | { kind: "create"; selection: TextSelection; mark: MarkName; note: string; expanded: string; russian: string; error?: string }
-  | { kind: "edit"; id: string; mark: MarkName; note: string; expanded: string; russian: string; error?: string };
+  | { kind: "edit"; id: string; anchor: PopoverAnchor; mark: MarkName; note: string; expanded: string; russian: string; error?: string };
+
+/** Sits just to the left of the anchor when it fits; otherwise below it, then above, and always inside the viewport. */
+export function placeEditPopover(rect: PopoverAnchor): CSSProperties {
+  const margin = 12;
+  const gap = 8;
+  const width = Math.min(384, window.innerWidth - margin * 2);
+  const height = Math.min(460, window.innerHeight - margin * 2);
+  let left = rect.left - width - gap;
+  let top = rect.top;
+  const beside = left >= margin;
+  if (!beside) {
+    left = rect.left;
+    top = rect.bottom + gap;
+    if (top + height > window.innerHeight - margin) top = rect.top - height - gap;
+  }
+  left = Math.max(margin, Math.min(left, window.innerWidth - width - margin));
+  top = Math.max(margin, Math.min(top, window.innerHeight - height - margin));
+  return { position: "fixed", top, left, width, maxHeight: height };
+}
 
 function popoverStyle(form: FormState): CSSProperties {
-  if (form.kind === "edit") {
-    if (window.innerWidth < 768) return { position: "fixed", left: 12, right: 12, bottom: 12 };
-    return { position: "fixed", left: 16, top: 120, width: "24rem" };
-  }
+  if (form.kind === "edit") return placeEditPopover(form.anchor);
   const width = Math.min(384, window.innerWidth - 24);
   const left = Math.max(12, Math.min(form.selection.rect.left, window.innerWidth - width - 12));
   const below = form.selection.rect.bottom + 8;
@@ -91,10 +107,10 @@ export default function EditorPage() {
     }));
   };
 
-  const openEdit = (id: string) => {
+  const openEdit = (id: string, anchor: PopoverAnchor) => {
     const found = file.annotations.find((item) => item.id === id);
     if (!found) return;
-    setForm({ kind: "edit", id, mark: found.mark, note: found.note, expanded: found.expanded, russian: found.russian ?? "" });
+    setForm({ kind: "edit", id, anchor, mark: found.mark, note: found.note, expanded: found.expanded, russian: found.russian ?? "" });
   };
 
   const onTextSelect = (selection: TextSelection) => {
@@ -197,7 +213,7 @@ export default function EditorPage() {
 
   const formCard = form && (
     <div
-      className="z-50 w-[min(24rem,calc(100vw-1.5rem))] rounded-md border border-wine/30 bg-[hsl(36_42%_97%)] p-4 shadow-elevated"
+      className="z-50 w-[min(24rem,calc(100vw-1.5rem))] overflow-y-auto rounded-md border border-wine/30 bg-[hsl(36_42%_97%)] p-4 shadow-elevated"
       style={popoverStyle(form)}
       role="dialog"
       aria-label={form.kind === "create" ? "Nova anotação" : "Editar anotação"}

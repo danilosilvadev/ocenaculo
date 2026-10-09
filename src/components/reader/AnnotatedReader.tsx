@@ -15,11 +15,18 @@ export interface TextSelection {
   rect: { top: number; left: number; bottom: number };
 }
 
+export interface PopoverAnchor {
+  top: number;
+  left: number;
+  right: number;
+  bottom: number;
+}
+
 interface AnnotatedReaderProps {
   chapter: Chapter;
   siblings: Chapter[];
   mode?: "read" | "edit";
-  onEditNote?: (id: string) => void;
+  onEditNote?: (id: string, anchor: PopoverAnchor) => void;
   onTextSelect?: (selection: TextSelection) => void;
 }
 
@@ -161,6 +168,11 @@ function ParagraphView({
       )}
     </div>
   );
+}
+
+function anchorFromElement(element: HTMLElement): PopoverAnchor {
+  const box = element.getBoundingClientRect();
+  return { top: box.top, left: box.left, right: box.right, bottom: box.bottom };
 }
 
 function offsetWithin(root: HTMLElement, node: Node, offset: number) {
@@ -427,7 +439,7 @@ export const AnnotatedReader = ({ chapter, siblings, mode = "read", onEditNote, 
                 }
               }
               const marked = (event.target as HTMLElement | null)?.closest<HTMLElement>("[data-note]");
-              if (marked?.dataset.note) onEditNote?.(marked.dataset.note);
+              if (marked?.dataset.note) onEditNote?.(marked.dataset.note, anchorFromElement(marked));
             }}
           >
             <header className="mb-8 text-center">
@@ -523,16 +535,16 @@ function MarginNote({
   active: boolean;
   ready: boolean;
   onOpen: (id: string) => void;
-  onEdit?: (id: string) => void;
+  onEdit?: (id: string, anchor: PopoverAnchor) => void;
 }) {
   const tilt = ((hashString(note.id) % 5) - 2) * 0.15;
   return (
     <button
       type="button"
       data-margin-note={note.id}
-      onClick={() => {
+      onClick={(event) => {
         onOpen(note.id);
-        onEdit?.(note.id);
+        onEdit?.(note.id, anchorFromElement(event.currentTarget));
       }}
       className={cn(
         "absolute left-0 right-0 text-left",
