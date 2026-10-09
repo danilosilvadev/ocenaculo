@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import type { Chapter, MarkKind, Note } from "@/data/types";
 import { collectNotes, noteContext, paragraphText, type Paragraph, type Segment } from "@/data/types";
-import { arrowPath, hashString, marginArrowStart, placeMarginNotes, wavyLine, wavyVertical } from "@/lib/layout";
-import { circleLoops } from "@/lib/marks";
+import { arrowPath, hashString, marginArrowStart, placeMarginNotes, wavyLine } from "@/lib/layout";
+import { circleLoops, sidelineRules } from "@/lib/marks";
 import type { ConceptWidget } from "@/lib/annotations";
 import { MiniMap } from "@/components/maps/LiteraryMap";
 import { ConceptCard } from "@/components/reader/SketchDiagram";
@@ -106,20 +106,25 @@ function unionRect(rects: Rect[]): Rect {
 function SegView({
   seg,
   activeId,
+  linkedId,
   onOpen,
 }: {
   seg: Segment;
   activeId: string | null;
+  linkedId: string | null;
   onOpen: (id: string) => void;
 }) {
   const content = seg.inner?.length
-    ? seg.inner.map((child, index) => <SegView key={child.note?.id ?? `${index}-${child.t.slice(0, 12)}`} seg={child} activeId={activeId} onOpen={onOpen} />)
+    ? seg.inner.map((child, index) => (
+        <SegView key={child.note?.id ?? `${index}-${child.t.slice(0, 12)}`} seg={child} activeId={activeId} linkedId={linkedId} onOpen={onOpen} />
+      ))
     : seg.t;
 
   if (!seg.note) return <span>{content}</span>;
 
   const note = seg.note;
   const active = activeId === note.id;
+  const linked = linkedId === note.id;
 
   return (
     <span
@@ -127,7 +132,7 @@ function SegView({
       data-mark={note.mark}
       role="button"
       tabIndex={0}
-      className={cn("mark-hit", active && "is-active")}
+      className={cn("mark-hit", active && "is-active", linked && "is-linked")}
       aria-pressed={active}
       aria-label={`${MARK_LABEL[note.mark]}: ${note.m}`}
       onClick={(event) => {
@@ -153,6 +158,7 @@ function ParagraphView({
   originalLabel,
   onToggleRussian,
   activeId,
+  linkedId,
   onOpen,
 }: {
   paragraph: Paragraph;
@@ -160,6 +166,7 @@ function ParagraphView({
   originalLabel: string | null;
   onToggleRussian: (id: string) => void;
   activeId: string | null;
+  linkedId: string | null;
   onOpen: (id: string) => void;
 }) {
   const text = paragraphText(paragraph);
@@ -170,7 +177,7 @@ function ParagraphView({
       <p className={cn("mb-[0.85em]", dialogue ? "indent-0" : "indent-[1.4em]", paragraphText(paragraph).includes("\n") && "whitespace-pre-line indent-0")}>
         <span data-prose="">
           {paragraph.segs.map((seg, index) => (
-            <SegView key={seg.note?.id ?? `${paragraph.id}-${index}`} seg={seg} activeId={activeId} onOpen={onOpen} />
+            <SegView key={seg.note?.id ?? `${paragraph.id}-${index}`} seg={seg} activeId={activeId} linkedId={linkedId} onOpen={onOpen} />
           ))}
         </span>
         {originalLabel && paragraph.ru.trim() && (
@@ -216,6 +223,7 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
   const bookRef = useRef<HTMLDivElement>(null);
   const marginRef = useRef<HTMLDivElement>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [linkedId, setLinkedId] = useState<string | null>(null);
   const [openRu, setOpenRu] = useState<Set<string>>(new Set());
   const [marks, setMarks] = useState<MarkGeom[]>([]);
   const [arrows, setArrows] = useState<ArrowGeom[]>([]);
@@ -229,6 +237,7 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
 
   useEffect(() => {
     setActiveId(null);
+    setLinkedId(null);
     setOpenRu(new Set());
     window.scrollTo(0, 0);
   }, [chapter.id]);
@@ -493,6 +502,7 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
                   originalLabel={frame.originalLabel}
                   onToggleRussian={toggleRussian}
                   activeId={activeId}
+                  linkedId={linkedId}
                   onOpen={openNote}
                 />
                 {widgets
@@ -539,6 +549,7 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
                 active={activeId === note.id}
                 ready={ready}
                 onOpen={openNote}
+                onLink={setLinkedId}
                 onEdit={mode === "edit" ? onEditNote : undefined}
               />
             ))}
@@ -585,6 +596,7 @@ function MarginNote({
   active,
   ready,
   onOpen,
+  onLink,
   onEdit,
 }: {
   note: Note;
@@ -592,6 +604,7 @@ function MarginNote({
   active: boolean;
   ready: boolean;
   onOpen: (id: string) => void;
+  onLink: (id: string | null) => void;
   onEdit?: (id: string, anchor: PopoverAnchor) => void;
 }) {
   const tilt = ((hashString(note.id) % 5) - 2) * 0.15;
@@ -604,6 +617,10 @@ function MarginNote({
       <button
         type="button"
         className="w-full text-left"
+        onPointerEnter={() => onLink(note.id)}
+        onPointerLeave={() => onLink(null)}
+        onFocus={() => onLink(note.id)}
+        onBlur={() => onLink(null)}
         onClick={(event) => {
           onOpen(note.id);
           onEdit?.(note.id, anchorFromElement(event.currentTarget));
@@ -716,15 +733,24 @@ function MarkShape({ mark, active }: { mark: MarkGeom; active: boolean }) {
   }
 
   if (mark.mark === "sideline") {
-    const x = Math.max(2, box.x - 10);
     return (
-      <path
-        d={wavyVertical(x, box.y, box.y + box.h, seed)}
-        fill="none"
-        stroke={stroke}
-        strokeWidth={width + 0.35}
-        strokeLinecap="round"
-      />
+      <g>
+        {mark.rects.flatMap((rect, index) =>
+          sidelineRules(rect).map((rule, ruleIndex) => (
+            <line
+              key={`${index}-${ruleIndex}`}
+              x1={rule.x1}
+              y1={rule.y}
+              x2={rule.x2}
+              y2={rule.y}
+              stroke={stroke}
+              strokeWidth={width}
+              strokeDasharray="5 3.5"
+              strokeLinecap="round"
+            />
+          )),
+        )}
+      </g>
     );
   }
 

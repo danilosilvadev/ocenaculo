@@ -5,7 +5,7 @@ import bras from "../../public/data/bras-cubas/ao-leitor-e-capitulo-1.annotation
 import vidas from "../../public/data/vidas-secas/mudanca.annotations.json";
 import { parseAnnotationFile } from "../lib/annotations";
 import { labelProblems } from "../lib/diagramLayout";
-import { circleLoops } from "../lib/marks";
+import { circleLoops, sidelineRules } from "../lib/marks";
 
 const books = [
   ["O Idiota", idiot],
@@ -88,6 +88,16 @@ describe("círculos", () => {
     expect(phrase.every((loop) => loop.kind === "underline")).toBe(true);
     const tight = circleLoops([{ x: 0, y: 0, w: 40, h: 28 }], 1, 2)[0];
     expect(tight).toMatchObject({ kind: "ellipse", rot: 0 });
-    if (tight?.kind === "ellipse") expect(tight.ry).toBeLessThanOrEqual(4.5);
+    if (tight?.kind === "ellipse") {
+      expect(tight.ry).toBeGreaterThan(28 * 0.3);
+      expect(tight.ry).toBeLessThan(14);
+    }
+    const rules = sidelineRules({ x: 8, y: 20, w: 60, h: 32 });
+    expect(rules).toHaveLength(2);
+    for (const rule of rules) {
+      expect(rule.y).toBeGreaterThan(20 + 32 * 0.7);
+      expect(rule.y).toBeLessThanOrEqual(20 + 32);
+      expect(rule.x2 - rule.x1).toBe(60);
+    }
   });
 });

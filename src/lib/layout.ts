@@ -131,18 +131,6 @@ export function arrowPath(x1: number, y1: number, x2: number, y2: number, seed: 
   return `M ${fmt(x1)} ${fmt(y1)} L ${fmt(railX)} ${fmt(y1)} L ${fmt(railX)} ${fmt(y2)} L ${fmt(x2)} ${fmt(y2)}`;
 }
 
-export function wavyVertical(x: number, y1: number, y2: number, seed: number): string {
-  const len = y2 - y1;
-  const steps = Math.max(2, Math.round(Math.abs(len) / 18));
-  let d = `M ${x.toFixed(1)} ${y1.toFixed(1)}`;
-  for (let i = 1; i <= steps; i++) {
-    const y = y1 + (len * i) / steps;
-    const wob = Math.sin(seed * 0.02 + i * 1.15) * 0.85;
-    d += ` L ${(x + wob).toFixed(1)} ${y.toFixed(1)}`;
-  }
-  return d;
-}
-
 export function wavyLine(x1: number, x2: number, y: number, seed: number): string {
   const len = Math.max(0, x2 - x1);
   const steps = Math.max(2, Math.round(len / 16));

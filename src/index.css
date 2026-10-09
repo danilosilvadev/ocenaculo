@@ -281,8 +281,9 @@
   background-color: hsl(42 72% 52% / 0.28);
 }
 
-.mark-hit.is-active {
-  background-color: hsl(42 74% 54% / 0.42);
+.mark-hit.is-active,
+.mark-hit.is-linked {
+  background-color: hsl(48 94% 62% / 0.5);
 }
 
 @media (prefers-reduced-motion: reduce) {
