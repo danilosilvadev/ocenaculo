@@ -11,8 +11,35 @@ export interface PlacedNote extends StackItem {
 /** Push colliding margin notes downward. Order follows the passage. */
 export function stackNotes(items: StackItem[], gap = 8): PlacedNote[] {
   const sorted = [...items].sort((a, b) => a.idealTop - b.idealTop || a.id.localeCompare(b.id));
+  return stackInGivenOrder(sorted, gap);
+}
+
+export interface RankedNote extends StackItem {
+  order: number;
+}
+
+/**
+ * Same stacking as stackNotes, but notes that would collide can be reordered
+ * by `order` without leaving their passage.
+ */
+export function placeMarginNotes(items: RankedNote[], gap = 8): PlacedNote[] {
+  const sorted = [...items].sort((a, b) => a.idealTop - b.idealTop || a.order - b.order || a.id.localeCompare(b.id));
+  const chains: RankedNote[][] = [];
+  for (const item of sorted) {
+    const chain = chains[chains.length - 1];
+    const prev = chain?.[chain.length - 1];
+    if (!chain || !prev || item.idealTop >= prev.idealTop + prev.height + gap) chains.push([item]);
+    else chain.push(item);
+  }
+  const flat = chains.flatMap((chain) =>
+    [...chain].sort((a, b) => a.order - b.order || a.idealTop - b.idealTop || a.id.localeCompare(b.id)),
+  );
+  return stackInGivenOrder(flat, gap);
+}
+
+function stackInGivenOrder(items: StackItem[], gap: number): PlacedNote[] {
   let cursor = 0;
-  return sorted.map((item) => {
+  return items.map((item) => {
     const top = Math.max(item.idealTop, cursor);
     cursor = top + item.height + gap;
     return { ...item, top };

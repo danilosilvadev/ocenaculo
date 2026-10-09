@@ -1,4 +1,4 @@
-export type MarkKind = "underline" | "circle" | "highlight" | "bracket" | "sideline";
+export type MarkKind = "underline" | "circle" | "highlight" | "bracket" | "sideline" | "arrow";
 
 export interface Note {
   id: string;
@@ -7,6 +7,9 @@ export interface Note {
   m: string;
   /** Close reading, opened on click. */
   x?: string;
+  /** Optional gloss of a Russian word. */
+  ruWord?: string;
+  order?: number;
 }
 
 export interface Segment {

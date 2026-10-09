@@ -24,7 +24,10 @@ export const SiteFooter = () => {
           </div>
         </div>
         <p className="mt-10 border-t border-primary-foreground/20 pt-6 text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} O Cenáculo. Texto russo em domínio público. A tradução é nossa.
+          © {new Date().getFullYear()} O Cenáculo. Texto russo em domínio público. A tradução é nossa.{" "}
+          <Link to="/editor" className="underline decoration-primary-foreground/30 underline-offset-2 hover:text-primary-foreground">
+            Editar a margem
+          </Link>
         </p>
       </Container>
     </footer>

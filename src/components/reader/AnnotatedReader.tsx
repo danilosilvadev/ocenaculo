@@ -4,12 +4,23 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import type { Chapter, MarkKind, Note } from "@/data/types";
 import { collectNotes, noteContext, paragraphText, type Paragraph, type Segment } from "@/data/types";
 import { RUSSIAN_SOURCE, TRANSLATION_NOTE } from "@/data/source";
-import { arrowPath, hashString, stackNotes, wavyLine, wavyVertical } from "@/lib/layout";
+import { arrowPath, hashString, placeMarginNotes, wavyLine, wavyVertical } from "@/lib/layout";
 import { cn } from "@/lib/utils";
+
+export interface TextSelection {
+  paragraphId: string;
+  start: number;
+  end: number;
+  quote: string;
+  rect: { top: number; left: number; bottom: number };
+}
 
 interface AnnotatedReaderProps {
   chapter: Chapter;
   siblings: Chapter[];
+  mode?: "read" | "edit";
+  onEditNote?: (id: string) => void;
+  onTextSelect?: (selection: TextSelection) => void;
 }
 
 interface Rect {
@@ -37,6 +48,7 @@ const MARK_LABEL: Record<MarkKind, string> = {
   highlight: "realce",
   bracket: "colchete",
   sideline: "traço à margem",
+  arrow: "seta",
 };
 
 function useIsMobile() {
@@ -75,7 +87,7 @@ function SegView({
   onOpen: (id: string) => void;
 }) {
   const content = seg.inner?.length
-    ? seg.inner.map((child, index) => <SegView key={child.note?.id ?? index} seg={child} activeId={activeId} onOpen={onOpen} />)
+    ? seg.inner.map((child, index) => <SegView key={child.note?.id ?? `${index}-${child.t.slice(0, 12)}`} seg={child} activeId={activeId} onOpen={onOpen} />)
     : seg.t;
 
   if (!seg.note) return <span>{content}</span>;
@@ -128,9 +140,11 @@ function ParagraphView({
   return (
     <div className="para group relative" data-paragraph={paragraph.id}>
       <p className={cn("mb-[0.85em]", dialogue ? "indent-0" : "indent-[1.4em]")}>
-        {paragraph.segs.map((seg, index) => (
-          <SegView key={seg.note?.id ?? `${paragraph.id}-${index}`} seg={seg} activeId={activeId} onOpen={onOpen} />
-        ))}
+        <span data-prose="">
+          {paragraph.segs.map((seg, index) => (
+            <SegView key={seg.note?.id ?? `${paragraph.id}-${index}`} seg={seg} activeId={activeId} onOpen={onOpen} />
+          ))}
+        </span>
         <button
           type="button"
           className="ml-2 inline align-baseline font-sans text-[0.68rem] font-medium uppercase tracking-[0.14em] text-wine/70 hover:text-wine"
@@ -149,7 +163,19 @@ function ParagraphView({
   );
 }
 
-export const AnnotatedReader = ({ chapter, siblings }: AnnotatedReaderProps) => {
+function offsetWithin(root: HTMLElement, node: Node, offset: number) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  let count = 0;
+  let current = walker.nextNode();
+  while (current) {
+    if (current === node) return count + offset;
+    count += current.textContent?.length ?? 0;
+    current = walker.nextNode();
+  }
+  return count;
+}
+
+export const AnnotatedReader = ({ chapter, siblings, mode = "read", onEditNote, onTextSelect }: AnnotatedReaderProps) => {
   const mobile = useIsMobile();
   const pageRef = useRef<HTMLDivElement>(null);
   const bookRef = useRef<HTMLDivElement>(null);
@@ -235,8 +261,13 @@ export const AnnotatedReader = ({ chapter, siblings }: AnnotatedReaderProps) => 
           ];
         });
 
-        const placed = stackNotes(
-          items.map(({ id, idealTop, height }) => ({ id, idealTop, height })),
+        const placed = placeMarginNotes(
+          items.map(({ id, idealTop, height }) => ({
+            id,
+            idealTop,
+            height,
+            order: notes.find((note) => note.id === id)?.order ?? 0,
+          })),
           6,
         );
         const byId = new Map(items.map((item) => [item.id, item]));
@@ -362,7 +393,43 @@ export const AnnotatedReader = ({ chapter, siblings }: AnnotatedReaderProps) => 
 
       <div className="mx-auto max-w-6xl px-3 py-6 sm:px-6 md:py-10">
         <div ref={pageRef} className="paper-sheet relative rounded-sm px-4 py-8 sm:px-8 md:grid md:grid-cols-[minmax(0,1fr)_17.5rem] md:gap-x-8 md:px-10 md:py-12 lg:grid-cols-[minmax(0,1fr)_21rem] lg:gap-x-10">
-          <div ref={bookRef} className="book-prose book-ink min-w-0 text-[1.05rem] leading-[1.78] sm:text-[1.12rem] md:text-[1.16rem]" lang="pt-BR">
+          <div
+            ref={bookRef}
+            className="book-prose book-ink min-w-0 text-[1.05rem] leading-[1.78] sm:text-[1.12rem] md:text-[1.16rem]"
+            lang="pt-BR"
+            onMouseUp={(event) => {
+              if (mode !== "edit") return;
+              const selection = window.getSelection();
+              if (onTextSelect && selection && !selection.isCollapsed && selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const prose = (range.startContainer instanceof Element ? range.startContainer : range.startContainer.parentElement)?.closest<HTMLElement>("[data-prose]");
+                const proseEnd = (range.endContainer instanceof Element ? range.endContainer : range.endContainer.parentElement)?.closest<HTMLElement>("[data-prose]");
+                if (prose && prose === proseEnd) {
+                  const paragraph = prose.closest<HTMLElement>("[data-paragraph]");
+                  if (paragraph?.dataset.paragraph) {
+                    const start = offsetWithin(prose, range.startContainer, range.startOffset);
+                    const end = offsetWithin(prose, range.endContainer, range.endOffset);
+                    const from = Math.min(start, end);
+                    const to = Math.max(start, end);
+                    const quote = prose.textContent?.slice(from, to) ?? "";
+                    if (quote.trim()) {
+                      const rect = range.getBoundingClientRect();
+                      onTextSelect({
+                        paragraphId: paragraph.dataset.paragraph,
+                        start: from,
+                        end: to,
+                        quote,
+                        rect: { top: rect.top, left: rect.left, bottom: rect.bottom },
+                      });
+                      return;
+                    }
+                  }
+                }
+              }
+              const marked = (event.target as HTMLElement | null)?.closest<HTMLElement>("[data-note]");
+              if (marked?.dataset.note) onEditNote?.(marked.dataset.note);
+            }}
+          >
             <header className="mb-8 text-center">
               <p className="font-sans text-[0.68rem] uppercase tracking-[0.28em] text-wine/80">Parte primeira</p>
               <h1 className="mt-2 font-serif text-4xl font-medium tracking-wide">{chapter.numeral}</h1>
@@ -404,6 +471,7 @@ export const AnnotatedReader = ({ chapter, siblings }: AnnotatedReaderProps) => 
                 active={activeId === note.id}
                 ready={ready}
                 onOpen={openNote}
+                onEdit={mode === "edit" ? onEditNote : undefined}
               />
             ))}
           </aside>
@@ -432,6 +500,7 @@ export const AnnotatedReader = ({ chapter, siblings }: AnnotatedReaderProps) => 
                   {excerpts.get(active.id)}
                 </SheetDescription>
               </SheetHeader>
+              {active.ruWord && <p className="mt-3 font-serif italic text-wine">{active.ruWord}</p>}
               {active.x && <p className="mt-4 font-sans text-[0.95rem] leading-relaxed text-foreground">{active.x}</p>}
             </>
           )}
@@ -447,19 +516,24 @@ function MarginNote({
   active,
   ready,
   onOpen,
+  onEdit,
 }: {
   note: Note;
   top: number;
   active: boolean;
   ready: boolean;
   onOpen: (id: string) => void;
+  onEdit?: (id: string) => void;
 }) {
   const tilt = ((hashString(note.id) % 5) - 2) * 0.15;
   return (
     <button
       type="button"
       data-margin-note={note.id}
-      onClick={() => onOpen(note.id)}
+      onClick={() => {
+        onOpen(note.id);
+        onEdit?.(note.id);
+      }}
       className={cn(
         "absolute left-0 right-0 text-left",
         active ? "z-10" : "z-[1]",
@@ -470,6 +544,7 @@ function MarginNote({
       <span className="font-hand block text-[1.35rem] leading-[1.05] text-wine">{note.m}</span>
       {active && note.x && (
         <span className="mt-1 block rounded-sm bg-[hsl(42_70%_55%/0.14)] px-1.5 py-1 font-sans text-[0.78rem] font-normal leading-snug text-foreground">
+          {note.ruWord && <span className="mb-1 block font-serif italic text-wine">{note.ruWord}</span>}
           {note.x}
         </span>
       )}
@@ -525,6 +600,28 @@ function MarkShape({ mark, active }: { mark: MarkGeom; active: boolean }) {
     const arm = 6;
     const d = `M ${(x + arm).toFixed(1)} ${y.toFixed(1)} Q ${x.toFixed(1)} ${y.toFixed(1)}, ${x.toFixed(1)} ${(y + 7).toFixed(1)} L ${x.toFixed(1)} ${(y + h - 7).toFixed(1)} Q ${x.toFixed(1)} ${(y + h).toFixed(1)}, ${(x + arm).toFixed(1)} ${(y + h).toFixed(1)}`;
     return <path d={d} fill="none" stroke={stroke} strokeWidth={width} strokeLinecap="round" />;
+  }
+
+  if (mark.mark === "arrow") {
+    return (
+      <g>
+        {mark.rects.map((rect, index) => {
+          const y = rect.y + rect.h - 1;
+          const x2 = rect.x + rect.w;
+          return (
+            <path
+              key={index}
+              d={`M ${rect.x.toFixed(1)} ${y.toFixed(1)} L ${(x2 - 7).toFixed(1)} ${y.toFixed(1)} M ${(x2 - 8).toFixed(1)} ${(y - 3).toFixed(1)} L ${x2.toFixed(1)} ${y.toFixed(1)} L ${(x2 - 8).toFixed(1)} ${(y + 3).toFixed(1)}`}
+              fill="none"
+              stroke={stroke}
+              strokeWidth={width}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          );
+        })}
+      </g>
+    );
   }
 
   if (mark.mark === "sideline") {
