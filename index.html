@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="%BASE_URL%favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="O Cenáculo: os clássicos anotados à margem. O Idiota, de Dostoiévski, em tradução própria a partir do russo, com leitura de perto na margem da página."
+    />
+    <title>O Cenáculo — os clássicos anotados à margem</title>
+    <script>
+      (function () {
+        var base = "%BASE_URL%".replace(/\/$/, "");
+        if (!base) return;
+        var path = location.pathname;
+        if (path.indexOf(base) !== 0) return;
+        var rest = path.slice(base.length).replace(/^\//, "").replace(/\/$/, "");
+        if (rest && rest !== "index.html" && !location.hash) {
+          location.replace(base + "/#/" + rest);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

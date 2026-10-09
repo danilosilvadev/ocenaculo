@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 25% 97%;
+    --foreground: 20 15% 15%;
+
+    --card: 30 20% 99%;
+    --card-foreground: 20 15% 15%;
+
+    --popover: 30 20% 99%;
+    --popover-foreground: 20 15% 15%;
+
+    --primary: 350 45% 30%;
+    --primary-foreground: 30 25% 97%;
+
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 20 15% 15%;
+
+    --muted: 30 15% 92%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 42 70% 55%;
+    --accent-foreground: 20 15% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 350 45% 30%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 30 20% 96%;
+    --sidebar-foreground: 20 15% 25%;
+    --sidebar-primary: 350 45% 30%;
+    --sidebar-primary-foreground: 30 25% 97%;
+    --sidebar-accent: 35 30% 92%;
+    --sidebar-accent-foreground: 20 15% 15%;
+    --sidebar-border: 30 15% 88%;
+    --sidebar-ring: 350 45% 30%;
+
+    /* Custom tokens */
+    --wine: 350 45% 30%;
+    --wine-light: 350 40% 45%;
+    --wine-dark: 350 50% 20%;
+    --cream: 30 25% 97%;
+    --cream-dark: 30 20% 92%;
+    --gold: 42 70% 55%;
+    --gold-light: 42 65% 70%;
+    --parchment: 35 30% 94%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--wine)) 0%, hsl(var(--wine-dark)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+    --gradient-cream: linear-gradient(180deg, hsl(var(--cream)) 0%, hsl(var(--parchment)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--wine) / 0.1);
+    --shadow-elevated: 0 10px 40px -10px hsl(var(--wine) / 0.15);
+    --shadow-glow: 0 0 30px hsl(var(--gold) / 0.3);
+  }
+
+  .dark {
+    --background: 20 15% 10%;
+    --foreground: 30 20% 95%;
+
+    --card: 20 15% 12%;
+    --card-foreground: 30 20% 95%;
+
+    --popover: 20 15% 12%;
+    --popover-foreground: 30 20% 95%;
+
+    --primary: 350 40% 50%;
+    --primary-foreground: 20 15% 10%;
+
+    --secondary: 20 12% 18%;
+    --secondary-foreground: 30 20% 95%;
+
+    --muted: 20 12% 18%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 42 65% 55%;
+    --accent-foreground: 20 15% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 30 20% 95%;
+
+    --border: 20 12% 20%;
+    --input: 20 12% 20%;
+    --ring: 350 40% 50%;
+
+    --wine: 350 40% 50%;
+    --wine-light: 350 35% 60%;
+    --wine-dark: 350 45% 35%;
+    --cream: 30 15% 90%;
+    --cream-dark: 30 12% 80%;
+    --gold: 42 65% 55%;
+    --parchment: 30 12% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    /* Evita scroll bounce indesejado em iOS quando em standalone */
+    overscroll-behavior-y: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  /* Safe area pra iOS notch e Android nav bar quando em PWA standalone */
+  @supports (padding: env(safe-area-inset-top)) {
+    body {
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
+
+  /* Toque suave: remove highlight cinza padrão do tap em mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Inputs/textareas no iOS não fazem zoom em touch quando font-size >= 16px */
+  input, textarea, select {
+    font-size: 16px;
+  }
+
+  /* Suaviza scroll horizontal nos rows (jogos, conteúdos) */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-cream-gradient {
+    background: var(--gradient-cream);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--gold) / 0) 0%,
+    hsl(var(--gold) / 0.3) 50%,
+    hsl(var(--gold) / 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Animations cinematográficas (usadas no overlay narrativo da Timeline Literária) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes driftDust {
+  0% { transform: translate(0, 0) scale(1); opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { transform: translate(60px, -120px) scale(1.2); opacity: 0; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+.font-hand {
+  font-family: "Caveat Variable", Caveat, cursive;
+  font-weight: 600;
+}
+
+.book-ink {
+  color: hsl(22 24% 14%);
+}
+
+.paper-sheet {
+  background-color: hsl(36 42% 96%);
+  background-image:
+    radial-gradient(hsl(28 18% 72% / 0.35) 0.55px, transparent 0.55px);
+  background-size: 3px 3px;
+  box-shadow: var(--shadow-elevated);
+}
+
+.book-prose {
+  font-family: "Playfair Display Variable", Georgia, serif;
+  font-weight: 500;
+  font-optical-sizing: auto;
+}
+
+.mark-hit {
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.mark-hit[data-mark="highlight"] {
+  background-color: hsl(42 72% 52% / 0.28);
+}
+
+.mark-hit.is-active {
+  background-color: hsl(42 74% 54% / 0.42);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-float,
+  .animate-shimmer {
+    animation: none;
+  }
+}
