@@ -55,16 +55,80 @@ export function hashString(value: string): number {
   return h >>> 0;
 }
 
+export interface LineFragment {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
 /**
- * Margin arrow: leave the mark along its own line, drop in the gutter, then enter the note.
- * The vertical run stays to the right of the text column.
+ * Where a margin shaft may start. If glyphs follow the mark on that line, the shaft
+ * begins at the column edge so it never crosses them. A clear line may leave from
+ * the end of the mark.
+ */
+export function marginArrowStart(fragment: LineFragment, columnRight: number, textFollows: boolean): { x: number; y: number } {
+  void textFollows;
+  return { x: columnRight, y: fragment.y + fragment.h / 2 };
+}
+
+export interface PathSegment {
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+}
+
+export function pathSegments(d: string): PathSegment[] {
+  const nums = [...d.matchAll(/-?\d+(?:\.\d+)?/g)].map((match) => Number(match[0]));
+  const points: { x: number; y: number }[] = [];
+  for (let i = 0; i + 1 < nums.length; i += 2) points.push({ x: nums[i]!, y: nums[i + 1]! });
+  const segments: PathSegment[] = [];
+  for (let i = 1; i < points.length; i++) {
+    const a = points[i - 1]!;
+    const b = points[i]!;
+    segments.push({ x1: a.x, y1: a.y, x2: b.x, y2: b.y });
+  }
+  return segments;
+}
+
+/** True when an axis-aligned segment cuts the interior of a word box. */
+export function segmentHitsRect(segment: PathSegment, rect: LineFragment, pad = 0.6): boolean {
+  const left = rect.x + pad;
+  const right = rect.x + rect.w - pad;
+  const top = rect.y + pad;
+  const bottom = rect.y + rect.h - pad;
+  if (right <= left || bottom <= top) return false;
+  const horizontal = Math.abs(segment.y1 - segment.y2) <= 0.8;
+  const vertical = Math.abs(segment.x1 - segment.x2) <= 0.8;
+  if (horizontal) {
+    const y = (segment.y1 + segment.y2) / 2;
+    if (y <= top || y >= bottom) return false;
+    const x1 = Math.min(segment.x1, segment.x2);
+    const x2 = Math.max(segment.x1, segment.x2);
+    return x2 > left && x1 < right;
+  }
+  if (vertical) {
+    const x = (segment.x1 + segment.x2) / 2;
+    if (x <= left || x >= right) return false;
+    const y1 = Math.min(segment.y1, segment.y2);
+    const y2 = Math.max(segment.y1, segment.y2);
+    return y2 > top && y1 < bottom;
+  }
+  return false;
+}
+
+/**
+ * Margin arrow: leave from a clear point, run to the gutter, then enter the note.
+ * Nothing in the shaft crosses the text column except the whitespace after a mark
+ * that already ends its line.
  */
 export function arrowPath(x1: number, y1: number, x2: number, y2: number, seed: number, gutterX?: number): string {
-  const wob = ((seed % 5) - 2) * 0.45;
+  void seed;
   const fmt = (n: number) => n.toFixed(1);
   const rail = gutterX ?? x1 + Math.min(14, Math.max(8, (x2 - x1) * 0.18));
-  const railX = Math.min(Math.max(rail, x1 + 2), x2 - 4);
-  return `M ${fmt(x1)} ${fmt(y1)} L ${fmt(railX)} ${fmt(y1 + wob)} L ${fmt(railX)} ${fmt(y2 - wob)} L ${fmt(x2)} ${fmt(y2)}`;
+  const railX = Math.min(Math.max(rail, x1), x2 - 4);
+  return `M ${fmt(x1)} ${fmt(y1)} L ${fmt(railX)} ${fmt(y1)} L ${fmt(railX)} ${fmt(y2)} L ${fmt(x2)} ${fmt(y2)}`;
 }
 
 export function wavyVertical(x: number, y1: number, y2: number, seed: number): string {

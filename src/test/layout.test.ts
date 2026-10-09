@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { arrowPath, placeMarginNotes, stackNotes } from "../lib/layout";
+import { arrowPath, marginArrowStart, pathSegments, placeMarginNotes, segmentHitsRect, stackNotes } from "../lib/layout";
 
 describe("stackNotes", () => {
   it("keeps notes in passage order and stops them from occupying the same band", () => {
@@ -53,5 +53,23 @@ describe("arrowPath", () => {
     expect(path).not.toMatch(/[CQ] /);
     const xs = [...path.matchAll(/[\d.]+/g)].map((match) => Number(match[0])).filter((_, index) => index % 2 === 0);
     expect(Math.min(...xs)).toBeGreaterThanOrEqual(80);
+  });
+
+  it("starts a mid-line arrow at the column edge so it misses the words that follow", () => {
+    const start = marginArrowStart({ x: 40, y: 12, w: 36, h: 22 }, 220, true);
+    expect(start.x).toBe(220);
+    const path = arrowPath(start.x, start.y, 280, 90, 2, 236);
+    const following = { x: 90, y: 12, w: 48, h: 22 };
+    const hits = pathSegments(path).filter((segment) => Math.min(segment.x1, segment.x2) < 220 && segmentHitsRect(segment, following));
+    expect(hits).toEqual([]);
+  });
+
+  it("keeps the shaft on the column edge even when the line looks clear", () => {
+    const start = marginArrowStart({ x: 40, y: 12, w: 160, h: 22 }, 220, false);
+    expect(start.x).toBe(220);
+    const path = arrowPath(start.x, start.y, 280, 90, 1, 236);
+    const onTheLine = { x: 40, y: 12, w: 150, h: 22 };
+    const hits = pathSegments(path).filter((segment) => Math.min(segment.x1, segment.x2) < 220 && segmentHitsRect(segment, onTheLine));
+    expect(hits).toEqual([]);
   });
 });

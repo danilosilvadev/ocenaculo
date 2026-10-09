@@ -22,11 +22,25 @@ export interface PlacedChip extends Rect {
   text: string;
 }
 
+export interface DiagramRoute {
+  from: string;
+  to: string;
+  label?: string;
+  points: { x: number; y: number }[];
+  d: string;
+  x2: number;
+  y2: number;
+  dx: number;
+  dy: number;
+  mid: { x: number; y: number };
+}
+
 export interface DiagramLayout {
   w: number;
   h: number;
   labels: PlacedLabel[];
   chips: PlacedChip[];
+  routes: DiagramRoute[];
   unplaced: string[];
 }
 
@@ -67,13 +81,12 @@ function labelOf(
   return { id, text, size, anchor, x, y, w, h, tx, ty, weight };
 }
 
-function centered(box: DiagramBox, text: string, size: number, padX: number) {
+function centered(box: DiagramBox, text: string, size: number, padY: number) {
   const blockW = inkWidth(text, size);
   const blockH = inkHeight(text, size);
-  const w = Math.max(box.w - padX * 2, blockW);
-  const x = box.x + (box.w - w) / 2;
-  const y = box.y + Math.max(padX, (box.h - blockH) / 2);
-  return labelOf(box.id, text, size, "middle", x, y, w);
+  const x = box.x + (box.w - blockW) / 2;
+  const y = box.y + Math.max(padY, (box.h - blockH) / 2);
+  return labelOf(box.id, text, size, "middle", x, y, blockW);
 }
 
 function boxLabel(box: DiagramBox): PlacedLabel | null {
@@ -86,8 +99,7 @@ function boxLabel(box: DiagramBox): PlacedLabel | null {
   if (box.role === "frame") {
     const size = 15;
     const blockW = inkWidth(box.text, size);
-    const w = Math.max(box.w - 16, blockW);
-    return labelOf(box.id, box.text, size, "start", box.x + 8, box.y + 4, w);
+    return labelOf(box.id, box.text, size, "start", box.x + 8, box.y + 4, blockW);
   }
   if (box.role === "tick") return centered(box, box.text, 14, 0);
   return centered(box, box.text, 15, 4);
@@ -107,82 +119,108 @@ function barLabels(box: DiagramBox): PlacedLabel[] {
   return labels;
 }
 
-function nudgeBarNames(labels: PlacedLabel[]) {
-  const names = labels.filter((label) => label.id.endsWith("-name")).sort((a, b) => a.x - b.x || a.y - b.y);
-  for (let i = 0; i < names.length; i++) {
-    for (let guard = 0; guard < 4; guard++) {
-      const hit = names.slice(0, i).some((other) => intersects(names[i]!, other, 2));
-      if (!hit) break;
-      names[i]!.y += 16;
-      names[i]!.ty += 16;
-    }
-  }
-}
-
 interface RoutePoint {
   x: number;
   y: number;
 }
 
-function routePoints(from: DiagramBox, to: DiagramBox, bend?: "above" | "elbow"): RoutePoint[] {
-  const overlapX = Math.min(from.x + from.w, to.x + to.w) - Math.max(from.x, to.x);
-  if (bend === "above" && overlapX > 16) {
-    const x = Math.max(from.x + from.w, to.x + to.w) + 16;
-    const y1 = from.y + from.h / 2;
-    const y2 = to.y + to.h / 2;
-    return [
-      { x: from.x + from.w, y: y1 },
-      { x, y: y1 },
-      { x, y: y2 },
-      { x: to.x + to.w, y: y2 },
-    ];
-  }
-  if (from.role === "tick" && to.role === "tick") {
-    const y = Math.min(from.y, to.y) - 22;
-    return [
-      { x: from.x + from.w / 2, y: from.y },
-      { x: from.x + from.w / 2, y },
-      { x: to.x + to.w / 2, y },
-      { x: to.x + to.w / 2, y: to.y },
-    ];
-  }
-  if (bend === "above") {
-    const y = Math.min(from.y, to.y) - 22;
-    return [
-      { x: from.x + from.w / 2, y: from.y },
-      { x: from.x + from.w / 2, y },
-      { x: to.x + to.w / 2, y },
-      { x: to.x + to.w / 2, y: to.y },
-    ];
-  }
-  const acx = from.x + from.w / 2;
-  const acy = from.y + from.h / 2;
-  const bcx = to.x + to.w / 2;
-  const bcy = to.y + to.h / 2;
-  if (Math.abs(bcx - acx) >= Math.abs(bcy - acy)) {
-    const x1 = bcx >= acx ? from.x + from.w : from.x;
-    const x2 = bcx >= acx ? to.x : to.x + to.w;
-    const mid = (x1 + x2) / 2;
-    return [
-      { x: x1, y: acy },
-      { x: mid, y: acy },
-      { x: mid, y: bcy },
-      { x: x2, y: bcy },
-    ];
-  }
-  const y1 = bcy >= acy ? from.y + from.h : from.y;
-  const y2 = bcy >= acy ? to.y : to.y + to.h;
-  const mid = (y1 + y2) / 2;
-  return [
-    { x: acx, y: y1 },
-    { x: acx, y: mid },
-    { x: bcx, y: mid },
-    { x: bcx, y: y2 },
-  ];
+type Side = "top" | "bottom" | "left" | "right";
+
+function port(label: Rect, side: Side, pad: number): RoutePoint {
+  const cx = label.x + label.w / 2;
+  const cy = label.y + label.h / 2;
+  if (side === "top") return { x: cx, y: label.y - pad };
+  if (side === "bottom") return { x: cx, y: label.y + label.h + pad };
+  if (side === "left") return { x: label.x - pad, y: cy };
+  return { x: label.x + label.w + pad, y: cy };
 }
 
-export function arrowRoute(from: DiagramBox, to: DiagramBox, bend?: "above" | "elbow") {
-  const points = routePoints(from, to, bend);
+export function segmentHitsLabel(a: RoutePoint, b: RoutePoint, rect: Rect, pad = 2): boolean {
+  const left = rect.x - pad;
+  const right = rect.x + rect.w + pad;
+  const top = rect.y - pad;
+  const bottom = rect.y + rect.h + pad;
+  if (Math.abs(a.x - b.x) <= 0.8) {
+    const x = (a.x + b.x) / 2;
+    if (x <= left || x >= right) return false;
+    const y1 = Math.min(a.y, b.y);
+    const y2 = Math.max(a.y, b.y);
+    return y2 > top && y1 < bottom;
+  }
+  if (Math.abs(a.y - b.y) <= 0.8) {
+    const y = (a.y + b.y) / 2;
+    if (y <= top || y >= bottom) return false;
+    const x1 = Math.min(a.x, b.x);
+    const x2 = Math.max(a.x, b.x);
+    return x2 > left && x1 < right;
+  }
+  return true;
+}
+
+function routeClear(points: RoutePoint[], obstacles: Rect[], width: number, height: number) {
+  if (points.length < 2) return false;
+  for (const point of points) {
+    if (point.x < 2 || point.y < 2 || point.x > width - 2 || point.y > height - 2) return false;
+  }
+  for (let i = 1; i < points.length; i++) {
+    const a = points[i - 1]!;
+    const b = points[i]!;
+    if (Math.hypot(b.x - a.x, b.y - a.y) < 6 && i === points.length - 1) return false;
+    if (obstacles.some((obstacle) => segmentHitsLabel(a, b, obstacle, 2))) return false;
+  }
+  return true;
+}
+
+function dedupe(points: RoutePoint[]): RoutePoint[] {
+  const out: RoutePoint[] = [];
+  for (const point of points) {
+    const prev = out[out.length - 1];
+    if (prev && Math.abs(prev.x - point.x) < 0.4 && Math.abs(prev.y - point.y) < 0.4) continue;
+    out.push(point);
+  }
+  return out;
+}
+
+function routeLength(points: RoutePoint[]) {
+  let length = 0;
+  for (let i = 1; i < points.length; i++) length += Math.hypot(points[i]!.x - points[i - 1]!.x, points[i]!.y - points[i - 1]!.y);
+  return length;
+}
+
+function routePoints(from: Rect, to: Rect, obstacles: Rect[], width: number, height: number, bend?: "above" | "elbow"): RoutePoint[] {
+  const pad = 10;
+  const sides: Side[] = bend === "above" ? ["top", "right", "left", "bottom"] : ["bottom", "right", "top", "left"];
+  const channelsY = [8, height - 8];
+  const channelsX = [8, width - 8];
+  let best: RoutePoint[] | null = null;
+  let bestLength = Number.POSITIVE_INFINITY;
+  for (const fromSide of sides) {
+    for (const toSide of sides) {
+      const a = port(from, fromSide, pad);
+      const b = port(to, toSide, pad);
+      const candidates = [
+        dedupe([a, b]),
+        dedupe([a, { x: b.x, y: a.y }, b]),
+        dedupe([a, { x: a.x, y: b.y }, b]),
+      ];
+      for (const y of channelsY) candidates.push(dedupe([a, { x: a.x, y }, { x: b.x, y }, b]));
+      for (const x of channelsX) candidates.push(dedupe([a, { x, y: a.y }, { x, y: b.y }, b]));
+      for (const points of candidates) {
+        if (!routeClear(points, obstacles, width, height)) continue;
+        const length = routeLength(points) + (fromSide === "top" || toSide === "top" ? 0 : 4);
+        if (length < bestLength) {
+          bestLength = length;
+          best = points;
+        }
+      }
+    }
+  }
+  if (best) return best;
+  return dedupe([port(from, "right", pad), port(to, "left", pad)]);
+}
+
+export function arrowRoute(from: Rect, to: Rect, obstacles: Rect[], width: number, height: number, bend?: "above" | "elbow") {
+  const points = routePoints(from, to, obstacles, width, height, bend);
   const d = points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`).join(" ");
   const last = points[points.length - 1]!;
   const prev = points[points.length - 2] ?? last;
@@ -236,7 +274,6 @@ export function layoutDiagram(diagram: Diagram): DiagramLayout {
       if (label) labels.push(label);
     }
   }
-  nudgeBarNames(labels);
   const contentRight = Math.max(0, ...diagram.boxes.map((box) => box.x + box.w), ...labels.map((label) => label.x + label.w));
   const contentBottom = Math.max(0, ...diagram.boxes.map((box) => box.y + box.h), ...labels.map((label) => label.y + label.h));
   const w = Math.max(diagram.w ?? 0, contentRight + 8);
@@ -250,16 +287,20 @@ export function layoutDiagram(diagram: Diagram): DiagramLayout {
   }
   for (const label of labels) obstacles.push(label);
   const chips: PlacedChip[] = [];
+  const routes: DiagramRoute[] = [];
   const unplaced: string[] = [];
   diagram.arrows.forEach((arrow, index) => {
-    if (!arrow.label) return;
     const from = byId.get(arrow.from);
     const to = byId.get(arrow.to);
     if (!from || !to) {
-      unplaced.push(arrow.label);
+      if (arrow.label) unplaced.push(arrow.label);
       return;
     }
-    const route = arrowRoute(from, to, arrow.bend);
+    const fromRect = labels.find((label) => label.id === arrow.from) ?? from;
+    const toRect = labels.find((label) => label.id === arrow.to) ?? to;
+    const route = arrowRoute(fromRect, toRect, labels, w, h, arrow.bend);
+    routes.push({ from: arrow.from, to: arrow.to, label: arrow.label, ...route });
+    if (!arrow.label) return;
     const chipW = inkWidth(arrow.label, 13) + 12;
     const chipH = 18;
     const slot = findSlot(chipW, chipH, route.mid, obstacles, w, h);
@@ -271,7 +312,7 @@ export function layoutDiagram(diagram: Diagram): DiagramLayout {
     chips.push(chip);
     obstacles.push(chip);
   });
-  return { w, h, labels, chips, unplaced };
+  return { w, h, labels, chips, routes, unplaced };
 }
 
 function crossesFrame(chip: Rect, frame: Rect) {
@@ -296,6 +337,15 @@ export function labelProblems(diagram: Diagram) {
   for (let i = 0; i < marks.length; i++) {
     for (let j = i + 1; j < marks.length; j++) {
       if (intersects(marks[i]!, marks[j]!, 1)) problems.push(`cruza: ${marks[i]!.text} × ${marks[j]!.text}`);
+    }
+  }
+  for (const route of layout.routes) {
+    for (let index = 1; index < route.points.length; index++) {
+      const a = route.points[index - 1]!;
+      const b = route.points[index]!;
+      for (const label of layout.labels) {
+        if (segmentHitsLabel(a, b, label, 1)) problems.push(`conector cruza: ${route.label || `${route.from}→${route.to}`} × ${label.text}`);
+      }
     }
   }
   for (const chip of layout.chips) {

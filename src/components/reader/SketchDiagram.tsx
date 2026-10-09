@@ -1,7 +1,7 @@
 import { useLayoutEffect, useMemo, useRef } from "react";
 import rough from "roughjs";
 import type { Diagram } from "@/lib/annotations";
-import { arrowRoute, layoutDiagram, type PlacedLabel } from "@/lib/diagramLayout";
+import { layoutDiagram, type PlacedLabel } from "@/lib/diagramLayout";
 
 const INK = "#6b1f2a";
 const YELLOW = "hsl(48 94% 62%)";
@@ -39,7 +39,6 @@ function LabelText({ label }: { label: PlacedLabel }) {
 export function SketchDiagram({ diagram, label }: { diagram: Diagram; label?: string }) {
   const ref = useRef<SVGSVGElement>(null);
   const layout = useMemo(() => layoutDiagram(diagram), [diagram]);
-  const byId = new Map(diagram.boxes.map((box) => [box.id, box]));
 
   useLayoutEffect(() => {
     const svg = ref.current;
@@ -68,17 +67,12 @@ export function SketchDiagram({ diagram, label }: { diagram: Diagram; label?: st
         }) as unknown as SVGElement,
       );
     }
-    for (const arrow of diagram.arrows) {
-      const from = byId.get(arrow.from);
-      const to = byId.get(arrow.to);
-      if (!from || !to) continue;
-      const route = arrowRoute(from, to, arrow.bend);
-      if (route.points.length >= 2) {
-        const points = route.points.map((point) => [point.x, point.y] as [number, number]);
-        append(pen.linearPath(points, { stroke: INK, strokeWidth: 1.25, roughness: 1.05 }) as unknown as SVGElement);
-      }
+    for (const route of layout.routes) {
+      if (route.points.length < 2) continue;
+      const points = route.points.map((point) => [point.x, point.y] as [number, number]);
+      append(pen.linearPath(points, { stroke: INK, strokeWidth: 1.25, roughness: 0.8 }) as unknown as SVGElement);
     }
-  }, [diagram]);
+  }, [diagram, layout]);
 
   return (
     <div className="mt-2">
@@ -118,13 +112,9 @@ export function SketchDiagram({ diagram, label }: { diagram: Diagram; label?: st
           {layout.labels.map((item) => (
             <LabelText key={item.id} label={item} />
           ))}
-          {diagram.arrows.map((arrow) => {
-            const from = byId.get(arrow.from);
-            const to = byId.get(arrow.to);
-            if (!from || !to) return null;
-            const route = arrowRoute(from, to, arrow.bend);
-            return <polygon key={`${arrow.from}-${arrow.to}-${arrow.label ?? ""}`} points={arrowHead(route.x2, route.y2, route.dx, route.dy)} fill={INK} />;
-          })}
+          {layout.routes.map((route) => (
+            <polygon key={`${route.from}-${route.to}-${route.label ?? ""}`} points={arrowHead(route.x2, route.y2, route.dx, route.dy)} fill={INK} />
+          ))}
           {layout.chips.map((chip) => (
             <g key={chip.id}>
               <rect x={chip.x} y={chip.y} width={chip.w} height={chip.h} rx={2} fill={YELLOW} stroke={INK} strokeWidth={1} />

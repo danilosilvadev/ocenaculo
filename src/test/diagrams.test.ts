@@ -48,6 +48,15 @@ describe("esquemas", () => {
     expect(chart?.diagram.boxes.some((box) => box.role === "caption" && box.text === "palavras por frase")).toBe(true);
     const bars = chart?.diagram.boxes.filter((box) => box.role === "bar").map((box) => box.text);
     expect(bars).toEqual(["9\nplanície", "11\nfome", "19\nléguas", "6\nsombra", "13\nfolhagem"]);
+    if (!chart) throw new Error("sem abertura");
+    const { layout } = labelProblems(chart.diagram);
+    for (const box of chart.diagram.boxes.filter((item) => item.role === "bar")) {
+      const name = layout.labels.find((label) => label.id === `${box.id}-name`);
+      expect(name).toBeTruthy();
+      expect(Math.abs(name!.tx - (box.x + box.w / 2))).toBeLessThan(1);
+      expect(name!.y).toBeGreaterThan(box.y + box.h);
+      expect(name!.y).toBeLessThan(box.y + box.h + 12);
+    }
   });
 });
 
@@ -68,5 +77,17 @@ describe("círculos", () => {
     expect(circleLoops([{ x: 0, y: 0, w: 40, h: 48 }])[0]?.kind).toBe("underline");
     const wide = circleLoops([{ x: 0, y: 0, w: 140, h: 20 }])[0];
     expect(wide).toMatchObject({ kind: "ellipse", rot: 0 });
+    const phrase = circleLoops(
+      [
+        { x: 0, y: 0, w: 180, h: 28 },
+        { x: 0, y: 32, w: 120, h: 28 },
+      ],
+      1,
+      8,
+    );
+    expect(phrase.every((loop) => loop.kind === "underline")).toBe(true);
+    const tight = circleLoops([{ x: 0, y: 0, w: 40, h: 28 }], 1, 2)[0];
+    expect(tight).toMatchObject({ kind: "ellipse", rot: 0 });
+    if (tight?.kind === "ellipse") expect(tight.ry).toBeLessThanOrEqual(4.5);
   });
 });

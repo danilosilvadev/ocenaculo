@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import type { Chapter, MarkKind, Note } from "@/data/types";
 import { collectNotes, noteContext, paragraphText, type Paragraph, type Segment } from "@/data/types";
-import { arrowPath, hashString, placeMarginNotes, wavyLine, wavyVertical } from "@/lib/layout";
+import { arrowPath, hashString, marginArrowStart, placeMarginNotes, wavyLine, wavyVertical } from "@/lib/layout";
 import { circleLoops } from "@/lib/marks";
 import type { ConceptWidget } from "@/lib/annotations";
 import { MiniMap } from "@/components/maps/LiteraryMap";
@@ -58,6 +58,7 @@ interface MarkGeom {
   id: string;
   mark: MarkKind;
   rects: Rect[];
+  words: number;
 }
 
 interface ArrowGeom {
@@ -272,7 +273,8 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
             w: rect.width,
             h: rect.height,
           }));
-        if (rects.length) nextMarks.push({ id, mark, rects });
+        const words = (el.textContent ?? "").trim().split(/\s+/).filter(Boolean).length;
+        if (rects.length) nextMarks.push({ id, mark, rects, words });
       });
 
       const nextTops: Record<string, number> = {};
@@ -284,14 +286,24 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
           const anchor = page.querySelector<HTMLElement>(`[data-note="${cssEscape(note.id)}"]`);
           const noteEl = margin.querySelector<HTMLElement>(`[data-margin-note="${cssEscape(note.id)}"]`);
           if (!anchor || !noteEl) return [];
-          const anchorBox = anchor.getClientRects()[0] ?? anchor.getBoundingClientRect();
+          const fragment = anchor.getClientRects()[0] ?? anchor.getBoundingClientRect();
+          const start = marginArrowStart(
+            {
+              x: fragment.left - pageBox.left,
+              y: fragment.top - pageBox.top,
+              w: fragment.width,
+              h: fragment.height,
+            },
+            columnRight,
+            true,
+          );
           return [
             {
               id: note.id,
-              idealTop: anchorBox.top - marginBox.top,
+              idealTop: fragment.top - marginBox.top,
               height: noteEl.offsetHeight,
-              anchorY: anchorBox.top + anchorBox.height / 2 - pageBox.top,
-              anchorX: anchorBox.right - pageBox.left,
+              anchorY: start.y,
+              anchorX: start.x,
             },
           ];
         });
@@ -336,12 +348,21 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
           const rects = [...anchor.getClientRects()];
           const last = rects[rects.length - 1];
           if (last) {
-            const x = last.left + last.width / 2 - pageBox.left;
-            const y = last.bottom - pageBox.top + 1;
-            const y2 = y + 22;
+            const start = marginArrowStart(
+              {
+                x: last.left - pageBox.left,
+                y: last.top - pageBox.top,
+                w: last.width,
+                h: last.height,
+              },
+              columnRight,
+              true,
+            );
+            const y2 = start.y + 16;
+            const x = start.x + 4;
             nextArrows.push({
               id: activeId,
-              d: `M ${x.toFixed(1)} ${y.toFixed(1)} Q ${(x + 6).toFixed(1)} ${(y + 10).toFixed(1)}, ${x.toFixed(1)} ${y2.toFixed(1)}`,
+              d: `M ${x.toFixed(1)} ${start.y.toFixed(1)} L ${x.toFixed(1)} ${y2.toFixed(1)}`,
               head: `M ${(x - 4).toFixed(1)} ${(y2 - 6).toFixed(1)} L ${x.toFixed(1)} ${y2.toFixed(1)} L ${(x + 4).toFixed(1)} ${(y2 - 6).toFixed(1)}`,
             });
           }
@@ -529,7 +550,7 @@ export const AnnotatedReader = ({ chapter, frame, widgets = [], mode = "read", o
             ))}
             {arrows.map((arrow) => (
               <g key={arrow.id} className={cn(arrow.id === activeId ? "opacity-100" : "opacity-80")}>
-                <path d={arrow.d} fill="none" stroke="hsl(350 48% 32%)" strokeWidth={arrow.id === activeId ? 1.7 : 1.25} strokeLinecap="round" />
+                <path data-margin-arrow={arrow.id} d={arrow.d} fill="none" stroke="hsl(350 48% 32%)" strokeWidth={arrow.id === activeId ? 1.7 : 1.25} strokeLinecap="round" />
                 <path d={arrow.head} fill="none" stroke="hsl(350 48% 32%)" strokeWidth={arrow.id === activeId ? 1.7 : 1.25} strokeLinecap="round" strokeLinejoin="round" />
               </g>
             ))}
@@ -632,9 +653,9 @@ function MarkShape({ mark, active }: { mark: MarkGeom; active: boolean }) {
   }
 
   if (mark.mark === "circle") {
-    const loops = circleLoops(mark.rects, seed);
+    const loops = circleLoops(mark.rects, seed, mark.words);
     return (
-      <g>
+      <g data-circle-words={mark.words}>
         {loops.map((loop, index) =>
           loop.kind === "underline" ? (
             <path
