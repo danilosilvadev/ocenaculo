@@ -17,6 +17,21 @@
       "order": 0
     },
     {
+      "id": "carta-1-p1-d1",
+      "anchor": {
+        "paragraphId": "p1",
+        "start": 2,
+        "end": 14,
+        "quote": "Sra. Saville"
+      },
+      "mark": "circulo",
+      "note": "O envelope não diz Margaret.",
+      "expanded": "No inglês de 1818 a linha é «To Mrs. SAVILLE, England.», com o apelido em caixa alta e sem nome próprio. Margaret só aparece depois, quando a carta precisa de intimidade. O tratamento «Sra.» guarda a distância social; o nome de irmã fica para o corpo da carta.",
+      "order": 1,
+      "gloss": "Mrs. SAVILLE — o apelido em caixa alta, sem o nome Margaret.",
+      "russian": "Mrs. SAVILLE — o apelido em caixa alta, sem o nome Margaret."
+    },
+    {
       "id": "carta-1-p2-2",
       "anchor": {
         "paragraphId": "p2",
@@ -27,650 +42,7 @@
       "mark": "sublinhado",
       "note": "A data corta o século.",
       "expanded": "«17—» recusa o ano. «Petersburgo» fica no mapa; o tempo, não. Walton escreve como quem já quer ser lenda antes de zarpar.",
-      "order": 1
-    },
-    {
-      "id": "carta-1-p3-3",
-      "anchor": {
-        "paragraphId": "p3",
-        "start": 0,
-        "end": 121,
-        "quote": "Há de alegrá-la saber que nenhum desastre acompanhou o começo de uma empresa que a senhora olhou com tão maus presságios."
-      },
-      "mark": "realce",
-      "note": "Nenhum desastre, ainda.",
-      "expanded": "«desastre» chega negado, e «maus presságios» ficam com a irmã. Ele transforma o medo dela em prova de que a empresa começou bem.",
-      "order": 2,
-      "gloss": "evil forebodings — os maus presságios são dela, não dele.",
-      "russian": "evil forebodings — os maus presságios são dela, não dele."
-    },
-    {
-      "id": "carta-1-p3-4",
-      "anchor": {
-        "paragraphId": "p3",
-        "start": 121,
-        "end": 264,
-        "quote": " Cheguei ontem; e a minha primeira tarefa é assegurar à minha querida irmã que estou bem, e que cresce a confiança no sucesso do que empreendi."
-      },
-      "mark": "traco",
-      "note": "A primeira tarefa é acalmar.",
-      "expanded": "«assegurar» vem antes de qualquer gelo. A sintaxe põe a irmã como dever, e o «sucesso» como coisa que já cresce, sem ter sido testada.",
-      "order": 3
-    },
-    {
-      "id": "carta-1-p4-5",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 0,
-        "end": 171,
-        "quote": "Já estou bem ao norte de Londres; e, ao caminhar pelas ruas de Petersburgo, sinto uma brisa fria do norte brincar nas faces, que me retesa os nervos e me enche de deleite."
-      },
-      "mark": "circulo",
-      "note": "A brisa entra pela rua.",
-      "expanded": "«brincar» torna o frio doméstico, quase carícia. «norte de Londres» mede a ambição em distância de casa, e o deleite nasce desse cálculo.",
-      "order": 4
-    },
-    {
-      "id": "carta-1-p4-6",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 171,
-        "end": 209,
-        "quote": " Compreende a senhora este sentimento?"
-      },
-      "mark": "circulo",
-      "note": "Ele pede licença ao sentimento.",
-      "expanded": "A pergunta «Compreende» não informa: testa se Margaret cabe no delírio. Se ela não compreende, a carta segue mesmo assim.",
-      "order": 5
-    },
-    {
-      "id": "carta-1-p4-7",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 209,
-        "end": 310,
-        "quote": " Esta brisa, que viajou das regiões para as quais avanço, dá-me um antegosto daqueles climas de gelo."
-      },
-      "mark": "seta",
-      "note": "O vento já veio do polo.",
-      "expanded": "«antegosto» come o futuro no presente. A brisa «viajou» das regiões para as quais ele ainda só avança: o clima chega antes do corpo.",
-      "order": 6
-    },
-    {
-      "id": "carta-1-p4-8",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 310,
-        "end": 400,
-        "quote": " Animado por este vento de promessa, os meus devaneios tornam-se mais ferventes e vívidos."
-      },
-      "mark": "realce",
-      "note": "Devaneio com temperatura.",
-      "expanded": "«ferventes» aquece o que era gelo. «vento de promessa» é metáfora de contrato: o ar assina o que a viagem ainda não cumpriu.",
-      "order": 7
-    },
-    {
-      "id": "carta-1-p4-9",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 400,
-        "end": 554,
-        "quote": " Em vão tento convencer-me de que o polo é a sede do gelo e da desolação; ele se apresenta sempre à minha imaginação como a região da beleza e do deleite."
-      },
-      "mark": "colchete",
-      "note": "Gelo negado, beleza imposta.",
-      "expanded": "«Em vão» admite a razão e passa por cima dela. O polo é «desolação» na cláusula que ele recusa, e «beleza» na que manda.",
-      "order": 8
-    },
-    {
-      "id": "carta-1-p4-10",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 554,
-        "end": 679,
-        "quote": " Ali, Margaret, o sol está para sempre visível; o disco largo apenas a roçar o horizonte, e a difundir um esplendor perpétuo."
-      },
-      "mark": "realce",
-      "note": "O sol que não se põe.",
-      "expanded": "«Margaret» irrompe no meio da visão, vocativo no gelo. O disco «a roçar» o horizonte é sintaxe suspensa: o sol também não acaba a frase.",
-      "order": 9
-    },
-    {
-      "id": "carta-1-p4-11",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 679,
-        "end": 963,
-        "quote": " Ali — pois, com a sua licença, minha irmã, porei alguma confiança nos navegadores que me precederam — ali a neve e o gelo estão banidos; e, singrando um mar calmo, podemos ser levados a uma terra que supera em prodígios e em beleza toda região até hoje descoberta no globo habitável."
-      },
-      "mark": "colchete",
-      "note": "A licença no meio do «ali».",
-      "expanded": "O travessão («com a sua licença») enfia a irmã dentro do mito. «navegadores que me precederam» são autoridade sem nome, e a neve é «banida» por decreto da imaginação.",
-      "order": 10
-    },
-    {
-      "id": "carta-1-p4-12",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 963,
-        "end": 1119,
-        "quote": " As suas produções e os seus traços podem não ter exemplo, como sem dúvida não têm exemplo os fenômenos dos corpos celestes naquelas solidões por descobrir."
-      },
-      "mark": "sublinhado",
-      "note": "Sem exemplo, como o céu.",
-      "expanded": "«sem exemplo» repete-se: terra e «fenômenos» no mesmo vazio. A comparação não aproxima; empurra o polo para fora do conhecido.",
-      "order": 11
-    },
-    {
-      "id": "carta-1-p4-13",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 1119,
-        "end": 1170,
-        "quote": " Que não se há de esperar de um país de luz eterna?"
-      },
-      "mark": "circulo",
-      "note": "A pergunta já responde sim.",
-      "expanded": "«luz eterna» é o país inteiro reduzido a um brilho. A interrogação «Que não se há de esperar» não espera objeção: é retórica de quem já partiu.",
-      "order": 12
-    },
-    {
-      "id": "carta-1-p4-14",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 1170,
-        "end": 1366,
-        "quote": " Posso ali descobrir o poder maravilhoso que atrai a agulha; e posso regular mil observações celestes, que só pedem esta viagem para tornar coerentes para sempre as suas aparentes excentricidades."
-      },
-      "mark": "seta",
-      "note": "A agulha e as mil contas.",
-      "expanded": "«agulha» é o íman, ainda sem o nome de segredo. «regular» quer domesticar «excentricidades»: o céu desordenado vira livro de bordo.",
-      "order": 13
-    },
-    {
-      "id": "carta-1-p4-15",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 1366,
-        "end": 1521,
-        "quote": " Hei de saciar a curiosidade ardente com a vista de uma parte do mundo nunca antes visitada, e posso pisar uma terra nunca antes impressa pelo pé do homem."
-      },
-      "mark": "realce",
-      "note": "Pé onde ninguém pisou.",
-      "expanded": "«saciar» trata a curiosidade como fome. «nunca antes impressa» faz do chão uma página em branco, e do homem o primeiro tipo.",
-      "order": 14
-    },
-    {
-      "id": "carta-1-p4-16",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 1521,
-        "end": 1811,
-        "quote": " Estes são os meus engodos, e bastam para vencer todo o medo do perigo ou da morte, e para me induzir a começar esta viagem laboriosa com a alegria que uma criança sente quando embarca num barquinho, com os companheiros de folga, numa expedição de descoberta rio acima, no rio da sua terra."
-      },
-      "mark": "colchete",
-      "note": "O medo vencido por engodo.",
-      "expanded": "«engodos» é a palavra honesta: ele sabe que se deixa levar. A criança no «barquinho» reduz o polo a um rio de férias, e o perigo cabe nessa escala falsa.",
-      "order": 15,
-      "gloss": "enticements — «engodos»: ele dá nome de isca ao que o puxa.",
-      "russian": "enticements — «engodos»: ele dá nome de isca ao que o puxa."
-    },
-    {
-      "id": "carta-1-p4-17",
-      "anchor": {
-        "paragraphId": "p4",
-        "start": 1811,
-        "end": 2188,
-        "quote": " Mas, supondo falsas todas estas conjecturas, a senhora não pode contestar o benefício inestimável que hei de conferir a toda a humanidade até à última geração, ao descobrir uma passagem perto do polo para aqueles países, a que chegar exige hoje tantos meses; ou ao apurar o segredo do íman, o que, se for de algum modo possível, só pode ser feito por uma empresa como a minha."
-      },
-      "mark": "traco",
-      "note": "O benefício, se o sonho falhar.",
-      "expanded": "«supondo falsas» é a retirada tática. Ainda assim «inestimável» e «última geração» inflam o período: a passagem e o «íman» salvam a vaidade mesmo sem a terra linda.",
-      "order": 16
-    },
-    {
-      "id": "carta-1-p5-18",
-      "anchor": {
-        "paragraphId": "p5",
-        "start": 0,
-        "end": 258,
-        "quote": "Estas reflexões dissiparam a agitação com que comecei a carta, e sinto o coração arder num entusiasmo que me eleva ao céu; pois nada contribui tanto para tranquilizar o espírito como um propósito firme — um ponto em que a alma possa fixar o olho intelectual."
-      },
-      "mark": "sublinhado",
-      "note": "O olho intelectual se fixa.",
-      "expanded": "«propósito firme» é o ponto geométrico da alma. «arder» e «tranquilizar» brigam no mesmo fôlego: o entusiasmo quer ser calma.",
-      "order": 17
-    },
-    {
-      "id": "carta-1-p5-19",
-      "anchor": {
-        "paragraphId": "p5",
-        "start": 258,
-        "end": 320,
-        "quote": " Esta expedição foi o sonho predileto dos meus primeiros anos."
-      },
-      "mark": "seta",
-      "note": "O sonho é anterior ao plano.",
-      "expanded": "«primeiros anos» empurra a expedição para a infância. «predileto» escolhe este sonho entre outros, e a carta trata a escolha como destino.",
-      "order": 18
-    },
-    {
-      "id": "carta-1-p5-20",
-      "anchor": {
-        "paragraphId": "p5",
-        "start": 320,
-        "end": 452,
-        "quote": " Li com ardor os relatos das várias viagens feitas na perspectiva de chegar ao oceano Pacífico Norte pelos mares que rodeiam o polo."
-      },
-      "mark": "realce",
-      "note": "Leitura no lugar da viagem.",
-      "expanded": "«ardor» é o mesmo calor do coração. Os «relatos» substituem o mar: ele chega ao Pacífico Norte pelos livros, «pelos mares» que ainda não viu.",
-      "order": 19
-    },
-    {
-      "id": "carta-1-p5-21",
-      "anchor": {
-        "paragraphId": "p5",
-        "start": 452,
-        "end": 586,
-        "quote": " Há de lembrar-se de que uma história de todas as viagens feitas para descobrir compunha a biblioteca inteira do nosso bom tio Thomas."
-      },
-      "mark": "circulo",
-      "note": "A biblioteca do tio é o mundo.",
-      "expanded": "«inteira» fecha a casa num só assunto. «tio Thomas» é o primeiro morto útil da carta: a estante dele educa o desejo.",
-      "order": 20
-    },
-    {
-      "id": "carta-1-p5-22",
-      "anchor": {
-        "paragraphId": "p5",
-        "start": 586,
-        "end": 673,
-        "quote": " A minha educação foi descuidada, e no entanto eu era apaixonadamente amigo da leitura."
-      },
-      "mark": "traco",
-      "note": "Descuido e paixão na mesma frase.",
-      "expanded": "«descuidada» acusa o pai; «apaixonadamente» absolve o filho. O «no entanto» é a dobradiça: a falta de escola vira licença para ler só o que inflama.",
-      "order": 21
-    },
-    {
-      "id": "carta-1-p5-23",
-      "anchor": {
-        "paragraphId": "p5",
-        "start": 673,
-        "end": 894,
-        "quote": " Estes volumes foram o meu estudo de dia e de noite, e a familiaridade com eles aumentou o pesar que eu sentira, em criança, ao saber que a ordem de meu pai moribundo proibira o tio de me deixar embarcar numa vida de mar."
-      },
-      "mark": "colchete",
-      "note": "A ordem do pai fecha o mar.",
-      "expanded": "«proibira» é pretérito que ainda manda. «vida de mar» fica interditada por um moribundo, e os «volumes» aumentam o pesar em vez de o curar.",
-      "order": 22
-    },
-    {
-      "id": "carta-1-p6-24",
-      "anchor": {
-        "paragraphId": "p6",
-        "start": 0,
-        "end": 132,
-        "quote": "Estas visões desvaneceram-se quando li, pela primeira vez, aqueles poetas cujos derrames enlevaram a minha alma e a ergueram ao céu."
-      },
-      "mark": "sublinhado",
-      "note": "Os poetas apagam o mapa.",
-      "expanded": "«desvaneceram-se» dissolve as viagens. «derrames» é a palavra do excesso lírico, e a alma sobe «ao céu» — o mesmo céu que daqui a pouco será cálculo.",
-      "order": 23
-    },
-    {
-      "id": "carta-1-p6-25",
-      "anchor": {
-        "paragraphId": "p6",
-        "start": 132,
-        "end": 330,
-        "quote": " Também me fiz poeta e, durante um ano, vivi num paraíso de minha própria criação; imaginei que também eu podia obter um nicho no templo em que os nomes de Homero e de Shakespeare estão consagrados."
-      },
-      "mark": "realce",
-      "note": "Um ano de paraíso próprio.",
-      "expanded": "«também eu» repete a ambição de nicho. Homero e Shakespeare são o templo; o «paraíso de minha própria criação» já anuncia, sem dizê-lo, o criador que ele ainda não conhece.",
-      "order": 24
-    },
-    {
-      "id": "carta-1-p6-26",
-      "anchor": {
-        "paragraphId": "p6",
-        "start": 330,
-        "end": 408,
-        "quote": " A senhora conhece bem o meu fracasso, e quão pesadamente suportei a decepção."
-      },
-      "mark": "traco",
-      "note": "O fracasso fica com ela.",
-      "expanded": "«a senhora conhece» poupa o relato. «pesadamente» carrega a decepção no advérbio, e a carta não cita um verso: o silêncio é a prova.",
-      "order": 25
-    },
-    {
-      "id": "carta-1-p6-27",
-      "anchor": {
-        "paragraphId": "p6",
-        "start": 408,
-        "end": 524,
-        "quote": " Mas justamente então herdei a fortuna de meu primo, e os meus pensamentos voltaram ao leito do seu pendor anterior."
-      },
-      "mark": "seta",
-      "note": "A herança devolve o rumo.",
-      "expanded": "«justamente então» cola dinheiro e vocação. «leito» e «pendor» fazem do desejo um rio antigo, e a fortuna do primo é só a comporta.",
-      "order": 26
-    },
-    {
-      "id": "carta-1-p7-28",
-      "anchor": {
-        "paragraphId": "p7",
-        "start": 0,
-        "end": 59,
-        "quote": "Passaram-se seis anos desde que resolvi a empresa presente."
-      },
-      "mark": "sublinhado",
-      "note": "Seis anos de resolução.",
-      "expanded": "«seis anos» medem a teimosia em calendário. «empresa presente» ainda está no papel: o tempo passado serve para parecer que o futuro já é fato.",
-      "order": 27
-    },
-    {
-      "id": "carta-1-p7-29",
-      "anchor": {
-        "paragraphId": "p7",
-        "start": 59,
-        "end": 145,
-        "quote": " Ainda agora me lembro da hora a partir da qual me dediquei a este grande cometimento."
-      },
-      "mark": "circulo",
-      "note": "A hora fica, o relógio não.",
-      "expanded": "«Ainda agora me lembro» e não diz que hora foi. O «grande cometimento» ganha auréola de conversão, sem o minuto.",
-      "order": 28
-    },
-    {
-      "id": "carta-1-p7-30",
-      "anchor": {
-        "paragraphId": "p7",
-        "start": 145,
-        "end": 185,
-        "quote": " Comecei por acostumar o corpo ao rigor."
-      },
-      "mark": "traco",
-      "note": "O corpo antes da glória.",
-      "expanded": "«acostumar» é treino, não inspiração. «rigor» substitui o paraíso do poeta: a frase é curta de propósito, como uma ordem.",
-      "order": 29
-    },
-    {
-      "id": "carta-1-p7-31",
-      "anchor": {
-        "paragraphId": "p7",
-        "start": 185,
-        "end": 560,
-        "quote": " Acompanhei os pescadores de baleia em várias expedições ao mar do Norte; suportei de vontade o frio, a fome, a sede e a falta de sono; muitas vezes trabalhei mais do que os marinheiros comuns durante o dia, e devotei as noites ao estudo da matemática, da teoria da medicina e daqueles ramos da ciência física de que um aventureiro naval podia tirar a maior vantagem prática."
-      },
-      "mark": "colchete",
-      "note": "A lista do que ele aguentou.",
-      "expanded": "Frio, fome, sede, sono: a enumeração quer certificado. «de vontade» distingue o sacrifício escolhido, e as noites de «matemática» e «medicina» reescrevem o poeta como técnico.",
-      "order": 30
-    },
-    {
-      "id": "carta-1-p7-32",
-      "anchor": {
-        "paragraphId": "p7",
-        "start": 560,
-        "end": 665,
-        "quote": " Duas vezes cheguei a alugar-me como subimediato num baleeiro da Groenlândia, e saí-me de modo admirável."
-      },
-      "mark": "realce",
-      "note": "Subimediato, e orgulho contido.",
-      "expanded": "«alugar-me» põe o herdeiro no mercado. «Groenlândia» é o ensaio do polo, e «admirável» é a nota que ele dá a si mesmo, ainda na voz do narrador.",
-      "order": 31,
-      "gloss": "under-mate — subimediato no baleeiro da Groenlândia.",
-      "russian": "under-mate — subimediato no baleeiro da Groenlândia."
-    },
-    {
-      "id": "carta-1-p7-33",
-      "anchor": {
-        "paragraphId": "p7",
-        "start": 665,
-        "end": 856,
-        "quote": " Devo confessar que senti um pouco de orgulho quando o capitão me ofereceu a segunda dignidade do navio e me pediu que ficasse com o maior empenho, tão valiosos lhe pareciam os meus serviços."
-      },
-      "mark": "circulo",
-      "note": "O capitão confirma o valor.",
-      "expanded": "«um pouco de orgulho» finge modéstia. «segunda dignidade» é o cargo, e «valiosos» chega no fim, como se a frase só então ousasse o adjetivo.",
-      "order": 32
-    },
-    {
-      "id": "carta-1-p8-34",
-      "anchor": {
-        "paragraphId": "p8",
-        "start": 0,
-        "end": 70,
-        "quote": "E agora, cara Margaret, não mereço eu realizar algum grande propósito."
-      },
-      "mark": "circulo",
-      "note": "A pergunta cobra a recompensa.",
-      "expanded": "«não mereço eu» inverte o pedido: Margaret deve responder que sim. «grande propósito» continua sem nome, maior do que o navio.",
-      "order": 33
-    },
-    {
-      "id": "carta-1-p8-35",
-      "anchor": {
-        "paragraphId": "p8",
-        "start": 70,
-        "end": 189,
-        "quote": " A minha vida podia ter decorrido em ócio e luxo; mas preferi a glória a todo o engodo que a riqueza me pôs no caminho."
-      },
-      "mark": "traco",
-      "note": "Glória contra o engodo da riqueza.",
-      "expanded": "«ócio e luxo» são o caminho recusado. «engodo» volta — antes eram os engodos do polo; aqui é o da fortuna. Ele troca um isco por outro.",
-      "order": 34
-    },
-    {
-      "id": "carta-1-p8-36",
-      "anchor": {
-        "paragraphId": "p8",
-        "start": 189,
-        "end": 246,
-        "quote": " Oh, que alguma voz de encorajamento respondesse que sim!"
-      },
-      "mark": "realce",
-      "note": "A voz que não está na carta.",
-      "expanded": "O «Oh» é teatral, e «respondesse que sim» pede um coro. A irmã lê em silêncio: o encorajamento fica no subjuntivo, não chega.",
-      "order": 35
-    },
-    {
-      "id": "carta-1-p8-37",
-      "anchor": {
-        "paragraphId": "p8",
-        "start": 246,
-        "end": 358,
-        "quote": " A minha coragem e a minha resolução são firmes; mas as esperanças oscilam, e o ânimo anda muitas vezes abatido."
-      },
-      "mark": "sublinhado",
-      "note": "Firmeza com ânimo oscilante.",
-      "expanded": "«são firmes» no plural tropeça (coragem e resolução); «oscilam» e «abatido» desmentem o verbo. A frase se corrige no meio, e essa correção é o caráter.",
-      "order": 36
-    },
-    {
-      "id": "carta-1-p8-38",
-      "anchor": {
-        "paragraphId": "p8",
-        "start": 358,
-        "end": 574,
-        "quote": " Estou prestes a seguir numa viagem longa e difícil, cujas emergências hão de exigir toda a minha fortaleza: pede-se-me não só que levante o ânimo dos outros, mas às vezes que sustente o meu, quando o deles fraqueja."
-      },
-      "mark": "colchete",
-      "note": "Sustentar o próprio ânimo.",
-      "expanded": "«emergências» ainda não aconteceram. O período reparte a fortaleza: levantar os outros e, «quando o deles fraqueja», segurar o seu. O capitão já treina a solidão.",
-      "order": 37
-    },
-    {
-      "id": "carta-1-p9-39",
-      "anchor": {
-        "paragraphId": "p9",
-        "start": 0,
-        "end": 52,
-        "quote": "Esta é a época mais favorável para viajar na Rússia."
-      },
-      "mark": "sublinhado",
-      "note": "A Rússia vira estação boa.",
-      "expanded": "«época mais favorável» baixa o mito para o horário. «Rússia» entra como estrada, não como império: o tom é de guia de viagem.",
-      "order": 38
-    },
-    {
-      "id": "carta-1-p9-40",
-      "anchor": {
-        "paragraphId": "p9",
-        "start": 52,
-        "end": 191,
-        "quote": " Voam depressa sobre a neve nos trenós; o movimento é agradável e, na minha opinião, bem mais aprazível do que o de uma diligência inglesa."
-      },
-      "mark": "circulo",
-      "note": "Trenó contra diligência.",
-      "expanded": "«Voam» sem sujeito nomeado: «They» do inglês fica gente anônima. A comparação com a «diligência inglesa» mede o estrangeiro pela carruagem de casa.",
-      "order": 39
-    },
-    {
-      "id": "carta-1-p9-41",
-      "anchor": {
-        "paragraphId": "p9",
-        "start": 191,
-        "end": 440,
-        "quote": " O frio não é excessivo, se a pessoa vai envolta em peles, traje que já adotei; pois há uma grande diferença entre caminhar no convés e permanecer sentado, imóvel, durante horas, quando nenhum exercício impede o sangue de congelar de fato nas veias."
-      },
-      "mark": "colchete",
-      "note": "Peles, convés, sangue.",
-      "expanded": "«já adotei» veste o traje antes da partida. O medo real não é o polo: é «congelar de fato» sentado na posta. «de fato» insiste que o clichê pode ser literal.",
-      "order": 40
-    },
-    {
-      "id": "carta-1-p9-42",
-      "anchor": {
-        "paragraphId": "p9",
-        "start": 440,
-        "end": 529,
-        "quote": " Não tenho ambição de perder a vida na estrada de posta entre São Petersburgo e Arcangel."
-      },
-      "mark": "seta",
-      "note": "A morte miúda que ele recusa.",
-      "expanded": "«Não tenho ambição» é ironia seca depois de tanta glória. Perder a vida «entre São Petersburgo e Arcangel» seria um fim sem narrativa, e ele o evita.",
-      "order": 41
-    },
-    {
-      "id": "carta-1-p10-43",
-      "anchor": {
-        "paragraphId": "p10",
-        "start": 0,
-        "end": 276,
-        "quote": "Partirei para esta última cidade dentro de quinze dias ou três semanas; e a minha intenção é alugar ali um navio, o que se faz com facilidade pagando o seguro ao dono, e engajar tantos marinheiros quantos eu julgue necessários entre os que estão acostumados à pesca da baleia."
-      },
-      "mark": "colchete",
-      "note": "O navio ainda é um plano.",
-      "expanded": "«quinze dias ou três semanas» afrouxa o calendário. «seguro ao dono» e «pesca da baleia» descem ao contrato: o herói conta o frete.",
-      "order": 42
-    },
-    {
-      "id": "carta-1-p10-44",
-      "anchor": {
-        "paragraphId": "p10",
-        "start": 276,
-        "end": 347,
-        "quote": " Não tenciono fazer-me ao mar antes do mês de junho: e quando voltarei?"
-      },
-      "mark": "circulo",
-      "note": "Junho, e a volta sem data.",
-      "expanded": "Os dois-pontos colam a partida à pergunta «quando voltarei?». O mês de «junho» é concreto; o regresso, não. A carta muda de tom nesse corte.",
-      "order": 43
-    },
-    {
-      "id": "carta-1-p10-45",
-      "anchor": {
-        "paragraphId": "p10",
-        "start": 347,
-        "end": 403,
-        "quote": " Ah, querida irmã, como posso responder a esta pergunta?"
-      },
-      "mark": "traco",
-      "note": "A irmã vira a pergunta.",
-      "expanded": "«como posso responder» admite que o saber acabou. «querida irmã» amacia a confissão, e a pergunta anterior fica sem dono.",
-      "order": 44
-    },
-    {
-      "id": "carta-1-p10-46",
-      "anchor": {
-        "paragraphId": "p10",
-        "start": 403,
-        "end": 513,
-        "quote": " Se tiver sucesso, muitos e muitos meses, talvez anos, hão de passar antes que a senhora e eu nos encontremos."
-      },
-      "mark": "seta",
-      "note": "O sucesso também separa.",
-      "expanded": "«muitos e muitos» alonga os meses de propósito. O êxito adia o reencontro: ganhar é não voltar. «talvez anos» abre o tempo do romance.",
-      "order": 45
-    },
-    {
-      "id": "carta-1-p10-47",
-      "anchor": {
-        "paragraphId": "p10",
-        "start": 513,
-        "end": 563,
-        "quote": " Se falhar, ver-me-á outra vez em breve, ou nunca."
-      },
-      "mark": "realce",
-      "note": "Em breve, ou nunca.",
-      "expanded": "A alternativa não tem meio. «breve» seria a derrota viva; «nunca» é o gelo. As duas cabem na mesma vírgula, e nenhuma promete a irmã.",
-      "order": 46
-    },
-    {
-      "id": "carta-1-p11-48",
-      "anchor": {
-        "paragraphId": "p11",
-        "start": 0,
-        "end": 38,
-        "quote": "Adeus, minha cara, excelente Margaret."
-      },
-      "mark": "sublinhado",
-      "note": "O adeus triplica o afeto.",
-      "expanded": "«cara, excelente» acumula adjetivos para fechar. «Adeus» ainda não é o fim da carta: sobra a bênção, como quem não quer largar a página.",
-      "order": 47
-    },
-    {
-      "id": "carta-1-p11-49",
-      "anchor": {
-        "paragraphId": "p11",
-        "start": 38,
-        "end": 189,
-        "quote": " Que o céu derrame bênçãos sobre a senhora, e me salve, para que eu possa, uma vez e outra, testemunhar a minha gratidão por todo o seu amor e bondade."
-      },
-      "mark": "colchete",
-      "note": "Salvar-me para eu agradecer.",
-      "expanded": "A oração pede o céu em dois tempos: bênçãos para ela, salvação para ele. «uma vez e outra» imagina o regresso como repetição do agradecimento, não como relato.",
-      "order": 48
-    },
-    {
-      "id": "carta-1-p12-50",
-      "anchor": {
-        "paragraphId": "p12",
-        "start": 0,
-        "end": 19,
-        "quote": "Seu irmão afetuoso,"
-      },
-      "mark": "traco",
-      "note": "A assinatura ainda é fórmula.",
-      "expanded": "«afetuoso» cabe na despedida inglesa e soa pequeno depois do polo. A vírgula deixa a frase aberta para o nome.",
-      "order": 49
-    },
-    {
-      "id": "carta-1-p13-51",
-      "anchor": {
-        "paragraphId": "p13",
-        "start": 0,
-        "end": 10,
-        "quote": "R. Walton."
-      },
-      "mark": "circulo",
-      "note": "O nome entra por último.",
-      "expanded": "«Walton» só agora. A carta inteira foi desejo sem assinatura. O «R.» inicial guarda o Robert, e o ponto final é o primeiro porto de verdade.",
-      "order": 50
+      "order": 2
     },
     {
       "id": "carta-1-lugar-52",
@@ -683,12 +55,98 @@
       "mark": "lugar",
       "note": "A carta está aqui.",
       "expanded": "O datado é Petersburgo, 11 de dezembro. Ele ainda não tomou a posta para Arcangel; a cidade é o chão desta página.",
-      "order": 51,
+      "order": 3,
       "place": {
         "lat": 59.934,
         "lng": 30.335,
         "label": "São Petersburgo"
       }
+    },
+    {
+      "id": "carta-1-p3-3",
+      "anchor": {
+        "paragraphId": "p3",
+        "start": 0,
+        "end": 121,
+        "quote": "Há de alegrá-la saber que nenhum desastre acompanhou o começo de uma empresa que a senhora olhou com tão maus presságios."
+      },
+      "mark": "realce",
+      "note": "Nenhum desastre, ainda.",
+      "expanded": "«desastre» chega negado, e «maus presságios» ficam com a irmã. Ele transforma o medo dela em prova de que a empresa começou bem.",
+      "order": 4,
+      "gloss": "evil forebodings — os maus presságios são dela, não dele.",
+      "russian": "evil forebodings — os maus presságios são dela, não dele."
+    },
+    {
+      "id": "carta-1-p3-d2",
+      "anchor": {
+        "paragraphId": "p3",
+        "start": 0,
+        "end": 21,
+        "quote": "Há de alegrá-la saber"
+      },
+      "mark": "sublinhado",
+      "note": "A alegria vem no futuro.",
+      "expanded": "«You will rejoice to hear» manda o júbilo antes da notícia: rejoice é mais forte do que alegrar, e will é quase uma ordem social. «Há de» guarda o futuro de expectativa e abaixa o verbo. A irmã é intimada a ficar contente; o conteúdo ainda não chegou.",
+      "order": 5,
+      "gloss": "You will rejoice to hear.",
+      "russian": "You will rejoice to hear."
+    },
+    {
+      "id": "carta-1-p3-d3",
+      "anchor": {
+        "paragraphId": "p3",
+        "start": 26,
+        "end": 52,
+        "quote": "nenhum desastre acompanhou"
+      },
+      "mark": "realce",
+      "note": "O desastre ia de companhia.",
+      "expanded": "«No disaster has accompanied» põe o desastre no presente perfeito, como quem podia ter viajado junto e não veio. «Acompanhou» conserva essa pessoa. «Commencement» vira «começo»: a empresa nasce, e o mal fica de fora do cortejo.",
+      "order": 6,
+      "gloss": "no disaster has accompanied the commencement",
+      "russian": "no disaster has accompanied the commencement"
+    },
+    {
+      "id": "carta-1-p3-4",
+      "anchor": {
+        "paragraphId": "p3",
+        "start": 121,
+        "end": 264,
+        "quote": " Cheguei ontem; e a minha primeira tarefa é assegurar à minha querida irmã que estou bem, e que cresce a confiança no sucesso do que empreendi."
+      },
+      "mark": "traco",
+      "note": "A primeira tarefa é acalmar.",
+      "expanded": "«assegurar» vem antes de qualquer gelo. A sintaxe põe a irmã como dever, e o «sucesso» como coisa que já cresce, sem ter sido testada.",
+      "order": 7
+    },
+    {
+      "id": "carta-1-p3-d4",
+      "anchor": {
+        "paragraphId": "p3",
+        "start": 122,
+        "end": 135,
+        "quote": "Cheguei ontem"
+      },
+      "mark": "seta",
+      "note": "O «here» caiu fora.",
+      "expanded": "O inglês diz «I arrived here yesterday». O advérbio here repete o lugar que o datado já deu. A tradução corta-o e deixa só o tempo: a chegada é ontem, não um ponto no mapa. O «and» que segue cola a chegada à tarefa de acalmar a irmã, sem pausa de paisagem.",
+      "order": 8,
+      "gloss": "I arrived here yesterday",
+      "russian": "I arrived here yesterday"
+    },
+    {
+      "id": "carta-1-p4-5",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 0,
+        "end": 171,
+        "quote": "Já estou bem ao norte de Londres; e, ao caminhar pelas ruas de Petersburgo, sinto uma brisa fria do norte brincar nas faces, que me retesa os nervos e me enche de deleite."
+      },
+      "mark": "circulo",
+      "note": "A brisa entra pela rua.",
+      "expanded": "«brincar» torna o frio doméstico, quase carícia. «norte de Londres» mede a ambição em distância de casa, e o deleite nasce desse cálculo.",
+      "order": 9
     },
     {
       "id": "carta-1-lugar-53",
@@ -701,7 +159,7 @@
       "mark": "lugar",
       "note": "O norte mede-se daqui.",
       "expanded": "«norte de Londres» é a régua. A Inglaterra da senhora Saville fica neste ponto; a brisa que ele sente já não é a de casa.",
-      "order": 52,
+      "order": 10,
       "place": {
         "lat": 51.507,
         "lng": -0.128,
@@ -709,22 +167,161 @@
       }
     },
     {
-      "id": "carta-1-lugar-54",
+      "id": "carta-1-p4-d5",
       "anchor": {
-        "paragraphId": "p9",
-        "start": 520,
-        "end": 528,
-        "quote": "Arcangel"
+        "paragraphId": "p4",
+        "start": 106,
+        "end": 123,
+        "quote": "brincar nas faces"
       },
-      "mark": "lugar",
-      "note": "A próxima cidade, ainda não.",
-      "expanded": "Ele não quer morrer na posta entre Petersburgo e Arcangel. A cidade é plano de quinze dias ou três semanas, não cenário desta carta.",
-      "order": 53,
-      "place": {
-        "lat": 64.54,
-        "lng": 40.543,
-        "label": "Arcangel"
-      }
+      "mark": "circulo",
+      "note": "O vento toca a pele.",
+      "expanded": "«Play upon my cheeks»: upon é contacto, não cenário. «Brincar nas faces» põe o frio em cima do corpo. O deleite começa nesse toque, antes de qualquer argumento sobre o polo. A brisa é personagem; a cara é o palco.",
+      "order": 11,
+      "gloss": "play upon my cheeks",
+      "russian": "play upon my cheeks"
+    },
+    {
+      "id": "carta-1-p4-d6",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 132,
+        "end": 148,
+        "quote": "retesa os nervos"
+      },
+      "mark": "sublinhado",
+      "note": "Brace é cabo e tónico.",
+      "expanded": "«Braces my nerves» junta o vocabulário do navio ao da medicina: brace é o estai que firma e o tónico que retesa. «Retesar» escolhe a corda. O sistema nervoso vira aparelho náutico, e o prazer é muscular, não moral.",
+      "order": 12,
+      "gloss": "braces my nerves",
+      "russian": "braces my nerves"
+    },
+    {
+      "id": "carta-1-p4-d7",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 151,
+        "end": 170,
+        "quote": "me enche de deleite"
+      },
+      "mark": "traco",
+      "note": "O homem é o recipiente.",
+      "expanded": "«Fills me with delight» trata Walton de vasilha: o vento enche, o deleite é o conteúdo. Na mesma oração relativa, «que» já retesou os nervos. Dois predicados, um sujeito (a brisa). O ritmo não separa o tónico do prazer.",
+      "order": 13,
+      "gloss": "fills me with delight",
+      "russian": "fills me with delight"
+    },
+    {
+      "id": "carta-1-p4-6",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 171,
+        "end": 209,
+        "quote": " Compreende a senhora este sentimento?"
+      },
+      "mark": "circulo",
+      "note": "Ele pede licença ao sentimento.",
+      "expanded": "A pergunta «Compreende» não informa: testa se Margaret cabe no delírio. Se ela não compreende, a carta segue mesmo assim.",
+      "order": 14
+    },
+    {
+      "id": "carta-1-p4-7",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 209,
+        "end": 310,
+        "quote": " Esta brisa, que viajou das regiões para as quais avanço, dá-me um antegosto daqueles climas de gelo."
+      },
+      "mark": "seta",
+      "note": "O vento já veio do polo.",
+      "expanded": "«antegosto» come o futuro no presente. A brisa «viajou» das regiões para as quais ele ainda só avança: o clima chega antes do corpo.",
+      "order": 15
+    },
+    {
+      "id": "carta-1-p4-d8",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 273,
+        "end": 285,
+        "quote": "um antegosto"
+      },
+      "mark": "circulo",
+      "note": "O gelo prova-se antes.",
+      "expanded": "«Foretaste» é amostra de comida. «Antegoosto» seria o calco; «antegosto» é o prato. Ele prova os climas de gelo ainda em Petersburgo, na rua. A viagem já aconteceu na boca, e o corpo acredita antes do navio.",
+      "order": 16,
+      "gloss": "a foretaste of those icy climes",
+      "russian": "a foretaste of those icy climes"
+    },
+    {
+      "id": "carta-1-p4-8",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 310,
+        "end": 400,
+        "quote": " Animado por este vento de promessa, os meus devaneios tornam-se mais ferventes e vívidos."
+      },
+      "mark": "realce",
+      "note": "Devaneio com temperatura.",
+      "expanded": "«ferventes» aquece o que era gelo. «vento de promessa» é metáfora de contrato: o ar assina o que a viagem ainda não cumpriu.",
+      "order": 17
+    },
+    {
+      "id": "carta-1-p4-d9",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 328,
+        "end": 345,
+        "quote": "vento de promessa"
+      },
+      "mark": "circulo",
+      "note": "O vento assina contrato.",
+      "expanded": "«Wind of promise»: promise é bíblico e é comercial. «Inspirited by» — animado, com espírito dentro — fica «Animado por». O vento não é clima; é penhor. A imaginação trata uma lufada como cláusula já assinada.",
+      "order": 18,
+      "gloss": "this wind of promise",
+      "russian": "this wind of promise"
+    },
+    {
+      "id": "carta-1-p4-d10",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 380,
+        "end": 399,
+        "quote": "ferventes e vívidos"
+      },
+      "mark": "realce",
+      "note": "Calor dentro do gelo.",
+      "expanded": "«Day dreams» é o devaneio acordado, com hífen de época; «devaneios» perde o dia e fica o delírio leve. «Fervent and vivid» mete febre e cor numa carta sobre gelo. Os adjetivos contradizem o clima que a frase acabou de desejar.",
+      "order": 19,
+      "gloss": "my day dreams become more fervent and vivid",
+      "russian": "my day dreams become more fervent and vivid"
+    },
+    {
+      "id": "carta-1-p4-9",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 400,
+        "end": 554,
+        "quote": " Em vão tento convencer-me de que o polo é a sede do gelo e da desolação; ele se apresenta sempre à minha imaginação como a região da beleza e do deleite."
+      },
+      "mark": "colchete",
+      "note": "Gelo negado, beleza imposta.",
+      "expanded": "«Em vão» admite a razão e passa por cima dela. O polo é «desolação» na cláusula que ele recusa, e «beleza» na que manda.",
+      "order": 20
+    },
+    {
+      "id": "carta-1-p4-d11",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 408,
+        "end": 426,
+        "quote": "tento convencer-me"
+      },
+      "mark": "seta",
+      "note": "O inglês era passivo.",
+      "expanded": "«I try in vain to be persuaded»: alguém devia persuadi-lo, e ele só tenta deixar-se. A passiva põe a razão fora. «Convencer-me» cola sujeito e objeto no mesmo pronome. A tradução fecha a briga dentro de um homem só, e o «em vão» continua a ganhar.",
+      "order": 21,
+      "gloss": "I try in vain to be persuaded",
+      "russian": "I try in vain to be persuaded"
     },
     {
       "id": "carta-1-lugar-55",
@@ -737,12 +334,1105 @@
       "mark": "lugar",
       "note": "Direção, não ancoragem.",
       "expanded": "O polo é a sede que a imaginação recusa chamar de desolação. O pin marca o rumo, não um lugar onde alguém desta carta tenha pisado.",
-      "order": 54,
+      "order": 22,
       "place": {
         "lat": 78.2,
         "lng": 40,
         "label": "Rumo ao Ártico"
       }
+    },
+    {
+      "id": "carta-1-p4-10",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 554,
+        "end": 679,
+        "quote": " Ali, Margaret, o sol está para sempre visível; o disco largo apenas a roçar o horizonte, e a difundir um esplendor perpétuo."
+      },
+      "mark": "realce",
+      "note": "O sol que não se põe.",
+      "expanded": "«Margaret» irrompe no meio da visão, vocativo no gelo. O disco «a roçar» o horizonte é sintaxe suspensa: o sol também não acaba a frase.",
+      "order": 23
+    },
+    {
+      "id": "carta-1-p4-d12",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 616,
+        "end": 642,
+        "quote": "apenas a roçar o horizonte"
+      },
+      "mark": "sublinhado",
+      "note": "O sol não se põe.",
+      "expanded": "«Its broad disk just skirting the horizon»: skirt é roçar a orla, quase sem peso. O gerúndio inglês fica infinitivo «a roçar», dependurado na vírgula depois de «visível». A sintaxe imita o disco: encosta e não cai. É o sol da meia-noite, dito como carícia.",
+      "order": 24,
+      "gloss": "its broad disk just skirting the horizon",
+      "russian": "its broad disk just skirting the horizon"
+    },
+    {
+      "id": "carta-1-p4-11",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 679,
+        "end": 963,
+        "quote": " Ali — pois, com a sua licença, minha irmã, porei alguma confiança nos navegadores que me precederam — ali a neve e o gelo estão banidos; e, singrando um mar calmo, podemos ser levados a uma terra que supera em prodígios e em beleza toda região até hoje descoberta no globo habitável."
+      },
+      "mark": "colchete",
+      "note": "A licença no meio do «ali».",
+      "expanded": "O travessão («com a sua licença») enfia a irmã dentro do mito. «navegadores que me precederam» são autoridade sem nome, e a neve é «banida» por decreto da imaginação.",
+      "order": 25
+    },
+    {
+      "id": "carta-1-p4-d13",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 723,
+        "end": 745,
+        "quote": "porei alguma confiança"
+      },
+      "mark": "traco",
+      "note": "A fé é a mínima.",
+      "expanded": "«I will put some trust in preceding navigators.» Some é o mínimo de fé; «alguma» traduz essa migalha. O futuro «porei» é licença que ele concede a si, dentro do parêntese, antes de repetir «ali». A autoridade dos navegadores entra como favor, não como prova.",
+      "order": 26,
+      "gloss": "I will put some trust",
+      "russian": "I will put some trust"
+    },
+    {
+      "id": "carta-1-p4-d14",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 844,
+        "end": 863,
+        "quote": "podemos ser levados"
+      },
+      "mark": "realce",
+      "note": "Wafted perde o ar.",
+      "expanded": "«We may be wafted» é passiva de um verbo de ar: ser levado ao de leve, quase sem quilha. «Podemos ser levados» guarda o «may» e a passiva, e larga a leveza. Em troca, «singrando» acrescenta um verbo de vela que o inglês não tinha. A agência oscila: o mar calmo conduz, o verbo náutico ainda trabalha.",
+      "order": 27,
+      "gloss": "we may be wafted",
+      "russian": "we may be wafted"
+    },
+    {
+      "id": "carta-1-p4-12",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 963,
+        "end": 1119,
+        "quote": " As suas produções e os seus traços podem não ter exemplo, como sem dúvida não têm exemplo os fenômenos dos corpos celestes naquelas solidões por descobrir."
+      },
+      "mark": "sublinhado",
+      "note": "Sem exemplo, como o céu.",
+      "expanded": "«sem exemplo» repete-se: terra e «fenômenos» no mesmo vazio. A comparação não aproxima; empurra o polo para fora do conhecido.",
+      "order": 28
+    },
+    {
+      "id": "carta-1-p4-d15",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1057,
+        "end": 1086,
+        "quote": "fenômenos dos corpos celestes"
+      },
+      "mark": "sublinhado",
+      "note": "O æ de 1818 some.",
+      "expanded": "A edição imprime «phænomena», com a ligadura antiga. «Fenômenos» moderniza a grafia e esconde que a palavra científica já nascia velha na página. «Undoubtedly» vira «sem dúvida», o advérbio que não admite a dúvida que a letra antiga ainda carregava.",
+      "order": 29,
+      "gloss": "phænomena of the heavenly bodies",
+      "russian": "phænomena of the heavenly bodies"
+    },
+    {
+      "id": "carta-1-p4-13",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1119,
+        "end": 1170,
+        "quote": " Que não se há de esperar de um país de luz eterna?"
+      },
+      "mark": "circulo",
+      "note": "A pergunta já responde sim.",
+      "expanded": "«luz eterna» é o país inteiro reduzido a um brilho. A interrogação «Que não se há de esperar» não espera objeção: é retórica de quem já partiu.",
+      "order": 30
+    },
+    {
+      "id": "carta-1-p4-d16",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1151,
+        "end": 1169,
+        "quote": "país de luz eterna"
+      },
+      "mark": "circulo",
+      "note": "Luz de teologia no mapa.",
+      "expanded": "«A country of eternal light»: country é país e é região. «Luz eterna» é linguagem de lâmpada que não se apaga, aplicada a uma latitude. A pergunta «What may not be expected» é retórica negativa; «Que não se há de esperar» conserva a negação que afirma tudo.",
+      "order": 31,
+      "gloss": "a country of eternal light",
+      "russian": "a country of eternal light"
+    },
+    {
+      "id": "carta-1-p4-14",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1170,
+        "end": 1366,
+        "quote": " Posso ali descobrir o poder maravilhoso que atrai a agulha; e posso regular mil observações celestes, que só pedem esta viagem para tornar coerentes para sempre as suas aparentes excentricidades."
+      },
+      "mark": "seta",
+      "note": "A agulha e as mil contas.",
+      "expanded": "«agulha» é o íman, ainda sem o nome de segredo. «regular» quer domesticar «excentricidades»: o céu desordenado vira livro de bordo.",
+      "order": 32
+    },
+    {
+      "id": "carta-1-p4-15",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1366,
+        "end": 1521,
+        "quote": " Hei de saciar a curiosidade ardente com a vista de uma parte do mundo nunca antes visitada, e posso pisar uma terra nunca antes impressa pelo pé do homem."
+      },
+      "mark": "realce",
+      "note": "Pé onde ninguém pisou.",
+      "expanded": "«saciar» trata a curiosidade como fome. «nunca antes impressa» faz do chão uma página em branco, e do homem o primeiro tipo.",
+      "order": 33
+    },
+    {
+      "id": "carta-1-p4-d17",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1437,
+        "end": 1457,
+        "quote": "nunca antes visitada"
+      },
+      "mark": "seta",
+      "note": "O olho, depois o pé.",
+      "expanded": "«Never before» repete-se na frase seguinte, «never before imprinted». A primeira vez é a vista; a segunda é a sola. «Visitada» traduz o olhar. O desejo de prioridade organiza-se em dois verbos, e o homem ainda não pisou: a sintaxe é que pisa primeiro.",
+      "order": 34,
+      "gloss": "never before visited",
+      "russian": "never before visited"
+    },
+    {
+      "id": "carta-1-p4-16",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1521,
+        "end": 1811,
+        "quote": " Estes são os meus engodos, e bastam para vencer todo o medo do perigo ou da morte, e para me induzir a começar esta viagem laboriosa com a alegria que uma criança sente quando embarca num barquinho, com os companheiros de folga, numa expedição de descoberta rio acima, no rio da sua terra."
+      },
+      "mark": "colchete",
+      "note": "O medo vencido por engodo.",
+      "expanded": "«engodos» é a palavra honesta: ele sabe que se deixa levar. A criança no «barquinho» reduz o polo a um rio de férias, e o perigo cabe nessa escala falsa.",
+      "order": 35,
+      "gloss": "enticements — «engodos»: ele dá nome de isca ao que o puxa.",
+      "russian": "enticements — «engodos»: ele dá nome de isca ao que o puxa."
+    },
+    {
+      "id": "carta-1-p4-d18",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1728,
+        "end": 1749,
+        "quote": "companheiros de folga"
+      },
+      "mark": "circulo",
+      "note": "Holiday vira licença de bordo.",
+      "expanded": "«Holiday mates» são os colegas de um dia sem aula. «Folga» é a folga do marinheiro, o dia em que não se trabalha a bordo. A tradução empurra a criança para a tripulação que Walton ainda não contratou. O símile deixa de ser só escola e já cheira a navio.",
+      "order": 36,
+      "gloss": "his holiday mates",
+      "russian": "his holiday mates"
+    },
+    {
+      "id": "carta-1-p4-d19",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1794,
+        "end": 1810,
+        "quote": "rio da sua terra"
+      },
+      "mark": "traco",
+      "note": "O rio dito duas vezes.",
+      "expanded": "«Up his native river» diz o rio uma só vez. «Rio acima, no rio da sua terra» parte a frase em direção e em pertença. O gaguejo é da tradução, e faz o trabalho do inglês: o polo enorme acaba num curso de água doméstico. A escala falsa está nessa repetição.",
+      "order": 37,
+      "gloss": "up his native river",
+      "russian": "up his native river"
+    },
+    {
+      "id": "carta-1-p4-17",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1811,
+        "end": 2188,
+        "quote": " Mas, supondo falsas todas estas conjecturas, a senhora não pode contestar o benefício inestimável que hei de conferir a toda a humanidade até à última geração, ao descobrir uma passagem perto do polo para aqueles países, a que chegar exige hoje tantos meses; ou ao apurar o segredo do íman, o que, se for de algum modo possível, só pode ser feito por uma empresa como a minha."
+      },
+      "mark": "traco",
+      "note": "O benefício, se o sonho falhar.",
+      "expanded": "«supondo falsas» é a retirada tática. Ainda assim «inestimável» e «última geração» inflam o período: a passagem e o «íman» salvam a vaidade mesmo sem a terra linda.",
+      "order": 38
+    },
+    {
+      "id": "carta-1-p4-d20",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1867,
+        "end": 1885,
+        "quote": "não pode contestar"
+      },
+      "mark": "seta",
+      "note": "A objeção fica proibida.",
+      "expanded": "«You cannot contest» não é um pedido: cannot fecha a boca da irmã. O objeto da proibição é o «benefício inestimável», que a sintaxe ainda não nomeou quando o modal já o defende. Ele redige a discordância dela e recusa-a na mesma oração.",
+      "order": 39,
+      "gloss": "you cannot contest",
+      "russian": "you cannot contest"
+    },
+    {
+      "id": "carta-1-p4-d21",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 1956,
+        "end": 1970,
+        "quote": "última geração"
+      },
+      "mark": "circulo",
+      "note": "O público ainda não nasceu.",
+      "expanded": "«To the last generation» estica o benefício até quem não existe. «Última geração» é hipérbole de calendário. O período, que acabou de admitir que as conjecturas podem ser falsas, mede a vaidade em séculos. O tempo verbal é futuro sobre gente futura.",
+      "order": 40,
+      "gloss": "to the last generation",
+      "russian": "to the last generation"
+    },
+    {
+      "id": "carta-1-p4-d22",
+      "anchor": {
+        "paragraphId": "p4",
+        "start": 2117,
+        "end": 2139,
+        "quote": "de algum modo possível"
+      },
+      "mark": "realce",
+      "note": "A dúvida cabe numa coda.",
+      "expanded": "«If at all possible» entra depois do íman, numa coda menor do que o alarde. «De algum modo» é a fresta. A sintaxe esconde a admissão — o segredo pode não existir — atrás de «só pode ser feito por uma empresa como a minha». A restrição serve de elogio.",
+      "order": 41,
+      "gloss": "if at all possible",
+      "russian": "if at all possible"
+    },
+    {
+      "id": "carta-1-p5-18",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 0,
+        "end": 258,
+        "quote": "Estas reflexões dissiparam a agitação com que comecei a carta, e sinto o coração arder num entusiasmo que me eleva ao céu; pois nada contribui tanto para tranquilizar o espírito como um propósito firme — um ponto em que a alma possa fixar o olho intelectual."
+      },
+      "mark": "sublinhado",
+      "note": "O olho intelectual se fixa.",
+      "expanded": "«propósito firme» é o ponto geométrico da alma. «arder» e «tranquilizar» brigam no mesmo fôlego: o entusiasmo quer ser calma.",
+      "order": 42
+    },
+    {
+      "id": "carta-1-p5-d23",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 16,
+        "end": 37,
+        "quote": "dissiparam a agitação"
+      },
+      "mark": "sublinhado",
+      "note": "A cura já está no perfeito.",
+      "expanded": "«Have dispelled»: o presente perfeito declara a agitação acabada no momento em que a frase a nomeia. A carta finge ter-se curado sozinha, por meio das reflexões que o leitor acabou de ler. O efeito é anterior à leitura. Técnica de quem narra o próprio sossego.",
+      "order": 43,
+      "gloss": "have dispelled the agitation",
+      "russian": "have dispelled the agitation"
+    },
+    {
+      "id": "carta-1-p5-d24",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 241,
+        "end": 257,
+        "quote": "olho intelectual"
+      },
+      "mark": "circulo",
+      "note": "A alma tem um olho.",
+      "expanded": "«A point on which the soul may fix its intellectual eye.» O século XVIII dá faculdades à mente e, aqui, um olho. «Fix» é geometria: o propósito firme é um ponto. «Olho intelectual» traduz a metáfora sem a explicar. A alma mira; o corpo, nesta frase, não entra.",
+      "order": 44,
+      "gloss": "its intellectual eye",
+      "russian": "its intellectual eye"
+    },
+    {
+      "id": "carta-1-p5-19",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 258,
+        "end": 320,
+        "quote": " Esta expedição foi o sonho predileto dos meus primeiros anos."
+      },
+      "mark": "seta",
+      "note": "O sonho é anterior ao plano.",
+      "expanded": "«primeiros anos» empurra a expedição para a infância. «predileto» escolhe este sonho entre outros, e a carta trata a escolha como destino.",
+      "order": 45
+    },
+    {
+      "id": "carta-1-p5-20",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 320,
+        "end": 452,
+        "quote": " Li com ardor os relatos das várias viagens feitas na perspectiva de chegar ao oceano Pacífico Norte pelos mares que rodeiam o polo."
+      },
+      "mark": "realce",
+      "note": "Leitura no lugar da viagem.",
+      "expanded": "«ardor» é o mesmo calor do coração. Os «relatos» substituem o mar: ele chega ao Pacífico Norte pelos livros, «pelos mares» que ainda não viu.",
+      "order": 46
+    },
+    {
+      "id": "carta-1-p5-d25",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 406,
+        "end": 420,
+        "quote": "Pacífico Norte"
+      },
+      "mark": "seta",
+      "note": "O polo é um anel de mar.",
+      "expanded": "«Arriving at the North Pacific Ocean through the seas which surround the pole.» A sintaxe faz do polo um círculo de água, não uma muralha de gelo. «Na perspectiva de chegar» traduz «in the prospect»: prospect é vista e é expectativa. O caminho impossível fica com gramática de roteiro.",
+      "order": 47,
+      "gloss": "the North Pacific Ocean through the seas which surround the pole",
+      "russian": "the North Pacific Ocean through the seas which surround the pole"
+    },
+    {
+      "id": "carta-1-p5-21",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 452,
+        "end": 586,
+        "quote": " Há de lembrar-se de que uma história de todas as viagens feitas para descobrir compunha a biblioteca inteira do nosso bom tio Thomas."
+      },
+      "mark": "circulo",
+      "note": "A biblioteca do tio é o mundo.",
+      "expanded": "«inteira» fecha a casa num só assunto. «tio Thomas» é o primeiro morto útil da carta: a estante dele educa o desejo.",
+      "order": 48
+    },
+    {
+      "id": "carta-1-p5-d26",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 571,
+        "end": 585,
+        "quote": "bom tio Thomas"
+      },
+      "mark": "circulo",
+      "note": "O epitete antes da proibição.",
+      "expanded": "«Our good uncle Thomas» — «bom» é o afeto de família, colado ao nome. A biblioteca inteira dele é um só gênero: viagens de descoberta. O carinho prepara o golpe da frase seguinte, em que o mesmo tio obedece a um pai morto e fecha o mar.",
+      "order": 49,
+      "gloss": "our good uncle Thomas",
+      "russian": "our good uncle Thomas"
+    },
+    {
+      "id": "carta-1-p5-22",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 586,
+        "end": 673,
+        "quote": " A minha educação foi descuidada, e no entanto eu era apaixonadamente amigo da leitura."
+      },
+      "mark": "traco",
+      "note": "Descuido e paixão na mesma frase.",
+      "expanded": "«descuidada» acusa o pai; «apaixonadamente» absolve o filho. O «no entanto» é a dobradiça: a falta de escola vira licença para ler só o que inflama.",
+      "order": 50
+    },
+    {
+      "id": "carta-1-p5-d27",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 640,
+        "end": 672,
+        "quote": "apaixonadamente amigo da leitura"
+      },
+      "mark": "realce",
+      "note": "Fond esquenta na tradução.",
+      "expanded": "«Passionately fond of reading»: fond é afeição, passionately já sobe o tom. «Apaixonadamente amigo» empurra a leitura para a escala erótica. O «yet» inglês, «no entanto», é a dobradiça: a educação descuidada fica desculpada pelo excesso de livros. A falha vira caráter.",
+      "order": 51,
+      "gloss": "passionately fond of reading",
+      "russian": "passionately fond of reading"
+    },
+    {
+      "id": "carta-1-p5-23",
+      "anchor": {
+        "paragraphId": "p5",
+        "start": 673,
+        "end": 894,
+        "quote": " Estes volumes foram o meu estudo de dia e de noite, e a familiaridade com eles aumentou o pesar que eu sentira, em criança, ao saber que a ordem de meu pai moribundo proibira o tio de me deixar embarcar numa vida de mar."
+      },
+      "mark": "colchete",
+      "note": "A ordem do pai fecha o mar.",
+      "expanded": "«proibira» é pretérito que ainda manda. «vida de mar» fica interditada por um moribundo, e os «volumes» aumentam o pesar em vez de o curar.",
+      "order": 52
+    },
+    {
+      "id": "carta-1-p6-24",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 0,
+        "end": 132,
+        "quote": "Estas visões desvaneceram-se quando li, pela primeira vez, aqueles poetas cujos derrames enlevaram a minha alma e a ergueram ao céu."
+      },
+      "mark": "sublinhado",
+      "note": "Os poetas apagam o mapa.",
+      "expanded": "«desvaneceram-se» dissolve as viagens. «derrames» é a palavra do excesso lírico, e a alma sobe «ao céu» — o mesmo céu que daqui a pouco será cálculo.",
+      "order": 53
+    },
+    {
+      "id": "carta-1-p6-d28",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 80,
+        "end": 98,
+        "quote": "derrames enlevaram"
+      },
+      "mark": "sublinhado",
+      "note": "Effusion é derrame.",
+      "expanded": "«Whose effusions entranced my soul, and lifted it to heaven.» Effusion é o transbordamento romântico e é termo de medicina. «Derrames» em português carrega o derrame do corpo e o da lira. «Enlevaram» traduz entranced: a alma é levada. O verbo seguinte, erguer ao céu, repete a elevação do parágrafo anterior. Os poetas fazem o que o propósito firme dizia fazer.",
+      "order": 54,
+      "gloss": "effusions entranced my soul",
+      "russian": "effusions entranced my soul"
+    },
+    {
+      "id": "carta-1-p6-25",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 132,
+        "end": 330,
+        "quote": " Também me fiz poeta e, durante um ano, vivi num paraíso de minha própria criação; imaginei que também eu podia obter um nicho no templo em que os nomes de Homero e de Shakespeare estão consagrados."
+      },
+      "mark": "realce",
+      "note": "Um ano de paraíso próprio.",
+      "expanded": "«também eu» repete a ambição de nicho. Homero e Shakespeare são o templo; o «paraíso de minha própria criação» já anuncia, sem dizê-lo, o criador que ele ainda não conhece.",
+      "order": 55
+    },
+    {
+      "id": "carta-1-p6-d29",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 253,
+        "end": 268,
+        "quote": "nicho no templo"
+      },
+      "mark": "circulo",
+      "note": "A ambição é um buraco na parede.",
+      "expanded": "«Obtain a niche in the temple where the names of Homer and Shakespeare are consecrated.» Niche é o vão pequeno da estátua, não o trono. Ele quer ser colocado, não ler melhor. «Estão consagrados» guarda a passiva: os nomes já foram santificados por outros. O «também eu» pede uma vaga nesse móvel.",
+      "order": 56,
+      "gloss": "a niche in the temple",
+      "russian": "a niche in the temple"
+    },
+    {
+      "id": "carta-1-p6-26",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 330,
+        "end": 408,
+        "quote": " A senhora conhece bem o meu fracasso, e quão pesadamente suportei a decepção."
+      },
+      "mark": "traco",
+      "note": "O fracasso fica com ela.",
+      "expanded": "«a senhora conhece» poupa o relato. «pesadamente» carrega a decepção no advérbio, e a carta não cita um verso: o silêncio é a prova.",
+      "order": 57
+    },
+    {
+      "id": "carta-1-p6-d30",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 376,
+        "end": 396,
+        "quote": "pesadamente suportei"
+      },
+      "mark": "traco",
+      "note": "O fracasso tem peso.",
+      "expanded": "«How heavily I bore the disappointment.» Heavily é peso, não tristeza vaga. «Pesadamente suportei» mantém a carga. «You are well acquainted» pressupõe cartas que o leitor não viu: a técnica epistolar chega atrasada a uma mágoa já contada à irmã. O ano de poeta fecha-se como fardo, não como obra.",
+      "order": 58,
+      "gloss": "how heavily I bore the disappointment",
+      "russian": "how heavily I bore the disappointment"
+    },
+    {
+      "id": "carta-1-p6-27",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 408,
+        "end": 524,
+        "quote": " Mas justamente então herdei a fortuna de meu primo, e os meus pensamentos voltaram ao leito do seu pendor anterior."
+      },
+      "mark": "seta",
+      "note": "A herança devolve o rumo.",
+      "expanded": "«justamente então» cola dinheiro e vocação. «leito» e «pendor» fazem do desejo um rio antigo, e a fortuna do primo é só a comporta.",
+      "order": 59
+    },
+    {
+      "id": "carta-1-p6-d31",
+      "anchor": {
+        "paragraphId": "p6",
+        "start": 508,
+        "end": 523,
+        "quote": "pendor anterior"
+      },
+      "mark": "seta",
+      "note": "O inglês era um rio.",
+      "expanded": "«The channel of their earlier bent»: channel é leito, bent é inclinação e curva de água. «Leito do seu pendor anterior» conserva o rio e a ladeira. A fortuna do primo é a eclusa que devolve a corrente ao curso de antes do templo de Homero. A tradução é fiel e um pouco mais de pedra do que de água.",
+      "order": 60,
+      "gloss": "the channel of their earlier bent",
+      "russian": "the channel of their earlier bent"
+    },
+    {
+      "id": "carta-1-p7-28",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 0,
+        "end": 59,
+        "quote": "Passaram-se seis anos desde que resolvi a empresa presente."
+      },
+      "mark": "sublinhado",
+      "note": "Seis anos de resolução.",
+      "expanded": "«seis anos» medem a teimosia em calendário. «empresa presente» ainda está no papel: o tempo passado serve para parecer que o futuro já é fato.",
+      "order": 61
+    },
+    {
+      "id": "carta-1-p7-29",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 59,
+        "end": 145,
+        "quote": " Ainda agora me lembro da hora a partir da qual me dediquei a este grande cometimento."
+      },
+      "mark": "circulo",
+      "note": "A hora fica, o relógio não.",
+      "expanded": "«Ainda agora me lembro» e não diz que hora foi. O «grande cometimento» ganha auréola de conversão, sem o minuto.",
+      "order": 62
+    },
+    {
+      "id": "carta-1-p7-30",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 145,
+        "end": 185,
+        "quote": " Comecei por acostumar o corpo ao rigor."
+      },
+      "mark": "traco",
+      "note": "O corpo antes da glória.",
+      "expanded": "«acostumar» é treino, não inspiração. «rigor» substitui o paraíso do poeta: a frase é curta de propósito, como uma ordem.",
+      "order": 63
+    },
+    {
+      "id": "carta-1-p7-d32",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 158,
+        "end": 184,
+        "quote": "acostumar o corpo ao rigor"
+      },
+      "mark": "sublinhado",
+      "note": "Inure é calejar pelo uso.",
+      "expanded": "«Inuring my body to hardship.» Inure é endurecer à força de hábito, não um heroísmo de um dia. «Rigor» é mais estreito do que hardship. A frase começa pelo corpo, antes do mapa e antes da glória. Seis anos cabem no hábito, não num gesto.",
+      "order": 64,
+      "gloss": "inuring my body to hardship",
+      "russian": "inuring my body to hardship"
+    },
+    {
+      "id": "carta-1-p7-31",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 185,
+        "end": 560,
+        "quote": " Acompanhei os pescadores de baleia em várias expedições ao mar do Norte; suportei de vontade o frio, a fome, a sede e a falta de sono; muitas vezes trabalhei mais do que os marinheiros comuns durante o dia, e devotei as noites ao estudo da matemática, da teoria da medicina e daqueles ramos da ciência física de que um aventureiro naval podia tirar a maior vantagem prática."
+      },
+      "mark": "colchete",
+      "note": "A lista do que ele aguentou.",
+      "expanded": "Frio, fome, sede, sono: a enumeração quer certificado. «de vontade» distingue o sacrifício escolhido, e as noites de «matemática» e «medicina» reescrevem o poeta como técnico.",
+      "order": 65
+    },
+    {
+      "id": "carta-1-p7-d33",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 304,
+        "end": 319,
+        "quote": "a falta de sono"
+      },
+      "mark": "circulo",
+      "note": "Quatro privações, em fila.",
+      "expanded": "«Cold, famine, thirst, and want of sleep.» O «and» fecha uma lista de quatro nomes. «Want of sleep» não é a insônia romântica: é falta, como a de pão. «Falta de sono» traduz essa privação seca. O ritmo é de certificado: cada nome um carimbo, nenhum adjetivo a adoçar.",
+      "order": 66,
+      "gloss": "want of sleep",
+      "russian": "want of sleep"
+    },
+    {
+      "id": "carta-1-p7-d34",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 441,
+        "end": 459,
+        "quote": "teoria da medicina"
+      },
+      "mark": "realce",
+      "note": "A ciência aqui é ferramenta.",
+      "expanded": "De noite ele estuda «mathematics, the theory of medicine, and those branches of physical science from which a naval adventurer might derive the greatest practical advantage.» «Aventureiro naval» é o calco de naval adventurer. A medicina entra como vantagem prática de quem vai ao mar, não como transgressão. O quadro da carta prepara um apetite de saber; o motivo, nesta frase, é o ofício.",
+      "order": 67,
+      "gloss": "the theory of medicine",
+      "russian": "the theory of medicine"
+    },
+    {
+      "id": "carta-1-p7-32",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 560,
+        "end": 665,
+        "quote": " Duas vezes cheguei a alugar-me como subimediato num baleeiro da Groenlândia, e saí-me de modo admirável."
+      },
+      "mark": "realce",
+      "note": "Subimediato, e orgulho contido.",
+      "expanded": "«alugar-me» põe o herdeiro no mercado. «Groenlândia» é o ensaio do polo, e «admirável» é a nota que ele dá a si mesmo, ainda na voz do narrador.",
+      "order": 68,
+      "gloss": "under-mate — subimediato no baleeiro da Groenlândia.",
+      "russian": "under-mate — subimediato no baleeiro da Groenlândia."
+    },
+    {
+      "id": "carta-1-p7-d35",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 582,
+        "end": 608,
+        "quote": "alugar-me como subimediato"
+      },
+      "mark": "seta",
+      "note": "Ele é o contratante e o contratado.",
+      "expanded": "«I actually hired myself as an under-mate.» O reflexo «alugar-me» põe as duas pontas do contrato na mesma pessoa. Under-mate é abaixo do imediato; «subimediato» é o calco da patente. «Actually» / «cheguei a» insiste que o gesto aconteceu, duas vezes, num baleeiro da Groenlândia. A glória ainda é um lugar na lotação.",
+      "order": 69,
+      "gloss": "hired myself as an under-mate",
+      "russian": "hired myself as an under-mate"
+    },
+    {
+      "id": "carta-1-p7-d36",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 640,
+        "end": 664,
+        "quote": "saí-me de modo admirável"
+      },
+      "mark": "traco",
+      "note": "Acquit era verbo de tribunal.",
+      "expanded": "«Acquitted myself to admiration»: acquit é desobrigar-se, verbo de juízo. «Saí-me» muda o tribunal para o salão — saiu-se bem. «To admiration» é o grau, quase um aplauso de terceiros; «de modo admirável» devolve o advérbio ao próprio Walton. A modéstia da frase seguinte («um pouco de orgulho») nasce desse verbo já vaidoso.",
+      "order": 70,
+      "gloss": "acquitted myself to admiration",
+      "russian": "acquitted myself to admiration"
+    },
+    {
+      "id": "carta-1-p7-33",
+      "anchor": {
+        "paragraphId": "p7",
+        "start": 665,
+        "end": 856,
+        "quote": " Devo confessar que senti um pouco de orgulho quando o capitão me ofereceu a segunda dignidade do navio e me pediu que ficasse com o maior empenho, tão valiosos lhe pareciam os meus serviços."
+      },
+      "mark": "circulo",
+      "note": "O capitão confirma o valor.",
+      "expanded": "«um pouco de orgulho» finge modéstia. «segunda dignidade» é o cargo, e «valiosos» chega no fim, como se a frase só então ousasse o adjetivo.",
+      "order": 71
+    },
+    {
+      "id": "carta-1-p8-34",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 0,
+        "end": 70,
+        "quote": "E agora, cara Margaret, não mereço eu realizar algum grande propósito."
+      },
+      "mark": "circulo",
+      "note": "A pergunta cobra a recompensa.",
+      "expanded": "«não mereço eu» inverte o pedido: Margaret deve responder que sim. «grande propósito» continua sem nome, maior do que o navio.",
+      "order": 72
+    },
+    {
+      "id": "carta-1-p8-d37",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 24,
+        "end": 37,
+        "quote": "não mereço eu"
+      },
+      "mark": "circulo",
+      "note": "A pergunta termina em ponto.",
+      "expanded": "«Do I not deserve to accomplish some great purpose.» A inversão é de pergunta; o ponto final de 1818 recusa o ponto de interrogação. «Não mereço eu» espelha o «do I not» e também fecha com ponto. A súplica tem sintaxe de pergunta e pontuação de fato. Ele não espera resposta; redige o sim.",
+      "order": 73,
+      "gloss": "do I not deserve to accomplish some great purpose.",
+      "russian": "do I not deserve to accomplish some great purpose."
+    },
+    {
+      "id": "carta-1-p8-35",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 70,
+        "end": 189,
+        "quote": " A minha vida podia ter decorrido em ócio e luxo; mas preferi a glória a todo o engodo que a riqueza me pôs no caminho."
+      },
+      "mark": "traco",
+      "note": "Glória contra o engodo da riqueza.",
+      "expanded": "«ócio e luxo» são o caminho recusado. «engodo» volta — antes eram os engodos do polo; aqui é o da fortuna. Ele troca um isco por outro.",
+      "order": 74
+    },
+    {
+      "id": "carta-1-p8-36",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 189,
+        "end": 246,
+        "quote": " Oh, que alguma voz de encorajamento respondesse que sim!"
+      },
+      "mark": "realce",
+      "note": "A voz que não está na carta.",
+      "expanded": "O «Oh» é teatral, e «respondesse que sim» pede um coro. A irmã lê em silêncio: o encorajamento fica no subjuntivo, não chega.",
+      "order": 75
+    },
+    {
+      "id": "carta-1-p8-d39",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 205,
+        "end": 225,
+        "quote": "voz de encorajamento"
+      },
+      "mark": "sublinhado",
+      "note": "O sim seria um voto.",
+      "expanded": "«Oh, that some encouraging voice would answer in the affirmative!» O «that» é optativo, modo de desejo. «In the affirmative» é língua de assembleia, o voto que diz sim. «Respondesse que sim» traz a resposta para casa. A irmã imaginada discursa no inglês e conversa no português.",
+      "order": 76,
+      "gloss": "answer in the affirmative",
+      "russian": "answer in the affirmative"
+    },
+    {
+      "id": "carta-1-p8-37",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 246,
+        "end": 358,
+        "quote": " A minha coragem e a minha resolução são firmes; mas as esperanças oscilam, e o ânimo anda muitas vezes abatido."
+      },
+      "mark": "sublinhado",
+      "note": "Firmeza com ânimo oscilante.",
+      "expanded": "«são firmes» no plural tropeça (coragem e resolução); «oscilam» e «abatido» desmentem o verbo. A frase se corrige no meio, e essa correção é o caráter.",
+      "order": 77
+    },
+    {
+      "id": "carta-1-p8-d38",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 283,
+        "end": 293,
+        "quote": "são firmes"
+      },
+      "mark": "realce",
+      "note": "O inglês punha o verbo no singular.",
+      "expanded": "«My courage and my resolution is firm.» Dois sujeitos, um «is»: a coragem e a resolução são uma só substância, ou um solecismo que as solda. «São firmes» corrige a concordância e separa o par. A tradução ganha gramática e perde a teimosia de tratar as duas coisas como uma.",
+      "order": 78,
+      "gloss": "My courage and my resolution is firm",
+      "russian": "My courage and my resolution is firm"
+    },
+    {
+      "id": "carta-1-p8-38",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 358,
+        "end": 574,
+        "quote": " Estou prestes a seguir numa viagem longa e difícil, cujas emergências hão de exigir toda a minha fortaleza: pede-se-me não só que levante o ânimo dos outros, mas às vezes que sustente o meu, quando o deles fraqueja."
+      },
+      "mark": "colchete",
+      "note": "Sustentar o próprio ânimo.",
+      "expanded": "«emergências» ainda não aconteceram. O período reparte a fortaleza: levantar os outros e, «quando o deles fraqueja», segurar o seu. O capitão já treina a solidão.",
+      "order": 79
+    },
+    {
+      "id": "carta-1-p8-d40",
+      "anchor": {
+        "paragraphId": "p8",
+        "start": 557,
+        "end": 573,
+        "quote": "o deles fraqueja"
+      },
+      "mark": "seta",
+      "note": "O their's de 1818 não cabe.",
+      "expanded": "A edição escreve «when their’s are failing», com apóstrofo de posse à maneira do tempo. «Quando o deles fraqueja» traduz a posse e não pode mostrar a grafia. O plural inglês («are») junta os ânimos da tripulação; «fraqueja» no singular trata «o deles» como um bloco. Ele já se vê a suster um coro que desaba.",
+      "order": 80,
+      "gloss": "when their's are failing",
+      "russian": "when their's are failing"
+    },
+    {
+      "id": "carta-1-p9-39",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 0,
+        "end": 52,
+        "quote": "Esta é a época mais favorável para viajar na Rússia."
+      },
+      "mark": "sublinhado",
+      "note": "A Rússia vira estação boa.",
+      "expanded": "«época mais favorável» baixa o mito para o horário. «Rússia» entra como estrada, não como império: o tom é de guia de viagem.",
+      "order": 81
+    },
+    {
+      "id": "carta-1-p9-d41",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 9,
+        "end": 29,
+        "quote": "época mais favorável"
+      },
+      "mark": "sublinhado",
+      "note": "O sublime senta-se no calendário.",
+      "expanded": "«The most favourable period for travelling in Russia.» Favourable é também auspicioso. Depois do polo e do íman, a frase marca uma estação. A técnica da carta é esta queda: o período sublime acaba numa época do ano, e a Rússia vira estrada com horário.",
+      "order": 82,
+      "gloss": "the most favourable period",
+      "russian": "the most favourable period"
+    },
+    {
+      "id": "carta-1-p9-40",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 52,
+        "end": 191,
+        "quote": " Voam depressa sobre a neve nos trenós; o movimento é agradável e, na minha opinião, bem mais aprazível do que o de uma diligência inglesa."
+      },
+      "mark": "circulo",
+      "note": "Trenó contra diligência.",
+      "expanded": "«Voam» sem sujeito nomeado: «They» do inglês fica gente anônima. A comparação com a «diligência inglesa» mede o estrangeiro pela carruagem de casa.",
+      "order": 83
+    },
+    {
+      "id": "carta-1-p9-41",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 191,
+        "end": 440,
+        "quote": " O frio não é excessivo, se a pessoa vai envolta em peles, traje que já adotei; pois há uma grande diferença entre caminhar no convés e permanecer sentado, imóvel, durante horas, quando nenhum exercício impede o sangue de congelar de fato nas veias."
+      },
+      "mark": "colchete",
+      "note": "Peles, convés, sangue.",
+      "expanded": "«já adotei» veste o traje antes da partida. O medo real não é o polo: é «congelar de fato» sentado na posta. «de fato» insiste que o clichê pode ser literal.",
+      "order": 84
+    },
+    {
+      "id": "carta-1-p9-d42",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 232,
+        "end": 248,
+        "quote": "envolta em peles"
+      },
+      "mark": "traco",
+      "note": "Wrapt era a grafia antiga.",
+      "expanded": "«If you are wrapt in furs»: wrapt é o particípio de 1818, com o p. «Envolta» é particípio corrente e não guarda o arcaísmo. «You» podia ser a irmã; «se a pessoa vai» recua para o impessoal. O frio deixa de ser um «tu» e passa a ser uma hipótese de manual.",
+      "order": 85,
+      "gloss": "wrapt in furs",
+      "russian": "wrapt in furs"
+    },
+    {
+      "id": "carta-1-p9-42",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 440,
+        "end": 529,
+        "quote": " Não tenho ambição de perder a vida na estrada de posta entre São Petersburgo e Arcangel."
+      },
+      "mark": "seta",
+      "note": "A morte miúda que ele recusa.",
+      "expanded": "«Não tenho ambição» é ironia seca depois de tanta glória. Perder a vida «entre São Petersburgo e Arcangel» seria um fim sem narrativa, e ele o evita.",
+      "order": 86
+    },
+    {
+      "id": "carta-1-lugar-54",
+      "anchor": {
+        "paragraphId": "p9",
+        "start": 520,
+        "end": 528,
+        "quote": "Arcangel"
+      },
+      "mark": "lugar",
+      "note": "A próxima cidade, ainda não.",
+      "expanded": "Ele não quer morrer na posta entre Petersburgo e Arcangel. A cidade é plano de quinze dias ou três semanas, não cenário desta carta.",
+      "order": 87,
+      "place": {
+        "lat": 64.54,
+        "lng": 40.543,
+        "label": "Arcangel"
+      }
+    },
+    {
+      "id": "carta-1-p10-43",
+      "anchor": {
+        "paragraphId": "p10",
+        "start": 0,
+        "end": 276,
+        "quote": "Partirei para esta última cidade dentro de quinze dias ou três semanas; e a minha intenção é alugar ali um navio, o que se faz com facilidade pagando o seguro ao dono, e engajar tantos marinheiros quantos eu julgue necessários entre os que estão acostumados à pesca da baleia."
+      },
+      "mark": "colchete",
+      "note": "O navio ainda é um plano.",
+      "expanded": "«quinze dias ou três semanas» afrouxa o calendário. «seguro ao dono» e «pesca da baleia» descem ao contrato: o herói conta o frete.",
+      "order": 88
+    },
+    {
+      "id": "carta-1-p10-44",
+      "anchor": {
+        "paragraphId": "p10",
+        "start": 276,
+        "end": 347,
+        "quote": " Não tenciono fazer-me ao mar antes do mês de junho: e quando voltarei?"
+      },
+      "mark": "circulo",
+      "note": "Junho, e a volta sem data.",
+      "expanded": "Os dois-pontos colam a partida à pergunta «quando voltarei?». O mês de «junho» é concreto; o regresso, não. A carta muda de tom nesse corte.",
+      "order": 89
+    },
+    {
+      "id": "carta-1-p10-d43",
+      "anchor": {
+        "paragraphId": "p10",
+        "start": 331,
+        "end": 347,
+        "quote": "quando voltarei?"
+      },
+      "mark": "circulo",
+      "note": "Os dois pontos não fecham.",
+      "expanded": "No inglês, os dois pontos ligam o mês de junho à pergunta: «until the month of June: and when shall I return?» O português conserva os dois pontos em «junho: e quando voltarei?» A pontuação não termina o plano; abre o buraco. O calendário comercial esbarra numa pergunta sem verbo de certeza.",
+      "order": 90,
+      "gloss": "and when shall I return?",
+      "russian": "and when shall I return?"
+    },
+    {
+      "id": "carta-1-p10-45",
+      "anchor": {
+        "paragraphId": "p10",
+        "start": 347,
+        "end": 403,
+        "quote": " Ah, querida irmã, como posso responder a esta pergunta?"
+      },
+      "mark": "traco",
+      "note": "A irmã vira a pergunta.",
+      "expanded": "«como posso responder» admite que o saber acabou. «querida irmã» amacia a confissão, e a pergunta anterior fica sem dono.",
+      "order": 91
+    },
+    {
+      "id": "carta-1-p10-46",
+      "anchor": {
+        "paragraphId": "p10",
+        "start": 403,
+        "end": 513,
+        "quote": " Se tiver sucesso, muitos e muitos meses, talvez anos, hão de passar antes que a senhora e eu nos encontremos."
+      },
+      "mark": "seta",
+      "note": "O sucesso também separa.",
+      "expanded": "«muitos e muitos» alonga os meses de propósito. O êxito adia o reencontro: ganhar é não voltar. «talvez anos» abre o tempo do romance.",
+      "order": 92
+    },
+    {
+      "id": "carta-1-p10-47",
+      "anchor": {
+        "paragraphId": "p10",
+        "start": 513,
+        "end": 563,
+        "quote": " Se falhar, ver-me-á outra vez em breve, ou nunca."
+      },
+      "mark": "realce",
+      "note": "Em breve, ou nunca.",
+      "expanded": "A alternativa não tem meio. «breve» seria a derrota viva; «nunca» é o gelo. As duas cabem na mesma vírgula, e nenhuma promete a irmã.",
+      "order": 93
+    },
+    {
+      "id": "carta-1-p10-d44",
+      "anchor": {
+        "paragraphId": "p10",
+        "start": 544,
+        "end": 562,
+        "quote": "em breve, ou nunca"
+      },
+      "mark": "realce",
+      "note": "Ela é quem vê.",
+      "expanded": "«You will see me again soon, or never.» O sujeito gramatical é a irmã: ver-me-á. Ele reduz-se ao pronome. «Soon, or never» são dois advérbios e uma vírgula; «em breve, ou nunca» guarda essa vírgula, que é o enredo inteiro do regresso. Não há terceiro termo.",
+      "order": 94,
+      "gloss": "soon, or never",
+      "russian": "soon, or never"
+    },
+    {
+      "id": "carta-1-p11-48",
+      "anchor": {
+        "paragraphId": "p11",
+        "start": 0,
+        "end": 38,
+        "quote": "Adeus, minha cara, excelente Margaret."
+      },
+      "mark": "sublinhado",
+      "note": "O adeus triplica o afeto.",
+      "expanded": "«cara, excelente» acumula adjetivos para fechar. «Adeus» ainda não é o fim da carta: sobra a bênção, como quem não quer largar a página.",
+      "order": 95
+    },
+    {
+      "id": "carta-1-p11-d45",
+      "anchor": {
+        "paragraphId": "p11",
+        "start": 19,
+        "end": 37,
+        "quote": "excelente Margaret"
+      },
+      "mark": "circulo",
+      "note": "Falta uma vírgula do vocativo.",
+      "expanded": "«My dear, excellent, Margaret»: duas vírgulas, três tempos, o nome isolado no fim. «Minha cara, excelente Margaret» cola «excelente» ao nome e perde a segunda pausa. O vocativo fica com menos ar. No fecho, o inglês ainda empilha adjetivos; o português já a trata por uma fórmula só.",
+      "order": 96,
+      "gloss": "my dear, excellent, Margaret",
+      "russian": "my dear, excellent, Margaret"
+    },
+    {
+      "id": "carta-1-p11-49",
+      "anchor": {
+        "paragraphId": "p11",
+        "start": 38,
+        "end": 189,
+        "quote": " Que o céu derrame bênçãos sobre a senhora, e me salve, para que eu possa, uma vez e outra, testemunhar a minha gratidão por todo o seu amor e bondade."
+      },
+      "mark": "colchete",
+      "note": "Salvar-me para eu agradecer.",
+      "expanded": "A oração pede o céu em dois tempos: bênçãos para ela, salvação para ele. «uma vez e outra» imagina o regresso como repetição do agradecimento, não como relato.",
+      "order": 97
+    },
+    {
+      "id": "carta-1-p12-50",
+      "anchor": {
+        "paragraphId": "p12",
+        "start": 0,
+        "end": 19,
+        "quote": "Seu irmão afetuoso,"
+      },
+      "mark": "traco",
+      "note": "A assinatura ainda é fórmula.",
+      "expanded": "«afetuoso» cabe na despedida inglesa e soa pequeno depois do polo. A vírgula deixa a frase aberta para o nome.",
+      "order": 98
+    },
+    {
+      "id": "carta-1-p13-51",
+      "anchor": {
+        "paragraphId": "p13",
+        "start": 0,
+        "end": 10,
+        "quote": "R. Walton."
+      },
+      "mark": "circulo",
+      "note": "O nome entra por último.",
+      "expanded": "«Walton» só agora. A carta inteira foi desejo sem assinatura. O «R.» inicial guarda o Robert, e o ponto final é o primeiro porto de verdade.",
+      "order": 99
+    },
+    {
+      "id": "carta-1-p13-d46",
+      "anchor": {
+        "paragraphId": "p13",
+        "start": 0,
+        "end": 10,
+        "quote": "R. Walton."
+      },
+      "mark": "sublinhado",
+      "note": "A assinatura baixa a voz.",
+      "expanded": "A página de 1818 fecha «R. WALTON.», em caixa alta, como o «SAVILLE» do sobrescrito. «R. Walton.» desce as letras. O R. continua a esconder o nome próprio, simétrico ao «17—» que escondeu o ano. A moldura assina em voz mais baixa do que o livro que a imprimiu.",
+      "order": 100,
+      "gloss": "R. WALTON.",
+      "russian": "R. WALTON."
     }
   ],
   "widgets": [

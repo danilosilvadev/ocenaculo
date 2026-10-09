@@ -69,6 +69,8 @@ describe("os quatro primeiros capítulos", () => {
         expect(collectNotes([paragraph]).length).toBeGreaterThan(0);
       }
       expect(notes.length).toBeGreaterThanOrEqual(Math.floor(sentences * 0.85));
+      const chars = chapter!.paragraphs.reduce((sum, paragraph) => sum + paragraphText(paragraph).length, 0);
+      expect(notes.length / chars).toBeGreaterThanOrEqual(0.011);
       const close = notes.filter((note) => (note.x?.length ?? 0) >= 80);
       expect(close.length).toBeGreaterThanOrEqual(Math.floor(notes.length * 0.7));
       for (const note of notes) {
