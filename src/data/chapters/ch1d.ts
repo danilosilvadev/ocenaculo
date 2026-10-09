@@ -26,7 +26,7 @@ export const ch1d: ParaDraft[] = [
         "O narrador acaba de nos dar um par e imediatamente o desmente. «Механически, чем нравственно» é uma distinção dura. A lista — distração, não candura; inquietação; agitação; bater a língua — recusa o sentimentalismo do «eu gostei de você», que Rogójin dirá no fim do capítulo. As duas verdades vão ficar juntas. Aqui o narrador impede que leiamos cedo demais a santidade do encontro.",
       ),
       a(
-        "Parecia que ele ainda estava com febre, ou pelo menos com uma febre quente. ",
+        "Parecia que ele ainda estava naquela febre alta, ou pelo menos com febre. ",
         "circle",
         "A febre de Pskov não ficou em Pskov.",
         "«Горячка» e «лихорадка» quase sinônimos, o segundo a corrigir o primeiro para baixo. O corpo explica o estilo: frases que pegam fogo e não escolhem. O narrador oferece a fisiologia como causa sem fechar a psicologia.",
@@ -68,10 +68,10 @@ export const ch1d: ParaDraft[] = [
         "«Юродивые» são os loucos de Deus, a quem se dá esmola e autoridade. Rogójin fala deles com irritação doméstica. O leitor ainda não sabe que daqui a pouco a palavra vai cair em Míchkin, dita por este mesmo homem, com outro tom. A rima está armada. «Монашенка не монашенка, а еще пуще» é provérbio de quem não quer a teologia, quer o incômodo.",
       ),
       a(
-        "Ela se assustou com o telegrama e, sem abrir, apresentou-o na esquadra, e lá ficou ele até hoje. ",
+        "Ela se assustou com o telegrama e, sem abrir, apresentou-o no posto, e lá ficou ele até hoje. ",
         "circle",
         "O medo trata o papel como um demônio.",
-        "Não abrir e entregar à polícia («в часть») é um gesto completo de characterização, numa oração. O telegrama «залегла» — ficou deitado, como um doente — na esquadra. A morte do pai não chegou porque uma velha teve medo de um envelope.",
+        "Não abrir e entregar à polícia («в часть», o posto) é um gesto completo de caracterização, numa oração. O telegrama «залегла» — ficou deitado, como um doente — no posto. A morte do pai não chegou porque uma velha teve medo de um envelope.",
       ),
       a(
         "Só Kóniev, Vassíli Vassílitch, me salvou, escreveu tudo. Do brocado que cobria o caixão de meu pai, de noite, meu irmão cortou as borlas fundidas, de ouro: «Elas, diz ele, olhe quanto dinheiro valem». ",
@@ -278,10 +278,10 @@ export const ch1d: ParaDraft[] = [
         "«Н-ничего» parte a palavra com hífen, como a fala de Míchkin vai partir o «não» no fim do capítulo. Aqui é pânico, não doença. «Спохватился» — caiu em si — é o verbo de quem percebe tarde a linha que cruzou.",
       ),
       a(
-        "n-nenhum dinheiro, quero dizer, o Likhatchov conseguiu chegar lá! Não, isto não é como a Armance. Aqui é só o Tótski. ",
+        "n-com dinheiro nenhum, quero dizer, é que o Likhatchov não conseguiu chegar lá! Não, isto não é como a Armance. Aqui é só o Tótski. ",
         "underline",
-        "Ele corrige a lista com outra lista.",
-        "A pressa produz informação nova: Tótski como exclusivo, Armance como o termo de comparação baixo. Liébedev tenta salvar-se sendo ainda mais preciso. É o seu instinto, e é o que o torna útil e odioso.",
+        "A negativa é que o salva.",
+        "«Никакими деньгами доехать не мог»: com dinheiro nenhum o Likhatchov conseguia chegar. A gagueira quase diz o contrário; a negação é o pedido de desculpa. Em seguida Tótski entra como exclusivo, e Armance como o termo baixo. Liébedev tenta salvar-se sendo ainda mais preciso. É o seu instinto, e é o que o torna útil e odioso.",
       ),
       a(
         "De noite, no Bolchói ou no teatro francês, senta-se no seu próprio camarote. Os oficiais lá dizem muita coisa entre si, e mesmo esses não podem provar nada: «eis, dizem, esta é aquela mesma Nastássia Filíppovna», e só; e quanto ao resto — nada! Porque também não há nada.",

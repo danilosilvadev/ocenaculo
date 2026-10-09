@@ -170,10 +170,10 @@ export const ch1e: ParaDraft[] = [
         "No vagão ele se disse «Parfiôn», nu. Ela, na citação, manda agradecer a «Парфена Семеныча», nome e patronímico, tratamento de homem feito. A promoção é pública e é uma faca no pai. Rogójin conta isso com orgulho e com o resto da febre.",
       ),
       a(
-        "Pois eu, nesse meio-tempo, com a bênção de minha mãe, arranjei vinte rublos com o Seriojka Protúchin e parti de máquina para Pskov, e cheguei com febre; lá as velhas começaram a me benzer com o santoral, e eu sentado, bêbado, e depois fui pelas tabernas com o que restava, e sem sentidos passei a noite toda na rua, e de manhã a febre alta, e durante a noite os cães ainda me morderam. Mal voltei a mim.",
+        "Pois eu, nesse meio-tempo, com a bênção de minha mãe, arranjei vinte rublos com o Seriojka Protúchin e parti de máquina para Pskov, e cheguei com febre; lá as velhas começaram a ler o santoral por cima de mim, e eu sentado, bêbado, e depois fui pelas tabernas com o que restava, e sem sentidos passei a noite toda na rua, e de manhã a febre alta, e durante a noite os cães ainda me roeram. Mal voltei a mim.",
         "sideline",
         "A queda é uma lista de e, e, e.",
-        "A coordenação não hierarquiza: bênção da mãe, vinte rublos, trem, febre, santoral, bêbado, taberna, rua, cães. «Святцами зачитывать» é rezar o calendário dos santos por cima de um corpo, o mundo da tia. Os cães são o último detalhe, concreto demais para ser símbolo anunciado, e por isso funciona como símbolo. «Насилу очнулся» ecoa o «насилу рассвело» da primeira página: mal se conseguiu. O homem que volta no degelo já voltou uma vez, mordido.",
+        "A coordenação não hierarquiza: bênção da mãe, vinte rublos, trem, febre, santoral, bêbado, taberna, rua, cães. «Святцами зачитывать» é rezar o calendário dos santos por cima de um corpo, o mundo da tia. Os cães são o último detalhe, concreto demais para ser símbolo anunciado, e por isso funciona como símbolo. «Насилу очнулся» ecoa o «насилу рассвело» da primeira página: mal se conseguiu. O homem que volta no degelo já voltou uma vez, roído.",
       ),
     ],
   },
@@ -236,16 +236,16 @@ export const ch1e: ParaDraft[] = [
         "«Торжествующею и даже как бы злобною» ecoa o sorriso «insolente e até mau» da primeira página. O «как бы» hesita: como que maldoso. O narrador não crava. O murmúrio é para si; o corpo vira-se para Míchkin. A cena pública não lhe basta. Ele precisa do ouvinte do vagão.",
       ),
       a(
-        "— Príncipe, não sei por que gostei do senhor. Talvez porque o encontrei num minuto destes, e veja que também o encontrei (apontou Liébedev), e dele eu não gostei. ",
+        "— Príncipe, não sei por que gostei de você. Talvez porque encontrei você num minuto destes, e veja que também encontrei este (apontou Liébedev), e dele eu não gostei. ",
         "sideline",
         "A causa da afeição é confessada como ignorância.",
         "«Неизвестно мне, за что» é o oposto de uma declaração. Ele oferece duas hipóteses e fica com a comparação: no mesmo minuto, dois homens, e só um. Apontar Liébedev é crueldade necessária à lógica. A frase não é ainda «você é bom». É «você não é ele».",
       ),
       a(
-        "Venha à minha casa, príncipe. Nós lhe tiramos essas polainazinhas, eu o visto numa peliça de marta das primeiras, mando fazer-lhe um fraque dos primeiros, um colete branco ou do que o senhor quiser, encho-lhe os bolsos de dinheiro, e... vamos à casa de Nastássia Filíppovna! O senhor vem ou não?",
+        "Venha à minha casa, príncipe. A gente tira de você essas polainazinhas, eu visto você numa peliça de marta das primeiras, mando fazer-lhe um fraque dos primeiros, um colete branco ou do que você quiser, encho-lhe os bolsos de dinheiro, e... vamos à casa de Nastássia Filíppovna! Você vem ou não?",
         "bracket",
         "A lista de roupas desfaz o capuz suíço.",
-        "As polainas do primeiro parágrafo voltam no diminutivo zombeteiro e carinhoso, «штиблетишки». A peliça, o fraque, o colete, os bolsos: Rogójin veste o príncipe como o pai vestia uma comissão, só que para o escândalo. As reticências antes de «vamos» são o convite verdadeiro, o que não cabe na alfaiataria. A pergunta final é ты ainda não — é «придешь», segunda pessoa, a intimidade já instalada. Ele não espera uma ética. Espera um sim.",
+        "As polainas do primeiro parágrafo voltam no diminutivo zombeteiro e carinhoso, «штиблетишки». A peliça, o fraque, o colete, os bolsos: Rogójin veste o príncipe como o pai vestia uma comissão, só que para o escândalo. As reticências antes de «vamos» são o convite verdadeiro, o que não cabe na alfaiataria. «Придешь» é ты: até aqui, com o príncipe, ele dizia «o senhor». A pergunta final instala a intimidade. Ele não espera uma ética. Espera um sim.",
       ),
     ],
   },
@@ -356,7 +356,7 @@ export const ch1e: ParaDraft[] = [
     ru: ru.p83,
     segs: [
       a(
-        "— Bom, se é assim — exclamou Rogójin —, o senhor me sai é um iuródivy, príncipe, e a esses, como o senhor, Deus ama!",
+        "— Bom, se é assim — exclamou Rogójin —, você me sai é um iuródivy, príncipe, e a esses, como você, Deus ama!",
         "sideline",
         "A palavra da tia cai, enfim, no príncipe.",
         "«Юродивый» volta, não mais como incômodo da tia beata, mas como sentença afetiva. O ты de «ты, князь» está dentro de «выходишь»: ele o trata por baixo e por cima ao mesmo tempo. «Таких бог любит» é provérbio. Rogójin não o discute. Aplica. O narrador não confirma. Quem confirma, ecoando, é Liébedev — e o eco estraga e autentica.",
@@ -410,7 +410,7 @@ export const ch1e: ParaDraft[] = [
         "A topografia faz a estrutura. Duas ruas, dois enredos, o mesmo dia. A frase é simples de propósito, depois de tanta febre. O leitor respira o mapa.",
       ),
       a(
-        "Estava úmido e molhado; o príncipe perguntou aos passantes — até o fim do caminho que lhe restava eram umas três verstas, e ele decidiu tomar um cocheiro.",
+        "Estava úmido e molhado; o príncipe perguntou aos passantes — até o fim do caminho que lhe restava eram umas três verstas, e ele decidiu chamar um cocheiro.",
         "sideline",
         "O clima da primeira linha fecha o capítulo.",
         "«Сыро и мокро» ecoa «сыро и туманно». A névoa tornou-se lama. O travessão mete a conta das verstas como um parêntese de necessidade, a mesma necessidade do copeque e da peliça. «Решился» — decidiu-se — é um verbo grande para um cocheiro, e é o primeiro ato prático de Míchkin em terra russa. O capítulo não acaba num símbolo. Acaba numa despesa.",

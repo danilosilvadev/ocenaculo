@@ -6,8 +6,8 @@ O primeiro volume é *O Idiota*, de Dostoiévski. A tradução para o português
 
 ## O que está na página
 
-- Parte I, capítulo I (o vagão) e capítulo II (a antecâmara), traduzidos e anotados frase a frase.
-- Os capítulos seguintes da parte I aparecem na navegação como «em breve».
+- Parte I, capítulo I (o vagão), traduzido e anotado frase a frase.
+- Os outros capítulos aparecem na navegação como «em breve».
 - Cada parágrafo pode mostrar o russo da edição citada.
 - No telefone o texto ocupa a largura; o toque numa marca abre a nota num painel inferior.
 
@@ -17,8 +17,7 @@ F. M. Dostoiévski, *Идиот*, in *Собрание сочинений в 15 
 
 Publicação eletrônica: [Русская виртуальная библиотека](https://rvb.ru/dostoevski/01text/vol6/28.htm), versão 3.0, de 27 de janeiro de 2017.
 
-- Capítulo I: [28-01.htm](https://rvb.ru/dostoevski/01text/vol6/28-01.htm)
-- Capítulo II: [28-02.htm](https://rvb.ru/dostoevski/01text/vol6/28-02.htm)
+- Capítulo I, o vagão: [28-01.htm](https://rvb.ru/dostoevski/01text/vol6/28-01.htm)
 
 O russo no site é o dessa edição, com os parágrafos partidos por número de página reunidos de novo.
 

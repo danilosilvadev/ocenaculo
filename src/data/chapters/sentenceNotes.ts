@@ -223,8 +223,8 @@ export const sentenceNotes: Record<string, SentenceNote[]> = {
   p47: [
     n(
       "circle",
-      "As palmas cobram o milhão.",
-      "O verbo do narrador, «bateu palmas», faz de Liébedev um público de feira. A exclamação religiosa e o gesto baixo chegam juntos. Ele celebra o dinheiro alheio com o corpo. A devoção é auditiva.",
+      "As mãos sobem com o milhão.",
+      "«Всплеснул руками» joga as duas mãos para o alto. Não é palma de aplauso: é o espanto que já cobra. A exclamação religiosa e o gesto baixo chegam juntos. Ele celebra o dinheiro alheio com o corpo.",
     ),
   ],
   p48: [
@@ -592,7 +592,7 @@ export const sentenceNotes: Record<string, SentenceNote[]> = {
     n(
       "sideline",
       "A pergunta final é um desafio.",
-      "«O senhor vem ou não?» reduz o convite a uma alternativa seca. O «ou não» admite a recusa e a provoca. Rogójin precisa da resposta no mesmo fôlego da extravagância.",
+      "«Você vem ou não?» é o ты de «придешь», depois de um capítulo em que, com o príncipe, ele dizia «o senhor». A alternativa é seca. O «ou não» admite a recusa e a provoca. Rogójin precisa da resposta no mesmo fôlego da extravagância.",
     ),
   ],
   p76: [

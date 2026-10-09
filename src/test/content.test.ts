@@ -7,9 +7,9 @@ import { collectNotes, countSentences, paragraphText } from "../data/types";
 const available = partOne.filter((chapter) => chapter.available);
 
 describe("capítulos de O Idiota", () => {
-  it("abre a parte I no vagão e na antecâmara, e deixa o resto em breve", () => {
+  it("abre a parte I no vagão e deixa o resto em breve", () => {
     expect(partOne).toHaveLength(16);
-    expect(partOne.filter((chapter) => chapter.available).map((chapter) => chapter.number)).toEqual([1, 2]);
+    expect(partOne.filter((chapter) => chapter.available).map((chapter) => chapter.number)).toEqual([1]);
     expect(partOne.filter((chapter) => !chapter.available).every((chapter) => chapter.paragraphs.length === 0)).toBe(true);
     expect(TRANSLATION_NOTE).toMatch(/Tradução do Cenáculo/);
   });
@@ -40,10 +40,11 @@ describe("capítulos de O Idiota", () => {
         expect(note.m.trim().length).toBeGreaterThanOrEqual(8);
       }
     }
-    for (let index = 1; index <= 164; index += 1) {
+    for (let index = 1; index <= 86; index += 1) {
       expect(seen.has(`p${index}`), `parágrafo p${index}`).toBe(true);
     }
+    expect(seen.has("p87")).toBe(false);
     expect(ruPart1.p1.startsWith("В конце ноября, в оттепель")).toBe(true);
-    expect(ruPart1.p164).toBe("— Князь, пожалуйте!");
+    expect(ruPart1.p86.endsWith("взять извозчика.")).toBe(true);
   });
 });

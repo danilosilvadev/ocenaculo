@@ -3,9 +3,6 @@ import { ch1b } from "./chapters/ch1b";
 import { ch1c } from "./chapters/ch1c";
 import { ch1d } from "./chapters/ch1d";
 import { ch1e } from "./chapters/ch1e";
-import { ch2a } from "./chapters/ch2a";
-import { ch2b } from "./chapters/ch2b";
-import { ch2c } from "./chapters/ch2c";
 import { sentenceNotes } from "./chapters/sentenceNotes";
 import { applySentenceNotes, finalizeParagraphs, type Chapter, type ParaDraft } from "./types";
 
@@ -51,8 +48,7 @@ export const idiot = {
 
 export const partOne: Chapter[] = [
   chapter(1, 1, "O vagão", true, [...ch1a, ...ch1b, ...ch1c, ...ch1d, ...ch1e], "c1"),
-  chapter(1, 2, "A antecâmara", true, [...ch2a, ...ch2b, ...ch2c], "c2"),
-  ...Array.from({ length: 14 }, (_, index) => chapter(1, index + 3, "", false, [], "")),
+  ...Array.from({ length: 15 }, (_, index) => chapter(1, index + 2, "", false, [], "")),
 ];
 
 export function findChapter(id: string | undefined) {

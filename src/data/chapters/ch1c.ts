@@ -152,7 +152,7 @@ export const ch1c: ParaDraft[] = [
     ru: ru.p39,
     segs: [
       a(
-        "— Mas eu também foi assim, só uma coisa e outra — acrescentou o príncipe, quase em desculpa. — A mim, por causa da doença, não achavam possível ensinar com sistema.",
+        "— Pois comigo também foi assim, só uma coisa e outra — acrescentou o príncipe, quase em desculpa. — A mim, por causa da doença, não achavam possível ensinar com sistema.",
         "sideline",
         "Ele pede desculpa de ter estudado.",
         "«Чуть не в извинение»: o narrador tem de nomear o pedido de desculpa porque a frase, sozinha, poderia parecer informação. Míchkin nivela por baixo para não humilhar quem não estudou. «Не находили возможным» — «não achavam possível» — esconde os sujeitos: médicos, tutores, o morto Pavlístchev. A voz passiva é a sua maneira de não acusar.",
@@ -248,7 +248,7 @@ export const ch1c: ParaDraft[] = [
         "Até aqui o tratamento oscila. «А ты откуда» é ты seco, de cima para baixo, e é a primeira vez que Rogójin fere Liébedev com o pronome. «Чистого капиталу» repete a fórmula para esmagá-la: você não tinha o direito de saber o líquido. Não olhar («не удостоивая взглянуть») é o gesto que a frase nomeia.",
       ),
       a(
-        "— Veja só! (piscou-o ao príncipe) e que proveito levam eles em se enfiarem logo como cola? ",
+        "— Veja só! (piscou ao príncipe, apontando-o) e que proveito levam eles em se enfiarem logo como cola? ",
         "underline",
         "O parêntese escolhe o verdadeiro ouvinte.",
         "O piscar exclui Liébedev da frase que fala dele. «Прихвостнями» é cola, puxa-saco, dito no plural «они»: já não é um homem, é a espécie do ensaio. Rogójin fala ao príncipe sobre o terceiro como se o terceiro fosse um inseto no vidro.",
@@ -266,10 +266,10 @@ export const ch1c: ParaDraft[] = [
     ru: ru.p47,
     segs: [
       a(
-        "— E agora lhe calha receber de uma vez um milhãozinho e mais, e isso no mínimo, meu Deus! — o funcionário bateu palmas.",
+        "— E agora lhe calha receber de uma vez um milhãozinho e mais, e isso no mínimo, meu Deus! — o funcionário ergueu as mãos.",
         "circle",
         "O diminutivo «миллиончик» é devoção.",
-        "«Миллиончик» acaricia a cifra. «О господи!» é pietismo de quem reza ao capital. Bater palmas é a rubrica justa: não há pensamento, há aplauso. Liébedev já se incluiu na herança.",
+        "«Миллиончик» acaricia a cifra. «О господи!» é pietismo de quem reza ao capital. «Всплеснул руками» não é aplauso: as duas mãos sobem juntas, espanto e cobiça no mesmo gesto. Não há pensamento. Há o corpo no capital. Liébedev já se incluiu na herança.",
       ),
     ],
   },

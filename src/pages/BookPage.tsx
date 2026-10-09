@@ -33,7 +33,7 @@ export default function BookPage() {
             <Badge variant="secondary">Rússia</Badge>
             <Badge variant="outline">Romance</Badge>
             <Badge variant="outline">1868–1869</Badge>
-            <Badge variant="outline">Parte I em leitura</Badge>
+            <Badge variant="outline">Capítulo I na margem</Badge>
           </div>
           <p className="max-w-xl font-sans text-sm leading-relaxed text-muted-foreground">{idiot.pitch}</p>
           <Button asChild>
@@ -55,10 +55,9 @@ export default function BookPage() {
             terceira, de capuz suíço, ao lado de um desconhecido de olhos em brasa.
           </p>
           <p>
-            A margem segue o ofício: como o diálogo apresenta dois homens antes do nome; como a frase longa segura o tempo
-            de quem vai morrer; como o narrador ironiza e, de repente, diz «eu»; como um escândalo já se ensaia no relato
-            dos brincos, muito antes da lareira. Polifonia, aqui, não é um verbete. É duas vozes no mesmo banco, e uma
-            terceira que sabe demais.
+            A margem segue o ofício deste vagão: como o diálogo apresenta dois homens antes do nome; como um retrato faz
+            o caráter antes da fala; como o narrador ironiza e, de repente, diz «eu»; como o escândalo dos brincos já se
+            ensaia numa história contada a um desconhecido. Duas vozes no mesmo banco, e uma terceira que sabe demais.
           </p>
         </CardContent>
       </Card>
@@ -69,10 +68,9 @@ export default function BookPage() {
         </CardHeader>
         <CardContent className="font-sans text-sm leading-relaxed text-muted-foreground">
           <p>
-            A ação da primeira parte cabe num dia de fim de novembro, em Petersburgo, no degelo. O príncipe volta da
-            Suíça depois de quatro anos. Rogójin volta de Pskov para uma herança e para Nastássia Filíppovna. O general
-            Iepántchin, na manhã seguinte do mesmo dia, ainda não sabe que os dois existem. O capítulo II chega à porta
-            dele — e, no caminho, o príncipe conta a guilhotina.
+            A ação deste capítulo cabe numa manhã de fim de novembro, no trem que chega a Petersburgo. O príncipe volta
+            da Suíça depois de quatro anos, com um fardel e um capuz. Rogójin volta de Pskov para uma herança e para um
+            nome que o vagão ainda mal segurou: Nastássia Filíppovna. A margem fica nesse compartimento, até a estação.
           </p>
         </CardContent>
       </Card>
